@@ -1,0 +1,17 @@
+{
+  "CNSN": {
+    "label_en": "Shaanxi",
+    "label_zh": "陕西",
+    "inst_en": "Xi’an Jiaotong University (example)",
+    "inst_zh": "西安交通大学（示例）",
+    "url": "https://www.xjtu.edu.cn/"
+  },
+
+  "CNBJ": {
+    "label_en": "Beijing",
+    "label_zh": "北京",
+    "inst_en": "Peking University / Tsinghua University (example)",
+    "inst_zh": "北京大学 / 清华大学（示例）",
+    "url": "https://www.pku.edu.cn/"
+  }
+}

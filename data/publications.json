@@ -1,0 +1,182 @@
+[
+  {
+    "authors": "Duan Q, Jia H-R, Chen W et al.",
+    "title": "Multivalent Aptamer-Based Lysosome-Targeting Chimeras (LYTACs) Platform for Mono- or Dual-Targeted Proteins Degradation on Cell Surface",
+    "journal": "Advanced Science",
+    "year": "2024",
+    "doi": "10.1002/advs.202308924",
+    "pdf": "../assets/papers/Duan et al. - 2024 - Multivalent Aptamer-Based Lysosome-Targeting Chimeras (LYTACs) Platform for Mono- or Dual-Targeted P.pdf",
+    "cover": "../assets/covers/duan-et-al-2024-multivalent-aptamer-based-lysosome-targeting-chimeras-lytacs-platform-for-mono-or-dual-targeted-p.png",
+    "doi_url": "https://doi.org/10.1002/advs.202308924"
+  },
+  {
+    "authors": "Fei L, Pan Y, Zhai J et al.",
+    "title": "PTf-SRiApt Targeting SCAF4-POLR2A Interaction Suppresses Tumor Growth and Promotes Antitumor Immunity in Triple-Negative Breast Cancer",
+    "journal": "Advanced Science",
+    "year": "2025",
+    "doi": "10.1002/advs.202500433",
+    "pdf": "../assets/papers/Fei et al. - 2025 - PTf-SRiApt Targeting SCAF4-POLR2A Interaction Suppresses Tumor Growth and Promotes Antitumor Immunit.pdf",
+    "cover": "../assets/covers/fei-et-al-2025-ptf-sriapt-targeting-scaf4-polr2a-interaction-suppresses-tumor-growth-and-promotes-antitumor-immunit.png",
+    "doi_url": "https://doi.org/10.1002/advs.202500433"
+  },
+  {
+    "authors": "Guan X, Lu Q, Wei N et al.",
+    "title": "Multiplexed Detection of Tumor Markers and Discrimination of Cancer Cell Types by Laser Ablation-Dielectric Barrier Discharge Ionization-Mass Spectrometry",
+    "journal": "Anal Chem",
+    "year": "2025",
+    "doi": "10.1021/acs.analchem.4c06927",
+    "pdf": "../assets/papers/Guan et al. - 2025 - Multiplexed Detection of Tumor Markers and Discrimination of Cancer Cell Types by Laser Ablation-Die.pdf",
+    "cover": "../assets/covers/guan-et-al-2025-multiplexed-detection-of-tumor-markers-and-discrimination-of-cancer-cell-types-by-laser-ablation-die.png",
+    "doi_url": "https://doi.org/10.1021/acs.analchem.4c06927"
+  },
+  {
+    "authors": "Li T, Liu X, Qian H et al.",
+    "title": "Blocker-SELEX: a structure-guided strategy for developing inhibitory aptamers disrupting undruggable transcription factor interactions",
+    "journal": "Nat Commun",
+    "year": "2024",
+    "doi": "10.1038/s41467-024-51197-w",
+    "pdf": "../assets/papers/Li et al. - 2024 - Blocker-SELEX a structure-guided strategy for developing inhibitory aptamers disrupting undruggable.pdf",
+    "cover": "../assets/covers/li-et-al-2024-blocker-selex-a-structure-guided-strategy-for-developing-inhibitory-aptamers-disrupting-undruggable.png",
+    "doi_url": "https://doi.org/10.1038/s41467-024-51197-w"
+  },
+  {
+    "authors": "Liu Y, Zhang S, Zhang M et al.",
+    "title": "Chemical evolution of ASO-like DNAzymes for effective and extended gene silencing in cells",
+    "journal": "Nucleic Acids Research",
+    "year": "2025",
+    "doi": "10.1093/nar/gkaf144",
+    "pdf": "../assets/papers/Liu et al. - 2025 - Chemical evolution of ASO-like DNAzymes for effective and extended gene silencing in cells.pdf",
+    "cover": "../assets/covers/liu-et-al-2025-chemical-evolution-of-aso-like-dnazymes-for-effective-and-extended-gene-silencing-in-cells.png",
+    "doi_url": "https://doi.org/10.1093/nar/gkaf144"
+  },
+  {
+    "authors": "Luo G, Song J, Fu Y et al.",
+    "title": "SPARK-seq: A high-throughput platform for aptamer discovery and kinetic profiling",
+    "journal": "Science",
+    "year": "2026",
+    "doi": "10.1126/science.adv6127",
+    "pdf": "../assets/papers/Luo et al. - 2026 - SPARK-seq A high-throughput platform for aptamer .pdf",
+    "cover": "../assets/covers/luo-et-al-2026-spark-seq-a-high-throughput-platform-for-aptamer.png",
+    "doi_url": "https://doi.org/10.1126/science.adv6127"
+  },
+  {
+    "authors": "Tang H, Xiong Y, Gan S et al.",
+    "title": "CD4 aptamer-engineered cell platforms enhance anti-tumor immunity in triple-negative breast cancer",
+    "journal": "Cell Biomaterials",
+    "year": "2026",
+    "doi": "10.1016/j.celbio.2025.100218",
+    "pdf": "../assets/papers/Tang et al. - 2026 - CD4 aptamer-engineered cell platforms enhance anti-tumor immunity in triple-negative breast cancer.pdf",
+    "cover": "../assets/covers/tang-et-al-2026-cd4-aptamer-engineered-cell-platforms-enhance-anti-tumor-immunity-in-triple-negative-breast-cancer.png",
+    "doi_url": "https://doi.org/10.1016/j.celbio.2025.100218"
+  },
+  {
+    "authors": "",
+    "title": "The Emerging Era of Molecular Medicine",
+    "journal": "ACS Nano",
+    "year": "2024",
+    "doi": "10.1021/acsnano.4c07969",
+    "pdf": "../assets/papers/2024 - The Emerging Era of Molecular Medicine.pdf",
+    "cover": "../assets/covers/2024-the-emerging-era-of-molecular-medicine.png",
+    "doi_url": "https://doi.org/10.1021/acsnano.4c07969"
+  },
+  {
+    "authors": "Wei J, Zhang S-Y, Zhou X-Y et al.",
+    "title": "Protocol to identify small-molecule inhibitors against cancer drug resistance",
+    "journal": "STAR Protocols",
+    "year": "2025",
+    "doi": "10.1016/j.xpro.2025.103605",
+    "pdf": "../assets/papers/Wei et al. - 2025 - Protocol to identify small-molecule inhibitors against cancer drug resistance.pdf",
+    "cover": "../assets/covers/wei-et-al-2025-protocol-to-identify-small-molecule-inhibitors-against-cancer-drug-resistance.png",
+    "doi_url": "https://doi.org/10.1016/j.xpro.2025.103605"
+  },
+  {
+    "authors": "Wu Q, Ba-Alawi W, Deblois G et al.",
+    "title": "GLUT1 inhibition blocks growth of RB1-positive triple negative breast cancer",
+    "journal": "Nat Commun",
+    "year": "2020",
+    "doi": "10.1038/s41467-020-18020-8",
+    "pdf": "../assets/papers/Wu et al. - 2020 - GLUT1 inhibition blocks growth of RB1-positive triple negative breast cancer.pdf",
+    "cover": "../assets/covers/wu-et-al-2020-glut1-inhibition-blocks-growth-of-rb1-positive-triple-negative-breast-cancer.png",
+    "doi_url": "https://doi.org/10.1038/s41467-020-18020-8"
+  },
+  {
+    "authors": "Wu Q, Heidenreich D, Zhou S et al.",
+    "title": "A chemical toolbox for the study of bromodomains and epigenetic signaling",
+    "journal": "Nat Commun",
+    "year": "2019",
+    "doi": "10.1038/s41467-019-09672-2",
+    "pdf": "../assets/papers/Wu et al. - 2019 - A chemical toolbox for the study of bromodomains and epigenetic signaling.pdf",
+    "cover": "../assets/covers/wu-et-al-2019-a-chemical-toolbox-for-the-study-of-bromodomains-and-epigenetic-signaling.png",
+    "doi_url": "https://doi.org/10.1038/s41467-019-09672-2"
+  },
+  {
+    "authors": "Wu Q, Nie DY, Ba-alawi W et al.",
+    "title": "PRMT inhibition induces a viral mimicry response in triple-negative breast cancer",
+    "journal": "Nat Chem Biol",
+    "year": "2022",
+    "doi": "10.1038/s41589-022-01024-4",
+    "pdf": "../assets/papers/Wu et al. - 2022 - PRMT inhibition induces a viral mimicry response in triple-negative breast cancer.pdf",
+    "cover": "../assets/covers/wu-et-al-2022-prmt-inhibition-induces-a-viral-mimicry-response-in-triple-negative-breast-cancer.png",
+    "doi_url": "https://doi.org/10.1038/s41589-022-01024-4"
+  },
+  {
+    "authors": "Wu Q, Schapira M, Arrowsmith CH et al.",
+    "title": "Protein arginine methylation: from enigmatic functions to therapeutic targeting",
+    "journal": "Nat Rev Drug Discov",
+    "year": "2021",
+    "doi": "10.1038/s41573-021-00159-8",
+    "pdf": "../assets/papers/Wu et al. - 2021 - Protein arginine methylation from enigmatic functions to therapeutic targeting.pdf",
+    "cover": "../assets/covers/wu-et-al-2021-protein-arginine-methylation-from-enigmatic-functions-to-therapeutic-targeting.png",
+    "doi_url": "https://doi.org/10.1038/s41573-021-00159-8"
+  },
+  {
+    "authors": "Wu X, Lin X, Ma X et al.",
+    "title": "High-Throughput Multiplexed Quantification of Molecules by Aptamer Sequencing (Apt-seq) in Single Cells",
+    "journal": "J Am Chem Soc",
+    "year": "2025",
+    "doi": "10.1021/jacs.5c01296",
+    "pdf": "../assets/papers/Wu et al. - 2025 - High-Throughput Multiplexed Quantification of Molecules by Aptamer Sequencing (Apt-seq) in Single Ce.pdf",
+    "cover": "../assets/covers/wu-et-al-2025-high-throughput-multiplexed-quantification-of-molecules-by-aptamer-sequencing-apt-seq-in-single-ce.png",
+    "doi_url": "https://doi.org/10.1021/jacs.5c01296"
+  },
+  {
+    "authors": "Yang R, Fei L, Xue Y et al.",
+    "title": "Increasing RB1 Expression by Targeting EZH2 in Triple-Negative Breast Cancer",
+    "journal": "Journal of Cellular and Molecular Medicine",
+    "year": "2025",
+    "doi": "10.1111/jcmm.70384",
+    "pdf": "../assets/papers/Yang et al. - 2025 - Increasing RB1 Expression by Targeting EZH2 in Triple-Negative Breast Cancer.pdf",
+    "cover": "../assets/covers/yang-et-al-2025-increasing-rb1-expression-by-targeting-ezh2-in-triple-negative-breast-cancer.png",
+    "doi_url": "https://doi.org/10.1111/jcmm.70384"
+  },
+  {
+    "authors": "Zhang K, Wei J, Zhang S et al.",
+    "title": "A chemical screen identifies PRMT5 as a therapeutic vulnerability for paclitaxel-resistant triple-negative breast cancer",
+    "journal": "Chemistry & Biology",
+    "year": "2024",
+    "doi": "10.1016/j.chembiol.2024.08.003",
+    "pdf": "../assets/papers/Zhang et al. - 2024 - A chemical screen identifies PRMT5 as a therapeutic vulnerability for paclitaxel-resistant triple-ne.pdf",
+    "cover": "../assets/covers/zhang-et-al-2024-a-chemical-screen-identifies-prmt5-as-a-therapeutic-vulnerability-for-paclitaxel-resistant-triple-ne.png",
+    "doi_url": "https://doi.org/10.1016/j.chembiol.2024.08.003"
+  },
+  {
+    "authors": "Zhang S, Guo L, Zhang Z et al.",
+    "title": "Type-I protein arginine methyltransferase inhibition primes anti-programmed cell death protein 1 immunotherapy in triple-negative breast cancer",
+    "journal": "Cancer",
+    "year": "2024",
+    "doi": "10.1002/cncr.35142",
+    "pdf": "../assets/papers/Zhang et al. - 2024 - Type-I protein arginine methyltransferase inhibition primes anti-programmed cell death protein 1 imm.pdf",
+    "cover": "../assets/covers/zhang-et-al-2024-type-i-protein-arginine-methyltransferase-inhibition-primes-anti-programmed-cell-death-protein-1-imm.png",
+    "doi_url": "https://doi.org/10.1002/cncr.35142"
+  },
+  {
+    "authors": "Zhang S, Liu X, Chen W et al.",
+    "title": "Targeting TAF1 with BAY-299 induces antitumor immunity in triple-negative breast cancer",
+    "journal": "Biochemical and Biophysical Research Communications",
+    "year": "2023",
+    "doi": "10.1016/j.bbrc.2023.04.100",
+    "pdf": "../assets/papers/Zhang et al. - 2023 - Targeting TAF1 with BAY-299 induces antitumor immunity in triple-negative breast cancer.pdf",
+    "cover": "../assets/covers/zhang-et-al-2023-targeting-taf1-with-bay-299-induces-antitumor-immunity-in-triple-negative-breast-cancer.png",
+    "doi_url": "https://doi.org/10.1016/j.bbrc.2023.04.100"
+  }
+]
