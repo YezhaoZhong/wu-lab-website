@@ -1,0 +1,549 @@
+{
+  "themes": [
+    {
+      "id": "explore",
+      "title": "Explore",
+      "subtitle": "Functional Nucleic Acid Intelligence",
+      "lead": "This theme covers how the lab designs, screens, and engineers functional nucleic acids into programmable binders and delivery-ready molecular tools.",
+      "description": "The studies in Explore move from discovery logic to molecular engineering. Together they define how the lab builds aptamers, catalytic nucleic acids, and targeted chimeras that can recognize, perturb, or redirect hard-to-drug biology.",
+      "heroImage": "../assets/research/research1.png",
+      "heroAlt": "Explore research illustration",
+      "branches": [
+        {
+          "title": "Discovery Engines",
+          "description": "Selection, structure, and kinetic profiling methods for building better binders.",
+          "studies": [
+            "blocker-selex",
+            "atp-aptamer"
+          ]
+        },
+        {
+          "title": "Programmable Nucleic Acids",
+          "description": "Expanding nucleic acids from passive binders into active molecular effectors.",
+          "studies": [
+            "dnazyme-evolution"
+          ]
+        },
+        {
+          "title": "Targeted Modality Design",
+          "description": "Applying engineered nucleic-acid binders to direct selective biological intervention.",
+          "studies": [
+            "aptamer-lytacs"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "decode",
+      "title": "Decode",
+      "subtitle": "Frontier Omics Technologies",
+      "lead": "This theme focuses on the measurement side of the program: turning aptamer and molecular-recognition tools into readout systems that resolve cellular heterogeneity and disease-state transitions.",
+      "description": "The studies in Decode build the technical bridge from molecular recognition to systems-level information. They show how the lab reads proteins, glycans, and other cell-state features at single-cell or multiplexed resolution, then frames those readouts in a broader molecular-medicine context.",
+      "heroImage": "../assets/research/research3.png",
+      "heroAlt": "Decode research illustration",
+      "branches": [
+        {
+          "title": "Single-Cell Profiling",
+          "description": "Sequencing-linked strategies that quantify non-nucleic-acid molecules in single cells.",
+          "studies": [
+            "apt-seq",
+            "spark-seq"
+          ]
+        },
+        {
+          "title": "Multiplexed Detection",
+          "description": "Analytical methods for resolving marker combinations and distinguishing cell states.",
+          "studies": [
+            "tumor-marker-ms"
+          ]
+        },
+        {
+          "title": "Systems Framing",
+          "description": "Conceptual work situating these tools within the wider transition toward molecular medicine.",
+          "studies": [
+            "molecular-medicine-era"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "protect",
+      "title": "Protect",
+      "subtitle": "Precision Diagnosis and Therapeutic Translation",
+      "lead": "This theme brings the lab's molecular tools and mechanistic findings into translational oncology, with a strong concentration on triple-negative breast cancer and treatment resistance.",
+      "description": "The studies in Protect connect target discovery, mechanism, biomarker definition, and therapeutic intervention. Together they outline how the lab moves from molecular vulnerability to actionable treatment logic, especially in immune-active and drug-resistant tumor settings.",
+      "heroImage": "../assets/research/research4.jpg",
+      "heroAlt": "Protect research illustration",
+      "branches": [
+        {
+          "title": "Target and Mechanism Discovery",
+          "description": "Studies that define metabolic, epigenetic, and transcriptional vulnerabilities in TNBC.",
+          "studies": [
+            "glut1-tnbc",
+            "bromodomain-toolbox",
+            "prmt-review",
+            "taf1-bay299",
+            "prmt-viral-mimicry",
+            "prmt5-vulnerability",
+            "ezh2-rb1",
+            "interferon-prmt5"
+          ]
+        },
+        {
+          "title": "Therapeutic Translation",
+          "description": "Intervention-focused studies that turn those mechanisms into treatment strategies.",
+          "studies": [
+            "prmt1-pd1",
+            "cd4-aptamer-cells",
+            "ptf-sriapt"
+          ]
+        },
+        {
+          "title": "Operationalization",
+          "description": "Protocol and workflow studies that make translational screening and validation reproducible.",
+          "studies": [
+            "drug-resistance-protocol"
+          ]
+        }
+      ]
+    }
+  ],
+  "studies": {
+    "aptamer-lytacs": {
+      "title": "Multivalent Aptamer-Based LYTACs for Cell-Surface Protein Degradation",
+      "year": "2024",
+      "journal": "Advanced Science",
+      "citation": "Duan Q, Jia H-R, Chen W et al.",
+      "theme": "explore",
+      "pdf": "../assets/publications/papers/Duan et al. - 2024 - Multivalent Aptamer-Based Lysosome-Targeting Chimeras (LYTACs) Platform for Mono- or Dual-Targeted P.pdf",
+      "doiUrl": "https://doi.org/10.1002/advs.202308924",
+      "cover": "../assets/publications/covers-subfigure/duan-et-al-2024-multivalent-aptamer-based-lysosome-targeting-chimeras-lytacs-platform-for-mono-or-dual-targeted-p.png",
+      "coverAlt": "Key figure from the multivalent aptamer-based LYTACs study",
+      "summary": [
+        "Builds aptamer-based LYTAC architectures that drive selective degradation of one or two cell-surface targets.",
+        "Extends aptamers from recognition reagents into programmable trafficking and degradation tools.",
+        "Shows how functional nucleic acids can be engineered into modular therapeutic modalities."
+      ],
+      "themeFit": "This study sits in Explore because it turns nucleic-acid recognition into an engineered intervention format. The central contribution is modality design: using aptamers as the programmable recognition layer in a degradative system.",
+      "related": [
+        "blocker-selex",
+        "dnazyme-evolution",
+        "ptf-sriapt"
+      ]
+    },
+    "ptf-sriapt": {
+      "title": "PTf-SRiApt Targeting SCAF4-POLR2A Interaction in TNBC",
+      "year": "2025",
+      "journal": "Advanced Science",
+      "citation": "Fei L, Pan Y, Zhai J et al.",
+      "theme": "protect",
+      "pdf": "../assets/publications/papers/Fei et al. - 2025 - PTf-SRiApt Targeting SCAF4-POLR2A Interaction Suppresses Tumor Growth and Promotes Antitumor Immunit.pdf",
+      "doiUrl": "https://doi.org/10.1002/advs.202500433",
+      "cover": "../assets/publications/covers-subfigure/fei-et-al-2025-ptf-sriapt-targeting-scaf4-polr2a-interaction-suppresses-tumor-growth-and-promotes-antitumor-immunit.png",
+      "coverAlt": "Key figure from the PTf-SRiApt TNBC study",
+      "summary": [
+        "Uses an inhibitory aptamer strategy to disrupt the SCAF4-POLR2A interaction in triple-negative breast cancer.",
+        "Links targeted transcriptional interference to tumor suppression and antitumor immune activation.",
+        "Provides a direct example of a nucleic-acid modality translated into a disease-specific intervention."
+      ],
+      "themeFit": "Although the molecular modality is aptamer-based, the paper belongs in Protect because the core result is therapeutic translation in TNBC. The study is centered on disease intervention, tumor control, and immune consequences rather than on platform invention alone.",
+      "related": [
+        "blocker-selex",
+        "cd4-aptamer-cells",
+        "interferon-prmt5"
+      ]
+    },
+    "tumor-marker-ms": {
+      "title": "Multiplexed Detection of Tumor Markers by LA-DBDI Mass Spectrometry",
+      "year": "2025",
+      "journal": "Analytical Chemistry",
+      "citation": "Guan X, Lu Q, Wei N et al.",
+      "theme": "decode",
+      "pdf": "../assets/publications/papers/Guan et al. - 2025 - Multiplexed Detection of Tumor Markers and Discrimination of Cancer Cell Types by Laser Ablation-Die.pdf",
+      "doiUrl": "https://doi.org/10.1021/acs.analchem.4c06927",
+      "cover": "../assets/publications/covers-subfigure/guan-et-al-2025-multiplexed-detection-of-tumor-markers-and-discrimination-of-cancer-cell-types-by-laser-ablation-die.png",
+      "coverAlt": "Key figure from the multiplexed tumor marker detection study",
+      "summary": [
+        "Develops a multiplexed analytical workflow to detect tumor markers and distinguish cancer cell types.",
+        "Shows how rich marker combinations can be read out in a single platform rather than through one-marker-at-a-time assays.",
+        "Adds an orthogonal molecular readout technology to the lab's profiling toolkit."
+      ],
+      "themeFit": "This study belongs in Decode because it is fundamentally about extracting discriminative molecular information from complex cellular samples. Its contribution is measurement capability, not target perturbation.",
+      "related": [
+        "apt-seq",
+        "molecular-medicine-era"
+      ]
+    },
+    "blocker-selex": {
+      "title": "Blocker-SELEX for Inhibitory Aptamers Against Undruggable TF Interfaces",
+      "year": "2024",
+      "journal": "Nature Communications",
+      "citation": "Li T, Liu X, Qian H et al.",
+      "theme": "explore",
+      "pdf": "../assets/publications/papers/Li et al. - 2024 - Blocker-SELEX a structure-guided strategy for developing inhibitory aptamers disrupting undruggable.pdf",
+      "doiUrl": "https://doi.org/10.1038/s41467-024-51197-w",
+      "cover": "../assets/publications/covers-subfigure/li-et-al-2024-blocker-selex-a-structure-guided-strategy-for-developing-inhibitory-aptamers-disrupting-undruggable.png",
+      "coverAlt": "Key figure from the Blocker-SELEX study",
+      "summary": [
+        "Introduces a structure-guided selection strategy to isolate aptamers that block transcription-factor protein interactions.",
+        "Pushes aptamers toward hard-to-drug interfaces where classical small-molecule discovery often stalls.",
+        "Establishes a general discovery logic for functional, mechanism-aware nucleic-acid binders."
+      ],
+      "themeFit": "This is a core Explore paper because it defines how the lab discovers functional aptamers with mechanistic intent. The emphasis is on screening logic, binder design, and expanding what nucleic acids can target.",
+      "related": [
+        "spark-seq",
+        "atp-aptamer",
+        "ptf-sriapt"
+      ]
+    },
+    "dnazyme-evolution": {
+      "title": "Chemical Evolution of ASO-like DNAzymes for Durable Gene Silencing",
+      "year": "2025",
+      "journal": "Nucleic Acids Research",
+      "citation": "Liu Y, Zhang S, Zhang M et al.",
+      "theme": "explore",
+      "pdf": "../assets/publications/papers/Liu et al. - 2025 - Chemical evolution of ASO-like DNAzymes for effective and extended gene silencing in cells.pdf",
+      "doiUrl": "https://doi.org/10.1093/nar/gkaf144",
+      "cover": "../assets/publications/covers-subfigure/liu-et-al-2025-chemical-evolution-of-aso-like-dnazymes-for-effective-and-extended-gene-silencing-in-cells.png",
+      "coverAlt": "Key figure from the DNAzyme evolution study",
+      "summary": [
+        "Optimizes ASO-like DNAzymes to improve intracellular silencing strength and persistence.",
+        "Applies medicinal-style chemical evolution principles to catalytic nucleic-acid effectors.",
+        "Broadens the lab's nucleic-acid engineering toolbox beyond binding and recognition."
+      ],
+      "themeFit": "The study belongs in Explore because it is about engineering new functional nucleic-acid behaviors. The central contribution is improved molecular performance through iterative design, not downstream disease profiling.",
+      "related": [
+        "blocker-selex",
+        "aptamer-lytacs",
+        "atp-aptamer"
+      ]
+    },
+    "spark-seq": {
+      "title": "SPARK-seq for High-Throughput Aptamer Discovery and Kinetic Profiling",
+      "year": "2026",
+      "journal": "Science",
+      "citation": "Luo G, Song J, Fu Y et al.",
+      "theme": "decode",
+      "pdf": "../assets/publications/papers/Luo et al. - 2026 - SPARK-seq A high-throughput platform for aptamer .pdf",
+      "doiUrl": "https://doi.org/10.1126/science.adv6127",
+      "cover": "../assets/publications/covers-subfigure/luo-et-al-2026-spark-seq-a-high-throughput-platform-for-aptamer.png",
+      "coverAlt": "Key figure from the SPARK-seq study",
+      "summary": [
+        "Builds a high-throughput platform that couples aptamer discovery with kinetic profiling at scale.",
+        "Turns aptamer selection into a richer, information-dense readout problem rather than a binary enrichment workflow.",
+        "Provides an enabling engine for both binder discovery and downstream molecular-state decoding."
+      ],
+      "themeFit": "SPARK-seq spans Explore and Decode, but it is placed in Decode because the defining advance is information capture at scale. The platform reads out kinetic behavior across large aptamer-target landscapes and therefore functions as a measurement system as much as a discovery pipeline.",
+      "related": [
+        "blocker-selex",
+        "apt-seq",
+        "atp-aptamer"
+      ]
+    },
+    "cd4-aptamer-cells": {
+      "title": "CD4 Aptamer-Engineered Cell Platforms for Antitumor Immunity",
+      "year": "2026",
+      "journal": "Cell Biomaterials",
+      "citation": "Tang H, Xiong Y, Gan S et al.",
+      "theme": "protect",
+      "pdf": "../assets/publications/papers/Tang et al. - 2026 - CD4 aptamer-engineered cell platforms enhance anti-tumor immunity in triple-negative breast cancer.pdf",
+      "doiUrl": "https://doi.org/10.1016/j.celbio.2025.100218",
+      "cover": "../assets/publications/covers-subfigure/tang-et-al-2026-cd4-aptamer-engineered-cell-platforms-enhance-anti-tumor-immunity-in-triple-negative-breast-cancer.png",
+      "coverAlt": "Key figure from the CD4 aptamer-engineered cell platform study",
+      "summary": [
+        "Engineers an aptamer-guided cell platform to enhance CD4-directed antitumor immunity in TNBC.",
+        "Addresses poor tumor infiltration and immunosuppression using a targeted immune-cell recruitment strategy.",
+        "Demonstrates how aptamer engineering can be translated into a cellular therapy format."
+      ],
+      "themeFit": "This study belongs in Protect because the primary outcome is therapeutic gain in a tumor model. The aptamer component is important, but the work is positioned as translational immunotherapy.",
+      "related": [
+        "ptf-sriapt",
+        "prmt1-pd1",
+        "interferon-prmt5"
+      ]
+    },
+    "molecular-medicine-era": {
+      "title": "The Emerging Era of Molecular Medicine",
+      "year": "2024",
+      "journal": "ACS Nano",
+      "citation": "Tang H, Zhang Y, Wu Y et al.",
+      "theme": "decode",
+      "pdf": "../assets/publications/papers/2024 - The Emerging Era of Molecular Medicine.pdf",
+      "doiUrl": "https://doi.org/10.1021/acsnano.4c07969",
+      "cover": "../assets/publications/covers-subfigure/2024-the-emerging-era-of-molecular-medicine.png",
+      "coverAlt": "Key figure from the molecular medicine perspective article",
+      "summary": [
+        "Frames the transition from broad disease classification toward molecule-resolved diagnosis and intervention.",
+        "Synthesizes how high-resolution molecular tools reshape research, diagnosis, and treatment design.",
+        "Provides conceptual context for why the lab invests in measurement-rich molecular technologies."
+      ],
+      "themeFit": "This paper is assigned to Decode because it articulates the systems-level rationale behind molecular readout technologies. It serves as a conceptual umbrella for the measurement platforms and map-building studies in the program.",
+      "related": [
+        "apt-seq",
+        "tumor-marker-ms"
+      ]
+    },
+    "drug-resistance-protocol": {
+      "title": "Protocol to Identify Small-Molecule Inhibitors Against Cancer Drug Resistance",
+      "year": "2025",
+      "journal": "STAR Protocols",
+      "citation": "Wei J, Zhang S-Y, Zhou X-Y et al.",
+      "theme": "protect",
+      "pdf": "../assets/publications/papers/Wei et al. - 2025 - Protocol to identify small-molecule inhibitors against cancer drug resistance.pdf",
+      "doiUrl": "https://doi.org/10.1016/j.xpro.2025.103605",
+      "cover": "../assets/publications/covers-subfigure/wei-et-al-2025-protocol-to-identify-small-molecule-inhibitors-against-cancer-drug-resistance.png",
+      "coverAlt": "Key figure from the drug-resistance screening protocol study",
+      "summary": [
+        "Details a reproducible workflow for screening small-molecule inhibitors against drug-resistant cancer states.",
+        "Operationalizes resistant-model construction, screening, and validation into a reusable protocol.",
+        "Bridges mechanistic discovery papers to experimental execution in translational settings."
+      ],
+      "themeFit": "The paper belongs in Protect because it turns translational logic into an executable workflow. It is the operational layer that supports therapy-oriented studies rather than a discovery paper by itself.",
+      "related": [
+        "prmt5-vulnerability",
+        "interferon-prmt5"
+      ]
+    },
+    "glut1-tnbc": {
+      "title": "GLUT1 Inhibition in RB1-Positive Triple-Negative Breast Cancer",
+      "year": "2020",
+      "journal": "Nature Communications",
+      "citation": "Wu Q, Ba-Alawi W, Deblois G et al.",
+      "theme": "protect",
+      "pdf": "../assets/publications/papers/Wu et al. - 2020 - GLUT1 inhibition blocks growth of RB1-positive triple negative breast cancer.pdf",
+      "doiUrl": "https://doi.org/10.1038/s41467-020-18020-8",
+      "cover": "../assets/publications/covers-subfigure/wu-et-al-2020-glut1-inhibition-blocks-growth-of-rb1-positive-triple-negative-breast-cancer.png",
+      "coverAlt": "Key figure from the GLUT1 TNBC study",
+      "summary": [
+        "Identifies GLUT1 dependence in RB1-positive TNBC and links metabolic control to tumor growth.",
+        "Defines a clinically relevant subtype-specific vulnerability in aggressive breast cancer.",
+        "Provides one of the earlier translational anchors for the lab's TNBC intervention program."
+      ],
+      "themeFit": "This paper is part of Protect because it maps a therapeutic vulnerability to a disease-defined patient subset. The contribution is a targetable intervention logic in TNBC.",
+      "related": [
+        "ezh2-rb1",
+        "prmt5-vulnerability"
+      ]
+    },
+    "bromodomain-toolbox": {
+      "title": "A Chemical Toolbox for Bromodomains and Epigenetic Signaling",
+      "year": "2019",
+      "journal": "Nature Communications",
+      "citation": "Wu Q, Heidenreich D, Zhou S et al.",
+      "theme": "protect",
+      "pdf": "../assets/publications/papers/Wu et al. - 2019 - A chemical toolbox for the study of bromodomains and epigenetic signaling.pdf",
+      "doiUrl": "https://doi.org/10.1038/s41467-019-09672-2",
+      "cover": "../assets/publications/covers-subfigure/wu-et-al-2019-a-chemical-toolbox-for-the-study-of-bromodomains-and-epigenetic-signaling.png",
+      "coverAlt": "Key figure from the bromodomain chemical toolbox study",
+      "summary": [
+        "Builds a chemical toolkit to interrogate bromodomains and broader epigenetic signaling networks.",
+        "Strengthens the experimental foundation for mechanism-guided therapeutic target discovery.",
+        "Prefigures the later translational emphasis on epigenetic vulnerabilities in cancer."
+      ],
+      "themeFit": "The paper is placed in Protect because it supports the therapeutic-target discovery arm of the program. Its value lies in enabling mechanistic interrogation of druggable chromatin regulators.",
+      "related": [
+        "prmt-review",
+        "taf1-bay299",
+        "prmt5-vulnerability"
+      ]
+    },
+    "prmt-viral-mimicry": {
+      "title": "PRMT Inhibition Induces a Viral Mimicry Response in TNBC",
+      "year": "2022",
+      "journal": "Nature Chemical Biology",
+      "citation": "Wu Q, Nie DY, Ba-Alawi W et al.",
+      "theme": "protect",
+      "pdf": "../assets/publications/papers/Wu et al. - 2022 - PRMT inhibition induces a viral mimicry response in triple-negative breast cancer.pdf",
+      "doiUrl": "https://doi.org/10.1038/s41589-022-01024-4",
+      "cover": "../assets/publications/covers-subfigure/wu-et-al-2022-prmt-inhibition-induces-a-viral-mimicry-response-in-triple-negative-breast-cancer.png",
+      "coverAlt": "Key figure from the PRMT viral mimicry study",
+      "summary": [
+        "Connects PRMT inhibition to RNA-splicing disruption and a viral-mimicry state in TNBC.",
+        "Explains how epigenetic intervention can activate tumor-intrinsic immune signaling.",
+        "Provides mechanistic groundwork for later biomarker and immunotherapy-combination studies."
+      ],
+      "themeFit": "This study is squarely in Protect because it links a druggable mechanism to an actionable immune-response phenotype in cancer. It is a mechanism-to-therapy bridge paper.",
+      "related": [
+        "prmt-review",
+        "prmt1-pd1",
+        "interferon-prmt5"
+      ]
+    },
+    "prmt-review": {
+      "title": "Protein Arginine Methylation: From Enigmatic Functions to Therapeutic Targeting",
+      "year": "2021",
+      "journal": "Nature Reviews Drug Discovery",
+      "citation": "Wu Q, Schapira M, Arrowsmith CH et al.",
+      "theme": "protect",
+      "pdf": "../assets/publications/papers/Wu et al. - 2021 - Protein arginine methylation from enigmatic functions to therapeutic targeting.pdf",
+      "doiUrl": "https://doi.org/10.1038/s41573-021-00159-8",
+      "cover": "../assets/publications/covers-subfigure/wu-et-al-2021-protein-arginine-methylation-from-enigmatic-functions-to-therapeutic-targeting.png",
+      "coverAlt": "Key figure from the PRMT review",
+      "summary": [
+        "Reviews PRMT biology across transcription, splicing, DNA damage, and metabolism.",
+        "Frames PRMT enzymes as therapeutic targets with disease-wide relevance.",
+        "Supplies the conceptual map underlying multiple later TNBC intervention studies."
+      ],
+      "themeFit": "This review belongs in Protect because it defines the therapeutic landscape around PRMT targeting. It functions as the conceptual scaffold for the lab's PRMT-centered translational work.",
+      "related": [
+        "prmt-viral-mimicry",
+        "prmt5-vulnerability",
+        "interferon-prmt5"
+      ]
+    },
+    "apt-seq": {
+      "title": "Apt-seq for Single-Cell Multiplexed Quantification of Molecules",
+      "year": "2025",
+      "journal": "Journal of the American Chemical Society",
+      "citation": "Wu X, Lin X, Ma X et al.",
+      "theme": "decode",
+      "pdf": "../assets/publications/papers/Wu et al. - 2025 - High-Throughput Multiplexed Quantification of Molecules by Aptamer Sequencing (Apt-seq) in Single Ce.pdf",
+      "doiUrl": "https://doi.org/10.1021/jacs.5c01296",
+      "cover": "../assets/publications/covers-subfigure/wu-et-al-2025-high-throughput-multiplexed-quantification-of-molecules-by-aptamer-sequencing-apt-seq-in-single-ce.png",
+      "coverAlt": "Key figure from the Apt-seq study",
+      "summary": [
+        "Introduces Apt-seq as a sequencing-linked platform to quantify proteins, glycans, and transcripts in single cells.",
+        "Demonstrates how aptamers can convert otherwise hard-to-sequence molecular states into countable readouts.",
+        "Builds a direct route from molecular recognition to high-dimensional single-cell profiling."
+      ],
+      "themeFit": "Apt-seq is a Decode paper because the point of the platform is information extraction. It transforms non-nucleic-acid biology into a high-throughput measurement format for cellular-state mapping.",
+      "related": [
+        "spark-seq",
+        "tumor-marker-ms",
+        "molecular-medicine-era"
+      ]
+    },
+    "ezh2-rb1": {
+      "title": "Increasing RB1 Expression by Targeting EZH2 in TNBC",
+      "year": "2025",
+      "journal": "Journal of Cellular and Molecular Medicine",
+      "citation": "Yang R, Fei L, Xue Y et al.",
+      "theme": "protect",
+      "pdf": "../assets/publications/papers/Yang et al. - 2025 - Increasing RB1 Expression by Targeting EZH2 in Triple-Negative Breast Cancer.pdf",
+      "doiUrl": "https://doi.org/10.1111/jcmm.70384",
+      "cover": "../assets/publications/covers-subfigure/yang-et-al-2025-increasing-rb1-expression-by-targeting-ezh2-in-triple-negative-breast-cancer.png",
+      "coverAlt": "Key figure from the EZH2-RB1 TNBC study",
+      "summary": [
+        "Shows that targeting EZH2 can restore RB1 expression in triple-negative breast cancer.",
+        "Connects chromatin regulation to tumor suppressor recovery in a difficult disease context.",
+        "Adds a second translational axis alongside the lab's PRMT-centered TNBC work."
+      ],
+      "themeFit": "The paper belongs in Protect because it is explicitly disease-focused and intervention-oriented. Its main value is defining a therapeutically actionable epigenetic strategy in TNBC.",
+      "related": [
+        "glut1-tnbc",
+        "prmt5-vulnerability",
+        "interferon-prmt5"
+      ]
+    },
+    "prmt5-vulnerability": {
+      "title": "PRMT5 as a Therapeutic Vulnerability in Paclitaxel-Resistant TNBC",
+      "year": "2024",
+      "journal": "Cell Chemical Biology",
+      "citation": "Zhang K, Wei J, Zhang S et al.",
+      "theme": "protect",
+      "pdf": "../assets/publications/papers/Zhang et al. - 2024 - A chemical screen identifies PRMT5 as a therapeutic vulnerability for paclitaxel-resistant triple-ne.pdf",
+      "doiUrl": "https://doi.org/10.1016/j.chembiol.2024.08.003",
+      "cover": "../assets/publications/covers-subfigure/zhang-et-al-2024-a-chemical-screen-identifies-prmt5-as-a-therapeutic-vulnerability-for-paclitaxel-resistant-triple-ne.png",
+      "coverAlt": "Key figure from the PRMT5 vulnerability study",
+      "summary": [
+        "Uses chemical screening to identify PRMT5 inhibition as a vulnerability in paclitaxel-resistant TNBC.",
+        "Links splicing disruption to mitotic catastrophe in resistant tumor cells.",
+        "Creates a strong mechanistic and translational foundation for downstream biomarker and protocol studies."
+      ],
+      "themeFit": "This is a Protect study because it starts from a clinically difficult resistance state and delivers an actionable therapeutic strategy. The whole paper is organized around translational leverage in TNBC.",
+      "related": [
+        "drug-resistance-protocol",
+        "prmt-viral-mimicry",
+        "interferon-prmt5"
+      ]
+    },
+    "prmt1-pd1": {
+      "title": "Type-I PRMT Inhibition Primes Anti-PD1 Immunotherapy in TNBC",
+      "year": "2024",
+      "journal": "Cancer",
+      "citation": "Zhang S, Guo L, Zhang Z et al.",
+      "theme": "protect",
+      "pdf": "../assets/publications/papers/Zhang et al. - 2024 - Type-I protein arginine methyltransferase inhibition primes anti-programmed cell death protein 1 imm.pdf",
+      "doiUrl": "https://doi.org/10.1002/cncr.35142",
+      "cover": "../assets/publications/covers-subfigure/zhang-et-al-2024-type-i-protein-arginine-methyltransferase-inhibition-primes-anti-programmed-cell-death-protein-1-imm.png",
+      "coverAlt": "Key figure from the type-I PRMT and anti-PD1 study",
+      "summary": [
+        "Shows that type-I PRMT inhibition can sensitize TNBC to anti-PD1 immunotherapy.",
+        "Moves the PRMT program from mechanism into rational combination treatment design.",
+        "Demonstrates direct translational value for immune-oncology strategy building."
+      ],
+      "themeFit": "This paper is in Protect because it is explicitly about therapeutic combination logic. The endpoint is better immunotherapy response, not just molecular characterization.",
+      "related": [
+        "prmt-viral-mimicry",
+        "cd4-aptamer-cells",
+        "interferon-prmt5"
+      ]
+    },
+    "taf1-bay299": {
+      "title": "Targeting TAF1 with BAY-299 Induces Antitumor Immunity in TNBC",
+      "year": "2023",
+      "journal": "Biochemical and Biophysical Research Communications",
+      "citation": "Zhang S, Liu X, Chen W et al.",
+      "theme": "protect",
+      "pdf": "../assets/publications/papers/Zhang et al. - 2023 - Targeting TAF1 with BAY-299 induces antitumor immunity in triple-negative breast cancer.pdf",
+      "doiUrl": "https://doi.org/10.1016/j.bbrc.2023.04.100",
+      "cover": "../assets/publications/covers-subfigure/zhang-et-al-2023-targeting-taf1-with-bay-299-induces-antitumor-immunity-in-triple-negative-breast-cancer.png",
+      "coverAlt": "Key figure from the TAF1 BAY-299 study",
+      "summary": [
+        "Identifies TAF1 inhibition as a route to antitumor immune activation in TNBC.",
+        "Expands the translational portfolio beyond PRMT-focused targets while keeping the immune-response lens.",
+        "Supports a broader strategy of transcriptional and epigenetic intervention in aggressive breast cancer."
+      ],
+      "themeFit": "The study belongs in Protect because it is centered on therapeutic target nomination and antitumor immune response. It advances intervention logic in TNBC rather than platform development.",
+      "related": [
+        "bromodomain-toolbox",
+        "prmt-viral-mimicry",
+        "prmt1-pd1"
+      ]
+    },
+    "interferon-prmt5": {
+      "title": "Interferon-Driven Biomarkers and Synergistic Therapy for PRMT5 Inhibition in TNBC",
+      "year": "2025",
+      "journal": "Advanced Science",
+      "citation": "Zhang Z, Zhang S, Guo L et al.",
+      "theme": "protect",
+      "pdf": "../assets/publications/papers/zhang-2025-interferon-prmt5-tnbc.pdf",
+      "doiUrl": "https://doi.org/10.1002/advs.202505787",
+      "cover": "../assets/publications/covers-subfigure/zhang-2025-interferon-prmt5-tnbc.png",
+      "coverAlt": "Key figure from the interferon-driven PRMT5 biomarker study",
+      "summary": [
+        "Defines interferon-linked biomarkers that predict or explain PRMT5 inhibitor response in TNBC.",
+        "Builds synergistic therapeutic logic around the PRMT5 vulnerability framework.",
+        "Connects mechanism, biomarkers, and treatment design in a single translational study."
+      ],
+      "themeFit": "This is a Protect study because it integrates biomarker stratification with therapy design. It represents the mature translational phase of the PRMT program.",
+      "related": [
+        "prmt5-vulnerability",
+        "drug-resistance-protocol",
+        "prmt1-pd1"
+      ]
+    },
+    "atp-aptamer": {
+      "title": "Structural Basis and Affinity Improvement for an ATP-Binding DNA Aptamer",
+      "year": "2025",
+      "journal": "PNAS",
+      "citation": "Jiang Y, Zhang Y, Wan L et al.",
+      "theme": "explore",
+      "pdf": "../assets/publications/papers/jiang-2025-atp-binding-dna-aptamer.pdf",
+      "doiUrl": "https://doi.org/10.1073/pnas.2506491122",
+      "cover": "../assets/publications/covers-subfigure/jiang-2025-atp-binding-dna-aptamer.png",
+      "coverAlt": "Key figure from the ATP-binding aptamer study",
+      "summary": [
+        "Resolves the structural basis of ATP recognition by a DNA aptamer and improves affinity through design.",
+        "Links molecular mechanism directly to performance optimization.",
+        "Supplies structure-informed rules that feed back into nucleic-acid discovery and engineering."
+      ],
+      "themeFit": "This paper is in Explore because it sharpens the design principles behind functional aptamers. The central advance is understanding and improving molecular recognition at the binder level.",
+      "related": [
+        "blocker-selex",
+        "spark-seq",
+        "dnazyme-evolution"
+      ]
+    }
+  }
+}

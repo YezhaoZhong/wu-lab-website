@@ -1,0 +1,32 @@
+{
+  "en": {
+    "publications.meta.title": "Publications | Wu Lab",
+    "publications.meta.description": "Top Wu Lab publications ranked by journal impact factor.",
+    "publications.head.title": "Publications",
+    "publications.selected": "Selected Papers",
+    "publications.more": "More Publications",
+    "publications.toggle": "Read more",
+    "publications.toggleLess": "Show less",
+    "publications.coverMode.subfigure": "Show important subfigures",
+    "publications.coverMode.paper": "Show paper covers",
+    "publications.label.doi": "DOI:",
+    "publications.label.pdf": "PDF",
+    "publications.error.title": "Publications could not be loaded",
+    "publications.error.body": "Please verify that data/publications.json is available from the current server path."
+  },
+  "zh": {
+    "publications.meta.title": "论文成果 | 吴芩课题组",
+    "publications.meta.description": "吴芩课题组论文成果。",
+    "publications.head.title": "论文成果",
+    "publications.selected": "代表性论文",
+    "publications.more": "更多论文",
+    "publications.toggle": "显示更多",
+    "publications.toggleLess": "收起",
+    "publications.coverMode.subfigure": "显示关键子图",
+    "publications.coverMode.paper": "显示论文封面",
+    "publications.label.doi": "DOI：",
+    "publications.label.pdf": "PDF",
+    "publications.error.title": "无法加载论文列表",
+    "publications.error.body": "请确认当前服务器路径下可以访问 data/publications.json。"
+  }
+}

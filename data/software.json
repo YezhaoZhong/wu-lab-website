@@ -1,0 +1,40 @@
+{
+  "en": {
+    "software.meta.title": "Software | Wu Lab",
+    "software.meta.description": "Software, tools, and resources from Wu Lab.",
+    "software.head.title": "Software",
+    "software.head.lead": "Software, resources, and technical outputs from the lab.",
+    "software.head.lead2": "Tools and pipelines from the lab.",
+    "software.card1.title": "XXXX",
+    "software.card1.body": "XXXXXXXXXXXXXXXX.",
+    "software.card2.title": "XXXX",
+    "software.card2.body": "XXXXXXXXXXXXXXXX.",
+    "software.card3.title": "XXXX",
+    "software.card3.body": "XXXXXXXXXXXXXXXX.",
+    "software.card4.title": "XXXX",
+    "software.card4.body": "XXXXXXXXXXXXXXXX.",
+    "software.card5.title": "XXXX",
+    "software.card5.body": "XXXXXXXXXXXXXXXX.",
+    "software.card6.title": "S2F",
+    "software.card6.body": "Sequence-to-function prediction toolkit."
+  },
+  "zh": {
+    "software.meta.title": "软件与工具 | 吴芩课题组",
+    "software.meta.description": "吴芩课题组的软件、工具与资源。",
+    "software.head.title": "软件与工具",
+    "software.head.lead": "来自课题组的软件、资源与技术输出。",
+    "software.head.lead2": "来自课题组的工具与流程。",
+    "software.card1.title": "待更新",
+    "software.card1.body": "相关工具信息即将发布。",
+    "software.card2.title": "待更新",
+    "software.card2.body": "相关工具信息即将发布。",
+    "software.card3.title": "待更新",
+    "software.card3.body": "相关工具信息即将发布。",
+    "software.card4.title": "待更新",
+    "software.card4.body": "相关工具信息即将发布。",
+    "software.card5.title": "待更新",
+    "software.card5.body": "相关工具信息即将发布。",
+    "software.card6.title": "S2F",
+    "software.card6.body": "序列到功能预测工具包。"
+  }
+}

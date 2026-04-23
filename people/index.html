@@ -3,29 +3,41 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>People | Wu Lab</title>
-  <meta name="description" content="Lab members and collaborators at Wu Lab." />
+  <title data-i18n="people.meta.title">People | Wu Lab</title>
+  <meta name="description" content="Lab members and collaborators at Wu Lab." data-i18n-attr="content:people.meta.description" />
+  <link rel="icon" type="image/svg+xml" href="../assets/branding/logo.svg" />
+  <script>
+    (function () {
+      try {
+        var lang = localStorage.getItem("siteLang") || "en";
+        document.documentElement.dataset.siteLang = lang;
+        if (lang === "zh") {
+          document.documentElement.classList.add("i18n-pending");
+        }
+      } catch (e) {}
+    })();
+  </script>
+  <style>
+    html.i18n-pending body { visibility: hidden; }
+  </style>
   <link rel="stylesheet" href="../styles.css" />
 </head>
 <body>
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="../index.html" aria-label="Home">
-        <span class="brand-mark">LAB</span>
-        <span class="brand-text">
-          <span class="brand-title">Wu Lab</span>
-          <span class="brand-subtitle">Hangzhou Institute of Medicine, Chinese Academy of Science</span>
-        </span>
+      <a class="brand" href="../index.html" aria-label="Home" data-i18n-attr="aria-label:shared.brand.home">
+        <span class="brand-combo"><span class="brand-mark"><img class="brand-logo" src="../assets/branding/logowithwords.svg" alt="Wu Lab logo" /></span><span class="brand-divider" aria-hidden="true"></span><span class="brand-partner"><img class="brand-partner-logo" src="../assets/branding/HIMCASlogo2.png" alt="HIMCAS logo" /></span></span>
       </a>
-      <button class="nav-toggle" id="navToggle" type="button" aria-label="Open menu" aria-expanded="false">Menu</button>
+      <button class="nav-toggle" id="navToggle" type="button" aria-label="Open menu" data-i18n-attr="aria-label:shared.menu" aria-expanded="false">Menu</button>
       <nav class="nav" id="nav">
-        <a href="../index.html">Home</a>
-        <a href="../research/">Research</a>
-        <a href="../people/">People</a>
-        <a href="../publications/">Publications</a>
-        <a href="../software/">Software</a>
-        <a href="../resources/">Resources</a>
-              <a href="../join/">Join Us</a>
+        <a href="../index.html" data-i18n="shared.nav.home">Home</a>
+        <a href="../research/" data-i18n="shared.nav.research">Research</a>
+        <a href="../people/" data-i18n="shared.nav.people">People</a>
+        <a href="../publications/" data-i18n="shared.nav.publications">Publications</a>
+        <a href="../software/" data-i18n="shared.nav.software">Software</a>
+        <a href="../news/" data-i18n="shared.nav.news">News</a>
+              <a href="../join/" data-i18n="shared.nav.join">Join Us</a>
+        <button class="lang-toggle" id="langToggle" type="button" data-i18n="shared.lang.toggle">中文</button>
       </nav>
     </div>
   </header>
@@ -33,79 +45,79 @@
   <main class="section">
     <div class="container">
       <div class="section-head">
-        <h2>Current Lab Members</h2>
-        <p>Team members and where we are based.</p>
+        <h2 data-i18n="people.head.title">Current Lab Members</h2>
+        <p data-i18n="people.head.lead">Team members and where we are based.</p>
       </div>
       <article class="member-card pi-card">
         <div class="avatar" aria-hidden="true"></div>
-            <h3>Dr. Qin Wu</h3><p class="muted"><a href="mailto:wuqin@him.cas.cn">wuqin@him.cas.cn</a></p>
-            <p>Qin Wu is a Principal Investigator and Ph.D. Supervisor at the Hangzhou Institute of Medicine, Chinese Academy of Sciences, and Head of the Research Group. She serves as Chief Scientist of a CAS Strategic Priority Research Program, Deputy Director of the Center for Nucleic Acid Molecular Medicine, and Vice Dean of the Innovation Research Institute. She is a recipient of the National Excellent Young Scientists Fund (Overseas), the Zhejiang Provincial Distinguished Young Scientists Fund, and is recognized as a Zhejiang High-Level Overseas Talent (Long-term Innovation Program).</p>
+            <h3 data-i18n="people.pi.name">Dr. Qin Wu</h3><p class="muted"><a href="mailto:wuqin@him.cas.cn">wuqin@him.cas.cn</a></p>
+            <p data-i18n="people.pi.bio1">Qin Wu is a Principal Investigator and Ph.D. Supervisor at the Hangzhou Institute of Medicine, Chinese Academy of Sciences, and Head of the Research Group. She serves as Chief Scientist of a CAS Strategic Priority Research Program, Deputy Director of the Center for Nucleic Acid Molecular Medicine, and Vice Dean of the Innovation Research Institute. She is a recipient of the National Excellent Young Scientists Fund (Overseas), the Zhejiang Provincial Distinguished Young Scientists Fund, and is recognized as a Zhejiang High-Level Overseas Talent (Long-term Innovation Program).</p>
 
-            <p>Her research group integrates chemical biology, cell biology, molecular biology, and bioinformatics to construct single-cell spatiotemporal molecular maps of tumors. The team aims to identify novel therapeutic targets, elucidate the molecular mechanisms underlying tumor initiation and progression, discover predictive biomarkers of drug response, and develop innovative therapeutic strategies to enable personalized precision medicine.In the past two years, as corresponding author, she has published multiple papers in leading journals including Nature Chemical Biology, Nature Communications, Cell Chemical Biology, and Advanced Science, and has been granted several patents. She currently leads multiple national and provincial research projects, including grants from the National Natural Science Foundation of China and key R&D programs of the Ministry of Science and Technology and Zhejiang Province.</p>
+            <p data-i18n="people.pi.bio2">Her research group integrates chemical biology, cell biology, molecular biology, and bioinformatics to construct single-cell spatiotemporal molecular maps of tumors. The team aims to identify novel therapeutic targets, elucidate the molecular mechanisms underlying tumor initiation and progression, discover predictive biomarkers of drug response, and develop innovative therapeutic strategies to enable personalized precision medicine. In the past two years, as corresponding author, she has published multiple papers in leading journals including Nature Chemical Biology, Nature Communications, Cell Chemical Biology, and Advanced Science, and has been granted several patents. She currently leads multiple national and provincial research projects, including grants from the National Natural Science Foundation of China and key R&D programs of the Ministry of Science and Technology and Zhejiang Province.</p>
 
       </article>
       <div class="people-layout">
         <div class="map-panel">
           <div id="chinaObjWrap">
-            <object id="chinaObj" type="image/svg+xml" data="../assets/china.svg"></object>
+            <object id="chinaObj" type="image/svg+xml" data="../assets/people/china.svg"></object>
           </div>
           <div class="map-legend">
-            <span id="mapInfo">Hover a province to see details. Click to open link.</span>
+            <span id="mapInfo" data-i18n="people.mapInfo">Hover a province to see details. Click to open link.</span>
           </div>
         </div>
         <div class="member-list">
 
           <article class="member-card">
             <div class="avatar" aria-hidden="true"></div>
-            <h3>Postdoctoral Researcher</h3>
-            <p>Computational biology • Biomarker discovery</p>
+            <h3 data-i18n="people.member1.title">Postdoctoral Researcher</h3>
+            <p data-i18n="people.member1.body">Computational biology • Biomarker discovery</p>
           </article>
           <article class="member-card">
             <div class="avatar" aria-hidden="true"></div>
-            <h3>PhD Student</h3>
-            <p>Multi-omics integration • Network medicine</p>
+            <h3 data-i18n="people.member2.title">PhD Student</h3>
+            <p data-i18n="people.member2.body">Multi-omics integration • Network medicine</p>
           </article>
           <article class="member-card">
             <div class="avatar" aria-hidden="true"></div>
-            <h3>MSc Student</h3>
-            <p>Clinical ML • Translational pipelines</p>
+            <h3 data-i18n="people.member3.title">MSc Student</h3>
+            <p data-i18n="people.member3.body">Clinical ML • Translational pipelines</p>
           </article>
         </div>
       </div>
 
       <div class="section-subhead">
-        <h3>Former Lab Members</h3>
+        <h3 data-i18n="people.former">Former Lab Members</h3>
       </div>
       <div class="tag-list">
-        <span>Former Postdoc</span>
-        <span>Former PhD Student</span>
-        <span>Former MSc Student</span>
-        <span>Former Research Assistant</span>
+        <span data-i18n="people.former.1">Former Postdoc</span>
+        <span data-i18n="people.former.2">Former PhD Student</span>
+        <span data-i18n="people.former.3">Former MSc Student</span>
+        <span data-i18n="people.former.4">Former Research Assistant</span>
       </div>
 
       <div class="section-subhead">
-        <h3>Lab Photos</h3>
+        <h3 data-i18n="people.photos">Lab Photos</h3>
       </div>
       <div class="photo-grid">
         <figure class="photo-placeholder">
-          <img class="photo-image" src="../assets/labphoto1.jpg" alt="Lab photo 1" />
+          <img class="photo-image" src="../assets/people/labphoto1.jpg" alt="Lab photo 1" />
         </figure>
         <figure class="photo-placeholder">
-          <img class="photo-image" src="../assets/labphoto2.jpg" alt="Lab photo 2" />
+          <img class="photo-image" src="../assets/people/labphoto2.jpg" alt="Lab photo 2" />
         </figure>
         <figure class="photo-placeholder">
-          <img class="photo-image" src="../assets/labphoto3.jpg" alt="Lab photo 3" />
+          <img class="photo-image" src="../assets/people/labphoto3.jpg" alt="Lab photo 3" />
         </figure>
         <figure class="photo-placeholder">
-          <img class="photo-image" src="../assets/labphoto4.jpg" alt="Lab photo 4" />
+          <img class="photo-image" src="../assets/people/labphoto4.jpg" alt="Lab photo 4" />
         </figure>
       </div>
 
       <div class="section-subhead">
         <div class="hero-actions">
-          <a class="btn" href="../join/">Join us</a>
+          <a class="btn" href="../join/" data-i18n="people.join">Join us</a>
         </div>
-        <p>We are always looking for talented students, postdocs, and collaborators. Explore current opportunities and get in touch.</p>
+        <p data-i18n="people.join.lead">We are always looking for talented students, postdocs, and collaborators. Explore current opportunities and get in touch.</p>
 
       </div>
     </div>
@@ -114,35 +126,25 @@
   <footer class="footer" id="contact">
     <div class="container footer-inner">
       <div>
-        <h2>Address</h2>
-        <p>
-          Wu Qin Research Laboratory<br />
-          Hangzhou Institute of Medicine<br />
-          Chinese Academy of Sciences<br />
-          Department of Innovation Research<br />
-        </p>
+        <h2 data-i18n="shared.footer.address.title">Address</h2>
+        <p data-i18n-html="shared.footer.address.html">Wu Qin Research Laboratory<br />Hangzhou Institute of Medicine<br />Chinese Academy of Sciences<br />Department of Innovation Research<br /></p>
       </div>
       <div>
-        <h3>Contact Information</h3>
-        <p>
-          No. 150 Dongfang Street<br />
-          Xiasha Subdistrict<br />
-          Qiantang District<br />
-          Hangzhou, Zhejiang 310018<br />
-          P.R. China
-        </p> 
+        <h3 data-i18n="shared.footer.contact.title">Contact Information</h3>
+        <p data-i18n-html="shared.footer.contact.html">No. 150 Dongfang Street<br />Xiasha Subdistrict<br />Qiantang District<br />Hangzhou, Zhejiang 310018<br />P.R. China</p> 
         <p><a href="mailto:wuqin@him.cas.cn">wuqin@him.cas.cn</a></p>
       </div>
       <div>
-        <h3>Quick links</h3>
+        <h3 data-i18n="shared.footer.links.title">Quick links</h3>
         <p class="link-list">
-          <a href="../index.html">Home</a>
-          <a href="../research/">Research</a>
-          <a href="../people/">People</a>
-          <a href="../publications/">Publications</a>
-          <a href="../software/">Software</a>
-          <a href="../resources/">Resources</a>
-          <a href="../join/">Join Us</a>
+          <a href="../index.html" data-i18n="shared.nav.home">Home</a>
+          <a href="../research/" data-i18n="shared.nav.research">Research</a>
+          <a href="../people/" data-i18n="shared.nav.people">People</a>
+          <a href="../publications/" data-i18n="shared.nav.publications">Publications</a>
+          <a href="../software/" data-i18n="shared.nav.software">Software</a>
+          <a href="../news/" data-i18n="shared.nav.news">News</a>
+          <a href="../join/" data-i18n="shared.nav.join">Join Us</a>
+        
         </p>
       </div>
     </div>

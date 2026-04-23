@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en" data-base="../">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Study | Wu Lab</title>
+  <meta name="description" content="Research study detail from Wu Lab." />
+  <link rel="icon" type="image/svg+xml" href="../assets/branding/logo.svg" />
+  <script>
+    (function () {
+      try {
+        var lang = localStorage.getItem("siteLang") || "en";
+        document.documentElement.dataset.siteLang = lang;
+        if (lang === "zh") {
+          document.documentElement.classList.add("i18n-pending");
+        }
+      } catch (e) {}
+    })();
+  </script>
+  <style>
+    html.i18n-pending body { visibility: hidden; }
+  </style>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body data-research-page="study">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="../index.html" aria-label="Home" data-i18n-attr="aria-label:shared.brand.home">
+        <span class="brand-combo"><span class="brand-mark"><img class="brand-logo" src="../assets/branding/logowithwords.svg" alt="Wu Lab logo" /></span><span class="brand-divider" aria-hidden="true"></span><span class="brand-partner"><img class="brand-partner-logo" src="../assets/branding/HIMCASlogo2.png" alt="HIMCAS logo" /></span></span>
+      </a>
+      <button class="nav-toggle" id="navToggle" type="button" aria-label="Open menu" data-i18n-attr="aria-label:shared.menu" aria-expanded="false">Menu</button>
+      <nav class="nav" id="nav">
+        <a href="../index.html" data-i18n="shared.nav.home">Home</a>
+        <a href="../research/" data-i18n="shared.nav.research">Research</a>
+        <a href="../people/" data-i18n="shared.nav.people">People</a>
+        <a href="../publications/" data-i18n="shared.nav.publications">Publications</a>
+        <a href="../software/" data-i18n="shared.nav.software">Software</a>
+        <a href="../news/" data-i18n="shared.nav.news">News</a>
+        <a href="../join/" data-i18n="shared.nav.join">Join Us</a>
+        <button class="lang-toggle" id="langToggle" type="button" data-i18n="shared.lang.toggle">中文</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container" id="studyPage">
+      <p class="research-breadcrumb"><a href="./">Research</a> / <span id="studyThemeCrumb">Study</span> / <span>Detail</span></p>
+      <section class="research-study-layout">
+        <article class="card research-study-card research-study-main">
+          <div class="study-heading">
+            <span class="study-theme-tag" id="studyThemeTag"></span>
+            <h1 id="studyTitle">Study title</h1>
+            <p class="study-journal" id="studyJournal"></p>
+            <p class="study-citation" id="studyCitation"></p>
+          </div>
+          <figure class="study-figure-frame">
+            <img id="studyFigure" src="" alt="" />
+          </figure>
+          <section class="study-section">
+            <h2>Why This Study Matters</h2>
+            <ul class="study-summary" id="studySummary"></ul>
+          </section>
+          <section class="study-section">
+            <h2>Why It Sits In This Theme</h2>
+            <p id="studyThemeFit"></p>
+          </section>
+          <div class="study-link-row">
+            <a class="btn" id="studyPdfLink" href="#">Open PDF</a>
+            <a class="btn btn-secondary" id="studyDoiLink" href="#" target="_blank" rel="noopener noreferrer">Open DOI</a>
+            <a class="btn btn-secondary" id="studyThemeLink" href="./">Back to theme map</a>
+          </div>
+        </article>
+        <aside class="card research-study-card research-study-side">
+          <section class="study-section">
+            <h2>Related Studies</h2>
+            <div class="related-study-list" id="studyRelated"></div>
+          </section>
+        </aside>
+      </section>
+      <p class="research-runtime-error" id="researchRuntimeError" hidden></p>
+    </div>
+  </main>
+
+  <footer class="footer" id="contact">
+    <div class="container footer-inner">
+      <div>
+        <h2 data-i18n="shared.footer.address.title">Address</h2>
+        <p data-i18n-html="shared.footer.address.html">Wu Qin Research Laboratory<br />Hangzhou Institute of Medicine<br />Chinese Academy of Sciences<br />Department of Innovation Research<br /></p>
+      </div>
+      <div>
+        <h3 data-i18n="shared.footer.contact.title">Contact Information</h3>
+        <p data-i18n-html="shared.footer.contact.html">No. 150 Dongfang Street<br />Xiasha Subdistrict<br />Qiantang District<br />Hangzhou, Zhejiang 310018<br />P.R. China</p>
+        <p><a href="mailto:wuqin@him.cas.cn">wuqin@him.cas.cn</a></p>
+      </div>
+      <div>
+        <h3 data-i18n="shared.footer.links.title">Quick links</h3>
+        <p class="link-list">
+          <a href="../index.html" data-i18n="shared.nav.home">Home</a>
+          <a href="../research/" data-i18n="shared.nav.research">Research</a>
+          <a href="../people/" data-i18n="shared.nav.people">People</a>
+          <a href="../publications/" data-i18n="shared.nav.publications">Publications</a>
+          <a href="../software/" data-i18n="shared.nav.software">Software</a>
+          <a href="../news/" data-i18n="shared.nav.news">News</a>
+          <a href="../join/" data-i18n="shared.nav.join">Join Us</a>
+        </p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <span>© <span id="year"></span> Wu Lab</span>
+        <span class="muted">xxxx • xxxx</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+  <script src="./research-map.js"></script>
+</body>
+</html>

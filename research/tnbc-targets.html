@@ -3,29 +3,41 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>New Therapeutic Targets for TNBC | Wu Lab</title>
-  <meta name="description" content="New therapeutic targets for triple-negative breast cancer." />
+  <title data-i18n="research.detail.tnbc.meta.title">placeholder</title>
+  <meta name="description" content="" data-i18n-attr="content:research.detail.tnbc.meta.description" />
+  <link rel="icon" type="image/svg+xml" href="../assets/branding/logo.svg" />
+  <script>
+    (function () {
+      try {
+        var lang = localStorage.getItem("siteLang") || "en";
+        document.documentElement.dataset.siteLang = lang;
+        if (lang === "zh") {
+          document.documentElement.classList.add("i18n-pending");
+        }
+      } catch (e) {}
+    })();
+  </script>
+  <style>
+    html.i18n-pending body { visibility: hidden; }
+  </style>
   <link rel="stylesheet" href="../styles.css" />
 </head>
 <body>
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="../index.html" aria-label="Home">
-        <span class="brand-mark">LAB</span>
-        <span class="brand-text">
-          <span class="brand-title">Wu Lab</span>
-          <span class="brand-subtitle">Hangzhou Institute of Medicine, Chinese Academy of Science</span>
-        </span>
+      <a class="brand" href="../index.html" aria-label="Home" data-i18n-attr="aria-label:shared.brand.home">
+        <span class="brand-combo"><span class="brand-mark"><img class="brand-logo" src="../assets/branding/logowithwords.svg" alt="Wu Lab logo" /></span><span class="brand-divider" aria-hidden="true"></span><span class="brand-partner"><img class="brand-partner-logo" src="../assets/branding/HIMCASlogo2.png" alt="HIMCAS logo" /></span></span>
       </a>
-      <button class="nav-toggle" id="navToggle" type="button" aria-label="Open menu" aria-expanded="false">Menu</button>
+      <button class="nav-toggle" id="navToggle" type="button" aria-label="Open menu" data-i18n-attr="aria-label:shared.menu" aria-expanded="false">Menu</button>
       <nav class="nav" id="nav">
-        <a href="../index.html">Home</a>
-        <a href="../research/">Research</a>
-        <a href="../people/">People</a>
-        <a href="../publications/">Publications</a>
-        <a href="../software/">Software</a>
-        <a href="../resources/">Resources</a>
-              <a href="../join/">Join Us</a>
+        <a href="../index.html" data-i18n="shared.nav.home">Home</a>
+        <a href="../research/" data-i18n="shared.nav.research">Research</a>
+        <a href="../people/" data-i18n="shared.nav.people">People</a>
+        <a href="../publications/" data-i18n="shared.nav.publications">Publications</a>
+        <a href="../software/" data-i18n="shared.nav.software">Software</a>
+        <a href="../news/" data-i18n="shared.nav.news">News</a>
+              <a href="../join/" data-i18n="shared.nav.join">Join Us</a>
+        <button class="lang-toggle" id="langToggle" type="button" data-i18n="shared.lang.toggle">中文</button>
       </nav>
     </div>
   </header>
@@ -33,32 +45,13 @@
   <main class="section">
     <div class="container">
       <div class="section-head">
-        <h2>New Therapeutic Targets for TNBC</h2>
+        <h2 data-i18n="research.detail.tnbc.title">placeholder</h2>
       </div>
       <div class="grid research-detail">
-        <div>
-          <p>
-            Triple-negative breast cancer (TNBC) lacks estrogen receptor, progesterone receptor, and HER2 overexpression, making it largely unresponsive to current
-            targeted therapies and prone to rapid progression. While paclitaxel plays a key role in early-stage or metastatic TNBC, most patients develop resistance
-            after 5–7 months of treatment, leading to disease worsening. To address this challenge, a screen of epigenetic small-molecule inhibitor libraries identified
-            protein arginine methyltransferases (PRMTs), which regulate RNA splicing and chromatin stability, as new targets for overcoming paclitaxel resistance. The
-            mechanism involves altered RNA splicing, particularly intron retention of Aurora kinase B (AURKB), leading to reduced protein expression and selective
-            induction of mitotic catastrophe in paclitaxel-resistant cells.
-          </p>
-          <p>
-            Building on our previous discoveries that RNA splicing regulates innate immune mechanisms in TNBC (Nature Chemical Biology 18, 821–830, 2022; Nature
-            Chemical Biology 18, 795–796, 2022), this study further explored the role of RNA splicing in TNBC drug resistance and provides a new therapeutic strategy.
-            The work, titled “A chemical screen identifies PRMT5 as a therapeutic vulnerability for paclitaxel-resistant triple-negative breast cancer,” was published
-            in <em>Cell Chemical Biology</em> in 2024, with Kejing Zhang, Juan Wei, and Sheyu Zhang as co-first authors.
-          </p>
-          <p>
-            Based on this innovative platform, our lab was invited by <em>Cell</em> to contribute a methods paper detailing experimental protocols and standardized
-            workflows for PRMT5-targeted therapy. The methods paper was published in <em>STAR Protocols</em> in 2025, with Juan Wei and Sheyu Zhang as co-first authors.
-          </p>
-        </div>
+        <div data-i18n-html="research.detail.tnbc.body.html">placeholder</div>
         <div class="card research-figure-card">
           <div class="image-placeholder no-mask">
-            <img class="slide-image fit-contain" src="../assets/research4.jpg" alt="Research illustration" />
+            <img class="slide-image fit-contain" src="../assets/research/research4.jpg" alt="Research illustration" />
           </div>
         </div>
       </div>
@@ -68,35 +61,25 @@
   <footer class="footer" id="contact">
     <div class="container footer-inner">
       <div>
-        <h2>Address</h2>
-        <p>
-          Wu Qin Research Laboratory<br />
-          Hangzhou Institute of Medicine<br />
-          Chinese Academy of Sciences<br />
-          Department of Innovation Research<br />
-        </p>
+        <h2 data-i18n="shared.footer.address.title">Address</h2>
+        <p data-i18n-html="shared.footer.address.html">Wu Qin Research Laboratory<br />Hangzhou Institute of Medicine<br />Chinese Academy of Sciences<br />Department of Innovation Research<br /></p>
       </div>
       <div>
-        <h3>Contact Information</h3>
-        <p>
-          No. 150 Dongfang Street<br />
-          Xiasha Subdistrict<br />
-          Qiantang District<br />
-          Hangzhou, Zhejiang 310018<br />
-          P.R. China
-        </p> 
+        <h3 data-i18n="shared.footer.contact.title">Contact Information</h3>
+        <p data-i18n-html="shared.footer.contact.html">No. 150 Dongfang Street<br />Xiasha Subdistrict<br />Qiantang District<br />Hangzhou, Zhejiang 310018<br />P.R. China</p> 
         <p><a href="mailto:wuqin@him.cas.cn">wuqin@him.cas.cn</a></p>
       </div>
       <div>
-        <h3>Quick links</h3>
+        <h3 data-i18n="shared.footer.links.title">Quick links</h3>
         <p class="link-list">
-          <a href="../index.html">Home</a>
-          <a href="../research/">Research</a>
-          <a href="../people/">People</a>
-          <a href="../publications/">Publications</a>
-          <a href="../software/">Software</a>
-          <a href="../resources/">Resources</a>
-          <a href="../join/">Join Us</a>
+          <a href="../index.html" data-i18n="shared.nav.home">Home</a>
+          <a href="../research/" data-i18n="shared.nav.research">Research</a>
+          <a href="../people/" data-i18n="shared.nav.people">People</a>
+          <a href="../publications/" data-i18n="shared.nav.publications">Publications</a>
+          <a href="../software/" data-i18n="shared.nav.software">Software</a>
+          <a href="../news/" data-i18n="shared.nav.news">News</a>
+          <a href="../join/" data-i18n="shared.nav.join">Join Us</a>
+        
         </p>
       </div>
     </div>

@@ -3,29 +3,41 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Software | Wu Lab</title>
+  <title data-i18n="software.meta.title">Software | Wu Lab</title>
   <meta name="description" content="Software and tools from Wu Lab." />
+  <link rel="icon" type="image/svg+xml" href="../assets/branding/logo.svg" />
+  <script>
+    (function () {
+      try {
+        var lang = localStorage.getItem("siteLang") || "en";
+        document.documentElement.dataset.siteLang = lang;
+        if (lang === "zh") {
+          document.documentElement.classList.add("i18n-pending");
+        }
+      } catch (e) {}
+    })();
+  </script>
+  <style>
+    html.i18n-pending body { visibility: hidden; }
+  </style>
   <link rel="stylesheet" href="../styles.css" />
 </head>
 <body>
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="../index.html" aria-label="Home">
-        <span class="brand-mark">LAB</span>
-        <span class="brand-text">
-          <span class="brand-title">Wu Lab</span>
-          <span class="brand-subtitle">Hangzhou Institute of Medicine, Chinese Academy of Science</span>
-        </span>
+      <a class="brand" href="../index.html" aria-label="Home" data-i18n-attr="aria-label:shared.brand.home">
+        <span class="brand-combo"><span class="brand-mark"><img class="brand-logo" src="../assets/branding/logowithwords.svg" alt="Wu Lab logo" /></span><span class="brand-divider" aria-hidden="true"></span><span class="brand-partner"><img class="brand-partner-logo" src="../assets/branding/HIMCASlogo2.png" alt="HIMCAS logo" /></span></span>
       </a>
-      <button class="nav-toggle" id="navToggle" type="button" aria-label="Open menu" aria-expanded="false">Menu</button>
+      <button class="nav-toggle" id="navToggle" type="button" aria-label="Open menu" data-i18n-attr="aria-label:shared.menu" aria-expanded="false">Menu</button>
       <nav class="nav" id="nav">
-        <a href="../index.html">Home</a>
-        <a href="../research/">Research</a>
-        <a href="../people/">People</a>
-        <a href="../publications/">Publications</a>
-        <a href="../software/">Software</a>
-        <a href="../resources/">Resources</a>
-              <a href="../join/">Join Us</a>
+        <a href="../index.html" data-i18n="shared.nav.home">Home</a>
+        <a href="../research/" data-i18n="shared.nav.research">Research</a>
+        <a href="../people/" data-i18n="shared.nav.people">People</a>
+        <a href="../publications/" data-i18n="shared.nav.publications">Publications</a>
+        <a href="../software/" data-i18n="shared.nav.software">Software</a>
+        <a href="../news/" data-i18n="shared.nav.news">News</a>
+              <a href="../join/" data-i18n="shared.nav.join">Join Us</a>
+        <button class="lang-toggle" id="langToggle" type="button" data-i18n="shared.lang.toggle">中文</button>
       </nav>
     </div>
   </header>
@@ -33,45 +45,45 @@
   <main class="section">
     <div class="container">
       <div class="section-head">
-        <h2>Software</h2>
-        <p>Tools and pipelines from the lab.</p>
+        <h2 data-i18n="software.head.title">Software</h2>
+        <p data-i18n="software.head.lead2">Tools and pipelines from the lab.</p>
       </div>
       <div class="grid tools">
         <article class="tool-card">
           <div class="tool-media" aria-hidden="true"></div>
-          <h4>XXXX</h4>
-          <p>XXXXXXXXXXXXXXXX.</p>
-          <a class="tool-link" href="#" aria-disabled="true">Read more</a>
+          <h4 data-i18n="software.card1.title">XXXX</h4>
+          <p data-i18n="software.card1.body">XXXXXXXXXXXXXXXX.</p>
+          <a class="tool-link" href="#" aria-disabled="true" data-i18n="shared.actions.readMore">Read more</a>
         </article>
         <article class="tool-card">
           <div class="tool-media" aria-hidden="true"></div>
-          <h4>XXXX</h4>
-          <p>XXXXXXXXXXXXXXXX.</p>
-          <a class="tool-link" href="#" aria-disabled="true">Read more</a>
+          <h4 data-i18n="software.card2.title">XXXX</h4>
+          <p data-i18n="software.card2.body">XXXXXXXXXXXXXXXX.</p>
+          <a class="tool-link" href="#" aria-disabled="true" data-i18n="shared.actions.readMore">Read more</a>
         </article>
         <article class="tool-card">
           <div class="tool-media" aria-hidden="true"></div>
-          <h4>XXXX</h4>
-          <p>XXXXXXXXXXXXXXXX.</p>
-          <a class="tool-link" href="#" aria-disabled="true">Read more</a>
+          <h4 data-i18n="software.card3.title">XXXX</h4>
+          <p data-i18n="software.card3.body">XXXXXXXXXXXXXXXX.</p>
+          <a class="tool-link" href="#" aria-disabled="true" data-i18n="shared.actions.readMore">Read more</a>
         </article>
         <article class="tool-card">
           <div class="tool-media" aria-hidden="true"></div>
-          <h4>XXXX</h4>
-          <p>XXXXXXXXXXXXXXXX.</p>
-          <a class="tool-link" href="#" aria-disabled="true">Read more</a>
+          <h4 data-i18n="software.card4.title">XXXX</h4>
+          <p data-i18n="software.card4.body">XXXXXXXXXXXXXXXX.</p>
+          <a class="tool-link" href="#" aria-disabled="true" data-i18n="shared.actions.readMore">Read more</a>
         </article>
         <article class="tool-card">
           <div class="tool-media" aria-hidden="true"></div>
-          <h4>XXXX</h4>
-          <p>XXXXXXXXXXXXXXXX.</p>
-          <a class="tool-link" href="#" aria-disabled="true">Read more</a>
+          <h4 data-i18n="software.card5.title">XXXX</h4>
+          <p data-i18n="software.card5.body">XXXXXXXXXXXXXXXX.</p>
+          <a class="tool-link" href="#" aria-disabled="true" data-i18n="shared.actions.readMore">Read more</a>
         </article>
         <article class="tool-card">
           <div class="tool-media" aria-hidden="true"></div>
-          <h4>S2F</h4>
-          <p>Sequence-to-function prediction toolkit.</p>
-          <a class="tool-link" href="#" aria-disabled="true">Read more</a>
+          <h4 data-i18n="software.card6.title">S2F</h4>
+          <p data-i18n="software.card6.body">Sequence-to-function prediction toolkit.</p>
+          <a class="tool-link" href="#" aria-disabled="true" data-i18n="shared.actions.readMore">Read more</a>
         </article>
       </div>
     </div>
@@ -80,35 +92,25 @@
   <footer class="footer" id="contact">
     <div class="container footer-inner">
       <div>
-        <h2>Address</h2>
-        <p>
-          Wu Qin Research Laboratory<br />
-          Hangzhou Institute of Medicine<br />
-          Chinese Academy of Sciences<br />
-          Department of Innovation Research<br />
-        </p>
+        <h2 data-i18n="shared.footer.address.title">Address</h2>
+        <p data-i18n-html="shared.footer.address.html">Wu Qin Research Laboratory<br />Hangzhou Institute of Medicine<br />Chinese Academy of Sciences<br />Department of Innovation Research<br /></p>
       </div>
       <div>
-        <h3>Contact Information</h3>
-        <p>
-          No. 150 Dongfang Street<br />
-          Xiasha Subdistrict<br />
-          Qiantang District<br />
-          Hangzhou, Zhejiang 310018<br />
-          P.R. China
-        </p> 
+        <h3 data-i18n="shared.footer.contact.title">Contact Information</h3>
+        <p data-i18n-html="shared.footer.contact.html">No. 150 Dongfang Street<br />Xiasha Subdistrict<br />Qiantang District<br />Hangzhou, Zhejiang 310018<br />P.R. China</p> 
         <p><a href="mailto:wuqin@him.cas.cn">wuqin@him.cas.cn</a></p>
       </div>
       <div>
-        <h3>Quick links</h3>
+        <h3 data-i18n="shared.footer.links.title">Quick links</h3>
         <p class="link-list">
-          <a href="../index.html">Home</a>
-          <a href="../research/">Research</a>
-          <a href="../people/">People</a>
-          <a href="../publications/">Publications</a>
-          <a href="../software/">Software</a>
-          <a href="../resources/">Resources</a>
-          <a href="../join/">Join Us</a>
+          <a href="../index.html" data-i18n="shared.nav.home">Home</a>
+          <a href="../research/" data-i18n="shared.nav.research">Research</a>
+          <a href="../people/" data-i18n="shared.nav.people">People</a>
+          <a href="../publications/" data-i18n="shared.nav.publications">Publications</a>
+          <a href="../software/" data-i18n="shared.nav.software">Software</a>
+          <a href="../news/" data-i18n="shared.nav.news">News</a>
+          <a href="../join/" data-i18n="shared.nav.join">Join Us</a>
+        
         </p>
       </div>
     </div>

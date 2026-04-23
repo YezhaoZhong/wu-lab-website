@@ -3,29 +3,41 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Publications | Wu Lab</title>
-  <meta name="description" content="Selected publications from Wu Lab." />
+  <title data-i18n="publications.meta.title">Publications | Wu Lab</title>
+  <meta name="description" content="Top Wu Lab publications ranked by journal impact factor." data-i18n-attr="content:publications.meta.description" />
+  <link rel="icon" type="image/svg+xml" href="../assets/branding/logo.svg" />
+  <script>
+    (function () {
+      try {
+        var lang = localStorage.getItem("siteLang") || "en";
+        document.documentElement.dataset.siteLang = lang;
+        if (lang === "zh") {
+          document.documentElement.classList.add("i18n-pending");
+        }
+      } catch (e) {}
+    })();
+  </script>
+  <style>
+    html.i18n-pending body { visibility: hidden; }
+  </style>
   <link rel="stylesheet" href="../styles.css" />
 </head>
 <body>
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="../index.html" aria-label="Home">
-        <span class="brand-mark">LAB</span>
-        <span class="brand-text">
-          <span class="brand-title">Wu Lab</span>
-          <span class="brand-subtitle">Hangzhou Institute of Medicine, Chinese Academy of Science</span>
-        </span>
+      <a class="brand" href="../index.html" aria-label="Home" data-i18n-attr="aria-label:shared.brand.home">
+        <span class="brand-combo"><span class="brand-mark"><img class="brand-logo" src="../assets/branding/logowithwords.svg" alt="Wu Lab logo" /></span><span class="brand-divider" aria-hidden="true"></span><span class="brand-partner"><img class="brand-partner-logo" src="../assets/branding/HIMCASlogo2.png" alt="HIMCAS logo" /></span></span>
       </a>
-      <button class="nav-toggle" id="navToggle" type="button" aria-label="Open menu" aria-expanded="false">Menu</button>
+      <button class="nav-toggle" id="navToggle" type="button" aria-label="Open menu" data-i18n-attr="aria-label:shared.menu" aria-expanded="false">Menu</button>
       <nav class="nav" id="nav">
-        <a href="../index.html">Home</a>
-        <a href="../research/">Research</a>
-        <a href="../people/">People</a>
-        <a href="../publications/">Publications</a>
-        <a href="../software/">Software</a>
-        <a href="../resources/">Resources</a>
-              <a href="../join/">Join Us</a>
+        <a href="../index.html" data-i18n="shared.nav.home">Home</a>
+        <a href="../research/" data-i18n="shared.nav.research">Research</a>
+        <a href="../people/" data-i18n="shared.nav.people">People</a>
+        <a href="../publications/" data-i18n="shared.nav.publications">Publications</a>
+        <a href="../software/" data-i18n="shared.nav.software">Software</a>
+        <a href="../news/" data-i18n="shared.nav.news">News</a>
+        <a href="../join/" data-i18n="shared.nav.join">Join Us</a>
+        <button class="lang-toggle" id="langToggle" type="button" data-i18n="shared.lang.toggle">中文</button>
       </nav>
     </div>
   </header>
@@ -33,191 +45,53 @@
   <main class="section">
     <div class="container">
       <div class="section-head">
-        <h2>Publications</h2>
-        <p>Selected recent work from the lab.</p>
+        <h2 data-i18n="publications.head.title">Publications</h2>
       </div>
-      <div class="pub-list">
-        <article class="pub-item">
-<div class="pub-media"><a class="pub-cover-link" href="https://doi.org/10.1126/science.adv6127"><img class="pub-cover" src="../assets/covers/luo-et-al-2026-spark-seq-a-high-throughput-platform-for-aptamer.png" alt="SPARK-seq: A high-throughput platform for aptamer discovery and kinetic profiling cover" /></a></div>
-          <p class="pub-authors">Luo G, Song J, Fu Y et al.</p>
-          <h3>SPARK-seq: A high-throughput platform for aptamer discovery and kinetic profiling</h3>
-          <p>Science • 2026</p>
-          <p class="pub-links">DOI: <a href="https://doi.org/10.1126/science.adv6127">10.1126/science.adv6127</a></p>
-          <p class="pub-links"><a href="../assets/papers/Luo et al. - 2026 - SPARK-seq A high-throughput platform for aptamer .pdf">PDF</a></p>
-        </article>
-        <article class="pub-item">
-<div class="pub-media"><a class="pub-cover-link" href="https://doi.org/10.1016/j.celbio.2025.100218"><img class="pub-cover" src="../assets/covers/tang-et-al-2026-cd4-aptamer-engineered-cell-platforms-enhance-anti-tumor-immunity-in-triple-negative-breast-cancer.png" alt="CD4 aptamer-engineered cell platforms enhance anti-tumor immunity in triple-negative breast cancer cover" /></a></div>
-          <p class="pub-authors">Tang H, Xiong Y, Gan S et al.</p>
-          <h3>CD4 aptamer-engineered cell platforms enhance anti-tumor immunity in triple-negative breast cancer</h3>
-          <p>Cell Biomaterials • 2026</p>
-          <p class="pub-links">DOI: <a href="https://doi.org/10.1016/j.celbio.2025.100218">10.1016/j.celbio.2025.100218</a></p>
-          <p class="pub-links"><a href="../assets/papers/Tang et al. - 2026 - CD4 aptamer-engineered cell platforms enhance anti-tumor immunity in triple-negative breast cancer.pdf">PDF</a></p>
-        </article>
-        <article class="pub-item">
-<div class="pub-media"><a class="pub-cover-link" href="https://doi.org/10.1002/advs.202500433"><img class="pub-cover" src="../assets/covers/fei-et-al-2025-ptf-sriapt-targeting-scaf4-polr2a-interaction-suppresses-tumor-growth-and-promotes-antitumor-immunit.png" alt="PTf-SRiApt Targeting SCAF4-POLR2A Interaction Suppresses Tumor Growth and Promotes Antitumor Immunity in Triple-Negative Breast Cancer cover" /></a></div>
-          <p class="pub-authors">Fei L, Pan Y, Zhai J et al.</p>
-          <h3>PTf-SRiApt Targeting SCAF4-POLR2A Interaction Suppresses Tumor Growth and Promotes Antitumor Immunity in Triple-Negative Breast Cancer</h3>
-          <p>Advanced Science • 2025</p>
-          <p class="pub-links">DOI: <a href="https://doi.org/10.1002/advs.202500433">10.1002/advs.202500433</a></p>
-          <p class="pub-links"><a href="../assets/papers/Fei et al. - 2025 - PTf-SRiApt Targeting SCAF4-POLR2A Interaction Suppresses Tumor Growth and Promotes Antitumor Immunit.pdf">PDF</a></p>
-        </article>
-        <article class="pub-item">
-<div class="pub-media"><a class="pub-cover-link" href="https://doi.org/10.1021/acs.analchem.4c06927"><img class="pub-cover" src="../assets/covers/guan-et-al-2025-multiplexed-detection-of-tumor-markers-and-discrimination-of-cancer-cell-types-by-laser-ablation-die.png" alt="Multiplexed Detection of Tumor Markers and Discrimination of Cancer Cell Types by Laser Ablation-Dielectric Barrier Discharge Ionization-Mass Spectrometry cover" /></a></div>
-          <p class="pub-authors">Guan X, Lu Q, Wei N et al.</p>
-          <h3>Multiplexed Detection of Tumor Markers and Discrimination of Cancer Cell Types by Laser Ablation-Dielectric Barrier Discharge Ionization-Mass Spectrometry</h3>
-          <p>Anal Chem • 2025</p>
-          <p class="pub-links">DOI: <a href="https://doi.org/10.1021/acs.analchem.4c06927">10.1021/acs.analchem.4c06927</a></p>
-          <p class="pub-links"><a href="../assets/papers/Guan et al. - 2025 - Multiplexed Detection of Tumor Markers and Discrimination of Cancer Cell Types by Laser Ablation-Die.pdf">PDF</a></p>
-        </article>
-        <article class="pub-item">
-<div class="pub-media"><a class="pub-cover-link" href="https://doi.org/10.1093/nar/gkaf144"><img class="pub-cover" src="../assets/covers/liu-et-al-2025-chemical-evolution-of-aso-like-dnazymes-for-effective-and-extended-gene-silencing-in-cells.png" alt="Chemical evolution of ASO-like DNAzymes for effective and extended gene silencing in cells cover" /></a></div>
-          <p class="pub-authors">Liu Y, Zhang S, Zhang M et al.</p>
-          <h3>Chemical evolution of ASO-like DNAzymes for effective and extended gene silencing in cells</h3>
-          <p>Nucleic Acids Research • 2025</p>
-          <p class="pub-links">DOI: <a href="https://doi.org/10.1093/nar/gkaf144">10.1093/nar/gkaf144</a></p>
-          <p class="pub-links"><a href="../assets/papers/Liu et al. - 2025 - Chemical evolution of ASO-like DNAzymes for effective and extended gene silencing in cells.pdf">PDF</a></p>
-        </article>
-        <article class="pub-item">
-<div class="pub-media"><a class="pub-cover-link" href="https://doi.org/10.1016/j.xpro.2025.103605"><img class="pub-cover" src="../assets/covers/wei-et-al-2025-protocol-to-identify-small-molecule-inhibitors-against-cancer-drug-resistance.png" alt="Protocol to identify small-molecule inhibitors against cancer drug resistance cover" /></a></div>
-          <p class="pub-authors">Wei J, Zhang S-Y, Zhou X-Y et al.</p>
-          <h3>Protocol to identify small-molecule inhibitors against cancer drug resistance</h3>
-          <p>STAR Protocols • 2025</p>
-          <p class="pub-links">DOI: <a href="https://doi.org/10.1016/j.xpro.2025.103605">10.1016/j.xpro.2025.103605</a></p>
-          <p class="pub-links"><a href="../assets/papers/Wei et al. - 2025 - Protocol to identify small-molecule inhibitors against cancer drug resistance.pdf">PDF</a></p>
-        </article>
-        <article class="pub-item">
-<div class="pub-media"><a class="pub-cover-link" href="https://doi.org/10.1021/jacs.5c01296"><img class="pub-cover" src="../assets/covers/wu-et-al-2025-high-throughput-multiplexed-quantification-of-molecules-by-aptamer-sequencing-apt-seq-in-single-ce.png" alt="High-Throughput Multiplexed Quantification of Molecules by Aptamer Sequencing (Apt-seq) in Single Cells cover" /></a></div>
-          <p class="pub-authors">Wu X, Lin X, Ma X et al.</p>
-          <h3>High-Throughput Multiplexed Quantification of Molecules by Aptamer Sequencing (Apt-seq) in Single Cells</h3>
-          <p>J Am Chem Soc • 2025</p>
-          <p class="pub-links">DOI: <a href="https://doi.org/10.1021/jacs.5c01296">10.1021/jacs.5c01296</a></p>
-          <p class="pub-links"><a href="../assets/papers/Wu et al. - 2025 - High-Throughput Multiplexed Quantification of Molecules by Aptamer Sequencing (Apt-seq) in Single Ce.pdf">PDF</a></p>
-        </article>
-        <article class="pub-item">
-<div class="pub-media"><a class="pub-cover-link" href="https://doi.org/10.1111/jcmm.70384"><img class="pub-cover" src="../assets/covers/yang-et-al-2025-increasing-rb1-expression-by-targeting-ezh2-in-triple-negative-breast-cancer.png" alt="Increasing RB1 Expression by Targeting EZH2 in Triple-Negative Breast Cancer cover" /></a></div>
-          <p class="pub-authors">Yang R, Fei L, Xue Y et al.</p>
-          <h3>Increasing RB1 Expression by Targeting EZH2 in Triple-Negative Breast Cancer</h3>
-          <p>Journal of Cellular and Molecular Medicine • 2025</p>
-          <p class="pub-links">DOI: <a href="https://doi.org/10.1111/jcmm.70384">10.1111/jcmm.70384</a></p>
-          <p class="pub-links"><a href="../assets/papers/Yang et al. - 2025 - Increasing RB1 Expression by Targeting EZH2 in Triple-Negative Breast Cancer.pdf">PDF</a></p>
-        </article>
-        <article class="pub-item">
-<div class="pub-media"><a class="pub-cover-link" href="https://doi.org/10.1002/advs.202308924"><img class="pub-cover" src="../assets/covers/duan-et-al-2024-multivalent-aptamer-based-lysosome-targeting-chimeras-lytacs-platform-for-mono-or-dual-targeted-p.png" alt="Multivalent Aptamer-Based Lysosome-Targeting Chimeras (LYTACs) Platform for Mono- or Dual-Targeted Proteins Degradation on Cell Surface cover" /></a></div>
-          <p class="pub-authors">Duan Q, Jia H-R, Chen W et al.</p>
-          <h3>Multivalent Aptamer-Based Lysosome-Targeting Chimeras (LYTACs) Platform for Mono- or Dual-Targeted Proteins Degradation on Cell Surface</h3>
-          <p>Advanced Science • 2024</p>
-          <p class="pub-links">DOI: <a href="https://doi.org/10.1002/advs.202308924">10.1002/advs.202308924</a></p>
-          <p class="pub-links"><a href="../assets/papers/Duan et al. - 2024 - Multivalent Aptamer-Based Lysosome-Targeting Chimeras (LYTACs) Platform for Mono- or Dual-Targeted P.pdf">PDF</a></p>
-        </article>
-        <article class="pub-item">
-<div class="pub-media"><a class="pub-cover-link" href="https://doi.org/10.1038/s41467-024-51197-w"><img class="pub-cover" src="../assets/covers/li-et-al-2024-blocker-selex-a-structure-guided-strategy-for-developing-inhibitory-aptamers-disrupting-undruggable.png" alt="Blocker-SELEX: a structure-guided strategy for developing inhibitory aptamers disrupting undruggable transcription factor interactions cover" /></a></div>
-          <p class="pub-authors">Li T, Liu X, Qian H et al.</p>
-          <h3>Blocker-SELEX: a structure-guided strategy for developing inhibitory aptamers disrupting undruggable transcription factor interactions</h3>
-          <p>Nat Commun • 2024</p>
-          <p class="pub-links">DOI: <a href="https://doi.org/10.1038/s41467-024-51197-w">10.1038/s41467-024-51197-w</a></p>
-          <p class="pub-links"><a href="../assets/papers/Li et al. - 2024 - Blocker-SELEX a structure-guided strategy for developing inhibitory aptamers disrupting undruggable.pdf">PDF</a></p>
-        </article>
-        <article class="pub-item">
-<div class="pub-media"><a class="pub-cover-link" href="https://doi.org/10.1021/acsnano.4c07969"><img class="pub-cover" src="../assets/covers/2024-the-emerging-era-of-molecular-medicine.png" alt="The Emerging Era of Molecular Medicine cover" /></a></div>
-          <p class="pub-authors"></p>
-          <p class="pub-authors">Tang H, Zhang Y, Wu Y et al.</p>
-          <h3>The Emerging Era of Molecular Medicine</h3>
-          <p>ACS Nano • 2024</p>
-          <p class="pub-links">DOI: <a href="https://doi.org/10.1021/acsnano.4c07969">10.1021/acsnano.4c07969</a></p>
-          <p class="pub-links"><a href="../assets/papers/2024 - The Emerging Era of Molecular Medicine.pdf">PDF</a></p>
-        </article>
-        <article class="pub-item">
-<div class="pub-media"><a class="pub-cover-link" href="https://doi.org/10.1016/j.chembiol.2024.08.003"><img class="pub-cover" src="../assets/covers/zhang-et-al-2024-a-chemical-screen-identifies-prmt5-as-a-therapeutic-vulnerability-for-paclitaxel-resistant-triple-ne.png" alt="A chemical screen identifies PRMT5 as a therapeutic vulnerability for paclitaxel-resistant triple-negative breast cancer cover" /></a></div>
-          <p class="pub-authors">Zhang K, Wei J, Zhang S et al.</p>
-          <h3>A chemical screen identifies PRMT5 as a therapeutic vulnerability for paclitaxel-resistant triple-negative breast cancer</h3>
-          <p>Chemistry &amp; Biology • 2024</p>
-          <p class="pub-links">DOI: <a href="https://doi.org/10.1016/j.chembiol.2024.08.003">10.1016/j.chembiol.2024.08.003</a></p>
-          <p class="pub-links"><a href="../assets/papers/Zhang et al. - 2024 - A chemical screen identifies PRMT5 as a therapeutic vulnerability for paclitaxel-resistant triple-ne.pdf">PDF</a></p>
-        </article>
-        <article class="pub-item">
-<div class="pub-media"><a class="pub-cover-link" href="https://doi.org/10.1002/cncr.35142"><img class="pub-cover" src="../assets/covers/zhang-et-al-2024-type-i-protein-arginine-methyltransferase-inhibition-primes-anti-programmed-cell-death-protein-1-imm.png" alt="Type-I protein arginine methyltransferase inhibition primes anti-programmed cell death protein 1 immunotherapy in triple-negative breast cancer cover" /></a></div>
-          <p class="pub-authors">Zhang S, Guo L, Zhang Z et al.</p>
-          <h3>Type-I protein arginine methyltransferase inhibition primes anti-programmed cell death protein 1 immunotherapy in triple-negative breast cancer</h3>
-          <p>Cancer • 2024</p>
-          <p class="pub-links">DOI: <a href="https://doi.org/10.1002/cncr.35142">10.1002/cncr.35142</a></p>
-          <p class="pub-links"><a href="../assets/papers/Zhang et al. - 2024 - Type-I protein arginine methyltransferase inhibition primes anti-programmed cell death protein 1 imm.pdf">PDF</a></p>
-        </article>
-        <article class="pub-item">
-<div class="pub-media"><a class="pub-cover-link" href="https://doi.org/10.1016/j.bbrc.2023.04.100"><img class="pub-cover" src="../assets/covers/zhang-et-al-2023-targeting-taf1-with-bay-299-induces-antitumor-immunity-in-triple-negative-breast-cancer.png" alt="Targeting TAF1 with BAY-299 induces antitumor immunity in triple-negative breast cancer cover" /></a></div>
-          <p class="pub-authors">Zhang S, Liu X, Chen W et al.</p>
-          <h3>Targeting TAF1 with BAY-299 induces antitumor immunity in triple-negative breast cancer</h3>
-          <p>Biochemical and Biophysical Research Communications • 2023</p>
-          <p class="pub-links">DOI: <a href="https://doi.org/10.1016/j.bbrc.2023.04.100">10.1016/j.bbrc.2023.04.100</a></p>
-          <p class="pub-links"><a href="../assets/papers/Zhang et al. - 2023 - Targeting TAF1 with BAY-299 induces antitumor immunity in triple-negative breast cancer.pdf">PDF</a></p>
-        </article>
-        <article class="pub-item">
-<div class="pub-media"><a class="pub-cover-link" href="https://doi.org/10.1038/s41589-022-01024-4"><img class="pub-cover" src="../assets/covers/wu-et-al-2022-prmt-inhibition-induces-a-viral-mimicry-response-in-triple-negative-breast-cancer.png" alt="PRMT inhibition induces a viral mimicry response in triple-negative breast cancer cover" /></a></div>
-          <p class="pub-authors">Wu Q, Nie DY, Ba-alawi W et al.</p>
-          <h3>PRMT inhibition induces a viral mimicry response in triple-negative breast cancer</h3>
-          <p>Nat Chem Biol • 2022</p>
-          <p class="pub-links">DOI: <a href="https://doi.org/10.1038/s41589-022-01024-4">10.1038/s41589-022-01024-4</a></p>
-          <p class="pub-links"><a href="../assets/papers/Wu et al. - 2022 - PRMT inhibition induces a viral mimicry response in triple-negative breast cancer.pdf">PDF</a></p>
-        </article>
-        <article class="pub-item">
-<div class="pub-media"><a class="pub-cover-link" href="https://doi.org/10.1038/s41573-021-00159-8"><img class="pub-cover" src="../assets/covers/wu-et-al-2021-protein-arginine-methylation-from-enigmatic-functions-to-therapeutic-targeting.png" alt="Protein arginine methylation: from enigmatic functions to therapeutic targeting cover" /></a></div>
-          <p class="pub-authors">Wu Q, Schapira M, Arrowsmith CH et al.</p>
-          <h3>Protein arginine methylation: from enigmatic functions to therapeutic targeting</h3>
-          <p>Nat Rev Drug Discov • 2021</p>
-          <p class="pub-links">DOI: <a href="https://doi.org/10.1038/s41573-021-00159-8">10.1038/s41573-021-00159-8</a></p>
-          <p class="pub-links"><a href="../assets/papers/Wu et al. - 2021 - Protein arginine methylation from enigmatic functions to therapeutic targeting.pdf">PDF</a></p>
-        </article>
-        <article class="pub-item">
-<div class="pub-media"><a class="pub-cover-link" href="https://doi.org/10.1038/s41467-020-18020-8"><img class="pub-cover" src="../assets/covers/wu-et-al-2020-glut1-inhibition-blocks-growth-of-rb1-positive-triple-negative-breast-cancer.png" alt="GLUT1 inhibition blocks growth of RB1-positive triple negative breast cancer cover" /></a></div>
-          <p class="pub-authors">Wu Q, Ba-Alawi W, Deblois G et al.</p>
-          <h3>GLUT1 inhibition blocks growth of RB1-positive triple negative breast cancer</h3>
-          <p>Nat Commun • 2020</p>
-          <p class="pub-links">DOI: <a href="https://doi.org/10.1038/s41467-020-18020-8">10.1038/s41467-020-18020-8</a></p>
-          <p class="pub-links"><a href="../assets/papers/Wu et al. - 2020 - GLUT1 inhibition blocks growth of RB1-positive triple negative breast cancer.pdf">PDF</a></p>
-        </article>
-        <article class="pub-item">
-<div class="pub-media"><a class="pub-cover-link" href="https://doi.org/10.1038/s41467-019-09672-2"><img class="pub-cover" src="../assets/covers/wu-et-al-2019-a-chemical-toolbox-for-the-study-of-bromodomains-and-epigenetic-signaling.png" alt="A chemical toolbox for the study of bromodomains and epigenetic signaling cover" /></a></div>
-          <p class="pub-authors">Wu Q, Heidenreich D, Zhou S et al.</p>
-          <h3>A chemical toolbox for the study of bromodomains and epigenetic signaling</h3>
-          <p>Nat Commun • 2019</p>
-          <p class="pub-links">DOI: <a href="https://doi.org/10.1038/s41467-019-09672-2">10.1038/s41467-019-09672-2</a></p>
-          <p class="pub-links"><a href="../assets/papers/Wu et al. - 2019 - A chemical toolbox for the study of bromodomains and epigenetic signaling.pdf">PDF</a></p>
-        </article>
+      <button class="pub-cover-mode-toggle" id="pubCoverModeToggle" type="button" aria-pressed="false">Show important subfigures</button>
+
+      <div class="section-subhead pub-subhead">
+        <h3 data-i18n="publications.selected">Selected Papers</h3>
       </div>
+      <div class="pub-list" id="pubTop10"></div>
+
+      <div class="pub-toggle-wrap" id="pubToggleWrap">
+        <button class="pub-toggle-btn" id="pubToggleBtn" type="button" aria-expanded="false" aria-controls="pubMore" data-i18n="publications.toggle" data-i18n-less="publications.toggleLess">Read more</button>
+      </div>
+
+      <section class="pub-more-section" id="pubMore" hidden>
+        <div class="section-subhead pub-subhead">
+          <h3 data-i18n="publications.more">More Publications</h3>
+        </div>
+        <div class="pub-list" id="pubRest"></div>
+        <div class="pub-toggle-wrap pub-toggle-wrap-bottom" id="pubToggleWrapBottom">
+          <button class="pub-toggle-btn" id="pubToggleBtnBottom" type="button" aria-expanded="false" aria-controls="pubMore" data-i18n="publications.toggle" data-i18n-less="publications.toggleLess">Read more</button>
+        </div>
+      </section>
     </div>
   </main>
 
   <footer class="footer" id="contact">
     <div class="container footer-inner">
       <div>
-        <h2>Address</h2>
-        <p>
-          Wu Qin Research Laboratory<br />
-          Hangzhou Institute of Medicine<br />
-          Chinese Academy of Sciences<br />
-          Department of Innovation Research<br />
-        </p>
+        <h2 data-i18n="shared.footer.address.title">Address</h2>
+        <p data-i18n-html="shared.footer.address.html">Wu Qin Research Laboratory<br />Hangzhou Institute of Medicine<br />Chinese Academy of Sciences<br />Department of Innovation Research<br /></p>
       </div>
       <div>
-        <h3>Contact Information</h3>
-        <p>
-          No. 150 Dongfang Street<br />
-          Xiasha Subdistrict<br />
-          Qiantang District<br />
-          Hangzhou, Zhejiang 310018<br />
-          P.R. China
-        </p> 
+        <h3 data-i18n="shared.footer.contact.title">Contact Information</h3>
+        <p data-i18n-html="shared.footer.contact.html">No. 150 Dongfang Street<br />Xiasha Subdistrict<br />Qiantang District<br />Hangzhou, Zhejiang 310018<br />P.R. China</p>
         <p><a href="mailto:wuqin@him.cas.cn">wuqin@him.cas.cn</a></p>
       </div>
       <div>
-        <h3>Quick links</h3>
+        <h3 data-i18n="shared.footer.links.title">Quick links</h3>
         <p class="link-list">
-          <a href="../index.html">Home</a>
-          <a href="../research/">Research</a>
-          <a href="../people/">People</a>
-          <a href="../publications/">Publications</a>
-          <a href="../software/">Software</a>
-          <a href="../resources/">Resources</a>
-          <a href="../join/">Join Us</a>
+          <a href="../index.html" data-i18n="shared.nav.home">Home</a>
+          <a href="../research/" data-i18n="shared.nav.research">Research</a>
+          <a href="../people/" data-i18n="shared.nav.people">People</a>
+          <a href="../publications/" data-i18n="shared.nav.publications">Publications</a>
+          <a href="../software/" data-i18n="shared.nav.software">Software</a>
+          <a href="../news/" data-i18n="shared.nav.news">News</a>
+          <a href="../join/" data-i18n="shared.nav.join">Join Us</a>
+        
         </p>
       </div>
     </div>
@@ -229,6 +103,199 @@
     </div>
   </footer>
 
+  <script>
+    const impactFactors = {
+      "Nat Rev Drug Discov": 101.8,
+      "Science": 44.7,
+      "ACS Nano": 15.8,
+      "Nat Commun": 15.7,
+      "J Am Chem Soc": 15.0,
+      "Advanced Science": 14.3,
+      "Nat Chem Biol": 12.9,
+      "Nucleic Acids Research": 12.7,
+      "Chemistry & Biology": 8.4,
+      "Anal Chem": 6.8,
+      "Cancer": 6.6,
+      "Journal of Cellular and Molecular Medicine": 4.0,
+      "Biochemical and Biophysical Research Communications": 2.7,
+      "STAR Protocols": 1.4,
+      "Cell Biomaterials": 0
+    };
+
+    const PAPER_COVER_MODE = "paper";
+    const SUBFIGURE_COVER_MODE = "subfigure";
+
+    const getLangDict = () => {
+      const lang = localStorage.getItem("siteLang") || "en";
+      return (window.siteTextPayload && window.siteTextPayload[lang]) || {};
+    };
+
+    const getStoredCoverMode = () => {
+      try {
+        return localStorage.getItem("pubCoverMode") || PAPER_COVER_MODE;
+      } catch (e) {
+        return PAPER_COVER_MODE;
+      }
+    };
+
+    let currentCoverMode = getStoredCoverMode();
+
+    const applyInitialCoverModeClass = () => {
+      document.body.classList.toggle("pub-cover-mode-paper", currentCoverMode === PAPER_COVER_MODE);
+      document.body.classList.toggle("pub-cover-mode-subfigure", currentCoverMode === SUBFIGURE_COVER_MODE);
+    };
+
+    const getCoverSrc = (paper) => {
+      if (!paper.cover) return "";
+      if (currentCoverMode !== SUBFIGURE_COVER_MODE) return paper.cover;
+      return paper.cover.replace("/covers/", "/covers-subfigure/");
+    };
+
+    const updateCoverModeButton = (dict = getLangDict()) => {
+      const button = document.getElementById("pubCoverModeToggle");
+      if (!button) return;
+      const showingSubfigures = currentCoverMode === SUBFIGURE_COVER_MODE;
+      button.setAttribute("aria-pressed", String(showingSubfigures));
+      button.textContent = showingSubfigures
+        ? (dict["publications.coverMode.paper"] || "Show paper covers")
+        : (dict["publications.coverMode.subfigure"] || "Show important subfigures");
+    };
+
+    const updateCoverModeClasses = () => {
+      document.body.classList.toggle("pub-cover-mode-paper", currentCoverMode === PAPER_COVER_MODE);
+      document.body.classList.toggle("pub-cover-mode-subfigure", currentCoverMode === SUBFIGURE_COVER_MODE);
+    };
+
+    const buildPublicationCard = (paper, dict = getLangDict()) => {
+      const coverSrc = getCoverSrc(paper);
+      const coverAlt = currentCoverMode === SUBFIGURE_COVER_MODE
+        ? `${paper.title} important subfigure`
+        : `${paper.title} cover`;
+      const cover = coverSrc
+        ? `<div class="pub-media"><a class="pub-cover-link" href="${paper.doi_url}"><img class="pub-cover" src="${coverSrc}" alt="${coverAlt}" loading="lazy" /></a></div>`
+        : '<div class="pub-media" aria-hidden="true"></div>';
+      const journalLine = [paper.journal, paper.year].filter(Boolean).join(" • ");
+      const doiLabel = dict["publications.label.doi"] || "DOI:";
+      const pdfLabel = dict["publications.label.pdf"] || "PDF";
+      const doiLine = paper.doi
+        ? `<p class="pub-meta-line">${doiLabel} <a href="${paper.doi_url}">${paper.doi}</a></p>`
+        : "";
+      const pdfLine = paper.pdf
+        ? `<p class="pub-meta-line"><a href="${paper.pdf}">${pdfLabel}</a></p>`
+        : "";
+
+      return `
+        <article class="pub-item">
+          ${cover}
+          <p class="pub-authors">${paper.authors || ""}</p>
+          <h3>${paper.title}</h3>
+          <p>${journalLine}</p>
+          ${doiLine}
+          ${pdfLine}
+        </article>
+      `;
+    };
+
+    const sortByImpactFactor = (papers) =>
+      papers
+        .map((paper, index) => ({
+          ...paper,
+          impactFactor: impactFactors[paper.journal] || 0,
+          index
+        }))
+        .sort((a, b) => {
+          if (b.impactFactor !== a.impactFactor) return b.impactFactor - a.impactFactor;
+          if (Number(b.year || 0) !== Number(a.year || 0)) return Number(b.year || 0) - Number(a.year || 0);
+          return a.index - b.index;
+        });
+
+    const sortByTime = (papers) =>
+      [...papers].sort((a, b) => {
+        if (Number(b.year || 0) !== Number(a.year || 0)) return Number(b.year || 0) - Number(a.year || 0);
+        return (a.title || "").localeCompare(b.title || "");
+      });
+
+    let cachedTop = [];
+    let cachedRest = [];
+
+    const renderPublicationLists = () => {
+      const dict = getLangDict();
+      document.getElementById("pubTop10").innerHTML = cachedTop.map((paper) => buildPublicationCard(paper, dict)).join("");
+      if (cachedRest.length) {
+        document.getElementById("pubRest").innerHTML = cachedRest.map((paper) => buildPublicationCard(paper, dict)).join("");
+      }
+      updateCoverModeButton(dict);
+      updateCoverModeClasses();
+      const toggleBtn = document.getElementById("pubToggleBtn");
+      const toggleBtnBottom = document.getElementById("pubToggleBtnBottom");
+      const moreSection = document.getElementById("pubMore");
+      if (toggleBtn && toggleBtnBottom && moreSection) {
+        const expanded = toggleBtn.getAttribute("aria-expanded") === "true";
+        const label = expanded ? (dict["publications.toggleLess"] || "Show less") : (dict["publications.toggle"] || "Read more");
+        toggleBtn.textContent = label;
+        toggleBtnBottom.textContent = label;
+        toggleBtnBottom.setAttribute("aria-expanded", String(expanded));
+      }
+    };
+
+    applyInitialCoverModeClass();
+
+    fetch("../data/publications.json")
+      .then((response) => response.json())
+      .then((papers) => {
+        const forcedMore = papers.filter((paper) => paper.force_more);
+        const eligible = papers.filter((paper) => !paper.force_more);
+        const sorted = sortByImpactFactor(eligible);
+        cachedTop = sortByTime(sorted.slice(0, 6));
+        cachedRest = sortByTime([...sorted.slice(6), ...forcedMore]);
+
+        renderPublicationLists();
+
+        if (!cachedRest.length) return;
+
+        const toggleBtn = document.getElementById("pubToggleBtn");
+        const toggleBtnBottom = document.getElementById("pubToggleBtnBottom");
+        const moreSection = document.getElementById("pubMore");
+        const coverModeToggle = document.getElementById("pubCoverModeToggle");
+
+        const toggleExpanded = () => {
+          const expanded = toggleBtn.getAttribute("aria-expanded") === "true";
+          toggleBtn.setAttribute("aria-expanded", String(!expanded));
+          if (toggleBtnBottom) {
+            toggleBtnBottom.setAttribute("aria-expanded", String(!expanded));
+          }
+          moreSection.hidden = expanded;
+          renderPublicationLists();
+        };
+
+        toggleBtn.addEventListener("click", toggleExpanded);
+        if (toggleBtnBottom) {
+          toggleBtnBottom.addEventListener("click", toggleExpanded);
+        }
+
+        if (coverModeToggle) {
+          coverModeToggle.addEventListener("click", () => {
+            currentCoverMode = currentCoverMode === SUBFIGURE_COVER_MODE ? PAPER_COVER_MODE : SUBFIGURE_COVER_MODE;
+            try {
+              localStorage.setItem("pubCoverMode", currentCoverMode);
+            } catch (e) {}
+            renderPublicationLists();
+          });
+        }
+
+        document.addEventListener("site:languagechange", renderPublicationLists);
+      })
+      .catch(() => {
+        updateCoverModeClasses();
+        const dict = getLangDict();
+        document.getElementById("pubTop10").innerHTML = `
+          <article class="pub-item">
+            <h3>${dict["publications.error.title"] || "Publications could not be loaded"}</h3>
+            <p>${dict["publications.error.body"] || "Please verify that data/publications.json is available from the current server path."}</p>
+          </article>
+        `;
+      });
+  </script>
   <script src="../script.js"></script>
 </body>
 </html>
