@@ -1,0 +1,442 @@
+{
+  "apt-seq": {
+    "zh": {
+      "title": "Apt-seq：让单细胞测序读懂蛋白与糖链",
+      "paragraphs": [
+        "一张细胞转录组图谱能告诉我们哪些基因正在表达，却不能完整呈现细胞表面的蛋白和糖链。后两者直接参与细胞识别与免疫调控，变化也不一定与 mRNA 同步。Apt-seq 要解决的，正是如何在同一个细胞里，把这些原本不能直接测序的分子与转录组一起读出来。",
+        "首先需要找到一种既能识别目标、又能被测序的探针。研究利用核酸适配体兼具这两种性质的特点，将针对蛋白和唾液酸的适配体用于细胞标记，再通过单细胞条形码和文库构建，把适配体信号与同一细胞的 mRNA 对应起来，减少对抗体与寡核苷酸偶联、复杂糖链标记流程的依赖。",
+        "但读到适配体序列，是否真的反映了目标分子的差异？作者在细胞系中将测序结果与流式细胞术比较，并检查适配体标记对转录组的影响。整体与单细胞层面的验证支持这一读出方式；同时，多模态数据保留了表面分子与 mRNA 不完全一致的信息，而不是把两者当成可以互相替代的指标。",
+        "接下来，研究把方法用于更复杂的生物学场景。在临床肿瘤样本中，Apt-seq 识别出表面 PTK7 信号较高的细胞群，结合 CD44 表达及 CytoTRACE 分析，发现其具有更强的干性相关特征。唾液酸适配体则帮助追踪 T 细胞分化：唾液酸水平在静息细胞转向功能状态时升高，随后在成熟过程中下降。",
+        "这项工作提出了以适配体为测量工具的 Aptomics（核酸适配体组学）：不再只用 RNA 推测细胞状态，而是联合读取转录、表面蛋白和糖链。PTK7 的结果提示了值得进一步验证的细胞亚群，并不等同于已确立临床干细胞标志物；平台的覆盖范围也仍取决于可用适配体及其验证质量。"
+      ]
+    },
+    "en": {
+      "title": "Apt-seq: reading proteins and glycans alongside the single-cell transcriptome",
+      "paragraphs": [
+        "A transcriptome reveals which genes a cell expresses, but it does not fully describe the proteins and glycans on its surface. These molecules shape recognition and immune responses, and need not track mRNA abundance. Apt-seq asks how to measure these different layers in the same cell.",
+        "The first challenge was to connect molecular recognition to sequencing. Aptamers provide both a target-binding structure and a readable nucleic acid sequence. The researchers used protein- and sialic-acid-binding aptamers to label cells, then linked aptamer signals and mRNA through single-cell barcoding and library preparation.",
+        "Could sequence counts reliably report target differences? Comparisons with flow cytometry in cell lines supported the readout at bulk and single-cell levels. The team also examined the effect of labeling on transcriptomes. Importantly, measuring both layers retains differences between surface signals and mRNA rather than assuming that one substitutes for the other.",
+        "In clinical tumor samples, Apt-seq revealed cells with high surface PTK7 signals. CD44 expression and CytoTRACE analysis associated this population with stronger stemness-related features. A sialic acid aptamer provided another application: tracking a rise in sialylation as resting T cells entered functional states, followed by a decline during maturation.",
+        "The result is Aptomics: aptamer-enabled profiling that brings transcripts, surface proteins and glycans into a shared single-cell view. The PTK7 finding identifies a population for further investigation, not an established clinical stem-cell marker. The platform's reach still depends on the availability and validation of suitable aptamers."
+      ]
+    }
+  },
+  "spark-seq": {
+    "zh": {
+      "title": "SPARK-seq：在活细胞上同时寻找适配体、靶点与结合规律",
+      "paragraphs": [
+        "细胞表面蛋白是重要的分子识别目标，但把蛋白纯化后筛选，可能失去它在细胞膜上的天然构象；直接对细胞筛选，又常常不知道适配体究竟结合了谁。SPARK-seq 将这个两难转化为一个可检验的问题：如果敲掉某个蛋白，哪些适配体的结合会随之改变？",
+        "研究把针对 13 种表面蛋白的 CRISPR 敲除细胞混合起来，加入经 Cell-SELEX 富集的适配体库。在单细胞中同时读取向导 RNA、转录组和适配体序列，就能把遗传扰动与结合信号连接起来，而不必为每个候选序列分别设计一次筛选。",
+        "下一步是区分真正的靶向关系与间接变化。SPARTA 分析流程根据差异结合筛选候选，作者再用流式细胞术、表面等离子体共振和微量热泳等方法验证。研究报告了指向八种表面蛋白的候选序列，也解析了整合素复合物识别和 PTPR 家族交叉结合等复杂情况。",
+        "筛选信号还包含怎样的结合信息？动力学实验发现，该体系的差异结合指标更紧密地关联解离速率，而非平衡解离常数。这意味着它尤其有助于寻找不易从靶点脱落的适配体。研究进一步利用这些数据训练序列模型，并实验验证生成的动力学改良变体。",
+        "SPARK-seq 因而不只是扩大筛选通量，而是把靶点归属、细胞状态和结合动力学连接起来。其能力已经在所测试的靶点和细胞体系中得到展示，但遗传扰动引起的间接效应仍需要独立结合实验来排除，模型生成的序列也仍须实验验证。"
+      ]
+    },
+    "en": {
+      "title": "SPARK-seq: linking aptamer discovery to targets and binding kinetics",
+      "paragraphs": [
+        "Purified proteins may lose their native cell-surface context, while cell-based aptamer selection often leaves the target unknown. SPARK-seq approaches this problem through perturbation: when a surface protein is knocked out, which aptamer-binding signals change?",
+        "The researchers pooled cells carrying CRISPR knockouts of 13 surface proteins and exposed them to a Cell-SELEX-enriched aptamer library. Reading guide RNAs, transcripts and aptamers in individual cells linked each genetic perturbation to its binding profile, allowing many candidate interactions to be examined together.",
+        "The SPARTA analysis pipeline identified differential-binding candidates. Flow cytometry, surface plasmon resonance and microscale thermophoresis then tested selected interactions independently. The study reported candidates for eight surface proteins and resolved more complex recognition, including an integrin complex and cross-binding within the PTPR family.",
+        "Binding measurements revealed another layer of information: the differential-binding metric correlated more closely with dissociation rate than equilibrium affinity. The platform preferentially recovered slow-dissociating binders. Sequence models trained on these data also generated variants whose improved kinetic properties were experimentally tested.",
+        "The contribution is an integrated route from discovery to target assignment and kinetic optimization in cellular contexts. Its demonstrated scope is the tested targets and models, not every membrane protein. Independent validation remains essential because knockouts can have indirect effects and generated sequences are predictions until tested."
+      ]
+    }
+  },
+  "blocker-selex": {
+    "zh": {
+      "title": "Blocker-SELEX：让适配体不只结合蛋白，还能阻断关键互作",
+      "paragraphs": [
+        "转录调控依赖蛋白之间的接触，但许多接触界面宽而平坦，缺少适合小分子进入的口袋。核酸适配体可以覆盖较大的表面，不过，能结合蛋白并不意味着能阻断其功能。Blocker-SELEX 因此把筛选目标从“找到结合者”推进到“找到占据关键互作界面的阻断者”。",
+        "首先要决定把筛选压力施加在哪里。研究结合结构信息与界面导向的筛选设计，使候选适配体的发现围绕预期阻断的蛋白互作展开，再通过序列优化与功能验证逐步筛出抑制性适配体，而不是仅按富集程度判断成功。",
+        "作者以 SCAF4/SCAF8 与 RNA 聚合酶 II 的互作为主要验证体系，检查候选适配体是否能够干扰蛋白结合，以及这种干扰是否传递到转录和细胞增殖层面。结果显示，相关适配体能够协同扰乱这些互作，并影响聚合酶依赖的基因表达和细胞增殖。",
+        "为了回答方法是否只适用于一个特例，研究进一步将策略用于 WDR5-MYC 互作，获得相应的阻断适配体。这一步把单一靶点的成功推进为跨互作体系的方法验证。",
+        "这项工作的核心是把结构信息、分子识别与功能筛选连接起来，为研究难以药物化的转录调控界面提供工具。它并不意味着这些适配体已经成为可用药物；细胞内递送、稳定性和疾病模型中的效果，仍是后续开发必须解决的问题。"
+      ]
+    },
+    "en": {
+      "title": "Blocker-SELEX: selecting aptamers that interrupt protein interactions",
+      "paragraphs": [
+        "Many transcription-regulatory proteins meet across broad interfaces without obvious small-molecule pockets. Aptamers can occupy larger surfaces, but binding alone does not guarantee inhibition. Blocker-SELEX therefore asks how selection can favor molecules that interfere with a functionally important contact.",
+        "The first step was to make the intended interaction part of the discovery logic. Structural information guided interface-focused selection, followed by sequence optimization and functional testing. Enrichment was a starting point, not sufficient evidence that a candidate blocked the desired interaction.",
+        "The researchers tested this approach on interactions between SCAF4/SCAF8 and RNA polymerase II. They examined both protein-interaction disruption and downstream effects on polymerase-dependent gene expression and proliferation. The resulting inhibitory aptamers cooperatively disrupted these contacts and impaired cell growth.",
+        "To test whether the strategy extended beyond one system, the team applied it to WDR5-MYC and obtained aptamers that blocked that interaction. This additional example supported transfer of the approach across distinct interaction targets.",
+        "Blocker-SELEX connects structure-guided recognition with functional intervention, offering tools for interfaces that are difficult to address conventionally. It is a discovery strategy, not proof of a finished medicine: stability, intracellular delivery and disease-specific performance remain separate development challenges."
+      ]
+    }
+  },
+  "atp-aptamer": {
+    "zh": {
+      "title": "看清 ATP 如何被抓住，再改造适配体的亲和力",
+      "paragraphs": [
+        "ATP 是细胞能量代谢中的关键分子，也是生物传感的重要检测对象。已有 DNA 适配体 1301b 能够结合 ATP，但如果不知道它如何折叠、在哪里抓住 ATP，优化就容易变成反复试错。这篇研究选择先解析结构，再据此改造分子。",
+        "为了得到适合结构研究的体系，作者先将 1301b 缩短为仍保留结合能力的 1301b_v1，再用溶液核磁共振解析它与 ATP 的一比一复合物。结构显示，DNA 形成 L 形构架，两个内部环共同构成结合口袋。",
+        "ATP 并非随意停留在这个口袋中：它与 G14 形成氢键，并通过与 T8·A28 及 G9 的堆积作用获得稳定。结构与功能分析还表明，适配体从半折叠状态转向稳定复合物，说明识别伴随着构象调整，而非一个完全预成形的刚性口袋。",
+        "这些线索随后用于指导化学修饰。作者在中央连接区域引入 2′-O-甲基修饰，得到 9/10/16OMe 变体，其 ATP 结合解离常数约为 0.7 μM，相比起始 1301b 的约 2.7 μM 有所改善。",
+        "研究建立了从结构解释到性能改进的闭环：知道哪些局部接触和折叠过程重要，才能更有依据地设计适配体。这里的亲和力提升是在论文测定条件下获得的，并不自动等同于复杂生物样本中的传感性能或体内效果。"
+      ]
+    },
+    "en": {
+      "title": "Seeing how a DNA aptamer captures ATP, then improving its affinity",
+      "paragraphs": [
+        "ATP-binding aptamers are useful sensing tools, but optimization is difficult without knowing how DNA folds around the molecule. This study began with aptamer 1301b and asked whether a structural explanation of recognition could guide better binding.",
+        "The researchers shortened the sequence to 1301b_v1 while retaining ATP binding, then used solution NMR to determine a one-to-one aptamer-ATP complex. The DNA formed an L-shaped architecture with a pocket assembled from two internal loops.",
+        "The structure located specific contacts: ATP hydrogen-bonded with G14 and stacked against T8·A28 and G9. Further analysis supported an adaptive mechanism in which a semifolded aptamer becomes a stable tertiary structure upon binding, rather than behaving as a rigid, fully preformed receptor.",
+        "Guided by these observations, the team introduced 2′-O-methyl modifications into the central junction. The resulting 9/10/16OMe variant bound ATP with a dissociation constant of approximately 0.7 μM, compared with approximately 2.7 μM for the starting 1301b aptamer.",
+        "The study closes a structure-to-design loop: identifying important contacts and folding behavior makes optimization more informed. The affinity improvement applies to the reported measurements; performance in complex samples or in vivo would require additional validation."
+      ]
+    }
+  },
+  "dnazyme-evolution": {
+    "zh": {
+      "title": "让 DNAzyme 在细胞内持续、准确地切断 RNA",
+      "paragraphs": [
+        "能在试管里切断 RNA 的 DNA 催化分子，不一定能在细胞内有效工作。RNA 的复杂结构、核酸酶降解以及催化分子自身的不利构象，都可能削弱效果。研究以经典 10–23 DNAzyme 为起点，探索能否借用反义寡核苷酸的化学设计，同时保留 DNAzyme 自身的切割能力。",
+        "作者引入 2′-氟、2′-O-甲基、2′-O-甲氧乙基和硫代磷酸酯等修饰，逐步比较不同设计。关键并非简单增加修饰数量，而是让分子更好地结合 RNA、减少不利的二聚化，并兼顾催化活性与稳定性。",
+        "接下来需要跨过从短底物到真实转录本的距离。研究检测了长链、带结构 RNA 的切割，以及细胞内外源 eGFP 和内源 c-MYC 的 RNA、蛋白变化。改造后的 DNAzyme 表现出更持久的细胞内稳定性；在 HCT116 细胞中，c-MYC 下调伴随增殖下降、细胞周期阻滞和凋亡增加。",
+        "RNA 减少是否真由 DNAzyme 在预期位点切割，而不是普通反义效应？作者通过 RACE 和 Sanger 测序定位切割产物，并评估 RNase H 参与，支持这些分子能够在细胞内进行位点特异性切割，且 RNase H 激活较少。",
+        "这项研究说明，借鉴 ASO 的化学修饰可以改善 DNAzyme 的细胞内表现，同时保留其催化特点。它提供了基因沉默工具的设计依据，但细胞实验中的有效性仍不能替代递送、安全性和体内治疗研究。"
+      ]
+    },
+    "en": {
+      "title": "Engineering DNAzymes for sustained, site-specific RNA cleavage in cells",
+      "paragraphs": [
+        "An RNA-cleaving DNA enzyme that works in a test tube may struggle inside a cell. Structured transcripts, degradation and unfavorable folding can all limit activity. This study asked whether chemistry used in antisense oligonucleotides could improve the classic 10–23 DNAzyme without losing its catalytic mechanism.",
+        "The team compared designs incorporating 2′-fluoro, 2′-O-methyl, 2′-O-methoxyethyl and phosphorothioate modifications. The goal was to improve substrate binding and stability while reducing unproductive dimerization, rather than simply adding more modifications.",
+        "Testing progressed to long, structured RNA substrates and cellular eGFP and c-MYC targets. Modified DNAzymes showed prolonged intracellular stability and reduced target RNA and protein. In HCT116 cells, c-MYC downregulation accompanied reduced proliferation, cell-cycle arrest and increased apoptosis.",
+        "To distinguish catalytic cleavage from a conventional antisense effect, the researchers mapped products using RACE and Sanger sequencing and assessed RNase H involvement. The evidence supported cleavage at the intended site with minimal RNase H activation.",
+        "The work shows how ASO-inspired chemistry can improve cellular DNAzyme performance while preserving catalytic action. It establishes a design route for gene-silencing tools, not clinical efficacy; delivery, safety and in vivo performance remain further questions."
+      ]
+    }
+  },
+  "aptamer-lytacs": {
+    "zh": {
+      "title": "从识别到清除：用多价适配体把膜蛋白送进溶酶体",
+      "paragraphs": [
+        "阻断蛋白功能与直接清除蛋白，是两种不同的干预思路。依赖蛋白酶体的降解技术难以直接处理许多细胞表面目标，LYTAC 则借助内吞和溶酶体打开另一条通路。本研究进一步追问：能否用容易编程和组装的适配体，替代抗体作为目标识别模块？",
+        "作者利用生物素-链霉亲和素搭建支架，将目标结合适配体与 CI-M6PR 识别配体组合起来。一端抓住膜蛋白，另一端招募负责内吞运输的受体。以 PTK7 为例，蛋白检测、细胞成像和通路干预共同检验了目标降低是否涉及溶酶体运输与降解。",
+        "平台搭好之后，更具体的问题是：适配体越多，降解就越好吗？不同配比的比较表明，在所测试构型中，三价单靶向设计表现最佳。过度增加适配体可能妨碍其他组分装配及受体招募，因此多价效应需要与运输能力共同优化。",
+        "研究还将平台扩展至 Met，并组合识别 PTK7 与 Met 的适配体，验证同时降低两种目标蛋白的可行性。由此，模块化组装不只改变识别强度，也能改变一个构建体所处理的目标组合。",
+        "这项工作展示了适配体从结合探针转为蛋白清除工具的可能性，并给出价态设计的重要线索。结论属于细胞体系中的平台概念验证，尚不能据此推断其体内递送能力或临床治疗效果。"
+      ]
+    },
+    "en": {
+      "title": "From binding to clearance: aptamers route surface proteins to lysosomes",
+      "paragraphs": [
+        "Blocking a protein and removing it are different interventions. Many cell-surface targets are difficult to address through proteasome-based degradation. LYTACs use cellular uptake and lysosomes instead. This study asked whether programmable aptamers could serve as the recognition component of such degraders.",
+        "A biotin-streptavidin scaffold assembled target-binding aptamers with a ligand for the trafficking receptor CI-M6PR. One component recognized the surface target; the other recruited an internalization route. Protein measurements, imaging and pathway perturbation examined lysosomal degradation using PTK7 as a test target.",
+        "The next question was architectural: does adding more aptamers always help? Comparisons across assembly ratios favored a trivalent, single-target design among the tested constructs. Excess aptamer loading could interfere with assembly and receptor recruitment, showing that recognition and trafficking must be optimized together.",
+        "The team extended the platform to Met and combined aptamers for PTK7 and Met to demonstrate dual-target degradation. Modular assembly therefore changed both binding architecture and the combination of proteins addressed.",
+        "The study establishes a cellular proof of concept for aptamer-directed protein clearance and offers design guidance on valency. It does not establish in vivo delivery or clinical efficacy, which require separate investigation."
+      ]
+    }
+  },
+  "tumor-marker-ms": {
+    "zh": {
+      "title": "用质谱标签同时读取多种肿瘤相关蛋白",
+      "paragraphs": [
+        "细胞身份和疾病状态很少由单一标志物决定，但同时测量多个低丰度蛋白并不容易：光学信号可能重叠，样本量也常常有限。这篇研究将识别事件转换成质量不同的小分子标签，探索用常压质谱读取一组蛋白信号。",
+        "第一步是让蛋白识别产生足够强、又能区分的读数。研究将识别探针与携带有机小分子质量标签的金纳米颗粒结合，利用激光烧蚀-介质阻挡放电电离质谱（LA-DBDI-MS）检测标签。不同标签提供可分辨通道，纳米颗粒则放大识别信号。",
+        "灵敏度是否足以处理微量样本？作者使用 2 μL 血清进行凝血酶和 CA125 检测，分别报告 6.6 pM 和 1.4 U/mL 的检测限。这样的验证针对的是具体分析物和实验条件，不能直接推广为所有蛋白的检测能力。",
+        "随后研究转向细胞表面，联合读取 CA125、CEA、EpCAM、PTK7、CD71、CD8a 和 CD33 七种蛋白，并比较四类癌细胞的标志物组合。与逐个检测相比，多通道读出提供了区分细胞类型的组合信息。",
+        "结果支持了以分子识别和质量编码进行多重蛋白分析的可行性。论文所展示的是分析平台和细胞类型区分；单细胞尺度检测与临床诊断属于后续应用方向，不能把这些前景表述为已经完成的临床验证。"
+      ]
+    },
+    "en": {
+      "title": "Mass tags turn multiple tumor-marker measurements into one readout",
+      "paragraphs": [
+        "Cell identity rarely depends on a single marker, yet measuring several low-abundance proteins can consume scarce samples and create overlapping optical signals. This study explored a different readout: translating recognition events into small molecules distinguishable by mass.",
+        "The platform combined recognition probes with gold nanoparticles carrying organic mass tags. Laser ablation-dielectric barrier discharge ionization mass spectrometry, or LA-DBDI-MS, read the tags. Distinct masses separated measurement channels, while nanoparticle labeling amplified the signal.",
+        "Could the method work with very small samples? In 2 μL serum assays, the authors reported detection limits of 6.6 pM for thrombin and 1.4 U/mL for CA125. These measurements establish performance for the tested analytes and conditions, not a universal sensitivity.",
+        "The researchers then measured seven surface markers together: CA125, CEA, EpCAM, PTK7, CD71, CD8a and CD33. Comparing their patterns across four cancer cell types showed how multiplexed information could distinguish cells better than an isolated marker.",
+        "The work demonstrates an analytical platform linking molecular recognition to mass-coded protein measurements. Single-cell-scale applications and clinical diagnosis are prospective directions, not completed clinical validation in this study."
+      ]
+    }
+  },
+  "molecular-medicine-era": {
+    "zh": {
+      "title": "从疾病名称走向分子机制：分子医学的工具如何相互连接",
+      "paragraphs": [
+        "同一种疾病名称之下，可能存在不同的分子异常，也可能需要不同的干预方式。这篇观点文章讨论的不是某一次实验能否成功，而是医学如何从器官和症状层面的描述，逐步转向对分子机制的识别、测量与干预。",
+        "文章先把人体放在分子网络的视角下理解：核酸、蛋白、糖类和其他分子共同维持细胞功能，单个组分或相互作用的变化都可能引发疾病。由此，分子分型的价值不仅在于产生更多数据，还在于解释看似相同的疾病为什么表现不同。",
+        "接着，作者梳理了实现这种转变的工具。组学分析帮助发现异常及其组合，分子识别工具让这些异常成为可以检测的对象，基因编辑和靶向药物则提供检验与干预机制的路径。文章以已有研究和技术进展为依据，将这些工具放在同一条诊疗逻辑中讨论。",
+        "这里的关键问题是，发现分子差异之后，怎样把它转为可采取的行动。靶向递送、分子诊断和治疗选择需要彼此衔接，否则更精细的分型并不会自然带来更好的疗效。",
+        "作为观点文章，这项工作提供的是一幅概念图景，而非新的临床疗效证据。它强调分子识别在测量与干预之间的连接作用，也说明为什么开发分子工具、建立组学读出和推进医学验证需要协同进行。"
+      ]
+    },
+    "en": {
+      "title": "From disease labels to molecular mechanisms",
+      "paragraphs": [
+        "Patients sharing a disease label can have different molecular abnormalities and may require different interventions. This perspective examines how medicine moves from descriptions of organs and symptoms toward molecular measurement, explanation and intervention, rather than reporting a new experimental trial.",
+        "The article first considers the body as an interacting molecular system. Nucleic acids, proteins, carbohydrates and other components jointly support cellular functions. Disturbances in components or their interactions help explain why apparently similar diseases can behave differently.",
+        "It then connects the tools supporting this transition. Omics identifies patterns of abnormality; molecular-recognition tools make them measurable; gene editing and targeted agents provide routes to test and intervene in mechanisms. Published examples place these capabilities within a shared diagnostic and therapeutic framework.",
+        "A central issue is what happens after a difference is detected. Molecular classification must connect to delivery, diagnostic decisions and appropriate intervention. More detailed measurements do not automatically produce better outcomes.",
+        "The contribution is conceptual synthesis, not new evidence of clinical efficacy. It highlights molecular recognition as a connection between measurement and intervention, explaining why tool development, omics technologies and medical validation need to advance together."
+      ]
+    }
+  },
+  "drug-resistance-protocol": {
+    "zh": {
+      "title": "把耐药后的脆弱点，变成可以重复寻找的实验流程",
+      "paragraphs": [
+        "肿瘤细胞对一种药物产生耐受，并不意味着它不再依赖其他生物学过程。寻找耐药后新出现的脆弱点，需要的不只是一次筛选结果，还需要别人能够重复执行的模型建立、测量和验证流程。这篇 STAR Protocols 文章将这一过程具体化。",
+        "首先要解决的是模型是否真的代表耐药状态。文章以三阴性乳腺癌细胞为例，说明耐药细胞株的构建与药物反应评估。只有建立清楚的亲本与耐药参照，后续筛选才有可能分辨耐药相关敏感性与一般细胞毒性。",
+        "第二个问题是怎样稳定比较许多候选小分子。流程介绍细胞铺板、化合物处理、增殖读出和数据分析的衔接，并交代关键实验条件与质量控制，使不同处理的结果具有可比性。",
+        "初筛命中并不是终点。作者进一步说明如何复测候选、确认抑制效果，并通过后续验证筛掉技术波动带来的假阳性。文章也提供局限性及故障排查信息，让读者知道哪些环节可能影响结果。",
+        "这是一篇实验流程文章，其贡献是把耐药药物发现组织为可执行、可检查的工作链条，而不是宣称发现了新的临床治疗方案。迁移到其他肿瘤或耐药机制时，模型、处理条件与读出仍需要重新优化。"
+      ]
+    },
+    "en": {
+      "title": "Making the search for vulnerabilities in resistant cancer reproducible",
+      "paragraphs": [
+        "Resistance to one drug does not eliminate a cancer cell's dependence on other biological processes. Finding new vulnerabilities requires more than a screening hit: model construction, measurement and validation must be reproducible. This STAR Protocols article sets out that workflow.",
+        "The first problem is whether a model actually represents resistance. Using triple-negative breast cancer examples, the protocol describes resistant-cell construction and drug-response assessment. A clear parental-versus-resistant comparison is needed to distinguish resistance-associated sensitivity from general toxicity.",
+        "The next problem is consistent comparison across compounds. The workflow connects cell seeding, chemical treatment, proliferation measurements and analysis, with experimental conditions and controls that support interpretable comparisons.",
+        "Initial hits then require confirmation. Follow-up testing checks reproducibility and inhibitory activity rather than treating a single screening signal as sufficient evidence. Limitations and troubleshooting help readers identify technical sources of failure.",
+        "This is an operational contribution, not a new clinical treatment claim. It makes resistance-focused discovery easier to reproduce and inspect. Applying it to other tumors or resistance mechanisms still requires adaptation of models, treatment conditions and readouts."
+      ]
+    }
+  },
+  "glut1-tnbc": {
+    "zh": {
+      "title": "同样是三阴性乳腺癌，哪些细胞更依赖葡萄糖入口？",
+      "paragraphs": [
+        "三阴性乳腺癌常表现出活跃的葡萄糖代谢，但这并不意味着每个肿瘤都会对阻断葡萄糖摄取敏感。这项研究围绕 GLUT1 展开，把寻找治疗靶点与另一个同样重要的问题放在一起：如何识别真正依赖这个靶点的肿瘤？",
+        "作者首先用遗传干预和小分子 BAY-876 抑制 GLUT1，并比较多种三阴性乳腺癌细胞及患者来源材料。结果并不是所有模型都受到同样抑制，这种差异提示，GLUT1 表达本身不足以完整解释细胞是否依赖它。",
+        "为追踪差异来源，研究分析糖酵解与氧化磷酸化等代谢特征，并结合基因表达通路。敏感细胞倾向于较高的糖酵解和较低的氧化磷酸化，提示替代供能能力可能影响葡萄糖摄取被限制后的生存。",
+        "研究进一步把这一代谢状态与 RB1 联系起来：RB1 蛋白水平与 GLUT1 抑制敏感性高度相关，而 RB1 阴性细胞对该干预不敏感。由此，一个经典细胞周期调控因子成为理解代谢脆弱性的线索。",
+        "论文提出了可进一步检验的 RB1-GLUT1 代谢轴，以及基于 RB1 蛋白表达进行分层的思路。它支持的是特定模型中的靶点依赖与候选标志物，不能据此将 BAY-876 视为已证实对患者有效的治疗。"
+      ]
+    },
+    "en": {
+      "title": "Which triple-negative breast cancers depend on the glucose entry point?",
+      "paragraphs": [
+        "High glucose metabolism does not mean every triple-negative breast cancer will respond to blocking glucose uptake. This study examined GLUT1 while asking a companion question: how can the tumors that depend on this transporter be identified?",
+        "Genetic intervention and the inhibitor BAY-876 tested GLUT1 dependence across TNBC cell lines and patient-derived material. Responses varied, showing that a shared disease label did not imply a shared metabolic vulnerability.",
+        "Metabolic measurements and expression-pathway analysis explored the difference. Sensitive cells tended to combine higher glycolysis with lower oxidative phosphorylation. This linked the response to the ability to support growth through alternative metabolic activity.",
+        "The researchers then connected sensitivity to RB1 protein abundance. RB1 levels strongly correlated with response, while RB1-negative cells were insensitive to GLUT1 inhibition. A familiar cell-cycle regulator thus provided a clue to a metabolic dependency.",
+        "The study proposes an RB1-GLUT1 axis and a rationale for biomarker-based investigation. These are preclinical target-dependence and stratification findings, not evidence that BAY-876 is an established effective treatment for patients."
+      ]
+    }
+  },
+  "ptf-sriapt": {
+    "zh": {
+      "title": "阻断 SCAF4-POLR2A：从转录终止到肿瘤免疫",
+      "paragraphs": [
+        "癌细胞需要稳定地产生完整转录本，SCAF4 与 RNA 聚合酶 II 亚基 POLR2A 的互作参与防止 mRNA 过早终止。这个接触界面缺少易用的干预工具，因此它在三阴性乳腺癌生长和免疫调控中的作用一直难以直接检验。",
+        "研究首先解决工具问题：以 Blocker-SELEX 得到的 SRiApt 为基础，通过硫代磷酸酯修饰提高生物稳定性，形成 PTf-SRiApt。作者比较修饰设计与功能，使适配体不仅能够识别互作界面，也适合进一步的生物学实验。",
+        "有了工具，下一步是判断肿瘤是否依赖这组互作。研究在细胞及肿瘤模型中考察增殖和细胞周期，发现 SCAF4、POLR2A 表达较高的三阴性乳腺癌对干预表现出敏感性。PTf-SRiApt 抑制肿瘤生长，并促进细胞周期阻滞。",
+        "这种干预还会改变肿瘤被免疫系统看见的方式吗？转录分析与免疫相关实验把互作受阻、mRNA 过早终止、抗原呈递增强和 T 细胞浸润联系起来。患者样本分析进一步显示，该互作与免疫治疗效果呈负相关，为疾病相关性提供补充证据。",
+        "论文把一个难以直接研究的蛋白互作，转化为可用适配体干预的转录与免疫节点。患者样本中的相关性并不等于适配体治疗的临床有效性；目前结果支持继续开展药物开发和验证，而不是已有临床方案。"
+      ]
+    },
+    "en": {
+      "title": "Disrupting SCAF4-POLR2A connects transcript termination to tumor immunity",
+      "paragraphs": [
+        "Cancer cells depend on producing functional transcripts. The interaction between SCAF4 and RNA polymerase II subunit POLR2A helps prevent premature mRNA termination, but a shortage of effective tools made its role in TNBC difficult to test directly.",
+        "The researchers first improved the tool. Starting from SRiApt, discovered through Blocker-SELEX, they introduced phosphorothioate modifications to produce the more biologically stable PTf-SRiApt. Comparing modification designs connected chemical optimization to functional testing.",
+        "Cell and tumor experiments then examined dependence on this interaction. TNBC models with elevated SCAF4 and POLR2A expression were responsive to intervention; PTf-SRiApt suppressed growth and induced cell-cycle arrest.",
+        "The team also asked whether transcriptional disruption altered immune recognition. Transcript and immune analyses linked premature termination to enhanced antigen presentation and T-cell infiltration. Patient-sample analyses found a negative association between the interaction and immunotherapy effectiveness, adding disease context.",
+        "The study turns a difficult protein interface into an experimentally addressable transcription-immune node. Patient correlations do not demonstrate clinical efficacy of the aptamer. The findings support further therapeutic development rather than an established treatment."
+      ]
+    }
+  },
+  "cd4-aptamer-cells": {
+    "zh": {
+      "title": "把 CD4⁺ T 细胞带入肿瘤，并让它们组织免疫响应",
+      "paragraphs": [
+        "抗肿瘤免疫常以 CD8⁺ T 细胞为中心，但 CD4⁺ T 细胞也能提供辅助甚至直接杀伤作用。问题在于，它们未必能充分进入肿瘤，进入后也可能受到免疫抑制。这篇研究尝试把“招募到位”和“激活功能”放在同一个工程化平台中解决。",
+        "作者在液氮处理的肿瘤细胞上修饰 CD4 适配体，构建 AptCD4-LNT。设计结合处理后细胞载体的归巢特点与适配体对 CD4 的识别能力，并通过结合和细胞功能实验检查它能否捕获、招募与激活 CD4⁺ T 细胞。",
+        "随后，研究在三阴性乳腺癌模型中考察这些细胞能否进入肿瘤并影响生长。免疫细胞分析不只统计 CD4⁺ T 细胞数量，还进一步追踪它们对肿瘤微环境的影响，包括 NK 细胞、B 细胞和树突状细胞的参与。",
+        "要解释作用来源，还需要区分 CD4 与 CD8 通路。论文中的机制实验支持 CD4⁺ T 细胞及 MHC II 相关响应的重要性，并在所研究模型中显示不依赖 CD8⁺ T 细胞的抑瘤作用。这使平台的意义超出了单纯增加一种免疫细胞的浸润。",
+        "研究展示了通过适配体工程化细胞载体，调动 CD4⁺ T 细胞并重塑局部免疫的临床前策略。其效果与模型和平台构建条件相关，尚不能直接推断患者中的疗效或安全性。"
+      ]
+    },
+    "en": {
+      "title": "Recruiting CD4 T cells to tumors and mobilizing a broader immune response",
+      "paragraphs": [
+        "CD8 T cells dominate many discussions of antitumor immunity, but CD4 T cells can provide help and direct killing. Their potential is limited by poor tumor entry and local suppression. This study sought to combine recruitment and activation in one engineered platform.",
+        "The researchers attached a CD4-binding aptamer to liquid nitrogen-treated cancer cells, creating AptCD4-LNT. The design combined the carrier's homing properties with selective CD4 recognition. Binding and functional experiments tested capture, recruitment and activation of CD4 T cells.",
+        "TNBC models then tested tumor infiltration and growth control. Immune profiling went beyond counting CD4 cells to examine changes in natural killer cells, B cells and dendritic cells, asking whether the intervention mobilized a broader response.",
+        "Mechanistic experiments addressed the respective contributions of CD4 and CD8 pathways. The reported effects supported CD4- and MHC II-associated immunity, including tumor suppression independent of CD8 T cells in the tested models.",
+        "The work presents a preclinical strategy for using aptamer-engineered carriers to reshape local immunity through CD4 T cells. It does not establish patient efficacy or safety, which require further investigation."
+      ]
+    }
+  },
+  "bromodomain-toolbox": {
+    "zh": {
+      "title": "一套化学探针，拆解乙酰化信号背后的细胞依赖",
+      "paragraphs": [
+        "蛋白上的乙酰化标记需要被“读取”，才能转化成细胞行为；溴结构域就是参与这一过程的识别模块。要弄清家族中不同成员的作用，不能只观察表达，还需要能选择性干预它们的工具。本研究构建并系统评估了这样一套化学探针。",
+        "第一个问题是工具是否足够广、又足够明确。作者整理了覆盖 29 个人源溴结构域靶点的 25 个小分子探针，并用 BROMOscan 等分析检查选择性。知道一个化合物同时作用于哪些家族成员，是解释细胞表型的前提。",
+        "随后研究将探针用于细胞过程，考察能否借此发现被常规观察忽略的依赖关系。化学干预提供了一种可比较的方式，把特定识别模块的阻断与增殖、分化等细胞状态变化联系起来。",
+        "其中一个重要发现来自代谢条件的改变：在葡萄糖不足或 GLUT1 被抑制时，乳腺癌细胞对 BRPF2/3 溴结构域抑制更加脆弱。这个结果提示，染色质乙酰化信号与糖代谢并非互不相干，而可能共同决定细胞能否继续生长。",
+        "论文的价值既在于这条生物学联系，也在于提供可供后续研究使用的探针资源。化学探针并不等同于临床药物；解释任何命中仍需考虑选择性、实验背景，并结合其他方法验证靶点作用。"
+      ]
+    },
+    "en": {
+      "title": "A chemical toolbox reveals dependencies behind acetylation signaling",
+      "paragraphs": [
+        "Bromodomains recognize acetyl-lysine marks and help translate them into cellular behavior. Determining the roles of different family members requires selective perturbation, not expression measurements alone. This study assembled and evaluated a chemical resource for that purpose.",
+        "The first challenge was coverage with interpretable selectivity. The authors presented 25 probes covering 29 human bromodomain targets and characterized their binding profiles using BROMOscan. Knowing which related domains a compound affects is essential before assigning a cellular phenotype.",
+        "The probes were then applied to cellular processes to test their utility for discovering functional dependencies. Comparing perturbations linked inhibition of particular recognition modules to changes in cellular states rather than treating all bromodomains as interchangeable.",
+        "One finding connected chromatin regulation to metabolism: glucose deprivation or GLUT1 inhibition made breast cancer cells vulnerable to BRPF2/3 bromodomain inhibition. This pointed to a dependency that becomes apparent under a particular metabolic condition.",
+        "The contribution is both a biological connection and a reusable probe resource. Chemical probes are not clinical medicines, and their cellular effects still require interpretation through selectivity profiles, experimental context and independent target validation."
+      ]
+    }
+  },
+  "prmt-viral-mimicry": {
+    "zh": {
+      "title": "没有病毒，癌细胞为何启动抗病毒警报？",
+      "paragraphs": [
+        "表观遗传干预可以减慢癌细胞生长，但药物究竟通过什么过程起效，往往决定了哪些肿瘤会响应。这项研究从三阴性乳腺癌的化学探针筛选出发，发现 I 型蛋白精氨酸甲基转移酶抑制剂 MS023 的作用，与细胞自身的抗病毒响应联系在一起。",
+        "首先，作者比较不同细胞系对 MS023 的反应，并结合 PRMT1 遗传干预检验靶点作用。随后通过通路分析追问敏感性差异，发现处理前后的干扰素响应与抑制效果相关，这种关系也延伸到患者来源类器官。",
+        "没有外源病毒，警报从何而来？RNA 分析和双链 RNA 检测表明，I 型 PRMT 抑制扰乱 RNA 加工，并增加可触发抗病毒防御的双链 RNA，其中至少一部分来自倒置重复 Alu 元件。",
+        "研究进一步干预 RNA 感知通路，检查这些信号是否参与药物引起的干扰素响应和生长抑制。由此，双链 RNA 不再只是伴随变化，而成为解释“病毒模拟”现象及药物反应的机制线索。",
+        "这项工作把 I 型 PRMT 抑制的作用从一般性的增殖抑制，推进为可追踪的 RNA-先天免疫过程。它提出了干扰素相关分层与联合治疗的研究依据，但并未证明所有三阴性乳腺癌都对这种干预敏感。"
+      ]
+    },
+    "en": {
+      "title": "Why do cancer cells sound an antiviral alarm without a virus?",
+      "paragraphs": [
+        "An epigenetic inhibitor may slow cancer growth, but its mechanism helps explain which tumors respond. A chemical-probe screen in TNBC identified activity of the type I PRMT inhibitor MS023 and connected that activity to the cell's own antiviral response.",
+        "The researchers compared cell-line responses and used genetic PRMT1 perturbation to examine target involvement. Pathway analysis linked interferon activity before and after treatment to sensitivity, with related observations in patient-derived organoids.",
+        "What triggered an antiviral response without infection? RNA analyses and double-stranded RNA measurements showed that type I PRMT inhibition disrupted RNA processing and increased immunostimulatory dsRNA, derived at least partly from inverted-repeat Alu elements.",
+        "Perturbing RNA-sensing pathways then tested their contribution to interferon signaling and growth inhibition. This moved dsRNA accumulation beyond an accompanying observation toward a mechanistic explanation of viral mimicry.",
+        "The study reframes type I PRMT inhibition as an RNA-to-innate-immunity intervention and supplies a rationale for interferon-linked stratification and combination research. It does not imply uniform sensitivity across TNBC or establish a clinically validated treatment strategy."
+      ]
+    }
+  },
+  "prmt-review": {
+    "zh": {
+      "title": "精氨酸上的小修饰，如何成为药物研究的大问题",
+      "paragraphs": [
+        "给蛋白精氨酸加上甲基，看似只是局部化学变化，却可以改变蛋白与 RNA、其他蛋白的相互作用。这篇综述追踪蛋白精氨酸甲基转移酶（PRMT）研究，讨论这种修饰怎样影响细胞，以及为什么它可能成为治疗切入点。",
+        "文章首先梳理从化学变化到生物学功能的联系。不同甲基化形式及其识别过程，参与转录、RNA 剪接、DNA 损伤响应和代谢，也影响蛋白-RNA 作用与生物凝聚体。这里的重点不是为所有表型指定一个统一机制，而是揭示 PRMT 功能的多层次性。",
+        "接着，作者围绕疾病中的依赖关系整理证据：哪些遗传或代谢背景让细胞更依赖某类 PRMT？通过汇总已有机制研究，文章说明靶点是否值得干预，需要与具体疾病状态和分子背景一起判断。",
+        "能否把这种依赖变成可靠的干预，还取决于工具质量。综述结合结构生物学与抑制剂开发，讨论如何获得选择性分子、验证靶点作用，并把基础研究推进到治疗探索，同时指出机制理解和患者分层的重要性。",
+        "作为综述，它给出的是截至发表时的领域证据与问题框架，而不是一次新的药效实验。其启发在于：PRMT 靶向研究需要把酶的化学功能、细胞依赖和药物选择性连接起来，不能仅凭高表达就判断治疗价值。"
+      ]
+    },
+    "en": {
+      "title": "How a small arginine modification becomes a therapeutic question",
+      "paragraphs": [
+        "Adding a methyl group to protein arginine can change interactions with RNA and other proteins. This review follows protein arginine methyltransferases, or PRMTs, from the chemistry of that modification to cellular functions and therapeutic investigation.",
+        "It first connects methylation states and recognition mechanisms to transcription, RNA splicing, DNA-damage responses and metabolism. Protein-RNA interactions and biomolecular condensates add further layers. The synthesis emphasizes varied mechanisms rather than one explanation for every phenotype.",
+        "The next question is contextual dependence: which genetic or metabolic states make cells especially reliant on a PRMT? Drawing on published mechanistic studies, the review explains why target value must be considered alongside disease background.",
+        "Turning dependence into an intervention requires suitable molecules. Structural biology and inhibitor development provide routes to selectivity and target validation, while unresolved mechanisms and patient stratification remain important translational questions.",
+        "This is a synthesis of evidence available at publication, not a new efficacy experiment or a current clinical-development update. Its central lesson is to connect enzymatic chemistry, cellular dependence and compound selectivity rather than infer therapeutic value from expression alone."
+      ]
+    }
+  },
+  "ezh2-rb1": {
+    "zh": {
+      "title": "RB1 表达降低之后，能否通过染色质调控重新提高它？",
+      "paragraphs": [
+        "RB1 是细胞周期的重要制动因子，其功能受损与三阴性乳腺癌的治疗反应有关。但表达低与基因彻底缺失并不是同一件事：如果 RB1 受到的是可调节的转录抑制，是否存在恢复表达的机会？这项研究从表观遗传调控寻找答案。",
+        "作者结合生物信息学分析与实验验证，将 EZH2 锁定为 RB1 表达的上游调控因素。药理抑制 EZH2 后，相关细胞模型中的 RB1 表达上升，为进一步追问调控发生的位置提供了依据。",
+        "接下来，研究利用 ATAC-seq 线索检查 RB1 基因区域，并关注一个位于内含子的候选增强子。ChIP-qPCR 显示，EZH2 抑制后该区域的活化标记 H3K27ac 增加，把药物处理与局部染色质状态连接起来。",
+        "这个区域是否真的参与 RB1 表达，而非仅仅伴随变化？作者通过 CRISPR 删除增强子，观察到 RB1 RNA 与蛋白降低，支持其功能作用。不过，不能把结果简化为已经证明 EZH2 在此直接移除某种抑制标记；论文对局部机制仍保留未解问题。",
+        "研究支持通过表观遗传调控提高 RB1 表达的思路，为后续耐药研究提供切入点。它并没有证明能修复 RB1 基因缺失，也没有完成基于这一策略的临床治疗验证。"
+      ]
+    },
+    "en": {
+      "title": "Can chromatin regulation raise RB1 expression in TNBC?",
+      "paragraphs": [
+        "RB1 restrains cell-cycle progression, and loss of its function affects treatment response. Low expression, however, is not the same as gene deletion. This study asked whether an epigenetically regulated component of RB1 expression could be increased.",
+        "Bioinformatic analysis and experiments identified EZH2 as an upstream regulator. Pharmacological EZH2 inhibition raised RB1 expression in the tested cellular models, prompting investigation of the regulatory region involved.",
+        "ATAC-seq information pointed to a candidate intronic RB1 enhancer. ChIP-qPCR showed increased enrichment of the active chromatin mark H3K27ac after EZH2 inhibition, linking treatment to local chromatin changes.",
+        "To test whether the region was functional, the researchers deleted it using CRISPR and observed reduced RB1 RNA and protein. This supports enhancer involvement, but does not resolve every local mechanism or simply establish direct removal of a repressive mark by the treatment.",
+        "The study supports an epigenetic route to increasing RB1 expression and motivates further resistance research. It does not demonstrate repair of an RB1 deletion or clinical benefit from this strategy."
+      ]
+    }
+  },
+  "prmt5-vulnerability": {
+    "zh": {
+      "title": "紫杉醇耐药细胞如何暴露出新的分裂弱点",
+      "paragraphs": [
+        "紫杉醇通过干扰细胞分裂抑制肿瘤，但耐药细胞能够适应这种压力。适应是否也带来新的依赖？这项研究没有只追问原药为什么失效，而是利用表观遗传化学探针寻找耐药状态新产生的可干预弱点。",
+        "作者建立并比较亲本与耐药三阴性乳腺癌模型，通过筛选发现耐药细胞对 PRMT 抑制更加敏感。细胞及临床样本分析提示，这些耐药细胞通过稳定有丝分裂染色质装配来规避紫杉醇作用，也因此依赖维持分裂的相关过程。",
+        "为什么抑制 PRMT5 会击中这个弱点？遗传和药理干预结合 RNA 剪接分析，指向 AURKB 转录本的内含子保留。随之下降的 AURKB 蛋白削弱有丝分裂调控，使耐药细胞出现有丝分裂灾难。",
+        "机制线索进一步指导了联合干预：同时抑制 I 型 PRMT 与 PRMT5，可以加强对 AURKB 相关分裂信号的扰动。研究在耐药细胞和来自紫杉醇耐药患者的异种移植模型中检验了联合抑瘤效果。",
+        "这项工作说明，耐药可能不是简单变得更强，而是把生存建立在新的脆弱依赖上。PRMT-AURKB 轴提供了针对这种依赖的临床前依据，但患者来源模型仍不同于患者用药试验，疗效与耐受性需要进一步验证。"
+      ]
+    },
+    "en": {
+      "title": "Paclitaxel resistance exposes a new weakness in cell division",
+      "paragraphs": [
+        "Cells that escape paclitaxel have adapted to pressure on mitosis. Could that adaptation create a new dependency? Rather than only asking why the original drug failed, this study screened epigenetic probes for vulnerabilities acquired with resistance.",
+        "Comparisons of parental and resistant TNBC models identified increased sensitivity to PRMT inhibition. Cellular and clinical-sample analyses suggested that resistant cells maintained mitotic chromatin assembly to evade paclitaxel, creating dependence on processes that support division.",
+        "Genetic and pharmacological PRMT5 inhibition helped explain the vulnerability. RNA-splicing analysis identified intron retention in AURKB transcripts, followed by reduced AURKB protein and mitotic catastrophe in resistant cells.",
+        "The mechanism suggested a combination: inhibiting type I PRMTs alongside PRMT5 intensified disruption of AURKB-associated mitotic signaling. The team tested growth suppression in resistant cells and a xenograft derived from a paclitaxel-resistant patient's tumor.",
+        "The work shows how adaptation to treatment can expose another dependency and provides preclinical support for targeting the PRMT-AURKB axis. Patient-derived models are not patient treatment trials; efficacy and tolerability require further validation."
+      ]
+    }
+  },
+  "prmt1-pd1": {
+    "zh": {
+      "title": "先改变肿瘤免疫环境，再增强 PD-1 阻断的作用",
+      "paragraphs": [
+        "解除免疫检查点并不一定足以让 T 细胞有效攻击肿瘤，尤其当肿瘤缺少免疫细胞浸润或适当激活时。此前研究已发现 I 型 PRMT 抑制能启动病毒模拟响应，这篇论文进一步追问：这种肿瘤内在变化能否转化为更有利的免疫环境？",
+        "作者首先使用单细胞转录组分析，观察 MS023 处理后三阴性乳腺癌模型中的免疫细胞组成与状态。流式细胞术验证了 CD8 T 细胞浸润增加，把分子层面的免疫激活线索推进到实际细胞群体变化。",
+        "更多 T 细胞进入肿瘤，是否也意味着参与反应的克隆发生改变？研究通过单细胞 T 细胞受体测序追踪克隆型，观察到处理后克隆型数量与克隆多样性的增加，从另一个层面描述免疫响应的重塑。",
+        "随后，在同系小鼠肿瘤模型中，作者比较 MS023、抗 PD-1 及联合处理，并检测后续免疫记忆。联合方案抑制肿瘤生长，相关实验也支持其能够产生免疫记忆效应。",
+        "研究由此将 I 型 PRMT 抑制与免疫检查点阻断连接起来：不仅让肿瘤发出警报，还改变参与响应的细胞与克隆。结论来自临床前模型，为联合治疗提供依据，但不等于已经证实能提高患者的免疫治疗获益。"
+      ]
+    },
+    "en": {
+      "title": "Reshaping tumor immunity before releasing the PD-1 brake",
+      "paragraphs": [
+        "Checkpoint blockade may be insufficient when a tumor lacks immune infiltration or activation. Earlier work linked type I PRMT inhibition to viral mimicry. This study asked whether that tumor-intrinsic response could become a more favorable immune environment.",
+        "Single-cell transcriptomics examined immune populations and states after MS023 treatment in TNBC models. Flow cytometry confirmed increased CD8 T-cell infiltration, connecting molecular immune signals to changes in the cells present.",
+        "The researchers then used single-cell T-cell receptor sequencing to ask whether the responding repertoire changed. Increased clonotypes and clonal diversity provided another view of immune remodeling beyond cell counts alone.",
+        "In a syngeneic mouse tumor model, they compared MS023, anti-PD-1 and the combination, and investigated immune memory. Combination treatment suppressed tumor growth, with follow-up experiments supporting a memory effect.",
+        "The study connects type I PRMT inhibition to checkpoint therapy through changes in immune populations and repertoires. These preclinical findings justify further combination research; they do not establish improved immunotherapy outcomes in patients."
+      ]
+    }
+  },
+  "taf1-bay299": {
+    "zh": {
+      "title": "干预 TAF1，让部分乳腺癌细胞暴露内源性 RNA 警报",
+      "paragraphs": [
+        "TAF1 参与转录起始，但抑制这个过程会怎样影响三阴性乳腺癌及其免疫信号，并不清楚。这篇研究使用化学探针 BAY-299，从不同细胞模型的反应差异入手，寻找生长抑制背后的机制与解释敏感性的线索。",
+        "作者首先比较细胞增殖和转录变化，并用 TAF1 遗传敲低补充药理实验。结果显示，部分细胞中干扰 TAF1 会激活干扰素及抗原处理、呈递相关程序，而不同三阴性乳腺癌细胞的反应并不一致。",
+        "这些抗病毒样信号从哪里来？研究检测到内源性逆转录病毒相关转录增加，并通过双链 RNA 成像与定量观察到 RNA 积累，同时分析 RNA 感知通路。这些证据支持一种没有外源病毒参与的病毒模拟响应。",
+        "为解释为什么部分细胞不敏感，作者整合转录组和蛋白组，发现较高 PCNA 水平与较弱的 BAY-299 响应相关。患者数据中的相关分析还把 PCNA 与免疫抑制特征联系起来，但相关性本身不足以证明 PCNA 就是耐受的直接原因。",
+        "论文将 TAF1 干预、内源性 RNA 与先天免疫连接起来，并提出候选反应标志物。BAY-299 是研究用化学探针，不能将其细胞实验效果直接等同于临床治疗，也不应把相关标志物当作已经验证的患者筛选工具。"
+      ]
+    },
+    "en": {
+      "title": "TAF1 perturbation exposes an endogenous RNA alarm in TNBC",
+      "paragraphs": [
+        "TAF1 participates in transcription initiation, but the consequences of targeting it in TNBC were unclear. Using the chemical probe BAY-299, this study examined variable cellular responses to identify both a mechanism and potential sensitivity markers.",
+        "Proliferation and transcript analyses were complemented by genetic TAF1 knockdown. In responsive cells, perturbation activated interferon and antigen-processing or presentation programs. The response was not uniform across TNBC models.",
+        "To trace the antiviral-like signal, the researchers measured endogenous retrovirus-associated transcripts, imaged and quantified double-stranded RNA, and examined RNA-sensing pathways. The results supported viral mimicry without an external infection.",
+        "Integrating transcriptomic and proteomic data associated higher PCNA levels with weaker BAY-299 responses. Patient-dataset analyses also linked PCNA to suppressive immune features. These associations do not by themselves prove that PCNA directly causes resistance.",
+        "The study connects TAF1 perturbation to endogenous RNA and innate immune signaling while nominating a response marker. BAY-299 is a research probe, and neither its cellular activity nor the PCNA association establishes a clinical treatment or validated patient-selection test."
+      ]
+    }
+  },
+  "interferon-prmt5": {
+    "zh": {
+      "title": "用干扰素状态解释 PRMT5 敏感性，再寻找可改变它的组合",
+      "paragraphs": [
+        "PRMT5 抑制能够影响肿瘤生长，但不同三阴性乳腺癌模型的反应差异很大。如果无法区分敏感与不敏感状态，也就难以决定如何分层或联合干预。这项研究把基础干扰素信号作为连接这些问题的线索。",
+        "作者结合 PRMT5 抑制剂反应与转录组分析，发现较高的基础干扰素通路活性与敏感性相关。进一步分析显示，敏感模型中较高的 DNA 损伤与这种免疫信号状态相联系，提示药物反应与细胞既有的应激背景有关。",
+        "如果 DNA 损伤能改变干扰素信号，是否可以主动推动不敏感细胞进入更易响应的状态？研究使用 PARP 抑制剂奥拉帕利，观察 DNA 损伤、干扰素激活以及与 PRMT5 抑制联合时的效果，获得了协同抑制的证据。",
+        "随后，作者在患者来源类器官和异种移植模型中检验联合方案，并在免疫相关模型中研究微环境变化。结果将抑瘤效果与树突状细胞-CD8⁺ T 细胞交流增强以及持续的抗肿瘤免疫联系起来。",
+        "论文将候选标志物与机制驱动的联合方案组织到一起：既解释谁更敏感，也尝试改变不敏感状态。这里的干扰素特征与联合效果仍属于临床前证据，尚需独立队列及临床研究确定适用人群、获益和安全性。"
+      ]
+    },
+    "en": {
+      "title": "Using interferon state to understand and alter PRMT5 inhibitor response",
+      "paragraphs": [
+        "TNBC models respond differently to PRMT5 inhibition. Understanding those differences is necessary both for stratification and for designing combinations. This study examined basal interferon signaling as a link between sensitivity and cellular state.",
+        "Drug-response measurements and transcriptomic profiling associated stronger baseline interferon activity with sensitivity. Sensitive models also displayed elevated DNA damage linked to that signaling state, suggesting that pre-existing stress helps shape the response.",
+        "Could that state be altered in resistant cells? The researchers used the PARP inhibitor olaparib to induce DNA damage and interferon signaling, then tested its combination with PRMT5 inhibition. The experiments supported synergistic growth suppression.",
+        "Patient-derived organoids and xenografts extended the combination tests. Immune-focused models examined microenvironmental changes, connecting treatment to enhanced dendritic cell-CD8 T-cell communication and sustained antitumor immunity.",
+        "The paper brings a candidate stratification signal together with a mechanism-led combination: explaining sensitivity while trying to change resistant states. Both the interferon signature and therapeutic strategy remain preclinical findings requiring independent and clinical validation."
+      ]
+    }
+  }
+}

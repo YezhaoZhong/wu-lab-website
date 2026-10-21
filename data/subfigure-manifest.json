@@ -1,0 +1,362 @@
+[
+  {
+    "doi": "10.1002/advs.202308924",
+    "page": 2,
+    "figure": "Figure 1A",
+    "region": [
+      0.085,
+      0.09,
+      0.405,
+      0.452
+    ],
+    "reason": "AptLYTAC recognition, internalization and lysosomal degradation mechanism.",
+    "title": "Multivalent Aptamer-Based Lysosome-Targeting Chimeras (LYTACs) Platform for Mono- or Dual-Targeted Proteins Degradation on Cell Surface",
+    "pdf": "../assets/publications/papers/Duan et al. - 2024 - Multivalent Aptamer-Based Lysosome-Targeting Chimeras (LYTACs) Platform for Mono- or Dual-Targeted P.pdf",
+    "image": "../assets/publications/covers-subfigure/duan-et-al-2024-multivalent-aptamer-based-lysosome-targeting-chimeras-lytacs-platform-for-mono-or-dual-targeted-p.png",
+    "width": 573,
+    "height": 850,
+    "pdf_sha256": "2db8b364f9d9ab41fc510df5daebd61481ceb4e60d43085fb055bad0cefc7fa0"
+  },
+  {
+    "doi": "10.1002/advs.202500433",
+    "page": 3,
+    "figure": "Figure 1A",
+    "region": [
+      0.1,
+      0.09,
+      0.405,
+      0.266
+    ],
+    "reason": "Chemical modification design of the SRiApt therapeutic variants.",
+    "title": "PTf-SRiApt Targeting SCAF4-POLR2A Interaction Suppresses Tumor Growth and Promotes Antitumor Immunity in Triple-Negative Breast Cancer",
+    "pdf": "../assets/publications/papers/Fei et al. - 2025 - PTf-SRiApt Targeting SCAF4-POLR2A Interaction Suppresses Tumor Growth and Promotes Antitumor Immunit.pdf",
+    "image": "../assets/publications/covers-subfigure/fei-et-al-2025-ptf-sriapt-targeting-scaf4-polr2a-interaction-suppresses-tumor-growth-and-promotes-antitumor-immunit.png",
+    "width": 546,
+    "height": 414,
+    "pdf_sha256": "e6e8e34b86a11f567b54148583a7d8fc61ce0cf571a0495bcc6b7902c6a8d13f"
+  },
+  {
+    "doi": "10.1021/acs.analchem.4c06927",
+    "page": 2,
+    "figure": "Figure 1a",
+    "region": [
+      0.215,
+      0.072,
+      0.81,
+      0.218
+    ],
+    "reason": "Multiplexed cell-surface marker detection workflow and assay components.",
+    "title": "Multiplexed Detection of Tumor Markers and Discrimination of Cancer Cell Types by Laser Ablation-Dielectric Barrier Discharge Ionization-Mass Spectrometry",
+    "pdf": "../assets/publications/papers/Guan et al. - 2025 - Multiplexed Detection of Tumor Markers and Discrimination of Cancer Cell Types by Laser Ablation-Die.pdf",
+    "image": "../assets/publications/covers-subfigure/guan-et-al-2025-multiplexed-detection-of-tumor-markers-and-discrimination-of-cancer-cell-types-by-laser-ablation-die.png",
+    "width": 1086,
+    "height": 352,
+    "pdf_sha256": "88e297883cb6fb7b99e2309c9131834f3b47c25e9e2082b9edaecaadfcbf4da5"
+  },
+  {
+    "doi": "10.1038/s41467-024-51197-w",
+    "page": 3,
+    "figure": "Figure 1a",
+    "region": [
+      0.08,
+      0.055,
+      0.925,
+      0.237
+    ],
+    "reason": "Structure-guided selection workflow for inhibitory aptamers.",
+    "title": "Blocker-SELEX: a structure-guided strategy for developing inhibitory aptamers disrupting undruggable transcription factor interactions",
+    "pdf": "../assets/publications/papers/Li et al. - 2024 - Blocker-SELEX a structure-guided strategy for developing inhibitory aptamers disrupting undruggable.pdf",
+    "image": "../assets/publications/covers-subfigure/li-et-al-2024-blocker-selex-a-structure-guided-strategy-for-developing-inhibitory-aptamers-disrupting-undruggable.png",
+    "width": 1510,
+    "height": 433,
+    "pdf_sha256": "ac9db80f57382df11cfc2c6b9561accf9943c16b6f9d2a902647491ad979bd11"
+  },
+  {
+    "doi": "10.1093/nar/gkaf144",
+    "page": 1,
+    "figure": "Graphical abstract",
+    "region": [
+      0.075,
+      0.567,
+      0.915,
+      0.819
+    ],
+    "reason": "Overview of chemical evolution and intracellular gene silencing by ASO-like DNAzymes.",
+    "title": "Chemical evolution of ASO-like DNAzymes for effective and extended gene silencing in cells",
+    "pdf": "../assets/publications/papers/Liu et al. - 2025 - Chemical evolution of ASO-like DNAzymes for effective and extended gene silencing in cells.pdf",
+    "image": "../assets/publications/covers-subfigure/liu-et-al-2025-chemical-evolution-of-aso-like-dnazymes-for-effective-and-extended-gene-silencing-in-cells.png",
+    "width": 1543,
+    "height": 599,
+    "pdf_sha256": "73092e67160a1d311b078511eefee62d535a7f0914b5c03122d1f13a40639906"
+  },
+  {
+    "doi": "10.1126/science.adv6127",
+    "page": 1,
+    "figure": "Research summary schematic",
+    "region": [
+      0.507,
+      0.243,
+      0.94,
+      0.536
+    ],
+    "reason": "Integrates CRISPR perturbation, aptamer profiling, kinetics and AI-based generation.",
+    "title": "SPARK-seq: A high-throughput platform for aptamer discovery and kinetic profiling",
+    "pdf": "../assets/publications/papers/Luo et al. - 2026 - SPARK-seq A high-throughput platform for aptamer .pdf",
+    "image": "../assets/publications/covers-subfigure/luo-et-al-2026-spark-seq-a-high-throughput-platform-for-aptamer.png",
+    "width": 773,
+    "height": 665,
+    "pdf_sha256": "65c3a7cfee15ee737f031fa84c97e95641354cf6d396185c47fe6a8005077a3c"
+  },
+  {
+    "doi": "10.1016/j.celbio.2025.100218",
+    "page": 1,
+    "figure": "Graphical abstract",
+    "region": [
+      0.09,
+      0.283,
+      0.567,
+      0.532
+    ],
+    "reason": "AptCD4 cell engineering and immune-cell recruitment mechanism.",
+    "title": "CD4 aptamer-engineered cell platforms enhance anti-tumor immunity in triple-negative breast cancer",
+    "pdf": "../assets/publications/papers/Tang et al. - 2026 - CD4 aptamer-engineered cell platforms enhance anti-tumor immunity in triple-negative breast cancer.pdf",
+    "image": "../assets/publications/covers-subfigure/tang-et-al-2026-cd4-aptamer-engineered-cell-platforms-enhance-anti-tumor-immunity-in-triple-negative-breast-cancer.png",
+    "width": 864,
+    "height": 586,
+    "pdf_sha256": "53fd0f77c8b33f1c7b7eba9ed81f9b07525c7aa883c91f70389f79c0c322395f"
+  },
+  {
+    "doi": "10.1021/acsnano.4c07969",
+    "page": 2,
+    "figure": "Figure 1",
+    "region": [
+      0.245,
+      0.075,
+      0.795,
+      0.3
+    ],
+    "reason": "Conceptual molecular composition and interaction network overview; an unpanelled perspective figure.",
+    "title": "The Emerging Era of Molecular Medicine",
+    "pdf": "../assets/publications/papers/2024 - The Emerging Era of Molecular Medicine.pdf",
+    "image": "../assets/publications/covers-subfigure/2024-the-emerging-era-of-molecular-medicine.png",
+    "width": 1003,
+    "height": 541,
+    "pdf_sha256": "9f6648c1fa02766ddc4e78eec351de61e7255faf5081d8568f33413e99b02f50"
+  },
+  {
+    "doi": "10.1016/j.xpro.2025.103605",
+    "page": 1,
+    "figure": "Protocol overview graphic",
+    "region": [
+      0.14,
+      0.252,
+      0.73,
+      0.655
+    ],
+    "reason": "Complete workflow from resistant-cell establishment to inhibitor screening and validation.",
+    "title": "Protocol to identify small-molecule inhibitors against cancer drug resistance",
+    "pdf": "../assets/publications/papers/Wei et al. - 2025 - Protocol to identify small-molecule inhibitors against cancer drug resistance.pdf",
+    "image": "../assets/publications/covers-subfigure/wei-et-al-2025-protocol-to-identify-small-molecule-inhibitors-against-cancer-drug-resistance.png",
+    "width": 1068,
+    "height": 948,
+    "pdf_sha256": "2d87973c2b27f4bb960442d708cb946f75ba765e244597e814d57b84b2247602"
+  },
+  {
+    "doi": "10.1038/s41467-020-18020-8",
+    "page": 6,
+    "figure": "Figure 3g",
+    "region": [
+      0.739,
+      0.259,
+      0.916,
+      0.379
+    ],
+    "reason": "Core association between RB1 protein abundance and GLUT1 inhibitor sensitivity; a result panel, not a mechanism schematic.",
+    "title": "GLUT1 inhibition blocks growth of RB1-positive triple negative breast cancer",
+    "pdf": "../assets/publications/papers/Wu et al. - 2020 - GLUT1 inhibition blocks growth of RB1-positive triple negative breast cancer.pdf",
+    "image": "../assets/publications/covers-subfigure/wu-et-al-2020-glut1-inhibition-blocks-growth-of-rb1-positive-triple-negative-breast-cancer.png",
+    "width": 317,
+    "height": 283,
+    "pdf_sha256": "09ab8c7eb016a43f91062bed670d274c51704f53ec506eb322f600fd05d356ae"
+  },
+  {
+    "doi": "10.1038/s41467-019-09672-2",
+    "page": 3,
+    "figure": "Figure 1",
+    "region": [
+      0.12,
+      0.052,
+      0.87,
+      0.51
+    ],
+    "reason": "Overview of bromodomain-family coverage by the chemical probe toolbox; an unpanelled figure.",
+    "title": "A chemical toolbox for the study of bromodomains and epigenetic signaling",
+    "pdf": "../assets/publications/papers/Wu et al. - 2019 - A chemical toolbox for the study of bromodomains and epigenetic signaling.pdf",
+    "image": "../assets/publications/covers-subfigure/wu-et-al-2019-a-chemical-toolbox-for-the-study-of-bromodomains-and-epigenetic-signaling.png",
+    "width": 1340,
+    "height": 1076,
+    "pdf_sha256": "5a97eee38f7c4a5dc132995f105277e2afd28be9d90ee3d357f6f5b72238fa1c"
+  },
+  {
+    "doi": "10.1038/s41589-022-01024-4",
+    "page": 7,
+    "figure": "Figure 5d-e",
+    "region": [
+      0.435,
+      0.064,
+      0.935,
+      0.274
+    ],
+    "reason": "Microscopy and matched quantification of cytoplasmic dsRNA supporting the viral-mimicry mechanism.",
+    "title": "PRMT inhibition induces a viral mimicry response in triple-negative breast cancer",
+    "pdf": "../assets/publications/papers/Wu et al. - 2022 - PRMT inhibition induces a viral mimicry response in triple-negative breast cancer.pdf",
+    "image": "../assets/publications/covers-subfigure/wu-et-al-2022-prmt-inhibition-induces-a-viral-mimicry-response-in-triple-negative-breast-cancer.png",
+    "width": 894,
+    "height": 500,
+    "pdf_sha256": "22c2f7ea665edaebdcaab5fc0cc329c00d918a0508020f3224399633da1ac09a"
+  },
+  {
+    "doi": "10.1038/s41573-021-00159-8",
+    "page": 3,
+    "figure": "Figure 1",
+    "region": [
+      0.062,
+      0.33,
+      0.586,
+      0.742
+    ],
+    "reason": "Cellular distribution and biological functions of arginine-methylated proteins; a review overview figure.",
+    "title": "Protein arginine methylation: from enigmatic functions to therapeutic targeting",
+    "pdf": "../assets/publications/papers/Wu et al. - 2021 - Protein arginine methylation from enigmatic functions to therapeutic targeting.pdf",
+    "image": "../assets/publications/covers-subfigure/wu-et-al-2021-protein-arginine-methylation-from-enigmatic-functions-to-therapeutic-targeting.png",
+    "width": 937,
+    "height": 979,
+    "pdf_sha256": "3363c69473fa7e7eb181856b58832a728adb06715e431469e802d33fa7a01bd4"
+  },
+  {
+    "doi": "10.1021/jacs.5c01296",
+    "page": 2,
+    "figure": "Figure 1",
+    "region": [
+      0.24,
+      0.073,
+      0.75,
+      0.43
+    ],
+    "reason": "Apt-seq workflow from aptamer staining through single-cell library construction to multiomics analysis.",
+    "title": "High-Throughput Multiplexed Quantification of Molecules by Aptamer Sequencing (Apt-seq) in Single Cells",
+    "pdf": "../assets/publications/papers/Wu et al. - 2025 - High-Throughput Multiplexed Quantification of Molecules by Aptamer Sequencing (Apt-seq) in Single Ce.pdf",
+    "image": "../assets/publications/covers-subfigure/wu-et-al-2025-high-throughput-multiplexed-quantification-of-molecules-by-aptamer-sequencing-apt-seq-in-single-ce.png",
+    "width": 930,
+    "height": 859,
+    "pdf_sha256": "eba9ec6c89f7790274119143890140c37397a2acea9dda7927c93ad2ecc4cfc2"
+  },
+  {
+    "doi": "10.1111/jcmm.70384",
+    "page": 6,
+    "figure": "Figure 4B-C",
+    "region": [
+      0.073,
+      0.371,
+      0.935,
+      0.612
+    ],
+    "reason": "Matched ChIP-qPCR panels showing increased H3K27ac at the RB1 enhancer after EZH2 inhibition.",
+    "title": "Increasing RB1 Expression by Targeting EZH2 in Triple-Negative Breast Cancer",
+    "pdf": "../assets/publications/papers/Yang et al. - 2025 - Increasing RB1 Expression by Targeting EZH2 in Triple-Negative Breast Cancer.pdf",
+    "image": "../assets/publications/covers-subfigure/yang-et-al-2025-increasing-rb1-expression-by-targeting-ezh2-in-triple-negative-breast-cancer.png",
+    "width": 1540,
+    "height": 567,
+    "pdf_sha256": "df28365e56deaeda26c15a0d3f260cbf17ac7c38907f036b1174df432a8cedbf"
+  },
+  {
+    "doi": "10.1016/j.chembiol.2024.08.003",
+    "page": 1,
+    "figure": "Graphical abstract",
+    "region": [
+      0.09,
+      0.268,
+      0.565,
+      0.615
+    ],
+    "reason": "Paclitaxel resistance, PRMT targeting and AURKB intron retention integrated into the therapeutic model.",
+    "title": "A chemical screen identifies PRMT5 as a therapeutic vulnerability for paclitaxel-resistant triple-negative breast cancer",
+    "pdf": "../assets/publications/papers/Zhang et al. - 2024 - A chemical screen identifies PRMT5 as a therapeutic vulnerability for paclitaxel-resistant triple-ne.pdf",
+    "image": "../assets/publications/covers-subfigure/zhang-et-al-2024-a-chemical-screen-identifies-prmt5-as-a-therapeutic-vulnerability-for-paclitaxel-resistant-triple-ne.png",
+    "width": 861,
+    "height": 816,
+    "pdf_sha256": "ca50c66f4b29b06676a478062736845cbf4be109f9996a750baa18e520816eaf"
+  },
+  {
+    "doi": "10.1002/cncr.35142",
+    "page": 3,
+    "figure": "Figure 1A",
+    "region": [
+      0.083,
+      0.354,
+      0.464,
+      0.513
+    ],
+    "reason": "Conceptual tumor-immunogenicity and immune-microenvironment rationale for the combination; caption explicitly notes previous work.",
+    "title": "Type-I protein arginine methyltransferase inhibition primes anti-programmed cell death protein 1 immunotherapy in triple-negative breast cancer",
+    "pdf": "../assets/publications/papers/Zhang et al. - 2024 - Type-I protein arginine methyltransferase inhibition primes anti-programmed cell death protein 1 imm.pdf",
+    "image": "../assets/publications/covers-subfigure/zhang-et-al-2024-type-i-protein-arginine-methyltransferase-inhibition-primes-anti-programmed-cell-death-protein-1-imm.png",
+    "width": 681,
+    "height": 375,
+    "pdf_sha256": "bbd7d4b7780153f9b20f060624b86f77aee480bd565653abba1eed2c81bd792f"
+  },
+  {
+    "doi": "10.1016/j.bbrc.2023.04.100",
+    "page": 6,
+    "figure": "Figure 3d",
+    "region": [
+      0.464,
+      0.277,
+      0.875,
+      0.443
+    ],
+    "reason": "dsRNA imaging with matched quantification after TAF1 inhibition, supporting the antiviral-mimicry result.",
+    "title": "Targeting TAF1 with BAY-299 induces antitumor immunity in triple-negative breast cancer",
+    "pdf": "../assets/publications/papers/Zhang et al. - 2023 - Targeting TAF1 with BAY-299 induces antitumor immunity in triple-negative breast cancer.pdf",
+    "image": "../assets/publications/covers-subfigure/zhang-et-al-2023-targeting-taf1-with-bay-299-induces-antitumor-immunity-in-triple-negative-breast-cancer.png",
+    "width": 735,
+    "height": 396,
+    "pdf_sha256": "8e8fec7d65e31966def3dfde22a4dd18555beb52c0cdddf411ea733d5f416b16"
+  },
+  {
+    "doi": "10.1002/advs.202505787",
+    "page": 7,
+    "figure": "Figure 4j",
+    "region": [
+      0.42,
+      0.395,
+      0.823,
+      0.58
+    ],
+    "reason": "Patient-derived xenograft validation design for combining olaparib and PRMT5 inhibition.",
+    "title": "Interferon-Driven Biomarkers and Synergistic Therapy for PRMT5 Inhibition in Triple-Negative Breast Cancer",
+    "pdf": "../assets/publications/papers/zhang-2025-interferon-prmt5-tnbc.pdf",
+    "image": "../assets/publications/covers-subfigure/zhang-2025-interferon-prmt5-tnbc.png",
+    "width": 720,
+    "height": 435,
+    "pdf_sha256": "6d2b0b8683dc902b45481b5f308e5f32a7f3734510047af5ba886d221c9d1dd6"
+  },
+  {
+    "doi": "10.1073/pnas.2506491122",
+    "page": 2,
+    "figure": "Figure 1D",
+    "region": [
+      0.132,
+      0.337,
+      0.362,
+      0.478
+    ],
+    "reason": "Cartoon representation of the ATP-bound aptamer structure, showing the molecular recognition architecture.",
+    "title": "Structural basis and affinity improvement for an ATP-binding DNA aptamer",
+    "pdf": "../assets/publications/papers/jiang-2025-atp-binding-dna-aptamer.pdf",
+    "image": "../assets/publications/covers-subfigure/jiang-2025-atp-binding-dna-aptamer.png",
+    "width": 405,
+    "height": 332,
+    "pdf_sha256": "994a7df770da9fb96c84c816664fc1bb6cec24f362f7d1490d6ccbbfc3c1ed4c"
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {"doi":"10.1002/advs.202308924","page":2,"figure":"Figure 1A","region":[0.085,0.09,0.405,0.452],"reason":"AptLYTAC recognition, internalization and lysosomal degradation mechanism."},
+  {"doi":"10.1002/advs.202500433","page":3,"figure":"Figure 1A","region":[0.1,0.09,0.405,0.266],"reason":"Chemical modification design of the SRiApt therapeutic variants."},
+  {"doi":"10.1021/acs.analchem.4c06927","page":2,"figure":"Figure 1a","region":[0.215,0.072,0.81,0.218],"reason":"Multiplexed cell-surface marker detection workflow and assay components."},
+  {"doi":"10.1038/s41467-024-51197-w","page":3,"figure":"Figure 1a","region":[0.08,0.055,0.925,0.237],"reason":"Structure-guided selection workflow for inhibitory aptamers."},
+  {"doi":"10.1093/nar/gkaf144","page":1,"figure":"Graphical abstract","region":[0.075,0.567,0.915,0.819],"reason":"Overview of chemical evolution and intracellular gene silencing by ASO-like DNAzymes."},
+  {"doi":"10.1126/science.adv6127","page":1,"figure":"Research summary schematic","region":[0.507,0.243,0.94,0.536],"reason":"Integrates CRISPR perturbation, aptamer profiling, kinetics and AI-based generation."},
+  {"doi":"10.1016/j.celbio.2025.100218","page":1,"figure":"Graphical abstract","region":[0.09,0.283,0.567,0.532],"reason":"AptCD4 cell engineering and immune-cell recruitment mechanism."},
+  {"doi":"10.1021/acsnano.4c07969","page":2,"figure":"Figure 1","region":[0.245,0.075,0.795,0.30],"reason":"Conceptual molecular composition and interaction network overview; an unpanelled perspective figure."},
+  {"doi":"10.1016/j.xpro.2025.103605","page":1,"figure":"Protocol overview graphic","region":[0.14,0.252,0.73,0.655],"reason":"Complete workflow from resistant-cell establishment to inhibitor screening and validation."},
+  {"doi":"10.1038/s41467-020-18020-8","page":6,"figure":"Figure 3g","region":[0.739,0.259,0.916,0.379],"reason":"Core association between RB1 protein abundance and GLUT1 inhibitor sensitivity; a result panel, not a mechanism schematic."},
+  {"doi":"10.1038/s41467-019-09672-2","page":3,"figure":"Figure 1","region":[0.12,0.052,0.87,0.51],"reason":"Overview of bromodomain-family coverage by the chemical probe toolbox; an unpanelled figure."},
+  {"doi":"10.1038/s41589-022-01024-4","page":7,"figure":"Figure 5d-e","region":[0.435,0.064,0.935,0.274],"reason":"Microscopy and matched quantification of cytoplasmic dsRNA supporting the viral-mimicry mechanism."},
+  {"doi":"10.1038/s41573-021-00159-8","page":3,"figure":"Figure 1","region":[0.062,0.33,0.586,0.742],"reason":"Cellular distribution and biological functions of arginine-methylated proteins; a review overview figure."},
+  {"doi":"10.1021/jacs.5c01296","page":2,"figure":"Figure 1","region":[0.24,0.073,0.75,0.430],"reason":"Apt-seq workflow from aptamer staining through single-cell library construction to multiomics analysis."},
+  {"doi":"10.1111/jcmm.70384","page":6,"figure":"Figure 4B-C","region":[0.073,0.371,0.935,0.612],"reason":"Matched ChIP-qPCR panels showing increased H3K27ac at the RB1 enhancer after EZH2 inhibition."},
+  {"doi":"10.1016/j.chembiol.2024.08.003","page":1,"figure":"Graphical abstract","region":[0.09,0.268,0.565,0.615],"reason":"Paclitaxel resistance, PRMT targeting and AURKB intron retention integrated into the therapeutic model."},
+  {"doi":"10.1002/cncr.35142","page":3,"figure":"Figure 1A","region":[0.083,0.354,0.464,0.513],"reason":"Conceptual tumor-immunogenicity and immune-microenvironment rationale for the combination; caption explicitly notes previous work."},
+  {"doi":"10.1016/j.bbrc.2023.04.100","page":6,"figure":"Figure 3d","region":[0.464,0.277,0.875,0.443],"reason":"dsRNA imaging with matched quantification after TAF1 inhibition, supporting the antiviral-mimicry result."},
+  {"doi":"10.1002/advs.202505787","page":7,"figure":"Figure 4j","region":[0.42,0.395,0.823,0.58],"reason":"Patient-derived xenograft validation design for combining olaparib and PRMT5 inhibition."},
+  {"doi":"10.1073/pnas.2506491122","page":2,"figure":"Figure 1D","region":[0.132,0.337,0.362,0.478],"reason":"Cartoon representation of the ATP-bound aptamer structure, showing the molecular recognition architecture."}
+]

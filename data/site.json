@@ -1,0 +1,3278 @@
+{
+  "version": 11,
+  "logo": "assets/branding/probe-logo.png",
+  "areas": [
+    {
+      "id": "discover",
+      "title": "Discover",
+      "subtitle": {
+        "en": "Molecular Recognition & Omics",
+        "zh": "分子识别与组学"
+      },
+      "lead": {
+        "en": "Read the molecular signatures that define a cell.",
+        "zh": "读取定义细胞状态的分子信号。"
+      },
+      "studies": [
+        "spark-seq",
+        "apt-seq",
+        "tumor-marker-ms",
+        "molecular-medicine-era"
+      ]
+    },
+    {
+      "id": "design",
+      "title": "Design",
+      "subtitle": {
+        "en": "Structure-Guided Molecular Design",
+        "zh": "结构引导的分子设计"
+      },
+      "lead": {
+        "en": "Connect molecular structure to selective recognition.",
+        "zh": "连接分子结构与特异性识别。"
+      },
+      "studies": [
+        "atp-aptamer",
+        "blocker-selex"
+      ]
+    },
+    {
+      "id": "engineer",
+      "title": "Engineer",
+      "subtitle": {
+        "en": "Functional Aptamers & Therapeutics",
+        "zh": "功能适配体与治疗策略"
+      },
+      "lead": {
+        "en": "Turn recognition into a programmable biological function.",
+        "zh": "让分子识别成为可编程的生物功能。"
+      },
+      "studies": [
+        "blocker-selex",
+        "dnazyme-evolution",
+        "aptamer-lytacs",
+        "ptf-sriapt",
+        "cd4-aptamer-cells"
+      ]
+    },
+    {
+      "id": "translate",
+      "title": "Translate",
+      "subtitle": {
+        "en": "Precision Medicine & Translation",
+        "zh": "精准医学与转化"
+      },
+      "lead": {
+        "en": "Link disease mechanisms to strategies for intervention.",
+        "zh": "从疾病机制出发，寻找干预路径。"
+      },
+      "studies": [
+        "glut1-tnbc",
+        "bromodomain-toolbox",
+        "prmt-review",
+        "taf1-bay299",
+        "prmt-viral-mimicry",
+        "prmt5-vulnerability",
+        "ezh2-rb1",
+        "interferon-prmt5",
+        "prmt1-pd1",
+        "drug-resistance-protocol",
+        "ptf-sriapt",
+        "cd4-aptamer-cells",
+        "aptamer-lytacs"
+      ]
+    }
+  ],
+  "studies": [
+    {
+      "id": "cd4-aptamer-cells",
+      "title": "CD4 Aptamer-Engineered Cell Platforms for Antitumor Immunity",
+      "year": "2026",
+      "journal": "Cell Biomaterials",
+      "citation": "Tang H, Xiong Y, Gan S et al.",
+      "theme": "protect",
+      "pdf": "assets/publications/papers/Tang et al. - 2026 - CD4 aptamer-engineered cell platforms enhance anti-tumor immunity in triple-negative breast cancer.pdf",
+      "doiUrl": "https://doi.org/10.1016/j.celbio.2025.100218",
+      "cover": "assets/publications/covers-subfigure/tang-et-al-2026-cd4-aptamer-engineered-cell-platforms-enhance-anti-tumor-immunity-in-triple-negative-breast-cancer.png",
+      "coverAlt": "Key figure from the CD4 aptamer-engineered cell platform study",
+      "summary": [
+        "Engineers an aptamer-guided cell platform to enhance CD4-directed antitumor immunity in TNBC.",
+        "Addresses poor tumor infiltration and immunosuppression using a targeted immune-cell recruitment strategy.",
+        "Demonstrates how aptamer engineering can be translated into a cellular therapy format."
+      ],
+      "themeFit": "This study belongs in Protect because the primary outcome is therapeutic gain in a tumor model. The aptamer component is important, but the work is positioned as translational immunotherapy.",
+      "related": [
+        "ptf-sriapt",
+        "prmt1-pd1",
+        "interferon-prmt5"
+      ],
+      "areas": [
+        "engineer",
+        "translate"
+      ],
+      "article": {
+        "zh": {
+          "title": "把 CD4⁺ T 细胞带入肿瘤，并让它们组织免疫响应",
+          "paragraphs": [
+            "抗肿瘤免疫常以 CD8⁺ T 细胞为中心，但 CD4⁺ T 细胞也能提供辅助甚至直接杀伤作用。问题在于，它们未必能充分进入肿瘤，进入后也可能受到免疫抑制。这篇研究尝试把“招募到位”和“激活功能”放在同一个工程化平台中解决。",
+            "作者在液氮处理的肿瘤细胞上修饰 CD4 适配体，构建 AptCD4-LNT。设计结合处理后细胞载体的归巢特点与适配体对 CD4 的识别能力，并通过结合和细胞功能实验检查它能否捕获、招募与激活 CD4⁺ T 细胞。",
+            "随后，研究在三阴性乳腺癌模型中考察这些细胞能否进入肿瘤并影响生长。免疫细胞分析不只统计 CD4⁺ T 细胞数量，还进一步追踪它们对肿瘤微环境的影响，包括 NK 细胞、B 细胞和树突状细胞的参与。",
+            "要解释作用来源，还需要区分 CD4 与 CD8 通路。论文中的机制实验支持 CD4⁺ T 细胞及 MHC II 相关响应的重要性，并在所研究模型中显示不依赖 CD8⁺ T 细胞的抑瘤作用。这使平台的意义超出了单纯增加一种免疫细胞的浸润。",
+            "研究展示了通过适配体工程化细胞载体，调动 CD4⁺ T 细胞并重塑局部免疫的临床前策略。其效果与模型和平台构建条件相关，尚不能直接推断患者中的疗效或安全性。"
+          ]
+        },
+        "en": {
+          "title": "Recruiting CD4 T cells to tumors and mobilizing a broader immune response",
+          "paragraphs": [
+            "CD8 T cells dominate many discussions of antitumor immunity, but CD4 T cells can provide help and direct killing. Their potential is limited by poor tumor entry and local suppression. This study sought to combine recruitment and activation in one engineered platform.",
+            "The researchers attached a CD4-binding aptamer to liquid nitrogen-treated cancer cells, creating AptCD4-LNT. The design combined the carrier's homing properties with selective CD4 recognition. Binding and functional experiments tested capture, recruitment and activation of CD4 T cells.",
+            "TNBC models then tested tumor infiltration and growth control. Immune profiling went beyond counting CD4 cells to examine changes in natural killer cells, B cells and dendritic cells, asking whether the intervention mobilized a broader response.",
+            "Mechanistic experiments addressed the respective contributions of CD4 and CD8 pathways. The reported effects supported CD4- and MHC II-associated immunity, including tumor suppression independent of CD8 T cells in the tested models.",
+            "The work presents a preclinical strategy for using aptamer-engineered carriers to reshape local immunity through CD4 T cells. It does not establish patient efficacy or safety, which require further investigation."
+          ]
+        }
+      },
+      "publication": {
+        "authors": "Tang H, Xiong Y, Gan S et al.",
+        "title": "CD4 aptamer-engineered cell platforms enhance anti-tumor immunity in triple-negative breast cancer",
+        "journal": "Cell Biomaterials",
+        "year": "2026",
+        "doi": "10.1016/j.celbio.2025.100218",
+        "pdf": "../assets/publications/papers/Tang et al. - 2026 - CD4 aptamer-engineered cell platforms enhance anti-tumor immunity in triple-negative breast cancer.pdf",
+        "cover": "../assets/publications/covers/tang-et-al-2026-cd4-aptamer-engineered-cell-platforms-enhance-anti-tumor-immunity-in-triple-negative-breast-cancer.png",
+        "doi_url": "https://doi.org/10.1016/j.celbio.2025.100218",
+        "authorList": [
+          {
+            "name": "Heming Tang",
+            "equal": true,
+            "corresponding": false
+          },
+          {
+            "name": "Yalin Xiong",
+            "equal": true,
+            "corresponding": false
+          },
+          {
+            "name": "Shaoju Gan",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Liyan Fei",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Lu Guo",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Kejing Zhang",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Haowen Li",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Ting Fu",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Qin Wu",
+            "equal": false,
+            "corresponding": true
+          },
+          {
+            "name": "Weihong Tan",
+            "equal": false,
+            "corresponding": true
+          }
+        ],
+        "authorSource": {
+          "pdf": "assets/publications/papers/Tang et al. - 2026 - CD4 aptamer-engineered cell platforms enhance anti-tumor immunity in triple-negative breast cancer.pdf",
+          "page": 2,
+          "equalPage": 2,
+          "reviewed": "2026-10-21"
+        }
+      },
+      "paperCover": "assets/publications/covers/tang-et-al-2026-cd4-aptamer-engineered-cell-platforms-enhance-anti-tumor-immunity-in-triple-negative-breast-cancer.png"
+    },
+    {
+      "id": "spark-seq",
+      "title": "SPARK-seq for High-Throughput Aptamer Discovery and Kinetic Profiling",
+      "year": "2026",
+      "journal": "Science",
+      "citation": "Luo G, Song J, Fu Y et al.",
+      "theme": "decode",
+      "pdf": "assets/publications/papers/Luo et al. - 2026 - SPARK-seq A high-throughput platform for aptamer .pdf",
+      "doiUrl": "https://doi.org/10.1126/science.adv6127",
+      "cover": "assets/publications/covers-subfigure/luo-et-al-2026-spark-seq-a-high-throughput-platform-for-aptamer.png",
+      "coverAlt": "Key figure from the SPARK-seq study",
+      "summary": [
+        "Builds a high-throughput platform that couples aptamer discovery with kinetic profiling at scale.",
+        "Turns aptamer selection into a richer, information-dense readout problem rather than a binary enrichment workflow.",
+        "Provides an enabling engine for both binder discovery and downstream molecular-state decoding."
+      ],
+      "themeFit": "SPARK-seq spans Explore and Decode, but it is placed in Decode because the defining advance is information capture at scale. The platform reads out kinetic behavior across large aptamer-target landscapes and therefore functions as a measurement system as much as a discovery pipeline.",
+      "related": [
+        "blocker-selex",
+        "apt-seq",
+        "atp-aptamer"
+      ],
+      "areas": [
+        "discover"
+      ],
+      "article": {
+        "zh": {
+          "title": "SPARK-seq：在活细胞上同时寻找适配体、靶点与结合规律",
+          "paragraphs": [
+            "细胞表面蛋白是重要的分子识别目标，但把蛋白纯化后筛选，可能失去它在细胞膜上的天然构象；直接对细胞筛选，又常常不知道适配体究竟结合了谁。SPARK-seq 将这个两难转化为一个可检验的问题：如果敲掉某个蛋白，哪些适配体的结合会随之改变？",
+            "研究把针对 13 种表面蛋白的 CRISPR 敲除细胞混合起来，加入经 Cell-SELEX 富集的适配体库。在单细胞中同时读取向导 RNA、转录组和适配体序列，就能把遗传扰动与结合信号连接起来，而不必为每个候选序列分别设计一次筛选。",
+            "下一步是区分真正的靶向关系与间接变化。SPARTA 分析流程根据差异结合筛选候选，作者再用流式细胞术、表面等离子体共振和微量热泳等方法验证。研究报告了指向八种表面蛋白的候选序列，也解析了整合素复合物识别和 PTPR 家族交叉结合等复杂情况。",
+            "筛选信号还包含怎样的结合信息？动力学实验发现，该体系的差异结合指标更紧密地关联解离速率，而非平衡解离常数。这意味着它尤其有助于寻找不易从靶点脱落的适配体。研究进一步利用这些数据训练序列模型，并实验验证生成的动力学改良变体。",
+            "SPARK-seq 因而不只是扩大筛选通量，而是把靶点归属、细胞状态和结合动力学连接起来。其能力已经在所测试的靶点和细胞体系中得到展示，但遗传扰动引起的间接效应仍需要独立结合实验来排除，模型生成的序列也仍须实验验证。"
+          ]
+        },
+        "en": {
+          "title": "SPARK-seq: linking aptamer discovery to targets and binding kinetics",
+          "paragraphs": [
+            "Purified proteins may lose their native cell-surface context, while cell-based aptamer selection often leaves the target unknown. SPARK-seq approaches this problem through perturbation: when a surface protein is knocked out, which aptamer-binding signals change?",
+            "The researchers pooled cells carrying CRISPR knockouts of 13 surface proteins and exposed them to a Cell-SELEX-enriched aptamer library. Reading guide RNAs, transcripts and aptamers in individual cells linked each genetic perturbation to its binding profile, allowing many candidate interactions to be examined together.",
+            "The SPARTA analysis pipeline identified differential-binding candidates. Flow cytometry, surface plasmon resonance and microscale thermophoresis then tested selected interactions independently. The study reported candidates for eight surface proteins and resolved more complex recognition, including an integrin complex and cross-binding within the PTPR family.",
+            "Binding measurements revealed another layer of information: the differential-binding metric correlated more closely with dissociation rate than equilibrium affinity. The platform preferentially recovered slow-dissociating binders. Sequence models trained on these data also generated variants whose improved kinetic properties were experimentally tested.",
+            "The contribution is an integrated route from discovery to target assignment and kinetic optimization in cellular contexts. Its demonstrated scope is the tested targets and models, not every membrane protein. Independent validation remains essential because knockouts can have indirect effects and generated sequences are predictions until tested."
+          ]
+        }
+      },
+      "publication": {
+        "authors": "Luo G, Song J, Fu Y et al.",
+        "title": "SPARK-seq: A high-throughput platform for aptamer discovery and kinetic profiling",
+        "journal": "Science",
+        "year": "2026",
+        "doi": "10.1126/science.adv6127",
+        "pdf": "../assets/publications/papers/Luo et al. - 2026 - SPARK-seq A high-throughput platform for aptamer .pdf",
+        "cover": "../assets/publications/covers/luo-et-al-2026-spark-seq-a-high-throughput-platform-for-aptamer.png",
+        "doi_url": "https://doi.org/10.1126/science.adv6127",
+        "authorList": [
+          {
+            "name": "Guoyan Luo",
+            "equal": true,
+            "corresponding": false
+          },
+          {
+            "name": "Jia Song",
+            "equal": true,
+            "corresponding": false
+          },
+          {
+            "name": "Yongbo Fu",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Yuanjie Jiang",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Yuan Gao",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Zhixing Zhong",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Ling Li",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Yong Wei",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Hao-Ran Jia",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Lu Guo",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Ting Fu",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Qin Wu",
+            "equal": false,
+            "corresponding": true
+          },
+          {
+            "name": "Weihong Tan",
+            "equal": false,
+            "corresponding": true
+          }
+        ],
+        "authorSource": {
+          "pdf": "assets/publications/papers/Luo et al. - 2026 - SPARK-seq A high-throughput platform for aptamer .pdf",
+          "page": 2,
+          "equalPage": 2,
+          "reviewed": "2026-10-21"
+        }
+      },
+      "paperCover": "assets/publications/covers/luo-et-al-2026-spark-seq-a-high-throughput-platform-for-aptamer.png"
+    },
+    {
+      "id": "apt-seq",
+      "title": "Apt-seq for Single-Cell Multiplexed Quantification of Molecules",
+      "year": "2025",
+      "journal": "Journal of the American Chemical Society",
+      "citation": "Wu X, Lin X, Ma X et al.",
+      "theme": "decode",
+      "pdf": "assets/publications/papers/Wu et al. - 2025 - High-Throughput Multiplexed Quantification of Molecules by Aptamer Sequencing (Apt-seq) in Single Ce.pdf",
+      "doiUrl": "https://doi.org/10.1021/jacs.5c01296",
+      "cover": "assets/publications/covers-subfigure/wu-et-al-2025-high-throughput-multiplexed-quantification-of-molecules-by-aptamer-sequencing-apt-seq-in-single-ce.png",
+      "coverAlt": "Key figure from the Apt-seq study",
+      "summary": [
+        "Introduces Apt-seq as a sequencing-linked platform to quantify proteins, glycans, and transcripts in single cells.",
+        "Demonstrates how aptamers can convert otherwise hard-to-sequence molecular states into countable readouts.",
+        "Builds a direct route from molecular recognition to high-dimensional single-cell profiling."
+      ],
+      "themeFit": "Apt-seq is a Decode paper because the point of the platform is information extraction. It transforms non-nucleic-acid biology into a high-throughput measurement format for cellular-state mapping.",
+      "related": [
+        "spark-seq",
+        "tumor-marker-ms",
+        "molecular-medicine-era"
+      ],
+      "areas": [
+        "discover"
+      ],
+      "article": {
+        "zh": {
+          "title": "Apt-seq：让单细胞测序读懂蛋白与糖链",
+          "paragraphs": [
+            "一张细胞转录组图谱能告诉我们哪些基因正在表达，却不能完整呈现细胞表面的蛋白和糖链。后两者直接参与细胞识别与免疫调控，变化也不一定与 mRNA 同步。Apt-seq 要解决的，正是如何在同一个细胞里，把这些原本不能直接测序的分子与转录组一起读出来。",
+            "首先需要找到一种既能识别目标、又能被测序的探针。研究利用核酸适配体兼具这两种性质的特点，将针对蛋白和唾液酸的适配体用于细胞标记，再通过单细胞条形码和文库构建，把适配体信号与同一细胞的 mRNA 对应起来，减少对抗体与寡核苷酸偶联、复杂糖链标记流程的依赖。",
+            "但读到适配体序列，是否真的反映了目标分子的差异？作者在细胞系中将测序结果与流式细胞术比较，并检查适配体标记对转录组的影响。整体与单细胞层面的验证支持这一读出方式；同时，多模态数据保留了表面分子与 mRNA 不完全一致的信息，而不是把两者当成可以互相替代的指标。",
+            "接下来，研究把方法用于更复杂的生物学场景。在临床肿瘤样本中，Apt-seq 识别出表面 PTK7 信号较高的细胞群，结合 CD44 表达及 CytoTRACE 分析，发现其具有更强的干性相关特征。唾液酸适配体则帮助追踪 T 细胞分化：唾液酸水平在静息细胞转向功能状态时升高，随后在成熟过程中下降。",
+            "这项工作提出了以适配体为测量工具的 Aptomics（核酸适配体组学）：不再只用 RNA 推测细胞状态，而是联合读取转录、表面蛋白和糖链。PTK7 的结果提示了值得进一步验证的细胞亚群，并不等同于已确立临床干细胞标志物；平台的覆盖范围也仍取决于可用适配体及其验证质量。"
+          ]
+        },
+        "en": {
+          "title": "Apt-seq: reading proteins and glycans alongside the single-cell transcriptome",
+          "paragraphs": [
+            "A transcriptome reveals which genes a cell expresses, but it does not fully describe the proteins and glycans on its surface. These molecules shape recognition and immune responses, and need not track mRNA abundance. Apt-seq asks how to measure these different layers in the same cell.",
+            "The first challenge was to connect molecular recognition to sequencing. Aptamers provide both a target-binding structure and a readable nucleic acid sequence. The researchers used protein- and sialic-acid-binding aptamers to label cells, then linked aptamer signals and mRNA through single-cell barcoding and library preparation.",
+            "Could sequence counts reliably report target differences? Comparisons with flow cytometry in cell lines supported the readout at bulk and single-cell levels. The team also examined the effect of labeling on transcriptomes. Importantly, measuring both layers retains differences between surface signals and mRNA rather than assuming that one substitutes for the other.",
+            "In clinical tumor samples, Apt-seq revealed cells with high surface PTK7 signals. CD44 expression and CytoTRACE analysis associated this population with stronger stemness-related features. A sialic acid aptamer provided another application: tracking a rise in sialylation as resting T cells entered functional states, followed by a decline during maturation.",
+            "The result is Aptomics: aptamer-enabled profiling that brings transcripts, surface proteins and glycans into a shared single-cell view. The PTK7 finding identifies a population for further investigation, not an established clinical stem-cell marker. The platform's reach still depends on the availability and validation of suitable aptamers."
+          ]
+        }
+      },
+      "publication": {
+        "authors": "Wu X, Lin X, Ma X et al.",
+        "title": "High-Throughput Multiplexed Quantification of Molecules by Aptamer Sequencing (Apt-seq) in Single Cells",
+        "journal": "J Am Chem Soc",
+        "year": "2025",
+        "doi": "10.1021/jacs.5c01296",
+        "pdf": "../assets/publications/papers/Wu et al. - 2025 - High-Throughput Multiplexed Quantification of Molecules by Aptamer Sequencing (Apt-seq) in Single Ce.pdf",
+        "cover": "../assets/publications/covers/wu-et-al-2025-high-throughput-multiplexed-quantification-of-molecules-by-aptamer-sequencing-apt-seq-in-single-ce.png",
+        "doi_url": "https://doi.org/10.1021/jacs.5c01296",
+        "authorList": [
+          {
+            "name": "Xiaoqiu Wu",
+            "equal": true,
+            "corresponding": false
+          },
+          {
+            "name": "Xinrui Lin",
+            "equal": true,
+            "corresponding": false
+          },
+          {
+            "name": "Xiangqi Ma",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Huidong Huang",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Dengwei Zhang",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Yuqing Liu",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Rui Cheng",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Jia Song",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Lifei Zhang",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Yamin Tan",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Ruizi Peng",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Tao Bing",
+            "equal": false,
+            "corresponding": true
+          },
+          {
+            "name": "Qin Wu",
+            "equal": false,
+            "corresponding": true
+          },
+          {
+            "name": "Weihong Tan",
+            "equal": false,
+            "corresponding": true
+          }
+        ],
+        "authorSource": {
+          "pdf": "assets/publications/papers/Wu et al. - 2025 - High-Throughput Multiplexed Quantification of Molecules by Aptamer Sequencing (Apt-seq) in Single Ce.pdf",
+          "page": 1,
+          "equalPage": 10,
+          "reviewed": "2026-10-21"
+        }
+      },
+      "paperCover": "assets/publications/covers/wu-et-al-2025-high-throughput-multiplexed-quantification-of-molecules-by-aptamer-sequencing-apt-seq-in-single-ce.png"
+    },
+    {
+      "id": "atp-aptamer",
+      "title": "Structural Basis and Affinity Improvement for an ATP-Binding DNA Aptamer",
+      "year": "2025",
+      "journal": "PNAS",
+      "citation": "Jiang Y, Zhang Y, Wan L et al.",
+      "theme": "explore",
+      "pdf": "assets/publications/papers/jiang-2025-atp-binding-dna-aptamer.pdf",
+      "doiUrl": "https://doi.org/10.1073/pnas.2506491122",
+      "cover": "assets/publications/covers-subfigure/jiang-2025-atp-binding-dna-aptamer.png",
+      "coverAlt": "Key figure from the ATP-binding aptamer study",
+      "summary": [
+        "Resolves the structural basis of ATP recognition by a DNA aptamer and improves affinity through design.",
+        "Links molecular mechanism directly to performance optimization.",
+        "Supplies structure-informed rules that feed back into nucleic-acid discovery and engineering."
+      ],
+      "themeFit": "This paper is in Explore because it sharpens the design principles behind functional aptamers. The central advance is understanding and improving molecular recognition at the binder level.",
+      "related": [
+        "blocker-selex",
+        "spark-seq",
+        "dnazyme-evolution"
+      ],
+      "areas": [
+        "design"
+      ],
+      "article": {
+        "zh": {
+          "title": "看清 ATP 如何被抓住，再改造适配体的亲和力",
+          "paragraphs": [
+            "ATP 是细胞能量代谢中的关键分子，也是生物传感的重要检测对象。已有 DNA 适配体 1301b 能够结合 ATP，但如果不知道它如何折叠、在哪里抓住 ATP，优化就容易变成反复试错。这篇研究选择先解析结构，再据此改造分子。",
+            "为了得到适合结构研究的体系，作者先将 1301b 缩短为仍保留结合能力的 1301b_v1，再用溶液核磁共振解析它与 ATP 的一比一复合物。结构显示，DNA 形成 L 形构架，两个内部环共同构成结合口袋。",
+            "ATP 并非随意停留在这个口袋中：它与 G14 形成氢键，并通过与 T8·A28 及 G9 的堆积作用获得稳定。结构与功能分析还表明，适配体从半折叠状态转向稳定复合物，说明识别伴随着构象调整，而非一个完全预成形的刚性口袋。",
+            "这些线索随后用于指导化学修饰。作者在中央连接区域引入 2′-O-甲基修饰，得到 9/10/16OMe 变体，其 ATP 结合解离常数约为 0.7 μM，相比起始 1301b 的约 2.7 μM 有所改善。",
+            "研究建立了从结构解释到性能改进的闭环：知道哪些局部接触和折叠过程重要，才能更有依据地设计适配体。这里的亲和力提升是在论文测定条件下获得的，并不自动等同于复杂生物样本中的传感性能或体内效果。"
+          ]
+        },
+        "en": {
+          "title": "Seeing how a DNA aptamer captures ATP, then improving its affinity",
+          "paragraphs": [
+            "ATP-binding aptamers are useful sensing tools, but optimization is difficult without knowing how DNA folds around the molecule. This study began with aptamer 1301b and asked whether a structural explanation of recognition could guide better binding.",
+            "The researchers shortened the sequence to 1301b_v1 while retaining ATP binding, then used solution NMR to determine a one-to-one aptamer-ATP complex. The DNA formed an L-shaped architecture with a pocket assembled from two internal loops.",
+            "The structure located specific contacts: ATP hydrogen-bonded with G14 and stacked against T8·A28 and G9. Further analysis supported an adaptive mechanism in which a semifolded aptamer becomes a stable tertiary structure upon binding, rather than behaving as a rigid, fully preformed receptor.",
+            "Guided by these observations, the team introduced 2′-O-methyl modifications into the central junction. The resulting 9/10/16OMe variant bound ATP with a dissociation constant of approximately 0.7 μM, compared with approximately 2.7 μM for the starting 1301b aptamer.",
+            "The study closes a structure-to-design loop: identifying important contacts and folding behavior makes optimization more informed. The affinity improvement applies to the reported measurements; performance in complex samples or in vivo would require additional validation."
+          ]
+        }
+      },
+      "publication": {
+        "authors": "Jiang Y, Zhang Y, Wan L et al.",
+        "title": "Structural basis and affinity improvement for an ATP-binding DNA aptamer",
+        "journal": "Proceedings of the National Academy of Sciences of the United States of America",
+        "year": "2025",
+        "doi": "10.1073/pnas.2506491122",
+        "pdf": "../assets/publications/papers/jiang-2025-atp-binding-dna-aptamer.pdf",
+        "cover": "../assets/publications/covers/jiang-2025-atp-binding-dna-aptamer.png",
+        "doi_url": "https://doi.org/10.1073/pnas.2506491122",
+        "force_more": true,
+        "authorList": [
+          {
+            "name": "Yan Jiang",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Yuchao Zhang",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Liqi Wan",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Cheng Cui",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Pei Guo",
+            "equal": false,
+            "corresponding": true
+          },
+          {
+            "name": "Da Han",
+            "equal": false,
+            "corresponding": true
+          },
+          {
+            "name": "Weihong Tan",
+            "equal": false,
+            "corresponding": true
+          }
+        ],
+        "authorSource": {
+          "pdf": "assets/publications/papers/jiang-2025-atp-binding-dna-aptamer.pdf",
+          "page": 1,
+          "equalPage": null,
+          "reviewed": "2026-10-21"
+        }
+      },
+      "paperCover": "assets/publications/covers/jiang-2025-atp-binding-dna-aptamer.png"
+    },
+    {
+      "id": "dnazyme-evolution",
+      "title": "Chemical Evolution of ASO-like DNAzymes for Durable Gene Silencing",
+      "year": "2025",
+      "journal": "Nucleic Acids Research",
+      "citation": "Liu Y, Zhang S, Zhang M et al.",
+      "theme": "explore",
+      "pdf": "assets/publications/papers/Liu et al. - 2025 - Chemical evolution of ASO-like DNAzymes for effective and extended gene silencing in cells.pdf",
+      "doiUrl": "https://doi.org/10.1093/nar/gkaf144",
+      "cover": "assets/publications/covers-subfigure/liu-et-al-2025-chemical-evolution-of-aso-like-dnazymes-for-effective-and-extended-gene-silencing-in-cells.png",
+      "coverAlt": "Key figure from the DNAzyme evolution study",
+      "summary": [
+        "Optimizes ASO-like DNAzymes to improve intracellular silencing strength and persistence.",
+        "Applies medicinal-style chemical evolution principles to catalytic nucleic-acid effectors.",
+        "Broadens the lab's nucleic-acid engineering toolbox beyond binding and recognition."
+      ],
+      "themeFit": "The study belongs in Explore because it is about engineering new functional nucleic-acid behaviors. The central contribution is improved molecular performance through iterative design, not downstream disease profiling.",
+      "related": [
+        "blocker-selex",
+        "aptamer-lytacs",
+        "atp-aptamer"
+      ],
+      "areas": [
+        "engineer"
+      ],
+      "article": {
+        "zh": {
+          "title": "让 DNAzyme 在细胞内持续、准确地切断 RNA",
+          "paragraphs": [
+            "能在试管里切断 RNA 的 DNA 催化分子，不一定能在细胞内有效工作。RNA 的复杂结构、核酸酶降解以及催化分子自身的不利构象，都可能削弱效果。研究以经典 10–23 DNAzyme 为起点，探索能否借用反义寡核苷酸的化学设计，同时保留 DNAzyme 自身的切割能力。",
+            "作者引入 2′-氟、2′-O-甲基、2′-O-甲氧乙基和硫代磷酸酯等修饰，逐步比较不同设计。关键并非简单增加修饰数量，而是让分子更好地结合 RNA、减少不利的二聚化，并兼顾催化活性与稳定性。",
+            "接下来需要跨过从短底物到真实转录本的距离。研究检测了长链、带结构 RNA 的切割，以及细胞内外源 eGFP 和内源 c-MYC 的 RNA、蛋白变化。改造后的 DNAzyme 表现出更持久的细胞内稳定性；在 HCT116 细胞中，c-MYC 下调伴随增殖下降、细胞周期阻滞和凋亡增加。",
+            "RNA 减少是否真由 DNAzyme 在预期位点切割，而不是普通反义效应？作者通过 RACE 和 Sanger 测序定位切割产物，并评估 RNase H 参与，支持这些分子能够在细胞内进行位点特异性切割，且 RNase H 激活较少。",
+            "这项研究说明，借鉴 ASO 的化学修饰可以改善 DNAzyme 的细胞内表现，同时保留其催化特点。它提供了基因沉默工具的设计依据，但细胞实验中的有效性仍不能替代递送、安全性和体内治疗研究。"
+          ]
+        },
+        "en": {
+          "title": "Engineering DNAzymes for sustained, site-specific RNA cleavage in cells",
+          "paragraphs": [
+            "An RNA-cleaving DNA enzyme that works in a test tube may struggle inside a cell. Structured transcripts, degradation and unfavorable folding can all limit activity. This study asked whether chemistry used in antisense oligonucleotides could improve the classic 10–23 DNAzyme without losing its catalytic mechanism.",
+            "The team compared designs incorporating 2′-fluoro, 2′-O-methyl, 2′-O-methoxyethyl and phosphorothioate modifications. The goal was to improve substrate binding and stability while reducing unproductive dimerization, rather than simply adding more modifications.",
+            "Testing progressed to long, structured RNA substrates and cellular eGFP and c-MYC targets. Modified DNAzymes showed prolonged intracellular stability and reduced target RNA and protein. In HCT116 cells, c-MYC downregulation accompanied reduced proliferation, cell-cycle arrest and increased apoptosis.",
+            "To distinguish catalytic cleavage from a conventional antisense effect, the researchers mapped products using RACE and Sanger sequencing and assessed RNase H involvement. The evidence supported cleavage at the intended site with minimal RNase H activation.",
+            "The work shows how ASO-inspired chemistry can improve cellular DNAzyme performance while preserving catalytic action. It establishes a design route for gene-silencing tools, not clinical efficacy; delivery, safety and in vivo performance remain further questions."
+          ]
+        }
+      },
+      "publication": {
+        "authors": "Liu Y, Zhang S, Zhang M et al.",
+        "title": "Chemical evolution of ASO-like DNAzymes for effective and extended gene silencing in cells",
+        "journal": "Nucleic Acids Research",
+        "year": "2025",
+        "doi": "10.1093/nar/gkaf144",
+        "pdf": "../assets/publications/papers/Liu et al. - 2025 - Chemical evolution of ASO-like DNAzymes for effective and extended gene silencing in cells.pdf",
+        "cover": "../assets/publications/covers/liu-et-al-2025-chemical-evolution-of-aso-like-dnazymes-for-effective-and-extended-gene-silencing-in-cells.png",
+        "doi_url": "https://doi.org/10.1093/nar/gkaf144",
+        "authorList": [
+          {
+            "name": "Yingyu Liu",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Sheyu Zhang",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Meiqi Zhang",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Xin Liu",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Yashu Wu",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Qin Wu",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "John C. Chaput",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Yajun Wang",
+            "equal": false,
+            "corresponding": true
+          }
+        ],
+        "authorSource": {
+          "pdf": "assets/publications/papers/Liu et al. - 2025 - Chemical evolution of ASO-like DNAzymes for effective and extended gene silencing in cells.pdf",
+          "page": 1,
+          "equalPage": null,
+          "reviewed": "2026-10-21"
+        }
+      },
+      "paperCover": "assets/publications/covers/liu-et-al-2025-chemical-evolution-of-aso-like-dnazymes-for-effective-and-extended-gene-silencing-in-cells.png"
+    },
+    {
+      "id": "drug-resistance-protocol",
+      "title": "Protocol to Identify Small-Molecule Inhibitors Against Cancer Drug Resistance",
+      "year": "2025",
+      "journal": "STAR Protocols",
+      "citation": "Wei J, Zhang S-Y, Zhou X-Y et al.",
+      "theme": "protect",
+      "pdf": "assets/publications/papers/Wei et al. - 2025 - Protocol to identify small-molecule inhibitors against cancer drug resistance.pdf",
+      "doiUrl": "https://doi.org/10.1016/j.xpro.2025.103605",
+      "cover": "assets/publications/covers-subfigure/wei-et-al-2025-protocol-to-identify-small-molecule-inhibitors-against-cancer-drug-resistance.png",
+      "coverAlt": "Key figure from the drug-resistance screening protocol study",
+      "summary": [
+        "Details a reproducible workflow for screening small-molecule inhibitors against drug-resistant cancer states.",
+        "Operationalizes resistant-model construction, screening, and validation into a reusable protocol.",
+        "Bridges mechanistic discovery papers to experimental execution in translational settings."
+      ],
+      "themeFit": "The paper belongs in Protect because it turns translational logic into an executable workflow. It is the operational layer that supports therapy-oriented studies rather than a discovery paper by itself.",
+      "related": [
+        "prmt5-vulnerability",
+        "interferon-prmt5"
+      ],
+      "areas": [
+        "translate"
+      ],
+      "article": {
+        "zh": {
+          "title": "把耐药后的脆弱点，变成可以重复寻找的实验流程",
+          "paragraphs": [
+            "肿瘤细胞对一种药物产生耐受，并不意味着它不再依赖其他生物学过程。寻找耐药后新出现的脆弱点，需要的不只是一次筛选结果，还需要别人能够重复执行的模型建立、测量和验证流程。这篇 STAR Protocols 文章将这一过程具体化。",
+            "首先要解决的是模型是否真的代表耐药状态。文章以三阴性乳腺癌细胞为例，说明耐药细胞株的构建与药物反应评估。只有建立清楚的亲本与耐药参照，后续筛选才有可能分辨耐药相关敏感性与一般细胞毒性。",
+            "第二个问题是怎样稳定比较许多候选小分子。流程介绍细胞铺板、化合物处理、增殖读出和数据分析的衔接，并交代关键实验条件与质量控制，使不同处理的结果具有可比性。",
+            "初筛命中并不是终点。作者进一步说明如何复测候选、确认抑制效果，并通过后续验证筛掉技术波动带来的假阳性。文章也提供局限性及故障排查信息，让读者知道哪些环节可能影响结果。",
+            "这是一篇实验流程文章，其贡献是把耐药药物发现组织为可执行、可检查的工作链条，而不是宣称发现了新的临床治疗方案。迁移到其他肿瘤或耐药机制时，模型、处理条件与读出仍需要重新优化。"
+          ]
+        },
+        "en": {
+          "title": "Making the search for vulnerabilities in resistant cancer reproducible",
+          "paragraphs": [
+            "Resistance to one drug does not eliminate a cancer cell's dependence on other biological processes. Finding new vulnerabilities requires more than a screening hit: model construction, measurement and validation must be reproducible. This STAR Protocols article sets out that workflow.",
+            "The first problem is whether a model actually represents resistance. Using triple-negative breast cancer examples, the protocol describes resistant-cell construction and drug-response assessment. A clear parental-versus-resistant comparison is needed to distinguish resistance-associated sensitivity from general toxicity.",
+            "The next problem is consistent comparison across compounds. The workflow connects cell seeding, chemical treatment, proliferation measurements and analysis, with experimental conditions and controls that support interpretable comparisons.",
+            "Initial hits then require confirmation. Follow-up testing checks reproducibility and inhibitory activity rather than treating a single screening signal as sufficient evidence. Limitations and troubleshooting help readers identify technical sources of failure.",
+            "This is an operational contribution, not a new clinical treatment claim. It makes resistance-focused discovery easier to reproduce and inspect. Applying it to other tumors or resistance mechanisms still requires adaptation of models, treatment conditions and readouts."
+          ]
+        }
+      },
+      "publication": {
+        "authors": "Wei J, Zhang S-Y, Zhou X-Y et al.",
+        "title": "Protocol to identify small-molecule inhibitors against cancer drug resistance",
+        "journal": "STAR Protocols",
+        "year": "2025",
+        "doi": "10.1016/j.xpro.2025.103605",
+        "pdf": "../assets/publications/papers/Wei et al. - 2025 - Protocol to identify small-molecule inhibitors against cancer drug resistance.pdf",
+        "cover": "../assets/publications/covers/wei-et-al-2025-protocol-to-identify-small-molecule-inhibitors-against-cancer-drug-resistance.png",
+        "doi_url": "https://doi.org/10.1016/j.xpro.2025.103605",
+        "authorList": [
+          {
+            "name": "Juan Wei",
+            "equal": true,
+            "corresponding": false
+          },
+          {
+            "name": "She-Yu Zhang",
+            "equal": true,
+            "corresponding": false
+          },
+          {
+            "name": "Xue-Yuan Zhou",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Yong Wei",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Hao-Ran Jia",
+            "equal": false,
+            "corresponding": true
+          },
+          {
+            "name": "Qin Wu",
+            "equal": false,
+            "corresponding": true
+          },
+          {
+            "name": "Weihong Tan",
+            "equal": false,
+            "corresponding": true
+          }
+        ],
+        "authorSource": {
+          "pdf": "assets/publications/papers/Wei et al. - 2025 - Protocol to identify small-molecule inhibitors against cancer drug resistance.pdf",
+          "page": 2,
+          "equalPage": 2,
+          "reviewed": "2026-10-21"
+        }
+      },
+      "paperCover": "assets/publications/covers/wei-et-al-2025-protocol-to-identify-small-molecule-inhibitors-against-cancer-drug-resistance.png"
+    },
+    {
+      "id": "ezh2-rb1",
+      "title": "Increasing RB1 Expression by Targeting EZH2 in TNBC",
+      "year": "2025",
+      "journal": "Journal of Cellular and Molecular Medicine",
+      "citation": "Yang R, Fei L, Xue Y et al.",
+      "theme": "protect",
+      "pdf": "assets/publications/papers/Yang et al. - 2025 - Increasing RB1 Expression by Targeting EZH2 in Triple-Negative Breast Cancer.pdf",
+      "doiUrl": "https://doi.org/10.1111/jcmm.70384",
+      "cover": "assets/publications/covers-subfigure/yang-et-al-2025-increasing-rb1-expression-by-targeting-ezh2-in-triple-negative-breast-cancer.png",
+      "coverAlt": "Key figure from the EZH2-RB1 TNBC study",
+      "summary": [
+        "Shows that targeting EZH2 can restore RB1 expression in triple-negative breast cancer.",
+        "Connects chromatin regulation to tumor suppressor recovery in a difficult disease context.",
+        "Adds a second translational axis alongside the lab's PRMT-centered TNBC work."
+      ],
+      "themeFit": "The paper belongs in Protect because it is explicitly disease-focused and intervention-oriented. Its main value is defining a therapeutically actionable epigenetic strategy in TNBC.",
+      "related": [
+        "glut1-tnbc",
+        "prmt5-vulnerability",
+        "interferon-prmt5"
+      ],
+      "areas": [
+        "translate"
+      ],
+      "article": {
+        "zh": {
+          "title": "RB1 表达降低之后，能否通过染色质调控重新提高它？",
+          "paragraphs": [
+            "RB1 是细胞周期的重要制动因子，其功能受损与三阴性乳腺癌的治疗反应有关。但表达低与基因彻底缺失并不是同一件事：如果 RB1 受到的是可调节的转录抑制，是否存在恢复表达的机会？这项研究从表观遗传调控寻找答案。",
+            "作者结合生物信息学分析与实验验证，将 EZH2 锁定为 RB1 表达的上游调控因素。药理抑制 EZH2 后，相关细胞模型中的 RB1 表达上升，为进一步追问调控发生的位置提供了依据。",
+            "接下来，研究利用 ATAC-seq 线索检查 RB1 基因区域，并关注一个位于内含子的候选增强子。ChIP-qPCR 显示，EZH2 抑制后该区域的活化标记 H3K27ac 增加，把药物处理与局部染色质状态连接起来。",
+            "这个区域是否真的参与 RB1 表达，而非仅仅伴随变化？作者通过 CRISPR 删除增强子，观察到 RB1 RNA 与蛋白降低，支持其功能作用。不过，不能把结果简化为已经证明 EZH2 在此直接移除某种抑制标记；论文对局部机制仍保留未解问题。",
+            "研究支持通过表观遗传调控提高 RB1 表达的思路，为后续耐药研究提供切入点。它并没有证明能修复 RB1 基因缺失，也没有完成基于这一策略的临床治疗验证。"
+          ]
+        },
+        "en": {
+          "title": "Can chromatin regulation raise RB1 expression in TNBC?",
+          "paragraphs": [
+            "RB1 restrains cell-cycle progression, and loss of its function affects treatment response. Low expression, however, is not the same as gene deletion. This study asked whether an epigenetically regulated component of RB1 expression could be increased.",
+            "Bioinformatic analysis and experiments identified EZH2 as an upstream regulator. Pharmacological EZH2 inhibition raised RB1 expression in the tested cellular models, prompting investigation of the regulatory region involved.",
+            "ATAC-seq information pointed to a candidate intronic RB1 enhancer. ChIP-qPCR showed increased enrichment of the active chromatin mark H3K27ac after EZH2 inhibition, linking treatment to local chromatin changes.",
+            "To test whether the region was functional, the researchers deleted it using CRISPR and observed reduced RB1 RNA and protein. This supports enhancer involvement, but does not resolve every local mechanism or simply establish direct removal of a repressive mark by the treatment.",
+            "The study supports an epigenetic route to increasing RB1 expression and motivates further resistance research. It does not demonstrate repair of an RB1 deletion or clinical benefit from this strategy."
+          ]
+        }
+      },
+      "publication": {
+        "authors": "Yang R, Fei L, Xue Y et al.",
+        "title": "Increasing RB1 Expression by Targeting EZH2 in Triple-Negative Breast Cancer",
+        "journal": "Journal of Cellular and Molecular Medicine",
+        "year": "2025",
+        "doi": "10.1111/jcmm.70384",
+        "pdf": "../assets/publications/papers/Yang et al. - 2025 - Increasing RB1 Expression by Targeting EZH2 in Triple-Negative Breast Cancer.pdf",
+        "cover": "../assets/publications/covers/yang-et-al-2025-increasing-rb1-expression-by-targeting-ezh2-in-triple-negative-breast-cancer.png",
+        "doi_url": "https://doi.org/10.1111/jcmm.70384",
+        "authorList": [
+          {
+            "name": "Renfei Yang",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Liyan Fei",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Yingfei Xue",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Yu Zhang",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Qian Hu",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Lu Guo",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Yong Wei",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Qin Wu",
+            "equal": false,
+            "corresponding": true
+          }
+        ],
+        "authorSource": {
+          "pdf": "assets/publications/papers/Yang et al. - 2025 - Increasing RB1 Expression by Targeting EZH2 in Triple-Negative Breast Cancer.pdf",
+          "page": 1,
+          "equalPage": null,
+          "reviewed": "2026-10-21"
+        }
+      },
+      "paperCover": "assets/publications/covers/yang-et-al-2025-increasing-rb1-expression-by-targeting-ezh2-in-triple-negative-breast-cancer.png"
+    },
+    {
+      "id": "interferon-prmt5",
+      "title": "Interferon-Driven Biomarkers and Synergistic Therapy for PRMT5 Inhibition in TNBC",
+      "year": "2025",
+      "journal": "Advanced Science",
+      "citation": "Zhang Z, Zhang S, Guo L et al.",
+      "theme": "protect",
+      "pdf": "assets/publications/papers/zhang-2025-interferon-prmt5-tnbc.pdf",
+      "doiUrl": "https://doi.org/10.1002/advs.202505787",
+      "cover": "assets/publications/covers-subfigure/zhang-2025-interferon-prmt5-tnbc.png",
+      "coverAlt": "Key figure from the interferon-driven PRMT5 biomarker study",
+      "summary": [
+        "Defines interferon-linked biomarkers that predict or explain PRMT5 inhibitor response in TNBC.",
+        "Builds synergistic therapeutic logic around the PRMT5 vulnerability framework.",
+        "Connects mechanism, biomarkers, and treatment design in a single translational study."
+      ],
+      "themeFit": "This is a Protect study because it integrates biomarker stratification with therapy design. It represents the mature translational phase of the PRMT program.",
+      "related": [
+        "prmt5-vulnerability",
+        "drug-resistance-protocol",
+        "prmt1-pd1"
+      ],
+      "areas": [
+        "translate"
+      ],
+      "article": {
+        "zh": {
+          "title": "用干扰素状态解释 PRMT5 敏感性，再寻找可改变它的组合",
+          "paragraphs": [
+            "PRMT5 抑制能够影响肿瘤生长，但不同三阴性乳腺癌模型的反应差异很大。如果无法区分敏感与不敏感状态，也就难以决定如何分层或联合干预。这项研究把基础干扰素信号作为连接这些问题的线索。",
+            "作者结合 PRMT5 抑制剂反应与转录组分析，发现较高的基础干扰素通路活性与敏感性相关。进一步分析显示，敏感模型中较高的 DNA 损伤与这种免疫信号状态相联系，提示药物反应与细胞既有的应激背景有关。",
+            "如果 DNA 损伤能改变干扰素信号，是否可以主动推动不敏感细胞进入更易响应的状态？研究使用 PARP 抑制剂奥拉帕利，观察 DNA 损伤、干扰素激活以及与 PRMT5 抑制联合时的效果，获得了协同抑制的证据。",
+            "随后，作者在患者来源类器官和异种移植模型中检验联合方案，并在免疫相关模型中研究微环境变化。结果将抑瘤效果与树突状细胞-CD8⁺ T 细胞交流增强以及持续的抗肿瘤免疫联系起来。",
+            "论文将候选标志物与机制驱动的联合方案组织到一起：既解释谁更敏感，也尝试改变不敏感状态。这里的干扰素特征与联合效果仍属于临床前证据，尚需独立队列及临床研究确定适用人群、获益和安全性。"
+          ]
+        },
+        "en": {
+          "title": "Using interferon state to understand and alter PRMT5 inhibitor response",
+          "paragraphs": [
+            "TNBC models respond differently to PRMT5 inhibition. Understanding those differences is necessary both for stratification and for designing combinations. This study examined basal interferon signaling as a link between sensitivity and cellular state.",
+            "Drug-response measurements and transcriptomic profiling associated stronger baseline interferon activity with sensitivity. Sensitive models also displayed elevated DNA damage linked to that signaling state, suggesting that pre-existing stress helps shape the response.",
+            "Could that state be altered in resistant cells? The researchers used the PARP inhibitor olaparib to induce DNA damage and interferon signaling, then tested its combination with PRMT5 inhibition. The experiments supported synergistic growth suppression.",
+            "Patient-derived organoids and xenografts extended the combination tests. Immune-focused models examined microenvironmental changes, connecting treatment to enhanced dendritic cell-CD8 T-cell communication and sustained antitumor immunity.",
+            "The paper brings a candidate stratification signal together with a mechanism-led combination: explaining sensitivity while trying to change resistant states. Both the interferon signature and therapeutic strategy remain preclinical findings requiring independent and clinical validation."
+          ]
+        }
+      },
+      "publication": {
+        "authors": "Zhang Z, Zhang S, Guo L et al.",
+        "title": "Interferon-Driven Biomarkers and Synergistic Therapy for PRMT5 Inhibition in Triple-Negative Breast Cancer",
+        "journal": "Advanced Science",
+        "year": "2025",
+        "doi": "10.1002/advs.202505787",
+        "pdf": "../assets/publications/papers/zhang-2025-interferon-prmt5-tnbc.pdf",
+        "cover": "../assets/publications/covers/zhang-2025-interferon-prmt5-tnbc.png",
+        "doi_url": "https://doi.org/10.1002/advs.202505787",
+        "force_more": true,
+        "authorList": [
+          {
+            "name": "Ziwen Zhang",
+            "equal": true,
+            "corresponding": false
+          },
+          {
+            "name": "Sheyu Zhang",
+            "equal": true,
+            "corresponding": false
+          },
+          {
+            "name": "Lu Guo",
+            "equal": true,
+            "corresponding": false
+          },
+          {
+            "name": "Yichun Pan",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Juan Huang",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Yishuai Ji",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Jiaqi Tao",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Yong Wei",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Xiaojia Wang",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Qin Wu",
+            "equal": false,
+            "corresponding": true
+          }
+        ],
+        "authorSource": {
+          "pdf": "assets/publications/papers/zhang-2025-interferon-prmt5-tnbc.pdf",
+          "page": 1,
+          "equalPage": 12,
+          "reviewed": "2026-10-21"
+        }
+      },
+      "paperCover": "assets/publications/covers/zhang-2025-interferon-prmt5-tnbc.png"
+    },
+    {
+      "id": "ptf-sriapt",
+      "title": "PTf-SRiApt Targeting SCAF4-POLR2A Interaction in TNBC",
+      "year": "2025",
+      "journal": "Advanced Science",
+      "citation": "Fei L, Pan Y, Zhai J et al.",
+      "theme": "protect",
+      "pdf": "assets/publications/papers/Fei et al. - 2025 - PTf-SRiApt Targeting SCAF4-POLR2A Interaction Suppresses Tumor Growth and Promotes Antitumor Immunit.pdf",
+      "doiUrl": "https://doi.org/10.1002/advs.202500433",
+      "cover": "assets/publications/covers-subfigure/fei-et-al-2025-ptf-sriapt-targeting-scaf4-polr2a-interaction-suppresses-tumor-growth-and-promotes-antitumor-immunit.png",
+      "coverAlt": "Key figure from the PTf-SRiApt TNBC study",
+      "summary": [
+        "Uses an inhibitory aptamer strategy to disrupt the SCAF4-POLR2A interaction in triple-negative breast cancer.",
+        "Links targeted transcriptional interference to tumor suppression and antitumor immune activation.",
+        "Provides a direct example of a nucleic-acid modality translated into a disease-specific intervention."
+      ],
+      "themeFit": "Although the molecular modality is aptamer-based, the paper belongs in Protect because the core result is therapeutic translation in TNBC. The study is centered on disease intervention, tumor control, and immune consequences rather than on platform invention alone.",
+      "related": [
+        "blocker-selex",
+        "cd4-aptamer-cells",
+        "interferon-prmt5"
+      ],
+      "areas": [
+        "engineer",
+        "translate"
+      ],
+      "article": {
+        "zh": {
+          "title": "阻断 SCAF4-POLR2A：从转录终止到肿瘤免疫",
+          "paragraphs": [
+            "癌细胞需要稳定地产生完整转录本，SCAF4 与 RNA 聚合酶 II 亚基 POLR2A 的互作参与防止 mRNA 过早终止。这个接触界面缺少易用的干预工具，因此它在三阴性乳腺癌生长和免疫调控中的作用一直难以直接检验。",
+            "研究首先解决工具问题：以 Blocker-SELEX 得到的 SRiApt 为基础，通过硫代磷酸酯修饰提高生物稳定性，形成 PTf-SRiApt。作者比较修饰设计与功能，使适配体不仅能够识别互作界面，也适合进一步的生物学实验。",
+            "有了工具，下一步是判断肿瘤是否依赖这组互作。研究在细胞及肿瘤模型中考察增殖和细胞周期，发现 SCAF4、POLR2A 表达较高的三阴性乳腺癌对干预表现出敏感性。PTf-SRiApt 抑制肿瘤生长，并促进细胞周期阻滞。",
+            "这种干预还会改变肿瘤被免疫系统看见的方式吗？转录分析与免疫相关实验把互作受阻、mRNA 过早终止、抗原呈递增强和 T 细胞浸润联系起来。患者样本分析进一步显示，该互作与免疫治疗效果呈负相关，为疾病相关性提供补充证据。",
+            "论文把一个难以直接研究的蛋白互作，转化为可用适配体干预的转录与免疫节点。患者样本中的相关性并不等于适配体治疗的临床有效性；目前结果支持继续开展药物开发和验证，而不是已有临床方案。"
+          ]
+        },
+        "en": {
+          "title": "Disrupting SCAF4-POLR2A connects transcript termination to tumor immunity",
+          "paragraphs": [
+            "Cancer cells depend on producing functional transcripts. The interaction between SCAF4 and RNA polymerase II subunit POLR2A helps prevent premature mRNA termination, but a shortage of effective tools made its role in TNBC difficult to test directly.",
+            "The researchers first improved the tool. Starting from SRiApt, discovered through Blocker-SELEX, they introduced phosphorothioate modifications to produce the more biologically stable PTf-SRiApt. Comparing modification designs connected chemical optimization to functional testing.",
+            "Cell and tumor experiments then examined dependence on this interaction. TNBC models with elevated SCAF4 and POLR2A expression were responsive to intervention; PTf-SRiApt suppressed growth and induced cell-cycle arrest.",
+            "The team also asked whether transcriptional disruption altered immune recognition. Transcript and immune analyses linked premature termination to enhanced antigen presentation and T-cell infiltration. Patient-sample analyses found a negative association between the interaction and immunotherapy effectiveness, adding disease context.",
+            "The study turns a difficult protein interface into an experimentally addressable transcription-immune node. Patient correlations do not demonstrate clinical efficacy of the aptamer. The findings support further therapeutic development rather than an established treatment."
+          ]
+        }
+      },
+      "publication": {
+        "authors": "Fei L, Pan Y, Zhai J et al.",
+        "title": "PTf-SRiApt Targeting SCAF4-POLR2A Interaction Suppresses Tumor Growth and Promotes Antitumor Immunity in Triple-Negative Breast Cancer",
+        "journal": "Advanced Science",
+        "year": "2025",
+        "doi": "10.1002/advs.202500433",
+        "pdf": "../assets/publications/papers/Fei et al. - 2025 - PTf-SRiApt Targeting SCAF4-POLR2A Interaction Suppresses Tumor Growth and Promotes Antitumor Immunit.pdf",
+        "cover": "../assets/publications/covers/fei-et-al-2025-ptf-sriapt-targeting-scaf4-polr2a-interaction-suppresses-tumor-growth-and-promotes-antitumor-immunit.png",
+        "doi_url": "https://doi.org/10.1002/advs.202500433",
+        "authorList": [
+          {
+            "name": "Liyan Fei",
+            "equal": true,
+            "corresponding": false
+          },
+          {
+            "name": "Yichun Pan",
+            "equal": true,
+            "corresponding": false
+          },
+          {
+            "name": "Jie Zhai",
+            "equal": true,
+            "corresponding": false
+          },
+          {
+            "name": "Tongqing Li",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Yuxin Zhou",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Sheyu Zhang",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Juan Wei",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Qian Hu",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Xueying Liu",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Lu Guo",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Weizhu Wu",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Yong Wei",
+            "equal": false,
+            "corresponding": true
+          },
+          {
+            "name": "Qin Wu",
+            "equal": false,
+            "corresponding": true
+          },
+          {
+            "name": "Weihong Tan",
+            "equal": false,
+            "corresponding": true
+          }
+        ],
+        "authorSource": {
+          "pdf": "assets/publications/papers/Fei et al. - 2025 - PTf-SRiApt Targeting SCAF4-POLR2A Interaction Suppresses Tumor Growth and Promotes Antitumor Immunit.pdf",
+          "page": 1,
+          "equalPage": 13,
+          "reviewed": "2026-10-21"
+        }
+      },
+      "paperCover": "assets/publications/covers/fei-et-al-2025-ptf-sriapt-targeting-scaf4-polr2a-interaction-suppresses-tumor-growth-and-promotes-antitumor-immunit.png"
+    },
+    {
+      "id": "tumor-marker-ms",
+      "title": "Multiplexed Detection of Tumor Markers by LA-DBDI Mass Spectrometry",
+      "year": "2025",
+      "journal": "Analytical Chemistry",
+      "citation": "Guan X, Lu Q, Wei N et al.",
+      "theme": "decode",
+      "pdf": "assets/publications/papers/Guan et al. - 2025 - Multiplexed Detection of Tumor Markers and Discrimination of Cancer Cell Types by Laser Ablation-Die.pdf",
+      "doiUrl": "https://doi.org/10.1021/acs.analchem.4c06927",
+      "cover": "assets/publications/covers-subfigure/guan-et-al-2025-multiplexed-detection-of-tumor-markers-and-discrimination-of-cancer-cell-types-by-laser-ablation-die.png",
+      "coverAlt": "Key figure from the multiplexed tumor marker detection study",
+      "summary": [
+        "Develops a multiplexed analytical workflow to detect tumor markers and distinguish cancer cell types.",
+        "Shows how rich marker combinations can be read out in a single platform rather than through one-marker-at-a-time assays.",
+        "Adds an orthogonal molecular readout technology to the lab's profiling toolkit."
+      ],
+      "themeFit": "This study belongs in Decode because it is fundamentally about extracting discriminative molecular information from complex cellular samples. Its contribution is measurement capability, not target perturbation.",
+      "related": [
+        "apt-seq",
+        "molecular-medicine-era"
+      ],
+      "areas": [
+        "discover"
+      ],
+      "article": {
+        "zh": {
+          "title": "用质谱标签同时读取多种肿瘤相关蛋白",
+          "paragraphs": [
+            "细胞身份和疾病状态很少由单一标志物决定，但同时测量多个低丰度蛋白并不容易：光学信号可能重叠，样本量也常常有限。这篇研究将识别事件转换成质量不同的小分子标签，探索用常压质谱读取一组蛋白信号。",
+            "第一步是让蛋白识别产生足够强、又能区分的读数。研究将识别探针与携带有机小分子质量标签的金纳米颗粒结合，利用激光烧蚀-介质阻挡放电电离质谱（LA-DBDI-MS）检测标签。不同标签提供可分辨通道，纳米颗粒则放大识别信号。",
+            "灵敏度是否足以处理微量样本？作者使用 2 μL 血清进行凝血酶和 CA125 检测，分别报告 6.6 pM 和 1.4 U/mL 的检测限。这样的验证针对的是具体分析物和实验条件，不能直接推广为所有蛋白的检测能力。",
+            "随后研究转向细胞表面，联合读取 CA125、CEA、EpCAM、PTK7、CD71、CD8a 和 CD33 七种蛋白，并比较四类癌细胞的标志物组合。与逐个检测相比，多通道读出提供了区分细胞类型的组合信息。",
+            "结果支持了以分子识别和质量编码进行多重蛋白分析的可行性。论文所展示的是分析平台和细胞类型区分；单细胞尺度检测与临床诊断属于后续应用方向，不能把这些前景表述为已经完成的临床验证。"
+          ]
+        },
+        "en": {
+          "title": "Mass tags turn multiple tumor-marker measurements into one readout",
+          "paragraphs": [
+            "Cell identity rarely depends on a single marker, yet measuring several low-abundance proteins can consume scarce samples and create overlapping optical signals. This study explored a different readout: translating recognition events into small molecules distinguishable by mass.",
+            "The platform combined recognition probes with gold nanoparticles carrying organic mass tags. Laser ablation-dielectric barrier discharge ionization mass spectrometry, or LA-DBDI-MS, read the tags. Distinct masses separated measurement channels, while nanoparticle labeling amplified the signal.",
+            "Could the method work with very small samples? In 2 μL serum assays, the authors reported detection limits of 6.6 pM for thrombin and 1.4 U/mL for CA125. These measurements establish performance for the tested analytes and conditions, not a universal sensitivity.",
+            "The researchers then measured seven surface markers together: CA125, CEA, EpCAM, PTK7, CD71, CD8a and CD33. Comparing their patterns across four cancer cell types showed how multiplexed information could distinguish cells better than an isolated marker.",
+            "The work demonstrates an analytical platform linking molecular recognition to mass-coded protein measurements. Single-cell-scale applications and clinical diagnosis are prospective directions, not completed clinical validation in this study."
+          ]
+        }
+      },
+      "publication": {
+        "authors": "Guan X, Lu Q, Wei N et al.",
+        "title": "Multiplexed Detection of Tumor Markers and Discrimination of Cancer Cell Types by Laser Ablation-Dielectric Barrier Discharge Ionization-Mass Spectrometry",
+        "journal": "Anal Chem",
+        "year": "2025",
+        "doi": "10.1021/acs.analchem.4c06927",
+        "pdf": "../assets/publications/papers/Guan et al. - 2025 - Multiplexed Detection of Tumor Markers and Discrimination of Cancer Cell Types by Laser Ablation-Die.pdf",
+        "cover": "../assets/publications/covers/guan-et-al-2025-multiplexed-detection-of-tumor-markers-and-discrimination-of-cancer-cell-types-by-laser-ablation-die.png",
+        "doi_url": "https://doi.org/10.1021/acs.analchem.4c06927",
+        "authorList": [
+          {
+            "name": "Xiaokang Guan",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Qiao Lu",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Naijie Wei",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Shuxian Liu",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Haowen Li",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Qin Wu",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Xiaowen Yan",
+            "equal": false,
+            "corresponding": true
+          },
+          {
+            "name": "Renato Zenobi",
+            "equal": false,
+            "corresponding": true
+          }
+        ],
+        "authorSource": {
+          "pdf": "assets/publications/papers/Guan et al. - 2025 - Multiplexed Detection of Tumor Markers and Discrimination of Cancer Cell Types by Laser Ablation-Die.pdf",
+          "page": 1,
+          "equalPage": null,
+          "reviewed": "2026-10-21"
+        }
+      },
+      "paperCover": "assets/publications/covers/guan-et-al-2025-multiplexed-detection-of-tumor-markers-and-discrimination-of-cancer-cell-types-by-laser-ablation-die.png"
+    },
+    {
+      "id": "aptamer-lytacs",
+      "title": "Multivalent Aptamer-Based LYTACs for Cell-Surface Protein Degradation",
+      "year": "2024",
+      "journal": "Advanced Science",
+      "citation": "Duan Q, Jia H-R, Chen W et al.",
+      "theme": "explore",
+      "pdf": "assets/publications/papers/Duan et al. - 2024 - Multivalent Aptamer-Based Lysosome-Targeting Chimeras (LYTACs) Platform for Mono- or Dual-Targeted P.pdf",
+      "doiUrl": "https://doi.org/10.1002/advs.202308924",
+      "cover": "assets/publications/covers-subfigure/duan-et-al-2024-multivalent-aptamer-based-lysosome-targeting-chimeras-lytacs-platform-for-mono-or-dual-targeted-p.png",
+      "coverAlt": "Key figure from the multivalent aptamer-based LYTACs study",
+      "summary": [
+        "Builds aptamer-based LYTAC architectures that drive selective degradation of one or two cell-surface targets.",
+        "Extends aptamers from recognition reagents into programmable trafficking and degradation tools.",
+        "Shows how functional nucleic acids can be engineered into modular therapeutic modalities."
+      ],
+      "themeFit": "This study sits in Explore because it turns nucleic-acid recognition into an engineered intervention format. The central contribution is modality design: using aptamers as the programmable recognition layer in a degradative system.",
+      "related": [
+        "blocker-selex",
+        "dnazyme-evolution",
+        "ptf-sriapt"
+      ],
+      "areas": [
+        "engineer",
+        "translate"
+      ],
+      "article": {
+        "zh": {
+          "title": "从识别到清除：用多价适配体把膜蛋白送进溶酶体",
+          "paragraphs": [
+            "阻断蛋白功能与直接清除蛋白，是两种不同的干预思路。依赖蛋白酶体的降解技术难以直接处理许多细胞表面目标，LYTAC 则借助内吞和溶酶体打开另一条通路。本研究进一步追问：能否用容易编程和组装的适配体，替代抗体作为目标识别模块？",
+            "作者利用生物素-链霉亲和素搭建支架，将目标结合适配体与 CI-M6PR 识别配体组合起来。一端抓住膜蛋白，另一端招募负责内吞运输的受体。以 PTK7 为例，蛋白检测、细胞成像和通路干预共同检验了目标降低是否涉及溶酶体运输与降解。",
+            "平台搭好之后，更具体的问题是：适配体越多，降解就越好吗？不同配比的比较表明，在所测试构型中，三价单靶向设计表现最佳。过度增加适配体可能妨碍其他组分装配及受体招募，因此多价效应需要与运输能力共同优化。",
+            "研究还将平台扩展至 Met，并组合识别 PTK7 与 Met 的适配体，验证同时降低两种目标蛋白的可行性。由此，模块化组装不只改变识别强度，也能改变一个构建体所处理的目标组合。",
+            "这项工作展示了适配体从结合探针转为蛋白清除工具的可能性，并给出价态设计的重要线索。结论属于细胞体系中的平台概念验证，尚不能据此推断其体内递送能力或临床治疗效果。"
+          ]
+        },
+        "en": {
+          "title": "From binding to clearance: aptamers route surface proteins to lysosomes",
+          "paragraphs": [
+            "Blocking a protein and removing it are different interventions. Many cell-surface targets are difficult to address through proteasome-based degradation. LYTACs use cellular uptake and lysosomes instead. This study asked whether programmable aptamers could serve as the recognition component of such degraders.",
+            "A biotin-streptavidin scaffold assembled target-binding aptamers with a ligand for the trafficking receptor CI-M6PR. One component recognized the surface target; the other recruited an internalization route. Protein measurements, imaging and pathway perturbation examined lysosomal degradation using PTK7 as a test target.",
+            "The next question was architectural: does adding more aptamers always help? Comparisons across assembly ratios favored a trivalent, single-target design among the tested constructs. Excess aptamer loading could interfere with assembly and receptor recruitment, showing that recognition and trafficking must be optimized together.",
+            "The team extended the platform to Met and combined aptamers for PTK7 and Met to demonstrate dual-target degradation. Modular assembly therefore changed both binding architecture and the combination of proteins addressed.",
+            "The study establishes a cellular proof of concept for aptamer-directed protein clearance and offers design guidance on valency. It does not establish in vivo delivery or clinical efficacy, which require separate investigation."
+          ]
+        }
+      },
+      "publication": {
+        "authors": "Duan Q, Jia H-R, Chen W et al.",
+        "title": "Multivalent Aptamer-Based Lysosome-Targeting Chimeras (LYTACs) Platform for Mono- or Dual-Targeted Proteins Degradation on Cell Surface",
+        "journal": "Advanced Science",
+        "year": "2024",
+        "doi": "10.1002/advs.202308924",
+        "pdf": "../assets/publications/papers/Duan et al. - 2024 - Multivalent Aptamer-Based Lysosome-Targeting Chimeras (LYTACs) Platform for Mono- or Dual-Targeted P.pdf",
+        "cover": "../assets/publications/covers/duan-et-al-2024-multivalent-aptamer-based-lysosome-targeting-chimeras-lytacs-platform-for-mono-or-dual-targeted-p.png",
+        "doi_url": "https://doi.org/10.1002/advs.202308924",
+        "authorList": [
+          {
+            "name": "Qiao Duan",
+            "equal": true,
+            "corresponding": false
+          },
+          {
+            "name": "Hao-Ran Jia",
+            "equal": true,
+            "corresponding": false
+          },
+          {
+            "name": "Weichang Chen",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Chunhong Qin",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Kejing Zhang",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Fei Jia",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Ting Fu",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Yong Wei",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Mengyang Fan",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Qin Wu",
+            "equal": false,
+            "corresponding": true
+          },
+          {
+            "name": "Weihong Tan",
+            "equal": false,
+            "corresponding": true
+          }
+        ],
+        "authorSource": {
+          "pdf": "assets/publications/papers/Duan et al. - 2024 - Multivalent Aptamer-Based Lysosome-Targeting Chimeras (LYTACs) Platform for Mono- or Dual-Targeted P.pdf",
+          "page": 1,
+          "equalPage": 9,
+          "reviewed": "2026-10-21"
+        }
+      },
+      "paperCover": "assets/publications/covers/duan-et-al-2024-multivalent-aptamer-based-lysosome-targeting-chimeras-lytacs-platform-for-mono-or-dual-targeted-p.png"
+    },
+    {
+      "id": "blocker-selex",
+      "title": "Blocker-SELEX for Inhibitory Aptamers Against Undruggable TF Interfaces",
+      "year": "2024",
+      "journal": "Nature Communications",
+      "citation": "Li T, Liu X, Qian H et al.",
+      "theme": "explore",
+      "pdf": "assets/publications/papers/Li et al. - 2024 - Blocker-SELEX a structure-guided strategy for developing inhibitory aptamers disrupting undruggable.pdf",
+      "doiUrl": "https://doi.org/10.1038/s41467-024-51197-w",
+      "cover": "assets/publications/covers-subfigure/li-et-al-2024-blocker-selex-a-structure-guided-strategy-for-developing-inhibitory-aptamers-disrupting-undruggable.png",
+      "coverAlt": "Key figure from the Blocker-SELEX study",
+      "summary": [
+        "Introduces a structure-guided selection strategy to isolate aptamers that block transcription-factor protein interactions.",
+        "Pushes aptamers toward hard-to-drug interfaces where classical small-molecule discovery often stalls.",
+        "Establishes a general discovery logic for functional, mechanism-aware nucleic-acid binders."
+      ],
+      "themeFit": "This is a core Explore paper because it defines how the lab discovers functional aptamers with mechanistic intent. The emphasis is on screening logic, binder design, and expanding what nucleic acids can target.",
+      "related": [
+        "spark-seq",
+        "atp-aptamer",
+        "ptf-sriapt"
+      ],
+      "areas": [
+        "design",
+        "engineer"
+      ],
+      "article": {
+        "zh": {
+          "title": "Blocker-SELEX：让适配体不只结合蛋白，还能阻断关键互作",
+          "paragraphs": [
+            "转录调控依赖蛋白之间的接触，但许多接触界面宽而平坦，缺少适合小分子进入的口袋。核酸适配体可以覆盖较大的表面，不过，能结合蛋白并不意味着能阻断其功能。Blocker-SELEX 因此把筛选目标从“找到结合者”推进到“找到占据关键互作界面的阻断者”。",
+            "首先要决定把筛选压力施加在哪里。研究结合结构信息与界面导向的筛选设计，使候选适配体的发现围绕预期阻断的蛋白互作展开，再通过序列优化与功能验证逐步筛出抑制性适配体，而不是仅按富集程度判断成功。",
+            "作者以 SCAF4/SCAF8 与 RNA 聚合酶 II 的互作为主要验证体系，检查候选适配体是否能够干扰蛋白结合，以及这种干扰是否传递到转录和细胞增殖层面。结果显示，相关适配体能够协同扰乱这些互作，并影响聚合酶依赖的基因表达和细胞增殖。",
+            "为了回答方法是否只适用于一个特例，研究进一步将策略用于 WDR5-MYC 互作，获得相应的阻断适配体。这一步把单一靶点的成功推进为跨互作体系的方法验证。",
+            "这项工作的核心是把结构信息、分子识别与功能筛选连接起来，为研究难以药物化的转录调控界面提供工具。它并不意味着这些适配体已经成为可用药物；细胞内递送、稳定性和疾病模型中的效果，仍是后续开发必须解决的问题。"
+          ]
+        },
+        "en": {
+          "title": "Blocker-SELEX: selecting aptamers that interrupt protein interactions",
+          "paragraphs": [
+            "Many transcription-regulatory proteins meet across broad interfaces without obvious small-molecule pockets. Aptamers can occupy larger surfaces, but binding alone does not guarantee inhibition. Blocker-SELEX therefore asks how selection can favor molecules that interfere with a functionally important contact.",
+            "The first step was to make the intended interaction part of the discovery logic. Structural information guided interface-focused selection, followed by sequence optimization and functional testing. Enrichment was a starting point, not sufficient evidence that a candidate blocked the desired interaction.",
+            "The researchers tested this approach on interactions between SCAF4/SCAF8 and RNA polymerase II. They examined both protein-interaction disruption and downstream effects on polymerase-dependent gene expression and proliferation. The resulting inhibitory aptamers cooperatively disrupted these contacts and impaired cell growth.",
+            "To test whether the strategy extended beyond one system, the team applied it to WDR5-MYC and obtained aptamers that blocked that interaction. This additional example supported transfer of the approach across distinct interaction targets.",
+            "Blocker-SELEX connects structure-guided recognition with functional intervention, offering tools for interfaces that are difficult to address conventionally. It is a discovery strategy, not proof of a finished medicine: stability, intracellular delivery and disease-specific performance remain separate development challenges."
+          ]
+        }
+      },
+      "publication": {
+        "authors": "Li T, Liu X, Qian H et al.",
+        "title": "Blocker-SELEX: a structure-guided strategy for developing inhibitory aptamers disrupting undruggable transcription factor interactions",
+        "journal": "Nat Commun",
+        "year": "2024",
+        "doi": "10.1038/s41467-024-51197-w",
+        "pdf": "../assets/publications/papers/Li et al. - 2024 - Blocker-SELEX a structure-guided strategy for developing inhibitory aptamers disrupting undruggable.pdf",
+        "cover": "../assets/publications/covers/li-et-al-2024-blocker-selex-a-structure-guided-strategy-for-developing-inhibitory-aptamers-disrupting-undruggable.png",
+        "doi_url": "https://doi.org/10.1038/s41467-024-51197-w",
+        "authorList": [
+          {
+            "name": "Tongqing Li",
+            "equal": true,
+            "corresponding": false
+          },
+          {
+            "name": "Xueying Liu",
+            "equal": true,
+            "corresponding": false
+          },
+          {
+            "name": "Haifeng Qian",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Sheyu Zhang",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Yu Hou",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Yuchao Zhang",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Guoyan Luo",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Xun Zhu",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Yanxin Tao",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Mengyang Fan",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Hong Wang",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Chulin Sha",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Ailan Lin",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Jingjing Qin",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Kedan Gu",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Weichang Chen",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Ting Fu",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Yajun Wang",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Yong Wei",
+            "equal": false,
+            "corresponding": true
+          },
+          {
+            "name": "Qin Wu",
+            "equal": false,
+            "corresponding": true
+          },
+          {
+            "name": "Weihong Tan",
+            "equal": false,
+            "corresponding": true
+          }
+        ],
+        "authorSource": {
+          "pdf": "assets/publications/papers/Li et al. - 2024 - Blocker-SELEX a structure-guided strategy for developing inhibitory aptamers disrupting undruggable.pdf",
+          "page": 1,
+          "equalPage": 1,
+          "reviewed": "2026-10-21"
+        }
+      },
+      "paperCover": "assets/publications/covers/li-et-al-2024-blocker-selex-a-structure-guided-strategy-for-developing-inhibitory-aptamers-disrupting-undruggable.png"
+    },
+    {
+      "id": "molecular-medicine-era",
+      "title": "The Emerging Era of Molecular Medicine",
+      "year": "2024",
+      "journal": "ACS Nano",
+      "citation": "Tang H, Zhang Y, Wu Y et al.",
+      "theme": "decode",
+      "pdf": "assets/publications/papers/2024 - The Emerging Era of Molecular Medicine.pdf",
+      "doiUrl": "https://doi.org/10.1021/acsnano.4c07969",
+      "cover": "assets/publications/covers-subfigure/2024-the-emerging-era-of-molecular-medicine.png",
+      "coverAlt": "Key figure from the molecular medicine perspective article",
+      "summary": [
+        "Frames the transition from broad disease classification toward molecule-resolved diagnosis and intervention.",
+        "Synthesizes how high-resolution molecular tools reshape research, diagnosis, and treatment design.",
+        "Provides conceptual context for why the lab invests in measurement-rich molecular technologies."
+      ],
+      "themeFit": "This paper is assigned to Decode because it articulates the systems-level rationale behind molecular readout technologies. It serves as a conceptual umbrella for the measurement platforms and map-building studies in the program.",
+      "related": [
+        "apt-seq",
+        "tumor-marker-ms"
+      ],
+      "areas": [
+        "discover"
+      ],
+      "article": {
+        "zh": {
+          "title": "从疾病名称走向分子机制：分子医学的工具如何相互连接",
+          "paragraphs": [
+            "同一种疾病名称之下，可能存在不同的分子异常，也可能需要不同的干预方式。这篇观点文章讨论的不是某一次实验能否成功，而是医学如何从器官和症状层面的描述，逐步转向对分子机制的识别、测量与干预。",
+            "文章先把人体放在分子网络的视角下理解：核酸、蛋白、糖类和其他分子共同维持细胞功能，单个组分或相互作用的变化都可能引发疾病。由此，分子分型的价值不仅在于产生更多数据，还在于解释看似相同的疾病为什么表现不同。",
+            "接着，作者梳理了实现这种转变的工具。组学分析帮助发现异常及其组合，分子识别工具让这些异常成为可以检测的对象，基因编辑和靶向药物则提供检验与干预机制的路径。文章以已有研究和技术进展为依据，将这些工具放在同一条诊疗逻辑中讨论。",
+            "这里的关键问题是，发现分子差异之后，怎样把它转为可采取的行动。靶向递送、分子诊断和治疗选择需要彼此衔接，否则更精细的分型并不会自然带来更好的疗效。",
+            "作为观点文章，这项工作提供的是一幅概念图景，而非新的临床疗效证据。它强调分子识别在测量与干预之间的连接作用，也说明为什么开发分子工具、建立组学读出和推进医学验证需要协同进行。"
+          ]
+        },
+        "en": {
+          "title": "From disease labels to molecular mechanisms",
+          "paragraphs": [
+            "Patients sharing a disease label can have different molecular abnormalities and may require different interventions. This perspective examines how medicine moves from descriptions of organs and symptoms toward molecular measurement, explanation and intervention, rather than reporting a new experimental trial.",
+            "The article first considers the body as an interacting molecular system. Nucleic acids, proteins, carbohydrates and other components jointly support cellular functions. Disturbances in components or their interactions help explain why apparently similar diseases can behave differently.",
+            "It then connects the tools supporting this transition. Omics identifies patterns of abnormality; molecular-recognition tools make them measurable; gene editing and targeted agents provide routes to test and intervene in mechanisms. Published examples place these capabilities within a shared diagnostic and therapeutic framework.",
+            "A central issue is what happens after a difference is detected. Molecular classification must connect to delivery, diagnostic decisions and appropriate intervention. More detailed measurements do not automatically produce better outcomes.",
+            "The contribution is conceptual synthesis, not new evidence of clinical efficacy. It highlights molecular recognition as a connection between measurement and intervention, explaining why tool development, omics technologies and medical validation need to advance together."
+          ]
+        }
+      },
+      "publication": {
+        "authors": "",
+        "title": "The Emerging Era of Molecular Medicine",
+        "journal": "ACS Nano",
+        "year": "2024",
+        "doi": "10.1021/acsnano.4c07969",
+        "pdf": "../assets/publications/papers/2024 - The Emerging Era of Molecular Medicine.pdf",
+        "cover": "../assets/publications/covers/2024-the-emerging-era-of-molecular-medicine.png",
+        "doi_url": "https://doi.org/10.1021/acsnano.4c07969",
+        "authorList": [
+          {
+            "name": "Heming Tang",
+            "equal": true,
+            "corresponding": false
+          },
+          {
+            "name": "Ying Zhang",
+            "equal": true,
+            "corresponding": false
+          },
+          {
+            "name": "Yanyuan Wu",
+            "equal": true,
+            "corresponding": false
+          },
+          {
+            "name": "Ting Fu",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Cheng Cui",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Zongping Wang",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Sitao Xie",
+            "equal": false,
+            "corresponding": true
+          },
+          {
+            "name": "Qin Wu",
+            "equal": false,
+            "corresponding": true
+          },
+          {
+            "name": "Weihong Tan",
+            "equal": false,
+            "corresponding": true
+          }
+        ],
+        "authorSource": {
+          "pdf": "assets/publications/papers/2024 - The Emerging Era of Molecular Medicine.pdf",
+          "page": 1,
+          "equalPage": 6,
+          "reviewed": "2026-10-21"
+        }
+      },
+      "paperCover": "assets/publications/covers/2024-the-emerging-era-of-molecular-medicine.png"
+    },
+    {
+      "id": "prmt1-pd1",
+      "title": "Type-I PRMT Inhibition Primes Anti-PD1 Immunotherapy in TNBC",
+      "year": "2024",
+      "journal": "Cancer",
+      "citation": "Zhang S, Guo L, Zhang Z et al.",
+      "theme": "protect",
+      "pdf": "assets/publications/papers/Zhang et al. - 2024 - Type-I protein arginine methyltransferase inhibition primes anti-programmed cell death protein 1 imm.pdf",
+      "doiUrl": "https://doi.org/10.1002/cncr.35142",
+      "cover": "assets/publications/covers-subfigure/zhang-et-al-2024-type-i-protein-arginine-methyltransferase-inhibition-primes-anti-programmed-cell-death-protein-1-imm.png",
+      "coverAlt": "Key figure from the type-I PRMT and anti-PD1 study",
+      "summary": [
+        "Shows that type-I PRMT inhibition can sensitize TNBC to anti-PD1 immunotherapy.",
+        "Moves the PRMT program from mechanism into rational combination treatment design.",
+        "Demonstrates direct translational value for immune-oncology strategy building."
+      ],
+      "themeFit": "This paper is in Protect because it is explicitly about therapeutic combination logic. The endpoint is better immunotherapy response, not just molecular characterization.",
+      "related": [
+        "prmt-viral-mimicry",
+        "cd4-aptamer-cells",
+        "interferon-prmt5"
+      ],
+      "areas": [
+        "translate"
+      ],
+      "article": {
+        "zh": {
+          "title": "先改变肿瘤免疫环境，再增强 PD-1 阻断的作用",
+          "paragraphs": [
+            "解除免疫检查点并不一定足以让 T 细胞有效攻击肿瘤，尤其当肿瘤缺少免疫细胞浸润或适当激活时。此前研究已发现 I 型 PRMT 抑制能启动病毒模拟响应，这篇论文进一步追问：这种肿瘤内在变化能否转化为更有利的免疫环境？",
+            "作者首先使用单细胞转录组分析，观察 MS023 处理后三阴性乳腺癌模型中的免疫细胞组成与状态。流式细胞术验证了 CD8 T 细胞浸润增加，把分子层面的免疫激活线索推进到实际细胞群体变化。",
+            "更多 T 细胞进入肿瘤，是否也意味着参与反应的克隆发生改变？研究通过单细胞 T 细胞受体测序追踪克隆型，观察到处理后克隆型数量与克隆多样性的增加，从另一个层面描述免疫响应的重塑。",
+            "随后，在同系小鼠肿瘤模型中，作者比较 MS023、抗 PD-1 及联合处理，并检测后续免疫记忆。联合方案抑制肿瘤生长，相关实验也支持其能够产生免疫记忆效应。",
+            "研究由此将 I 型 PRMT 抑制与免疫检查点阻断连接起来：不仅让肿瘤发出警报，还改变参与响应的细胞与克隆。结论来自临床前模型，为联合治疗提供依据，但不等于已经证实能提高患者的免疫治疗获益。"
+          ]
+        },
+        "en": {
+          "title": "Reshaping tumor immunity before releasing the PD-1 brake",
+          "paragraphs": [
+            "Checkpoint blockade may be insufficient when a tumor lacks immune infiltration or activation. Earlier work linked type I PRMT inhibition to viral mimicry. This study asked whether that tumor-intrinsic response could become a more favorable immune environment.",
+            "Single-cell transcriptomics examined immune populations and states after MS023 treatment in TNBC models. Flow cytometry confirmed increased CD8 T-cell infiltration, connecting molecular immune signals to changes in the cells present.",
+            "The researchers then used single-cell T-cell receptor sequencing to ask whether the responding repertoire changed. Increased clonotypes and clonal diversity provided another view of immune remodeling beyond cell counts alone.",
+            "In a syngeneic mouse tumor model, they compared MS023, anti-PD-1 and the combination, and investigated immune memory. Combination treatment suppressed tumor growth, with follow-up experiments supporting a memory effect.",
+            "The study connects type I PRMT inhibition to checkpoint therapy through changes in immune populations and repertoires. These preclinical findings justify further combination research; they do not establish improved immunotherapy outcomes in patients."
+          ]
+        }
+      },
+      "publication": {
+        "authors": "Zhang S, Guo L, Zhang Z et al.",
+        "title": "Type-I protein arginine methyltransferase inhibition primes anti-programmed cell death protein 1 immunotherapy in triple-negative breast cancer",
+        "journal": "Cancer",
+        "year": "2024",
+        "doi": "10.1002/cncr.35142",
+        "pdf": "../assets/publications/papers/Zhang et al. - 2024 - Type-I protein arginine methyltransferase inhibition primes anti-programmed cell death protein 1 imm.pdf",
+        "cover": "../assets/publications/covers/zhang-et-al-2024-type-i-protein-arginine-methyltransferase-inhibition-primes-anti-programmed-cell-death-protein-1-imm.png",
+        "doi_url": "https://doi.org/10.1002/cncr.35142",
+        "authorList": [
+          {
+            "name": "Sheyu Zhang",
+            "equal": true,
+            "corresponding": false
+          },
+          {
+            "name": "Lu Guo",
+            "equal": true,
+            "corresponding": false
+          },
+          {
+            "name": "Ziwen Zhang",
+            "equal": true,
+            "corresponding": false
+          },
+          {
+            "name": "Xueying Liu",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Wenjun Chen",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Yong Wei",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Xiaojia Wang",
+            "equal": false,
+            "corresponding": true
+          },
+          {
+            "name": "Qin Wu",
+            "equal": false,
+            "corresponding": true
+          }
+        ],
+        "authorSource": {
+          "pdf": "assets/publications/papers/Zhang et al. - 2024 - Type-I protein arginine methyltransferase inhibition primes anti-programmed cell death protein 1 imm.pdf",
+          "page": 1,
+          "equalPage": 1,
+          "reviewed": "2026-10-21"
+        }
+      },
+      "paperCover": "assets/publications/covers/zhang-et-al-2024-type-i-protein-arginine-methyltransferase-inhibition-primes-anti-programmed-cell-death-protein-1-imm.png"
+    },
+    {
+      "id": "prmt5-vulnerability",
+      "title": "PRMT5 as a Therapeutic Vulnerability in Paclitaxel-Resistant TNBC",
+      "year": "2024",
+      "journal": "Cell Chemical Biology",
+      "citation": "Zhang K, Wei J, Zhang S et al.",
+      "theme": "protect",
+      "pdf": "assets/publications/papers/Zhang et al. - 2024 - A chemical screen identifies PRMT5 as a therapeutic vulnerability for paclitaxel-resistant triple-ne.pdf",
+      "doiUrl": "https://doi.org/10.1016/j.chembiol.2024.08.003",
+      "cover": "assets/publications/covers-subfigure/zhang-et-al-2024-a-chemical-screen-identifies-prmt5-as-a-therapeutic-vulnerability-for-paclitaxel-resistant-triple-ne.png",
+      "coverAlt": "Key figure from the PRMT5 vulnerability study",
+      "summary": [
+        "Uses chemical screening to identify PRMT5 inhibition as a vulnerability in paclitaxel-resistant TNBC.",
+        "Links splicing disruption to mitotic catastrophe in resistant tumor cells.",
+        "Creates a strong mechanistic and translational foundation for downstream biomarker and protocol studies."
+      ],
+      "themeFit": "This is a Protect study because it starts from a clinically difficult resistance state and delivers an actionable therapeutic strategy. The whole paper is organized around translational leverage in TNBC.",
+      "related": [
+        "drug-resistance-protocol",
+        "prmt-viral-mimicry",
+        "interferon-prmt5"
+      ],
+      "areas": [
+        "translate"
+      ],
+      "article": {
+        "zh": {
+          "title": "紫杉醇耐药细胞如何暴露出新的分裂弱点",
+          "paragraphs": [
+            "紫杉醇通过干扰细胞分裂抑制肿瘤，但耐药细胞能够适应这种压力。适应是否也带来新的依赖？这项研究没有只追问原药为什么失效，而是利用表观遗传化学探针寻找耐药状态新产生的可干预弱点。",
+            "作者建立并比较亲本与耐药三阴性乳腺癌模型，通过筛选发现耐药细胞对 PRMT 抑制更加敏感。细胞及临床样本分析提示，这些耐药细胞通过稳定有丝分裂染色质装配来规避紫杉醇作用，也因此依赖维持分裂的相关过程。",
+            "为什么抑制 PRMT5 会击中这个弱点？遗传和药理干预结合 RNA 剪接分析，指向 AURKB 转录本的内含子保留。随之下降的 AURKB 蛋白削弱有丝分裂调控，使耐药细胞出现有丝分裂灾难。",
+            "机制线索进一步指导了联合干预：同时抑制 I 型 PRMT 与 PRMT5，可以加强对 AURKB 相关分裂信号的扰动。研究在耐药细胞和来自紫杉醇耐药患者的异种移植模型中检验了联合抑瘤效果。",
+            "这项工作说明，耐药可能不是简单变得更强，而是把生存建立在新的脆弱依赖上。PRMT-AURKB 轴提供了针对这种依赖的临床前依据，但患者来源模型仍不同于患者用药试验，疗效与耐受性需要进一步验证。"
+          ]
+        },
+        "en": {
+          "title": "Paclitaxel resistance exposes a new weakness in cell division",
+          "paragraphs": [
+            "Cells that escape paclitaxel have adapted to pressure on mitosis. Could that adaptation create a new dependency? Rather than only asking why the original drug failed, this study screened epigenetic probes for vulnerabilities acquired with resistance.",
+            "Comparisons of parental and resistant TNBC models identified increased sensitivity to PRMT inhibition. Cellular and clinical-sample analyses suggested that resistant cells maintained mitotic chromatin assembly to evade paclitaxel, creating dependence on processes that support division.",
+            "Genetic and pharmacological PRMT5 inhibition helped explain the vulnerability. RNA-splicing analysis identified intron retention in AURKB transcripts, followed by reduced AURKB protein and mitotic catastrophe in resistant cells.",
+            "The mechanism suggested a combination: inhibiting type I PRMTs alongside PRMT5 intensified disruption of AURKB-associated mitotic signaling. The team tested growth suppression in resistant cells and a xenograft derived from a paclitaxel-resistant patient's tumor.",
+            "The work shows how adaptation to treatment can expose another dependency and provides preclinical support for targeting the PRMT-AURKB axis. Patient-derived models are not patient treatment trials; efficacy and tolerability require further validation."
+          ]
+        }
+      },
+      "publication": {
+        "authors": "Zhang K, Wei J, Zhang S et al.",
+        "title": "A chemical screen identifies PRMT5 as a therapeutic vulnerability for paclitaxel-resistant triple-negative breast cancer",
+        "journal": "Chemistry & Biology",
+        "year": "2024",
+        "doi": "10.1016/j.chembiol.2024.08.003",
+        "pdf": "../assets/publications/papers/Zhang et al. - 2024 - A chemical screen identifies PRMT5 as a therapeutic vulnerability for paclitaxel-resistant triple-ne.pdf",
+        "cover": "../assets/publications/covers/zhang-et-al-2024-a-chemical-screen-identifies-prmt5-as-a-therapeutic-vulnerability-for-paclitaxel-resistant-triple-ne.png",
+        "doi_url": "https://doi.org/10.1016/j.chembiol.2024.08.003",
+        "authorList": [
+          {
+            "name": "KeJing Zhang",
+            "equal": true,
+            "corresponding": false
+          },
+          {
+            "name": "Juan Wei",
+            "equal": true,
+            "corresponding": false
+          },
+          {
+            "name": "SheYu Zhang",
+            "equal": true,
+            "corresponding": false
+          },
+          {
+            "name": "Liyan Fei",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Lu Guo",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Xueying Liu",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "YiShuai Ji",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "WenJun Chen",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Felipe E. Ciamponi",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "WeiChang Chen",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "MengXi Li",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Jie Zhai",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Ting Fu",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Katlin B. Massirer",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Yang Yu",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Mathieu Lupien",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Yong Wei",
+            "equal": false,
+            "corresponding": true
+          },
+          {
+            "name": "Cheryl. H. Arrowsmith",
+            "equal": false,
+            "corresponding": true
+          },
+          {
+            "name": "Qin Wu",
+            "equal": false,
+            "corresponding": true
+          },
+          {
+            "name": "WeiHong Tan",
+            "equal": false,
+            "corresponding": true
+          }
+        ],
+        "authorSource": {
+          "pdf": "assets/publications/papers/Zhang et al. - 2024 - A chemical screen identifies PRMT5 as a therapeutic vulnerability for paclitaxel-resistant triple-ne.pdf",
+          "page": 2,
+          "equalPage": 2,
+          "reviewed": "2026-10-21"
+        }
+      },
+      "paperCover": "assets/publications/covers/zhang-et-al-2024-a-chemical-screen-identifies-prmt5-as-a-therapeutic-vulnerability-for-paclitaxel-resistant-triple-ne.png"
+    },
+    {
+      "id": "taf1-bay299",
+      "title": "Targeting TAF1 with BAY-299 Induces Antitumor Immunity in TNBC",
+      "year": "2023",
+      "journal": "Biochemical and Biophysical Research Communications",
+      "citation": "Zhang S, Liu X, Chen W et al.",
+      "theme": "protect",
+      "pdf": "assets/publications/papers/Zhang et al. - 2023 - Targeting TAF1 with BAY-299 induces antitumor immunity in triple-negative breast cancer.pdf",
+      "doiUrl": "https://doi.org/10.1016/j.bbrc.2023.04.100",
+      "cover": "assets/publications/covers-subfigure/zhang-et-al-2023-targeting-taf1-with-bay-299-induces-antitumor-immunity-in-triple-negative-breast-cancer.png",
+      "coverAlt": "Key figure from the TAF1 BAY-299 study",
+      "summary": [
+        "Identifies TAF1 inhibition as a route to antitumor immune activation in TNBC.",
+        "Expands the translational portfolio beyond PRMT-focused targets while keeping the immune-response lens.",
+        "Supports a broader strategy of transcriptional and epigenetic intervention in aggressive breast cancer."
+      ],
+      "themeFit": "The study belongs in Protect because it is centered on therapeutic target nomination and antitumor immune response. It advances intervention logic in TNBC rather than platform development.",
+      "related": [
+        "bromodomain-toolbox",
+        "prmt-viral-mimicry",
+        "prmt1-pd1"
+      ],
+      "areas": [
+        "translate"
+      ],
+      "article": {
+        "zh": {
+          "title": "干预 TAF1，让部分乳腺癌细胞暴露内源性 RNA 警报",
+          "paragraphs": [
+            "TAF1 参与转录起始，但抑制这个过程会怎样影响三阴性乳腺癌及其免疫信号，并不清楚。这篇研究使用化学探针 BAY-299，从不同细胞模型的反应差异入手，寻找生长抑制背后的机制与解释敏感性的线索。",
+            "作者首先比较细胞增殖和转录变化，并用 TAF1 遗传敲低补充药理实验。结果显示，部分细胞中干扰 TAF1 会激活干扰素及抗原处理、呈递相关程序，而不同三阴性乳腺癌细胞的反应并不一致。",
+            "这些抗病毒样信号从哪里来？研究检测到内源性逆转录病毒相关转录增加，并通过双链 RNA 成像与定量观察到 RNA 积累，同时分析 RNA 感知通路。这些证据支持一种没有外源病毒参与的病毒模拟响应。",
+            "为解释为什么部分细胞不敏感，作者整合转录组和蛋白组，发现较高 PCNA 水平与较弱的 BAY-299 响应相关。患者数据中的相关分析还把 PCNA 与免疫抑制特征联系起来，但相关性本身不足以证明 PCNA 就是耐受的直接原因。",
+            "论文将 TAF1 干预、内源性 RNA 与先天免疫连接起来，并提出候选反应标志物。BAY-299 是研究用化学探针，不能将其细胞实验效果直接等同于临床治疗，也不应把相关标志物当作已经验证的患者筛选工具。"
+          ]
+        },
+        "en": {
+          "title": "TAF1 perturbation exposes an endogenous RNA alarm in TNBC",
+          "paragraphs": [
+            "TAF1 participates in transcription initiation, but the consequences of targeting it in TNBC were unclear. Using the chemical probe BAY-299, this study examined variable cellular responses to identify both a mechanism and potential sensitivity markers.",
+            "Proliferation and transcript analyses were complemented by genetic TAF1 knockdown. In responsive cells, perturbation activated interferon and antigen-processing or presentation programs. The response was not uniform across TNBC models.",
+            "To trace the antiviral-like signal, the researchers measured endogenous retrovirus-associated transcripts, imaged and quantified double-stranded RNA, and examined RNA-sensing pathways. The results supported viral mimicry without an external infection.",
+            "Integrating transcriptomic and proteomic data associated higher PCNA levels with weaker BAY-299 responses. Patient-dataset analyses also linked PCNA to suppressive immune features. These associations do not by themselves prove that PCNA directly causes resistance.",
+            "The study connects TAF1 perturbation to endogenous RNA and innate immune signaling while nominating a response marker. BAY-299 is a research probe, and neither its cellular activity nor the PCNA association establishes a clinical treatment or validated patient-selection test."
+          ]
+        }
+      },
+      "publication": {
+        "authors": "Zhang S, Liu X, Chen W et al.",
+        "title": "Targeting TAF1 with BAY-299 induces antitumor immunity in triple-negative breast cancer",
+        "journal": "Biochemical and Biophysical Research Communications",
+        "year": "2023",
+        "doi": "10.1016/j.bbrc.2023.04.100",
+        "pdf": "../assets/publications/papers/Zhang et al. - 2023 - Targeting TAF1 with BAY-299 induces antitumor immunity in triple-negative breast cancer.pdf",
+        "cover": "../assets/publications/covers/zhang-et-al-2023-targeting-taf1-with-bay-299-induces-antitumor-immunity-in-triple-negative-breast-cancer.png",
+        "doi_url": "https://doi.org/10.1016/j.bbrc.2023.04.100",
+        "authorList": [
+          {
+            "name": "Sheyu Zhang",
+            "equal": true,
+            "corresponding": false
+          },
+          {
+            "name": "Xueying Liu",
+            "equal": true,
+            "corresponding": false
+          },
+          {
+            "name": "Wenjun Chen",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Kejing Zhang",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Qin Wu",
+            "equal": false,
+            "corresponding": true
+          },
+          {
+            "name": "Yong Wei",
+            "equal": false,
+            "corresponding": true
+          }
+        ],
+        "authorSource": {
+          "pdf": "assets/publications/papers/Zhang et al. - 2023 - Targeting TAF1 with BAY-299 induces antitumor immunity in triple-negative breast cancer.pdf",
+          "page": 1,
+          "equalPage": 1,
+          "reviewed": "2026-10-21"
+        }
+      },
+      "paperCover": "assets/publications/covers/zhang-et-al-2023-targeting-taf1-with-bay-299-induces-antitumor-immunity-in-triple-negative-breast-cancer.png"
+    },
+    {
+      "id": "prmt-viral-mimicry",
+      "title": "PRMT Inhibition Induces a Viral Mimicry Response in TNBC",
+      "year": "2022",
+      "journal": "Nature Chemical Biology",
+      "citation": "Wu Q, Nie DY, Ba-Alawi W et al.",
+      "theme": "protect",
+      "pdf": "assets/publications/papers/Wu et al. - 2022 - PRMT inhibition induces a viral mimicry response in triple-negative breast cancer.pdf",
+      "doiUrl": "https://doi.org/10.1038/s41589-022-01024-4",
+      "cover": "assets/publications/covers-subfigure/wu-et-al-2022-prmt-inhibition-induces-a-viral-mimicry-response-in-triple-negative-breast-cancer.png",
+      "coverAlt": "Key figure from the PRMT viral mimicry study",
+      "summary": [
+        "Connects PRMT inhibition to RNA-splicing disruption and a viral-mimicry state in TNBC.",
+        "Explains how epigenetic intervention can activate tumor-intrinsic immune signaling.",
+        "Provides mechanistic groundwork for later biomarker and immunotherapy-combination studies."
+      ],
+      "themeFit": "This study is squarely in Protect because it links a druggable mechanism to an actionable immune-response phenotype in cancer. It is a mechanism-to-therapy bridge paper.",
+      "related": [
+        "prmt-review",
+        "prmt1-pd1",
+        "interferon-prmt5"
+      ],
+      "areas": [
+        "translate"
+      ],
+      "article": {
+        "zh": {
+          "title": "没有病毒，癌细胞为何启动抗病毒警报？",
+          "paragraphs": [
+            "表观遗传干预可以减慢癌细胞生长，但药物究竟通过什么过程起效，往往决定了哪些肿瘤会响应。这项研究从三阴性乳腺癌的化学探针筛选出发，发现 I 型蛋白精氨酸甲基转移酶抑制剂 MS023 的作用，与细胞自身的抗病毒响应联系在一起。",
+            "首先，作者比较不同细胞系对 MS023 的反应，并结合 PRMT1 遗传干预检验靶点作用。随后通过通路分析追问敏感性差异，发现处理前后的干扰素响应与抑制效果相关，这种关系也延伸到患者来源类器官。",
+            "没有外源病毒，警报从何而来？RNA 分析和双链 RNA 检测表明，I 型 PRMT 抑制扰乱 RNA 加工，并增加可触发抗病毒防御的双链 RNA，其中至少一部分来自倒置重复 Alu 元件。",
+            "研究进一步干预 RNA 感知通路，检查这些信号是否参与药物引起的干扰素响应和生长抑制。由此，双链 RNA 不再只是伴随变化，而成为解释“病毒模拟”现象及药物反应的机制线索。",
+            "这项工作把 I 型 PRMT 抑制的作用从一般性的增殖抑制，推进为可追踪的 RNA-先天免疫过程。它提出了干扰素相关分层与联合治疗的研究依据，但并未证明所有三阴性乳腺癌都对这种干预敏感。"
+          ]
+        },
+        "en": {
+          "title": "Why do cancer cells sound an antiviral alarm without a virus?",
+          "paragraphs": [
+            "An epigenetic inhibitor may slow cancer growth, but its mechanism helps explain which tumors respond. A chemical-probe screen in TNBC identified activity of the type I PRMT inhibitor MS023 and connected that activity to the cell's own antiviral response.",
+            "The researchers compared cell-line responses and used genetic PRMT1 perturbation to examine target involvement. Pathway analysis linked interferon activity before and after treatment to sensitivity, with related observations in patient-derived organoids.",
+            "What triggered an antiviral response without infection? RNA analyses and double-stranded RNA measurements showed that type I PRMT inhibition disrupted RNA processing and increased immunostimulatory dsRNA, derived at least partly from inverted-repeat Alu elements.",
+            "Perturbing RNA-sensing pathways then tested their contribution to interferon signaling and growth inhibition. This moved dsRNA accumulation beyond an accompanying observation toward a mechanistic explanation of viral mimicry.",
+            "The study reframes type I PRMT inhibition as an RNA-to-innate-immunity intervention and supplies a rationale for interferon-linked stratification and combination research. It does not imply uniform sensitivity across TNBC or establish a clinically validated treatment strategy."
+          ]
+        }
+      },
+      "publication": {
+        "authors": "Wu Q, Nie DY, Ba-alawi W et al.",
+        "title": "PRMT inhibition induces a viral mimicry response in triple-negative breast cancer",
+        "journal": "Nat Chem Biol",
+        "year": "2022",
+        "doi": "10.1038/s41589-022-01024-4",
+        "pdf": "../assets/publications/papers/Wu et al. - 2022 - PRMT inhibition induces a viral mimicry response in triple-negative breast cancer.pdf",
+        "cover": "../assets/publications/covers/wu-et-al-2022-prmt-inhibition-induces-a-viral-mimicry-response-in-triple-negative-breast-cancer.png",
+        "doi_url": "https://doi.org/10.1038/s41589-022-01024-4",
+        "authorList": [
+          {
+            "name": "Qin Wu",
+            "equal": true,
+            "corresponding": true
+          },
+          {
+            "name": "David Y. Nie",
+            "equal": true,
+            "corresponding": false
+          },
+          {
+            "name": "Wail Ba-alawi",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "YiShuai Ji",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "ZiWen Zhang",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Jennifer Cruickshank",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Jillian Haight",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Felipe E. Ciamponi",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Jocelyn Chen",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Shili Duan",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Yudao Shen",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Jing Liu",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Sajid A. Marhon",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Parinaz Mehdipour",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Magdalena M. Szewczyk",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Nergiz Dogan-Artun",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "WenJun Chen",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Lan Xin Zhang",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Genevieve Deblois",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Panagiotis Prinos",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Katlin B. Massirer",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Dalia Barsyte-Lovejoy",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Jian Jin",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Daniel D. De Carvalho",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Benjamin Haibe-Kains",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "XiaoJia Wang",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "David W. Cescon",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Mathieu Lupien",
+            "equal": false,
+            "corresponding": true
+          },
+          {
+            "name": "Cheryl H. Arrowsmith",
+            "equal": false,
+            "corresponding": true
+          }
+        ],
+        "authorSource": {
+          "pdf": "assets/publications/papers/Wu et al. - 2022 - PRMT inhibition induces a viral mimicry response in triple-negative breast cancer.pdf",
+          "page": 1,
+          "equalPage": 1,
+          "reviewed": "2026-10-21"
+        }
+      },
+      "paperCover": "assets/publications/covers/wu-et-al-2022-prmt-inhibition-induces-a-viral-mimicry-response-in-triple-negative-breast-cancer.png"
+    },
+    {
+      "id": "prmt-review",
+      "title": "Protein Arginine Methylation: From Enigmatic Functions to Therapeutic Targeting",
+      "year": "2021",
+      "journal": "Nature Reviews Drug Discovery",
+      "citation": "Wu Q, Schapira M, Arrowsmith CH et al.",
+      "theme": "protect",
+      "pdf": "assets/publications/papers/Wu et al. - 2021 - Protein arginine methylation from enigmatic functions to therapeutic targeting.pdf",
+      "doiUrl": "https://doi.org/10.1038/s41573-021-00159-8",
+      "cover": "assets/publications/covers-subfigure/wu-et-al-2021-protein-arginine-methylation-from-enigmatic-functions-to-therapeutic-targeting.png",
+      "coverAlt": "Key figure from the PRMT review",
+      "summary": [
+        "Reviews PRMT biology across transcription, splicing, DNA damage, and metabolism.",
+        "Frames PRMT enzymes as therapeutic targets with disease-wide relevance.",
+        "Supplies the conceptual map underlying multiple later TNBC intervention studies."
+      ],
+      "themeFit": "This review belongs in Protect because it defines the therapeutic landscape around PRMT targeting. It functions as the conceptual scaffold for the lab's PRMT-centered translational work.",
+      "related": [
+        "prmt-viral-mimicry",
+        "prmt5-vulnerability",
+        "interferon-prmt5"
+      ],
+      "areas": [
+        "translate"
+      ],
+      "article": {
+        "zh": {
+          "title": "精氨酸上的小修饰，如何成为药物研究的大问题",
+          "paragraphs": [
+            "给蛋白精氨酸加上甲基，看似只是局部化学变化，却可以改变蛋白与 RNA、其他蛋白的相互作用。这篇综述追踪蛋白精氨酸甲基转移酶（PRMT）研究，讨论这种修饰怎样影响细胞，以及为什么它可能成为治疗切入点。",
+            "文章首先梳理从化学变化到生物学功能的联系。不同甲基化形式及其识别过程，参与转录、RNA 剪接、DNA 损伤响应和代谢，也影响蛋白-RNA 作用与生物凝聚体。这里的重点不是为所有表型指定一个统一机制，而是揭示 PRMT 功能的多层次性。",
+            "接着，作者围绕疾病中的依赖关系整理证据：哪些遗传或代谢背景让细胞更依赖某类 PRMT？通过汇总已有机制研究，文章说明靶点是否值得干预，需要与具体疾病状态和分子背景一起判断。",
+            "能否把这种依赖变成可靠的干预，还取决于工具质量。综述结合结构生物学与抑制剂开发，讨论如何获得选择性分子、验证靶点作用，并把基础研究推进到治疗探索，同时指出机制理解和患者分层的重要性。",
+            "作为综述，它给出的是截至发表时的领域证据与问题框架，而不是一次新的药效实验。其启发在于：PRMT 靶向研究需要把酶的化学功能、细胞依赖和药物选择性连接起来，不能仅凭高表达就判断治疗价值。"
+          ]
+        },
+        "en": {
+          "title": "How a small arginine modification becomes a therapeutic question",
+          "paragraphs": [
+            "Adding a methyl group to protein arginine can change interactions with RNA and other proteins. This review follows protein arginine methyltransferases, or PRMTs, from the chemistry of that modification to cellular functions and therapeutic investigation.",
+            "It first connects methylation states and recognition mechanisms to transcription, RNA splicing, DNA-damage responses and metabolism. Protein-RNA interactions and biomolecular condensates add further layers. The synthesis emphasizes varied mechanisms rather than one explanation for every phenotype.",
+            "The next question is contextual dependence: which genetic or metabolic states make cells especially reliant on a PRMT? Drawing on published mechanistic studies, the review explains why target value must be considered alongside disease background.",
+            "Turning dependence into an intervention requires suitable molecules. Structural biology and inhibitor development provide routes to selectivity and target validation, while unresolved mechanisms and patient stratification remain important translational questions.",
+            "This is a synthesis of evidence available at publication, not a new efficacy experiment or a current clinical-development update. Its central lesson is to connect enzymatic chemistry, cellular dependence and compound selectivity rather than infer therapeutic value from expression alone."
+          ]
+        }
+      },
+      "publication": {
+        "authors": "Wu Q, Schapira M, Arrowsmith CH et al.",
+        "title": "Protein arginine methylation: from enigmatic functions to therapeutic targeting",
+        "journal": "Nat Rev Drug Discov",
+        "year": "2021",
+        "doi": "10.1038/s41573-021-00159-8",
+        "pdf": "../assets/publications/papers/Wu et al. - 2021 - Protein arginine methylation from enigmatic functions to therapeutic targeting.pdf",
+        "cover": "../assets/publications/covers/wu-et-al-2021-protein-arginine-methylation-from-enigmatic-functions-to-therapeutic-targeting.png",
+        "doi_url": "https://doi.org/10.1038/s41573-021-00159-8",
+        "authorList": [
+          {
+            "name": "Qin Wu",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Matthieu Schapira",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Cheryl H. Arrowsmith",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Dalia Barsyte-Lovejoy",
+            "equal": false,
+            "corresponding": true
+          }
+        ],
+        "authorSource": {
+          "pdf": "assets/publications/papers/Wu et al. - 2021 - Protein arginine methylation from enigmatic functions to therapeutic targeting.pdf",
+          "page": 1,
+          "equalPage": null,
+          "reviewed": "2026-10-21"
+        }
+      },
+      "paperCover": "assets/publications/covers/wu-et-al-2021-protein-arginine-methylation-from-enigmatic-functions-to-therapeutic-targeting.png"
+    },
+    {
+      "id": "glut1-tnbc",
+      "title": "GLUT1 Inhibition in RB1-Positive Triple-Negative Breast Cancer",
+      "year": "2020",
+      "journal": "Nature Communications",
+      "citation": "Wu Q, Ba-Alawi W, Deblois G et al.",
+      "theme": "protect",
+      "pdf": "assets/publications/papers/Wu et al. - 2020 - GLUT1 inhibition blocks growth of RB1-positive triple negative breast cancer.pdf",
+      "doiUrl": "https://doi.org/10.1038/s41467-020-18020-8",
+      "cover": "assets/publications/covers-subfigure/wu-et-al-2020-glut1-inhibition-blocks-growth-of-rb1-positive-triple-negative-breast-cancer.png",
+      "coverAlt": "Key figure from the GLUT1 TNBC study",
+      "summary": [
+        "Identifies GLUT1 dependence in RB1-positive TNBC and links metabolic control to tumor growth.",
+        "Defines a clinically relevant subtype-specific vulnerability in aggressive breast cancer.",
+        "Provides one of the earlier translational anchors for the lab's TNBC intervention program."
+      ],
+      "themeFit": "This paper is part of Protect because it maps a therapeutic vulnerability to a disease-defined patient subset. The contribution is a targetable intervention logic in TNBC.",
+      "related": [
+        "ezh2-rb1",
+        "prmt5-vulnerability"
+      ],
+      "areas": [
+        "translate"
+      ],
+      "article": {
+        "zh": {
+          "title": "同样是三阴性乳腺癌，哪些细胞更依赖葡萄糖入口？",
+          "paragraphs": [
+            "三阴性乳腺癌常表现出活跃的葡萄糖代谢，但这并不意味着每个肿瘤都会对阻断葡萄糖摄取敏感。这项研究围绕 GLUT1 展开，把寻找治疗靶点与另一个同样重要的问题放在一起：如何识别真正依赖这个靶点的肿瘤？",
+            "作者首先用遗传干预和小分子 BAY-876 抑制 GLUT1，并比较多种三阴性乳腺癌细胞及患者来源材料。结果并不是所有模型都受到同样抑制，这种差异提示，GLUT1 表达本身不足以完整解释细胞是否依赖它。",
+            "为追踪差异来源，研究分析糖酵解与氧化磷酸化等代谢特征，并结合基因表达通路。敏感细胞倾向于较高的糖酵解和较低的氧化磷酸化，提示替代供能能力可能影响葡萄糖摄取被限制后的生存。",
+            "研究进一步把这一代谢状态与 RB1 联系起来：RB1 蛋白水平与 GLUT1 抑制敏感性高度相关，而 RB1 阴性细胞对该干预不敏感。由此，一个经典细胞周期调控因子成为理解代谢脆弱性的线索。",
+            "论文提出了可进一步检验的 RB1-GLUT1 代谢轴，以及基于 RB1 蛋白表达进行分层的思路。它支持的是特定模型中的靶点依赖与候选标志物，不能据此将 BAY-876 视为已证实对患者有效的治疗。"
+          ]
+        },
+        "en": {
+          "title": "Which triple-negative breast cancers depend on the glucose entry point?",
+          "paragraphs": [
+            "High glucose metabolism does not mean every triple-negative breast cancer will respond to blocking glucose uptake. This study examined GLUT1 while asking a companion question: how can the tumors that depend on this transporter be identified?",
+            "Genetic intervention and the inhibitor BAY-876 tested GLUT1 dependence across TNBC cell lines and patient-derived material. Responses varied, showing that a shared disease label did not imply a shared metabolic vulnerability.",
+            "Metabolic measurements and expression-pathway analysis explored the difference. Sensitive cells tended to combine higher glycolysis with lower oxidative phosphorylation. This linked the response to the ability to support growth through alternative metabolic activity.",
+            "The researchers then connected sensitivity to RB1 protein abundance. RB1 levels strongly correlated with response, while RB1-negative cells were insensitive to GLUT1 inhibition. A familiar cell-cycle regulator thus provided a clue to a metabolic dependency.",
+            "The study proposes an RB1-GLUT1 axis and a rationale for biomarker-based investigation. These are preclinical target-dependence and stratification findings, not evidence that BAY-876 is an established effective treatment for patients."
+          ]
+        }
+      },
+      "publication": {
+        "authors": "Wu Q, Ba-Alawi W, Deblois G et al.",
+        "title": "GLUT1 inhibition blocks growth of RB1-positive triple negative breast cancer",
+        "journal": "Nat Commun",
+        "year": "2020",
+        "doi": "10.1038/s41467-020-18020-8",
+        "pdf": "../assets/publications/papers/Wu et al. - 2020 - GLUT1 inhibition blocks growth of RB1-positive triple negative breast cancer.pdf",
+        "cover": "../assets/publications/covers/wu-et-al-2020-glut1-inhibition-blocks-growth-of-rb1-positive-triple-negative-breast-cancer.png",
+        "doi_url": "https://doi.org/10.1038/s41467-020-18020-8",
+        "authorList": [
+          {
+            "name": "Qin Wu",
+            "equal": true,
+            "corresponding": false
+          },
+          {
+            "name": "Wail ba-alawi",
+            "equal": true,
+            "corresponding": false
+          },
+          {
+            "name": "Genevieve Deblois",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Jennifer Cruickshank",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Shili Duan",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Evelyne Lima-Fernandes",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Jillian Haight",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Seyed Ali Madani Tonekaboni",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Anne-Marie Fortier",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Hellen Kuasne",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Trevor D. McKee",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Hassan Mahmoud",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Michelle Kushida",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Sarina Cameron",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Nergiz Dogan-Artun",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "WenJun Chen",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Yan Nie",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Lan Xin Zhang",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Ravi N. Vellanki",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Stanley Zhou",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Panagiotis Prinos",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Bradly G. Wouters",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Peter B. Dirks",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Susan J. Done",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Morag Park",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "David W. Cescon",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Benjamin Haibe-Kains",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Mathieu Lupien",
+            "equal": false,
+            "corresponding": true
+          },
+          {
+            "name": "Cheryl H. Arrowsmith",
+            "equal": false,
+            "corresponding": true
+          }
+        ],
+        "authorSource": {
+          "pdf": "assets/publications/papers/Wu et al. - 2020 - GLUT1 inhibition blocks growth of RB1-positive triple negative breast cancer.pdf",
+          "page": 1,
+          "equalPage": 1,
+          "reviewed": "2026-10-21"
+        }
+      },
+      "paperCover": "assets/publications/covers/wu-et-al-2020-glut1-inhibition-blocks-growth-of-rb1-positive-triple-negative-breast-cancer.png"
+    },
+    {
+      "id": "bromodomain-toolbox",
+      "title": "A Chemical Toolbox for Bromodomains and Epigenetic Signaling",
+      "year": "2019",
+      "journal": "Nature Communications",
+      "citation": "Wu Q, Heidenreich D, Zhou S et al.",
+      "theme": "protect",
+      "pdf": "assets/publications/papers/Wu et al. - 2019 - A chemical toolbox for the study of bromodomains and epigenetic signaling.pdf",
+      "doiUrl": "https://doi.org/10.1038/s41467-019-09672-2",
+      "cover": "assets/publications/covers-subfigure/wu-et-al-2019-a-chemical-toolbox-for-the-study-of-bromodomains-and-epigenetic-signaling.png",
+      "coverAlt": "Key figure from the bromodomain chemical toolbox study",
+      "summary": [
+        "Builds a chemical toolkit to interrogate bromodomains and broader epigenetic signaling networks.",
+        "Strengthens the experimental foundation for mechanism-guided therapeutic target discovery.",
+        "Prefigures the later translational emphasis on epigenetic vulnerabilities in cancer."
+      ],
+      "themeFit": "The paper is placed in Protect because it supports the therapeutic-target discovery arm of the program. Its value lies in enabling mechanistic interrogation of druggable chromatin regulators.",
+      "related": [
+        "prmt-review",
+        "taf1-bay299",
+        "prmt5-vulnerability"
+      ],
+      "areas": [
+        "translate"
+      ],
+      "article": {
+        "zh": {
+          "title": "一套化学探针，拆解乙酰化信号背后的细胞依赖",
+          "paragraphs": [
+            "蛋白上的乙酰化标记需要被“读取”，才能转化成细胞行为；溴结构域就是参与这一过程的识别模块。要弄清家族中不同成员的作用，不能只观察表达，还需要能选择性干预它们的工具。本研究构建并系统评估了这样一套化学探针。",
+            "第一个问题是工具是否足够广、又足够明确。作者整理了覆盖 29 个人源溴结构域靶点的 25 个小分子探针，并用 BROMOscan 等分析检查选择性。知道一个化合物同时作用于哪些家族成员，是解释细胞表型的前提。",
+            "随后研究将探针用于细胞过程，考察能否借此发现被常规观察忽略的依赖关系。化学干预提供了一种可比较的方式，把特定识别模块的阻断与增殖、分化等细胞状态变化联系起来。",
+            "其中一个重要发现来自代谢条件的改变：在葡萄糖不足或 GLUT1 被抑制时，乳腺癌细胞对 BRPF2/3 溴结构域抑制更加脆弱。这个结果提示，染色质乙酰化信号与糖代谢并非互不相干，而可能共同决定细胞能否继续生长。",
+            "论文的价值既在于这条生物学联系，也在于提供可供后续研究使用的探针资源。化学探针并不等同于临床药物；解释任何命中仍需考虑选择性、实验背景，并结合其他方法验证靶点作用。"
+          ]
+        },
+        "en": {
+          "title": "A chemical toolbox reveals dependencies behind acetylation signaling",
+          "paragraphs": [
+            "Bromodomains recognize acetyl-lysine marks and help translate them into cellular behavior. Determining the roles of different family members requires selective perturbation, not expression measurements alone. This study assembled and evaluated a chemical resource for that purpose.",
+            "The first challenge was coverage with interpretable selectivity. The authors presented 25 probes covering 29 human bromodomain targets and characterized their binding profiles using BROMOscan. Knowing which related domains a compound affects is essential before assigning a cellular phenotype.",
+            "The probes were then applied to cellular processes to test their utility for discovering functional dependencies. Comparing perturbations linked inhibition of particular recognition modules to changes in cellular states rather than treating all bromodomains as interchangeable.",
+            "One finding connected chromatin regulation to metabolism: glucose deprivation or GLUT1 inhibition made breast cancer cells vulnerable to BRPF2/3 bromodomain inhibition. This pointed to a dependency that becomes apparent under a particular metabolic condition.",
+            "The contribution is both a biological connection and a reusable probe resource. Chemical probes are not clinical medicines, and their cellular effects still require interpretation through selectivity profiles, experimental context and independent target validation."
+          ]
+        }
+      },
+      "publication": {
+        "authors": "Wu Q, Heidenreich D, Zhou S et al.",
+        "title": "A chemical toolbox for the study of bromodomains and epigenetic signaling",
+        "journal": "Nat Commun",
+        "year": "2019",
+        "doi": "10.1038/s41467-019-09672-2",
+        "pdf": "../assets/publications/papers/Wu et al. - 2019 - A chemical toolbox for the study of bromodomains and epigenetic signaling.pdf",
+        "cover": "../assets/publications/covers/wu-et-al-2019-a-chemical-toolbox-for-the-study-of-bromodomains-and-epigenetic-signaling.png",
+        "doi_url": "https://doi.org/10.1038/s41467-019-09672-2",
+        "authorList": [
+          {
+            "name": "Qin Wu",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "David Heidenreich",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Stanley Zhou",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Suzanne Ackloo",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Andreas Krämer",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Kiran Nakka",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Evelyne Lima-Fernandes",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Genevieve Deblois",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Shili Duan",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Ravi N. Vellanki",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Fengling Li",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Masoud Vedadi",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Jeffrey Dilworth",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Mathieu Lupien",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Paul E. Brennan",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Cheryl H. Arrowsmith",
+            "equal": false,
+            "corresponding": true
+          },
+          {
+            "name": "Susanne Müller",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Oleg Fedorov",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Panagis Filippakopoulos",
+            "equal": false,
+            "corresponding": false
+          },
+          {
+            "name": "Stefan Knapp",
+            "equal": false,
+            "corresponding": true
+          }
+        ],
+        "authorSource": {
+          "pdf": "assets/publications/papers/Wu et al. - 2019 - A chemical toolbox for the study of bromodomains and epigenetic signaling.pdf",
+          "page": 1,
+          "equalPage": null,
+          "reviewed": "2026-10-21"
+        }
+      },
+      "paperCover": "assets/publications/covers/wu-et-al-2019-a-chemical-toolbox-for-the-study-of-bromodomains-and-epigenetic-signaling.png"
+    }
+  ],
+  "news": [
+    {
+      "id": "paper-accepted-angewandte-2025",
+      "date": "2025-12-03",
+      "en": {
+        "title": "Congratulations to the Lab on Acceptance of Our Work in Angewandte Chemie International Edition",
+        "summary": "A new study from the lab has been accepted by Angewandte Chemie International Edition.",
+        "body": "<p>We are pleased to share that a new study from the lab has been accepted for publication in Angewandte Chemie International Edition.</p><p>This acceptance reflects the continued progress of the group in advancing functional nucleic acids, molecular medicine, and translational research.</p><p>We congratulate everyone involved in this work and look forward to sharing more details once the paper is available.</p><p><a class=\"tool-link\" href=\"./index.html\">Back to all news</a></p>"
+      },
+      "zh": {
+        "title": "祝贺课题组工作被 Angewandte Chemie International Edition 接收！",
+        "summary": "课题组一项新研究成果被 Angewandte Chemie International Edition 接收。",
+        "body": "<p>我们很高兴地宣布，课题组一项新研究成果已被 <em>Angewandte Chemie International Edition</em> 接收发表。</p><p>这一进展体现了课题组在功能核酸、分子医学和转化研究方向上的持续推进。</p><p>祝贺参与这项工作的全体成员，也期待在论文正式发表后与大家分享更多细节。</p><p><a class=\"tool-link\" href=\"./index.html\">返回新闻列表</a></p>"
+      }
+    },
+    {
+      "id": "paper-accepted-science-2025",
+      "date": "2025-11-03",
+      "en": {
+        "title": "Congratulations to the Lab on Acceptance of Our Work in Science",
+        "summary": "A new study from the lab has been accepted by Science.",
+        "body": "<p>We are delighted to announce that a new study from the lab has been accepted for publication in Science.</p><p>This milestone marks a major recognition of the lab's research direction and its broader scientific impact.</p><p>We thank all collaborators and team members who contributed to this work and look forward to sharing it soon.</p><p><a class=\"tool-link\" href=\"./index.html\">Back to all news</a></p>"
+      },
+      "zh": {
+        "title": "祝贺课题组工作被 Science 接收！",
+        "summary": "课题组一项新研究成果被 Science 接收。",
+        "body": "<p>我们非常高兴地宣布，课题组一项新研究成果已被 <em>Science</em> 接收发表。</p><p>这一里程碑式进展体现了课题组研究方向的重要价值及其广泛科学影响力。</p><p>感谢所有参与这项工作的合作伙伴和团队成员，也期待尽快与大家分享相关成果。</p><p><a class=\"tool-link\" href=\"./index.html\">返回新闻列表</a></p>"
+      }
+    },
+    {
+      "id": "paper-accepted-advanced-science-2025",
+      "date": "2025-11-03",
+      "en": {
+        "title": "Congratulations to the Lab on Acceptance of Our Work in Advanced Science",
+        "summary": "A new study from the lab has been accepted by Advanced Science.",
+        "body": "<p>We are pleased to share that a new study from the lab has been accepted for publication in Advanced Science.</p><p>The acceptance reflects the strength of the group's current work in cancer biology, nucleic acid technology, and translational molecular medicine.</p><p>We congratulate the authors and all contributors to this achievement.</p><p><a class=\"tool-link\" href=\"./index.html\">Back to all news</a></p>"
+      },
+      "zh": {
+        "title": "祝贺课题组工作被 Advanced Science 接收！",
+        "summary": "课题组一项新研究成果被 Advanced Science 接收。",
+        "body": "<p>我们很高兴地分享，课题组一项新研究成果已被 <em>Advanced Science</em> 接收发表。</p><p>这一成果体现了团队在肿瘤生物学、核酸技术和分子医学转化方向上的研究实力。</p><p>祝贺论文作者及所有参与这一成果的成员。</p><p><a class=\"tool-link\" href=\"./index.html\">返回新闻列表</a></p>"
+      }
+    },
+    {
+      "id": "yue-zhao-nsfc-young-scientist-2025",
+      "date": "2025-09-24",
+      "en": {
+        "title": "Congratulations to Dr. Yue Zhao on Receiving the National Natural Science Foundation of China Young Scientists Fund",
+        "summary": "Dr. Yue Zhao was awarded a Young Scientists Fund project from the National Natural Science Foundation of China.",
+        "body": "<p>We are pleased to congratulate Dr. Yue Zhao on being awarded a Young Scientists Fund project from the National Natural Science Foundation of China.</p><p>This support recognizes the quality and potential of his research and will help advance the next stage of his independent scientific work.</p><p>We congratulate Dr. Zhao on this achievement and look forward to the results of the funded project.</p><p><a class=\"tool-link\" href=\"./index.html\">Back to all news</a></p>"
+      },
+      "zh": {
+        "title": "恭喜赵越博士获批国家自然科学基金青年项目！",
+        "summary": "赵越博士获批国家自然科学基金青年项目。",
+        "body": "<p>我们很高兴地祝贺赵越博士获批国家自然科学基金青年项目。</p><p>这一资助充分体现了其研究工作的质量与潜力，也将支持其下一阶段独立科研工作的推进。</p><p>祝贺赵越博士取得这一成绩，也期待项目后续产出更多优秀成果。</p><p><a class=\"tool-link\" href=\"./index.html\">返回新闻列表</a></p>"
+      }
+    },
+    {
+      "id": "lu-guo-nsfc-young-scientist-2025",
+      "date": "2025-09-24",
+      "en": {
+        "title": "Congratulations to Dr. Lu Guo on Receiving the National Natural Science Foundation of China Young Scientists Fund",
+        "summary": "Dr. Lu Guo was awarded a Young Scientists Fund project from the National Natural Science Foundation of China.",
+        "body": "<p>We are pleased to congratulate Dr. Lu Guo on being awarded a Young Scientists Fund project from the National Natural Science Foundation of China.</p><p>This funding supports promising early-career researchers and recognizes scientific excellence and future potential.</p><p>We congratulate Dr. Guo on this recognition and look forward to the progress of the project.</p><p><a class=\"tool-link\" href=\"./index.html\">Back to all news</a></p>"
+      },
+      "zh": {
+        "title": "恭喜郭璐博士获批国家自然科学基金青年项目！",
+        "summary": "郭璐博士获批国家自然科学基金青年项目。",
+        "body": "<p>我们很高兴地祝贺郭璐博士获批国家自然科学基金青年项目。</p><p>这一资助面向有潜力的青年科研人员，体现了其学术水平和未来发展潜力。</p><p>祝贺郭璐博士获得这一认可，也期待项目顺利推进并取得重要进展。</p><p><a class=\"tool-link\" href=\"./index.html\">返回新闻列表</a></p>"
+      }
+    },
+    {
+      "id": "cas-red-banner-holder-qin-wu",
+      "date": "2025-03-08",
+      "en": {
+        "title": "Congratulations to Prof. Qin Wu on Receiving the Chinese Academy of Sciences March 8th Red Banner Holder Advanced Individual Honor",
+        "summary": "Prof. Qin Wu was recognized by the Chinese Academy of Sciences with the March 8th Red Banner Holder Advanced Individual honor.",
+        "body": "<p>We are pleased to share that Prof. Qin Wu has received the Chinese Academy of Sciences March 8th Red Banner Holder Advanced Individual honor.</p><p>This recognition highlights her sustained contributions to scientific research, team leadership, and the broader academic community.</p><p>We congratulate Prof. Wu on this distinction and look forward to the next stage of the lab's work.</p><p><a class=\"tool-link\" href=\"./index.html\">Back to all news</a></p>"
+      },
+      "zh": {
+        "title": "恭喜吴芩老师获得中国科学院三八红旗手先进个人称号！",
+        "summary": "吴芩老师获评中国科学院三八红旗手先进个人。",
+        "body": "<p>我们很高兴地分享，吴芩老师获得中国科学院“三八红旗手先进个人”称号。</p><p>这一荣誉体现了她在科研创新、团队建设以及学术共同体中的持续贡献。</p><p>祝贺吴芩老师获得这一荣誉，也期待课题组在下一阶段取得更多进展。</p><p><a class=\"tool-link\" href=\"./index.html\">返回新闻列表</a></p>"
+      }
+    },
+    {
+      "id": "tongqing-li-outstanding-student-2024",
+      "date": "2025-01-15",
+      "en": {
+        "title": "Congratulations to Tongqing Li on Receiving the 2024 Outstanding Student of the CAS Community Award",
+        "summary": "Tongqing Li received the 2024 Outstanding Student of the CAS Community award from the Youth League Committee of the Shanghai Branch of CAS.",
+        "body": "<p>We are delighted to congratulate Tongqing Li on receiving the 2024 Outstanding Student of the CAS Community award from the Youth League Committee of the Shanghai Branch of the Chinese Academy of Sciences.</p><p>The award recognizes outstanding student achievement, research commitment, and active contribution to the scientific community.</p><p>We are pleased to see this achievement recognized and wish him continued success in his research and training.</p><p><a class=\"tool-link\" href=\"./index.html\">Back to all news</a></p>"
+      },
+      "zh": {
+        "title": "恭喜李同庆同学获得 2024 年度中国科学院上海分院团委“科苑优秀学子”奖！",
+        "summary": "李同庆同学获中国科学院上海分院团委 2024 年度“科苑优秀学子”奖。",
+        "body": "<p>我们非常高兴地祝贺李同庆同学获得中国科学院上海分院团委 2024 年度“科苑优秀学子”奖。</p><p>该奖项表彰学生在学术表现、科研投入以及科学共同体参与方面的突出表现。</p><p>很高兴看到这一成绩获得认可，也祝愿李同庆同学在后续科研训练中继续取得优异成果。</p><p><a class=\"tool-link\" href=\"./index.html\">返回新闻列表</a></p>"
+      }
+    },
+    {
+      "id": "outstanding-young-talent-qin-wu",
+      "date": "2024-12-15",
+      "en": {
+        "title": "Congratulations to Prof. Qin Wu on Receiving the Outstanding Young Talent Award from the Shanghai Branch of CAS",
+        "summary": "Prof. Qin Wu was named an Outstanding Young Talent by the Shanghai Branch of the Chinese Academy of Sciences.",
+        "body": "<p>We are pleased to announce that Prof. Qin Wu has received the Outstanding Young Talent award from the Shanghai Branch of the Chinese Academy of Sciences.</p><p>This award recognizes researchers with strong scientific output, clear academic leadership, and high potential for continued impact.</p><p>We congratulate Prof. Wu on this honor and look forward to future advances from the group.</p><p><a class=\"tool-link\" href=\"./index.html\">Back to all news</a></p>"
+      },
+      "zh": {
+        "title": "恭喜吴芩老师获得中国科学院上海分院杰出青年人才！",
+        "summary": "吴芩老师获评中国科学院上海分院杰出青年人才。",
+        "body": "<p>我们很高兴地宣布，吴芩老师获得中国科学院上海分院“杰出青年人才”称号。</p><p>这一荣誉表彰了科研人员在学术产出、学术引领能力以及持续影响力方面的突出表现。</p><p>祝贺吴芩老师获得这一荣誉，也期待课题组未来取得更多突破。</p><p><a class=\"tool-link\" href=\"./index.html\">返回新闻列表</a></p>"
+      }
+    },
+    {
+      "id": "sheyu-zhang-tju-innovation-award-2024",
+      "date": "2024-12-15",
+      "en": {
+        "title": "Congratulations to Sheyu Zhang on Receiving the 2024 Tianjin University Advanced Individual in Science and Technology Innovation Award",
+        "summary": "Sheyu Zhang received the 2024 Tianjin University Advanced Individual in Science and Technology Innovation award.",
+        "body": "<p>We are happy to congratulate Sheyu Zhang on receiving the 2024 Tianjin University Advanced Individual in Science and Technology Innovation award.</p><p>This recognition honors outstanding student performance in research and innovation.</p><p>We congratulate Sheyu on this achievement and wish her continued success in future research.</p><p><a class=\"tool-link\" href=\"./index.html\">Back to all news</a></p>"
+      },
+      "zh": {
+        "title": "恭喜张舍予同学获得 2024 年天津大学科技创新先进个人！",
+        "summary": "张舍予同学获 2024 年天津大学科技创新先进个人。",
+        "body": "<p>我们很高兴地祝贺张舍予同学获得 2024 年天津大学科技创新先进个人称号。</p><p>这一荣誉表彰了其在科研与创新实践中的优异表现。</p><p>祝贺张舍予同学取得这一成绩，并祝愿她在今后的研究中继续进步。</p><p><a class=\"tool-link\" href=\"./index.html\">返回新闻列表</a></p>"
+      }
+    },
+    {
+      "id": "xueying-liu-zhejiang-postdoc-funding",
+      "date": "2024-11-04",
+      "en": {
+        "title": "Congratulations to Dr. Xueying Liu on Receiving the Zhejiang Province Postdoctoral Merit-Based Funding Award",
+        "summary": "Dr. Xueying Liu received the Zhejiang Province Postdoctoral Merit-Based Funding award.",
+        "body": "<p>We are pleased to share that Dr. Xueying Liu has received the Zhejiang Province Postdoctoral Merit-Based Funding award.</p><p>This funding program supports postdoctoral researchers with strong academic records and clear research potential.</p><p>We congratulate Dr. Liu on this achievement and look forward to the next stage of her work.</p><p><a class=\"tool-link\" href=\"./index.html\">Back to all news</a></p>"
+      },
+      "zh": {
+        "title": "恭喜刘雪莹博士获得浙江省博士后择优资助项目！",
+        "summary": "刘雪莹博士获浙江省博士后择优资助项目。",
+        "body": "<p>我们很高兴地分享，刘雪莹博士获得浙江省博士后择优资助项目。</p><p>该项目支持具有良好学术基础和明确研究潜力的博士后研究人员。</p><p>祝贺刘雪莹博士取得这一成绩，也期待她在下一阶段工作中取得更多成果。</p><p><a class=\"tool-link\" href=\"./index.html\">返回新闻列表</a></p>"
+      }
+    },
+    {
+      "id": "liyan-fei-outstanding-student-2023",
+      "date": "2024-01-15",
+      "en": {
+        "title": "Congratulations to Liyan Fei on Receiving the 2023 Outstanding Student of the CAS Community Award",
+        "summary": "Liyan Fei received the 2023 Outstanding Student of the CAS Community award from the Youth League Committee of the Shanghai Branch of CAS.",
+        "body": "<p>We are delighted to congratulate Liyan Fei on receiving the 2023 Outstanding Student of the CAS Community award from the Youth League Committee of the Shanghai Branch of the Chinese Academy of Sciences.</p><p>The award recognizes strong academic performance, research dedication, and active participation in the scientific community.</p><p>We congratulate Liyan on this recognition and look forward to her future achievements.</p><p><a class=\"tool-link\" href=\"./index.html\">Back to all news</a></p>"
+      },
+      "zh": {
+        "title": "恭喜费立言同学获得 2023 年度中国科学院上海分院团委“科苑优秀学子”奖！",
+        "summary": "费立言同学获中国科学院上海分院团委 2023 年度“科苑优秀学子”奖。",
+        "body": "<p>我们非常高兴地祝贺费立言同学获得中国科学院上海分院团委 2023 年度“科苑优秀学子”奖。</p><p>该奖项表彰了其在学术表现、科研投入和科学共同体参与方面的优秀表现。</p><p>祝贺费立言同学获得这一荣誉，也期待她未来取得更多成果。</p><p><a class=\"tool-link\" href=\"./index.html\">返回新闻列表</a></p>"
+      }
+    }
+  ],
+  "activities": [
+    {
+      "id": 6,
+      "en": {
+        "title": "Women in Science",
+        "summary": "The 2026 Women in Science gathering reflected the lab's ongoing commitment to equity, mentorship, and an inclusive research culture.",
+        "date": "2026"
+      },
+      "zh": {
+        "title": "Women in Science",
+        "summary": "2026 年 Women in Science 活动延续了课题组对科研公平、导师支持与包容性学术文化的重视。",
+        "date": "2026"
+      }
+    },
+    {
+      "id": 9,
+      "en": {
+        "title": "IUPAC Global Women's Breakfast",
+        "summary": "The 2026 IUPAC Global Women's Breakfast continued these international exchanges and reinforced the lab's engagement with a global network of women scientists.",
+        "date": "2026"
+      },
+      "zh": {
+        "title": "IUPAC 全球女性早餐会",
+        "summary": "2026 年 IUPAC Global Women's Breakfast 进一步加强了课题组与全球女性科研工作者网络之间的联系与交流。",
+        "date": "2026"
+      }
+    },
+    {
+      "id": 10,
+      "en": {
+        "title": "Team Bonding",
+        "summary": "A team-bonding event strengthened collaboration, communication, and shared momentum across the lab.",
+        "date": "2026"
+      },
+      "zh": {
+        "title": "团队联谊",
+        "summary": "课题组组织了团队联谊活动，进一步增强协作、沟通与团队向心力。",
+        "date": "2026"
+      }
+    },
+    {
+      "id": 5,
+      "en": {
+        "title": "Women in Science",
+        "summary": "In 2025, the lab continued participating in Women in Science events that highlighted collaboration, recognition, and shared scientific ambition.",
+        "date": "2025"
+      },
+      "zh": {
+        "title": "Women in Science",
+        "summary": "2025 年，课题组继续参与 Women in Science 系列活动，彰显合作精神、科研热情与学术影响力。",
+        "date": "2025"
+      }
+    },
+    {
+      "id": 8,
+      "en": {
+        "title": "IUPAC Global Women's Breakfast",
+        "summary": "The lab participated in the 2025 IUPAC Global Women's Breakfast to connect with the international scientific community and celebrate women in chemistry and related fields.",
+        "date": "2025"
+      },
+      "zh": {
+        "title": "IUPAC 全球女性早餐会",
+        "summary": "课题组参加了 2025 年国际纯粹与应用化学联合会（IUPAC）Global Women's Breakfast，与国际科研同行交流并共同庆祝女性科学家的贡献。",
+        "date": "2025"
+      }
+    },
+    {
+      "id": 4,
+      "en": {
+        "title": "Women in Science",
+        "summary": "The 2024 Women in Science activity created another opportunity for discussion, visibility, and support for women researchers.",
+        "date": "2024"
+      },
+      "zh": {
+        "title": "Women in Science",
+        "summary": "2024 年 Women in Science 活动为女性科研工作者提供了更多展示、对话与彼此支持的机会。",
+        "date": "2024"
+      }
+    },
+    {
+      "id": 3,
+      "en": {
+        "title": "Women in Science",
+        "summary": "The lab joined the 2023 Women in Science program to celebrate scientific contributions and strengthen mentorship across the community.",
+        "date": "2023"
+      },
+      "zh": {
+        "title": "Women in Science",
+        "summary": "课题组参加了 2023 年 Women in Science 活动，庆祝女性科研工作者的贡献，并促进导师与青年科研人员之间的交流。",
+        "date": "2023"
+      }
+    },
+    {
+      "id": 2,
+      "en": {
+        "title": "Spring Festival",
+        "summary": "We celebrated the Spring Festival together and welcomed the new year with the lab community.",
+        "date": "2022"
+      },
+      "zh": {
+        "title": "春节",
+        "summary": "课题组共同庆祝春节，在温暖热闹的氛围中迎接新的一年。",
+        "date": "2022"
+      }
+    },
+    {
+      "id": 1,
+      "en": {
+        "title": "Hiking",
+        "summary": "A group hiking trip brought the lab together outdoors and marked an energetic moment of team connection.",
+        "date": "2021"
+      },
+      "zh": {
+        "title": "徒步活动",
+        "summary": "课题组开展了徒步活动，在户外交流中增强了团队凝聚力。",
+        "date": "2021"
+      }
+    },
+    {
+      "id": 7,
+      "en": {
+        "title": "Graduation",
+        "summary": "We celebrated the graduation of lab members and recognized their hard work, growth, and next steps.",
+        "date": "Graduation"
+      },
+      "zh": {
+        "title": "毕业",
+        "summary": "我们共同庆祝课题组成员顺利毕业，感谢他们的努力与成长，并祝福大家开启新的阶段。",
+        "date": "毕业季"
+      }
+    }
+  ],
+  "join": {
+    "en": {
+      "join.meta.title": "Join Us | PROBE Lab",
+      "join.meta.description": "Open positions and collaboration opportunities in the PROBE Lab.",
+      "join.head.title": "Join Us",
+      "join.students.title": "Master & PhD Students",
+      "join.students.lead": "The lab currently has openings for Master’s and PhD students in 2026. Please email Prof. Qin Wu at <a href=\"mailto:wuqin@him.cas.cn\">wuqin@him.cas.cn</a> for inquiries.",
+      "join.paths.title": "Graduate Admissions Pathways",
+      "join.path1.title": "Summer Camp",
+      "join.path1.body": "For 2026 summer-camp dates, eligibility and application procedures, please consult the current official institute notice or contact us.",
+      "join.path2.title": "Recommended Admission Interview",
+      "join.path2.body": "For recommended admission and direct PhD entry in 2026, consult the official admissions notice and confirm availability by email.",
+      "join.path3.title": "National Graduate Entrance Exam",
+      "join.path3.body": "For 2026 graduate entrance examinations, consult the institute admissions brochure and programme catalogue. Deadlines follow official notices.",
+      "join.joint.title": "Joint Training Programs",
+      "join.joint.body": "We jointly train graduate students with the University of Science and Technology of China, Institute of Chemistry (CAS), Tianjin University, Shanghai Jiao Tong University, University of Macau, Hunan University, Institute of Modern Physics (CAS), Zhejiang University, Zhejiang University of Technology, Wenzhou Medical University, and others. Please follow each university’s admissions policies.",
+      "join.postdoc.title": "Postdoctoral Researchers",
+      "join.postdoc.lead": "The lab is recruiting postdoctoral researchers. Please email Prof. Qin Wu at <a href=\"mailto:wuqin@him.cas.cn\">wuqin@him.cas.cn</a> for inquiries.",
+      "join.directions.title": "Research Directions",
+      "join.dir1.title": "Functional Nucleic Acid Tools",
+      "join.dir1.body": "Develop aptamer screening methods for undruggable proteins and protein interactions; build cell-based selection and target identification for membrane proteins; generate high-throughput aptamer libraries for cell atlas construction.",
+      "join.dir2.title": "Single-Cell Omics & Multi-omics Analysis",
+      "join.dir2.body": "Develop aptamer-based tools for single-cell surface proteomics, interactomics, and spatial multi-omics to systematically decode tumor evolution.",
+      "join.dir3.title": "New Targets & Cell Therapy",
+      "join.dir3.body": "Use single-cell and spatial multi-omics on clinical samples to identify therapeutic targets and develop CAR-T and other cell therapies.",
+      "join.background.title": "Desired Background",
+      "join.background.body": "Bioinformatics, immunology, structural biology, cell biology, molecular biology, pharmacy, biomedical sciences, or related fields. Experience in omics data analysis is preferred.",
+      "join.requirements.title": "Postdoctoral Recruitment Requirements",
+      "join.req1": "Abide by laws and regulations, strong academic record, and good physical and mental health.",
+      "join.req2": "Typically under 35 years old; PhD graduates or within 3 years of PhD completion.",
+      "join.req3": "Strong academic background, research potential, and team spirit; major aligns with lab needs; able to work full-time on postdoctoral research.",
+      "join.benefits.title": "Postdoctoral Compensation & Benefits",
+      "join.benefit1": "Annual salary RMB 300,000 (pre-tax) plus performance incentives; RMB 400,000 (pre-tax) during national fellowship funding for selected programs.",
+      "join.benefit2": "Same benefits as institute staff, including cafeteria allowance (RMB 6,600/year), union benefits, and VIP physical exams at top-tier hospitals.",
+      "join.benefit3": "Five social insurances and one housing fund as required by national policy.",
+      "join.benefits.note": "Outstanding postdocs will be prioritized for long-term positions, with talent recruitment benefits. The institute has a strategic partnership with Hangzhou Medical College, offering priority access to institutional teaching positions after postdoc completion.",
+      "join.apply.title": "How to Apply",
+      "join.apply.body": "Please send your CV to <a href=\"mailto:wuqin@him.cas.cn\">wuqin@him.cas.cn</a> with the subject line “Postdoc + Name + Research Direction”."
+    },
+    "zh": {
+      "join.meta.title": "加入我们 | 功能核酸组学团队",
+      "join.meta.description": "功能核酸组学团队招生与招聘信息。",
+      "join.head.title": "加入我们",
+      "join.students.title": "硕士与博士研究生",
+      "join.students.lead": "课题组目前仍有 2026 年硕士和博士研究生招生名额，欢迎邮件咨询吴芩老师：<a href=\"mailto:wuqin@him.cas.cn\">wuqin@him.cas.cn</a>。",
+      "join.paths.title": "研究生招生途径",
+      "join.path1.title": "夏令营",
+      "join.path1.body": "2026 年夏令营的时间、资格和申请流程，请以研究所当年正式通知为准，或邮件咨询。",
+      "join.path2.title": "推免面试",
+      "join.path2.body": "2026 年推免与直博申请请查阅正式招生通知，并通过邮件确认名额与申请安排。",
+      "join.path3.title": "研究生招生考试",
+      "join.path3.body": "2026 年研究生招生考试请参考研究所正式招生简章及专业目录，具体时间以官方通知为准。",
+      "join.joint.title": "联合培养途径",
+      "join.joint.body": "本所与中国科学技术大学、中国科学院化学研究所、天津大学、上海交通大学、澳门大学、湖南大学、中国科学院兰州近代物理研究所、浙江大学、浙江工业大学、温州医科大学等高校和研究机构联合培养研究生，详情请参考各高校招生政策。",
+      "join.postdoc.title": "博士后招聘",
+      "join.postdoc.lead": "课题组欢迎博士后申请，欢迎邮件咨询吴芩老师：<a href=\"mailto:wuqin@him.cas.cn\">wuqin@him.cas.cn</a>。",
+      "join.directions.title": "研究方向",
+      "join.dir1.title": "功能核酸工具开发",
+      "join.dir1.body": "针对难成药蛋白及其相互作用发展适配体筛选新方法，针对膜蛋白建立细胞筛选和靶标鉴定技术，高通量获得适配体分子工具并用于细胞图谱构建。",
+      "join.dir2.title": "单细胞组学与多组学分析",
+      "join.dir2.body": "发展基于适配体的单细胞表面蛋白组学、互作组学和空间多组学技术，系统解析肿瘤发生发展过程。",
+      "join.dir3.title": "新靶点发现与细胞治疗",
+      "join.dir3.body": "利用单细胞与空间多组学技术表征临床样本，发现治疗靶点并发展 CAR-T 等新型细胞治疗策略。",
+      "join.background.title": "专业背景",
+      "join.background.body": "欢迎生物信息学、免疫学、结构生物学、细胞生物学、分子生物学、药学、生物医学等相关专业申请；具有组学数据分析经验者优先。",
+      "join.requirements.title": "博士后招聘要求",
+      "join.req1": "遵纪守法，品学兼优，身心健康。",
+      "join.req2": "年龄一般不超过 35 岁，应届博士毕业生或获博士学位不超过 3 年。",
+      "join.req3": "具有良好的学术背景和研究基础，富有发展潜力及团队合作精神；专业符合课题组需求，并能全职从事博士后研究。",
+      "join.benefits.title": "博士后薪酬待遇",
+      "join.benefit1": "年薪 30 万元（税前），享受科研奖励；入选国家博士后相关人才计划者，在国家资助期内年薪提高至 40 万元（税前）。",
+      "join.benefit2": "享受所内正式员工同等福利，包括食堂餐补、工会福利及三甲医院 VIP 体检套餐。",
+      "join.benefit3": "按国家规定缴纳五险一金。",
+      "join.benefits.note": "博士后期间成果突出者，同等条件下优先留所发展，并按人才引进政策待遇执行；另医学所与杭州医学院建立人才战略合作关系，博士后出站后可优先安排事业编制教师岗位。",
+      "join.apply.title": "申请方式",
+      "join.apply.body": "请将简历发送至 <a href=\"mailto:wuqin@him.cas.cn\">wuqin@him.cas.cn</a>，邮件主题请注明“博士后+姓名+研究方向”。"
+    }
+  },
+  "people": {
+    "en": {
+      "people.meta.title": "People | Wu Lab",
+      "people.meta.description": "Lab members and collaborators at Wu Lab.",
+      "people.head.title": "Current Lab Members",
+      "people.head.lead": "Team members and where we are based.",
+      "people.former": "Former Lab Members",
+      "people.photos": "Lab Photos",
+      "people.join": "Join us",
+      "people.mapInfo": "Hover a province to see details. Click to open link.",
+      "people.pi.name": "Dr. Qin Wu",
+      "people.pi.bio1": "Qin Wu is a Principal Investigator and Ph.D. Supervisor at the Hangzhou Institute of Medicine, Chinese Academy of Sciences, and Head of the Research Group. She serves as Chief Scientist of a CAS Strategic Priority Research Program, Deputy Director of the Center for Nucleic Acid Molecular Medicine, and Vice Dean of the Innovation Research Institute. She is a recipient of the National Excellent Young Scientists Fund (Overseas), the Zhejiang Provincial Distinguished Young Scientists Fund, and is recognized as a Zhejiang High-Level Overseas Talent (Long-term Innovation Program).",
+      "people.pi.bio2": "Her research group integrates chemical biology, cell biology, molecular biology, and bioinformatics to construct single-cell spatiotemporal molecular maps of tumors. The team aims to identify novel therapeutic targets, elucidate the molecular mechanisms underlying tumor initiation and progression, discover predictive biomarkers of drug response, and develop innovative therapeutic strategies to enable personalized precision medicine. In the past two years, as corresponding author, she has published multiple papers in leading journals including Nature Chemical Biology, Nature Communications, Cell Chemical Biology, and Advanced Science, and has been granted several patents. She currently leads multiple national and provincial research projects, including grants from the National Natural Science Foundation of China and key R&D programs of the Ministry of Science and Technology and Zhejiang Province.",
+      "people.member1.title": "Postdoctoral Researcher",
+      "people.member1.body": "Computational biology • Biomarker discovery",
+      "people.member2.title": "PhD Student",
+      "people.member2.body": "Multi-omics integration • Network medicine",
+      "people.member3.title": "MSc Student",
+      "people.member3.body": "Clinical ML • Translational pipelines",
+      "people.former.1": "Former Postdoc",
+      "people.former.2": "Former PhD Student",
+      "people.former.3": "Former MSc Student",
+      "people.former.4": "Former Research Assistant",
+      "people.join.lead": "We are always looking for talented students, postdocs, and collaborators. Explore current opportunities and get in touch.",
+      "people.mapError.readSvg": "Cannot read SVG. Check assets/people/china.svg is accessible.",
+      "people.mapError.noIds": "Tip: No province IDs from JSON were found in the SVG. Check assets/people/china.svg IDs.",
+      "people.mapError.unableLoad": "Unable to load map data."
+    },
+    "zh": {
+      "people.meta.title": "团队成员 | 吴芩课题组",
+      "people.meta.description": "吴芩课题组成员信息与合作团队。",
+      "people.head.title": "现有成员",
+      "people.head.lead": "团队成员与分布情况。",
+      "people.former": "已离组成员",
+      "people.photos": "实验室照片",
+      "people.join": "加入我们",
+      "people.mapInfo": "将鼠标悬停在省份上查看详情，点击可打开链接。",
+      "people.pi.name": "吴芩研究员",
+      "people.pi.bio1": "吴芩，中国科学院杭州医学研究所研究员、博士生导师、课题组长。现任中国科学院战略性先导科技专项首席科学家、核酸分子医学研究中心副主任、创新研究院副院长。入选国家优秀青年科学基金（海外）、浙江省杰出青年基金，并获评浙江省海外高层次人才长期创新项目。",
+      "people.pi.bio2": "课题组综合运用化学生物学、细胞生物学、分子生物学和生物信息学等方法，构建肿瘤单细胞时空分子图谱，识别新的治疗靶点，解析肿瘤发生发展的分子机制，发现药物疗效预测生物标志物，并发展创新治疗策略以实现个体化精准医疗。近两年，吴芩老师作为通讯作者在 Nature Chemical Biology、Nature Communications、Cell Chemical Biology、Advanced Science 等期刊发表多篇论文，并获授权多项专利；目前主持国家自然科学基金、科技部重点研发计划和浙江省重点研发项目等多项国家及省部级课题。",
+      "people.member1.title": "博士后研究员",
+      "people.member1.body": "计算生物学 • 生物标志物发现",
+      "people.member2.title": "博士研究生",
+      "people.member2.body": "多组学整合 • 网络医学",
+      "people.member3.title": "硕士研究生",
+      "people.member3.body": "临床机器学习 • 转化流程",
+      "people.former.1": "已离组博士后",
+      "people.former.2": "已离组博士研究生",
+      "people.former.3": "已离组硕士研究生",
+      "people.former.4": "已离组科研助理",
+      "people.join.lead": "我们持续欢迎优秀学生、博士后和合作伙伴加入。欢迎查看当前机会并与我们联系。",
+      "people.mapError.readSvg": "无法读取 SVG，请检查 assets/people/china.svg 是否可访问。",
+      "people.mapError.noIds": "提示：JSON 中的省份 ID 未在 SVG 中找到，请检查 assets/people/china.svg 中的元素 ID。",
+      "people.mapError.unableLoad": "无法加载地图数据。"
+    }
+  },
+  "origins": {
+    "source": "20260920_课题组学生信息收集.zip",
+    "field": "籍贯/省份",
+    "locations": [
+      {
+        "id": "CNSC",
+        "zh": "四川",
+        "en": "Sichuan",
+        "x": 477.9,
+        "y": 498.5
+      },
+      {
+        "id": "CNTJ",
+        "zh": "天津",
+        "en": "Tianjin",
+        "x": 695.8,
+        "y": 344.6
+      },
+      {
+        "id": "CNAH",
+        "zh": "安徽",
+        "en": "Anhui",
+        "x": 693.7,
+        "y": 480.5
+      },
+      {
+        "id": "CNSD",
+        "zh": "山东",
+        "en": "Shandong",
+        "x": 701.7,
+        "y": 399.3
+      },
+      {
+        "id": "CNSX",
+        "zh": "山西",
+        "en": "Shanxi",
+        "x": 620.2,
+        "y": 375.3
+      },
+      {
+        "id": "CNGX",
+        "zh": "广西",
+        "en": "Guangxi Zhuang Autonomous Region",
+        "x": 570,
+        "y": 616.9
+      },
+      {
+        "id": "CNJS",
+        "zh": "江苏",
+        "en": "Jiangsu",
+        "x": 730,
+        "y": 449.1
+      },
+      {
+        "id": "CNJX",
+        "zh": "江西",
+        "en": "Jiangxi",
+        "x": 668.4,
+        "y": 550.5
+      },
+      {
+        "id": "CNHE",
+        "zh": "河北",
+        "en": "Hebei",
+        "x": 665.1,
+        "y": 362.4
+      },
+      {
+        "id": "CNHA",
+        "zh": "河南",
+        "en": "Henan",
+        "x": 641.2,
+        "y": 443.7
+      },
+      {
+        "id": "CNZJ",
+        "zh": "浙江",
+        "en": "Zhejiang",
+        "x": 734,
+        "y": 527.6
+      },
+      {
+        "id": "CNHB",
+        "zh": "湖北",
+        "en": "Hubei",
+        "x": 621.3,
+        "y": 492.1
+      },
+      {
+        "id": "CNHN",
+        "zh": "湖南",
+        "en": "Hunan",
+        "x": 611.6,
+        "y": 546.4
+      },
+      {
+        "id": "CNFJ",
+        "zh": "福建",
+        "en": "Fujian",
+        "x": 704.9,
+        "y": 576.8
+      },
+      {
+        "id": "CNGZ",
+        "zh": "贵州",
+        "en": "Guizhou",
+        "x": 545.9,
+        "y": 564.3
+      },
+      {
+        "id": "CNCQ",
+        "zh": "重庆",
+        "en": "Chongqing",
+        "x": 554.8,
+        "y": 509.5
+      },
+      {
+        "id": "CNSN",
+        "zh": "陕西",
+        "en": "Shaanxi",
+        "x": 567.3,
+        "y": 439.5
+      }
+    ],
+    "note": "Only aggregated location names; no member identities or counts."
+  },
+  "researchers": [
+    {
+      "id": "guoyan-luo",
+      "en": "Guoyan Luo",
+      "zh": "罗国焰",
+      "study": "spark-seq"
+    },
+    {
+      "id": "xiaoqiu-wu",
+      "en": "Xiaoqiu Wu",
+      "zh": "武晓秋",
+      "study": "apt-seq"
+    },
+    {
+      "id": "tongqing-li",
+      "en": "Tongqing Li",
+      "zh": "李同庆",
+      "study": "blocker-selex"
+    }
+  ]
+}

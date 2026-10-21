@@ -1,0 +1,82 @@
+{
+  "10.1002/advs.202308924": {
+    "names": "Qiao Duan; Hao-Ran Jia; Weichang Chen; Chunhong Qin; Kejing Zhang; Fei Jia; Ting Fu; Yong Wei; Mengyang Fan; Qin Wu; Weihong Tan",
+    "equal": [1, 2], "corresponding": [10, 11], "authorPage": 1, "equalPage": 9
+  },
+  "10.1002/advs.202500433": {
+    "names": "Liyan Fei; Yichun Pan; Jie Zhai; Tongqing Li; Yuxin Zhou; Sheyu Zhang; Juan Wei; Qian Hu; Xueying Liu; Lu Guo; Weizhu Wu; Yong Wei; Qin Wu; Weihong Tan",
+    "equal": [1, 2, 3], "corresponding": [12, 13, 14], "authorPage": 1, "equalPage": 13
+  },
+  "10.1021/acs.analchem.4c06927": {
+    "names": "Xiaokang Guan; Qiao Lu; Naijie Wei; Shuxian Liu; Haowen Li; Qin Wu; Xiaowen Yan; Renato Zenobi",
+    "equal": [], "corresponding": [7, 8], "authorPage": 1
+  },
+  "10.1038/s41467-024-51197-w": {
+    "names": "Tongqing Li; Xueying Liu; Haifeng Qian; Sheyu Zhang; Yu Hou; Yuchao Zhang; Guoyan Luo; Xun Zhu; Yanxin Tao; Mengyang Fan; Hong Wang; Chulin Sha; Ailan Lin; Jingjing Qin; Kedan Gu; Weichang Chen; Ting Fu; Yajun Wang; Yong Wei; Qin Wu; Weihong Tan",
+    "equal": [1, 2], "corresponding": [19, 20, 21], "authorPage": 1, "equalPage": 1
+  },
+  "10.1093/nar/gkaf144": {
+    "names": "Yingyu Liu; Sheyu Zhang; Meiqi Zhang; Xin Liu; Yashu Wu; Qin Wu; John C. Chaput; Yajun Wang",
+    "equal": [], "corresponding": [8], "authorPage": 1
+  },
+  "10.1126/science.adv6127": {
+    "names": "Guoyan Luo; Jia Song; Yongbo Fu; Yuanjie Jiang; Yuan Gao; Zhixing Zhong; Ling Li; Yong Wei; Hao-Ran Jia; Lu Guo; Ting Fu; Qin Wu; Weihong Tan",
+    "equal": [1, 2], "corresponding": [12, 13], "authorPage": 2, "equalPage": 2
+  },
+  "10.1016/j.celbio.2025.100218": {
+    "names": "Heming Tang; Yalin Xiong; Shaoju Gan; Liyan Fei; Lu Guo; Kejing Zhang; Haowen Li; Ting Fu; Qin Wu; Weihong Tan",
+    "equal": [1, 2], "corresponding": [9, 10], "authorPage": 2, "equalPage": 2
+  },
+  "10.1021/acsnano.4c07969": {
+    "names": "Heming Tang; Ying Zhang; Yanyuan Wu; Ting Fu; Cheng Cui; Zongping Wang; Sitao Xie; Qin Wu; Weihong Tan",
+    "equal": [1, 2, 3], "corresponding": [7, 8, 9], "authorPage": 1, "equalPage": 6
+  },
+  "10.1016/j.xpro.2025.103605": {
+    "names": "Juan Wei; She-Yu Zhang; Xue-Yuan Zhou; Yong Wei; Hao-Ran Jia; Qin Wu; Weihong Tan",
+    "equal": [1, 2], "corresponding": [5, 6, 7], "authorPage": 2, "equalPage": 2
+  },
+  "10.1038/s41467-020-18020-8": {
+    "names": "Qin Wu; Wail ba-alawi; Genevieve Deblois; Jennifer Cruickshank; Shili Duan; Evelyne Lima-Fernandes; Jillian Haight; Seyed Ali Madani Tonekaboni; Anne-Marie Fortier; Hellen Kuasne; Trevor D. McKee; Hassan Mahmoud; Michelle Kushida; Sarina Cameron; Nergiz Dogan-Artun; WenJun Chen; Yan Nie; Lan Xin Zhang; Ravi N. Vellanki; Stanley Zhou; Panagiotis Prinos; Bradly G. Wouters; Peter B. Dirks; Susan J. Done; Morag Park; David W. Cescon; Benjamin Haibe-Kains; Mathieu Lupien; Cheryl H. Arrowsmith",
+    "equal": [1, 2], "corresponding": [28, 29], "authorPage": 1, "equalPage": 1
+  },
+  "10.1038/s41467-019-09672-2": {
+    "names": "Qin Wu; David Heidenreich; Stanley Zhou; Suzanne Ackloo; Andreas Krämer; Kiran Nakka; Evelyne Lima-Fernandes; Genevieve Deblois; Shili Duan; Ravi N. Vellanki; Fengling Li; Masoud Vedadi; Jeffrey Dilworth; Mathieu Lupien; Paul E. Brennan; Cheryl H. Arrowsmith; Susanne Müller; Oleg Fedorov; Panagis Filippakopoulos; Stefan Knapp",
+    "equal": [], "corresponding": [16, 20], "authorPage": 1
+  },
+  "10.1038/s41589-022-01024-4": {
+    "names": "Qin Wu; David Y. Nie; Wail Ba-alawi; YiShuai Ji; ZiWen Zhang; Jennifer Cruickshank; Jillian Haight; Felipe E. Ciamponi; Jocelyn Chen; Shili Duan; Yudao Shen; Jing Liu; Sajid A. Marhon; Parinaz Mehdipour; Magdalena M. Szewczyk; Nergiz Dogan-Artun; WenJun Chen; Lan Xin Zhang; Genevieve Deblois; Panagiotis Prinos; Katlin B. Massirer; Dalia Barsyte-Lovejoy; Jian Jin; Daniel D. De Carvalho; Benjamin Haibe-Kains; XiaoJia Wang; David W. Cescon; Mathieu Lupien; Cheryl H. Arrowsmith",
+    "equal": [1, 2], "corresponding": [1, 28, 29], "authorPage": 1, "equalPage": 1
+  },
+  "10.1038/s41573-021-00159-8": {
+    "names": "Qin Wu; Matthieu Schapira; Cheryl H. Arrowsmith; Dalia Barsyte-Lovejoy",
+    "equal": [], "corresponding": [4], "authorPage": 1
+  },
+  "10.1021/jacs.5c01296": {
+    "names": "Xiaoqiu Wu; Xinrui Lin; Xiangqi Ma; Huidong Huang; Dengwei Zhang; Yuqing Liu; Rui Cheng; Jia Song; Lifei Zhang; Yamin Tan; Ruizi Peng; Tao Bing; Qin Wu; Weihong Tan",
+    "equal": [1, 2], "corresponding": [12, 13, 14], "authorPage": 1, "equalPage": 10
+  },
+  "10.1111/jcmm.70384": {
+    "names": "Renfei Yang; Liyan Fei; Yingfei Xue; Yu Zhang; Qian Hu; Lu Guo; Yong Wei; Qin Wu",
+    "equal": [], "corresponding": [8], "authorPage": 1
+  },
+  "10.1016/j.chembiol.2024.08.003": {
+    "names": "KeJing Zhang; Juan Wei; SheYu Zhang; Liyan Fei; Lu Guo; Xueying Liu; YiShuai Ji; WenJun Chen; Felipe E. Ciamponi; WeiChang Chen; MengXi Li; Jie Zhai; Ting Fu; Katlin B. Massirer; Yang Yu; Mathieu Lupien; Yong Wei; Cheryl. H. Arrowsmith; Qin Wu; WeiHong Tan",
+    "equal": [1, 2, 3], "corresponding": [17, 18, 19, 20], "authorPage": 2, "equalPage": 2
+  },
+  "10.1002/cncr.35142": {
+    "names": "Sheyu Zhang; Lu Guo; Ziwen Zhang; Xueying Liu; Wenjun Chen; Yong Wei; Xiaojia Wang; Qin Wu",
+    "equal": [1, 2, 3], "corresponding": [7, 8], "authorPage": 1, "equalPage": 1
+  },
+  "10.1016/j.bbrc.2023.04.100": {
+    "names": "Sheyu Zhang; Xueying Liu; Wenjun Chen; Kejing Zhang; Qin Wu; Yong Wei",
+    "equal": [1, 2], "corresponding": [5, 6], "authorPage": 1, "equalPage": 1
+  },
+  "10.1002/advs.202505787": {
+    "names": "Ziwen Zhang; Sheyu Zhang; Lu Guo; Yichun Pan; Juan Huang; Yishuai Ji; Jiaqi Tao; Yong Wei; Xiaojia Wang; Qin Wu",
+    "equal": [1, 2, 3], "corresponding": [10], "authorPage": 1, "equalPage": 12
+  },
+  "10.1073/pnas.2506491122": {
+    "names": "Yan Jiang; Yuchao Zhang; Liqi Wan; Cheng Cui; Pei Guo; Da Han; Weihong Tan",
+    "equal": [], "corresponding": [5, 6, 7], "authorPage": 1
+  }
+}

@@ -1,0 +1,126 @@
+{
+  "source": "20260920_课题组学生信息收集.zip",
+  "field": "籍贯/省份",
+  "locations": [
+    {
+      "id": "CNSC",
+      "zh": "四川",
+      "en": "Sichuan",
+      "x": 477.9,
+      "y": 498.5
+    },
+    {
+      "id": "CNTJ",
+      "zh": "天津",
+      "en": "Tianjin",
+      "x": 695.8,
+      "y": 344.6
+    },
+    {
+      "id": "CNAH",
+      "zh": "安徽",
+      "en": "Anhui",
+      "x": 693.7,
+      "y": 480.5
+    },
+    {
+      "id": "CNSD",
+      "zh": "山东",
+      "en": "Shandong",
+      "x": 701.7,
+      "y": 399.3
+    },
+    {
+      "id": "CNSX",
+      "zh": "山西",
+      "en": "Shanxi",
+      "x": 620.2,
+      "y": 375.3
+    },
+    {
+      "id": "CNGX",
+      "zh": "广西",
+      "en": "Guangxi Zhuang Autonomous Region",
+      "x": 570.0,
+      "y": 616.9
+    },
+    {
+      "id": "CNJS",
+      "zh": "江苏",
+      "en": "Jiangsu",
+      "x": 730.0,
+      "y": 449.1
+    },
+    {
+      "id": "CNJX",
+      "zh": "江西",
+      "en": "Jiangxi",
+      "x": 668.4,
+      "y": 550.5
+    },
+    {
+      "id": "CNHE",
+      "zh": "河北",
+      "en": "Hebei",
+      "x": 665.1,
+      "y": 362.4
+    },
+    {
+      "id": "CNHA",
+      "zh": "河南",
+      "en": "Henan",
+      "x": 641.2,
+      "y": 443.7
+    },
+    {
+      "id": "CNZJ",
+      "zh": "浙江",
+      "en": "Zhejiang",
+      "x": 734.0,
+      "y": 527.6
+    },
+    {
+      "id": "CNHB",
+      "zh": "湖北",
+      "en": "Hubei",
+      "x": 621.3,
+      "y": 492.1
+    },
+    {
+      "id": "CNHN",
+      "zh": "湖南",
+      "en": "Hunan",
+      "x": 611.6,
+      "y": 546.4
+    },
+    {
+      "id": "CNFJ",
+      "zh": "福建",
+      "en": "Fujian",
+      "x": 704.9,
+      "y": 576.8
+    },
+    {
+      "id": "CNGZ",
+      "zh": "贵州",
+      "en": "Guizhou",
+      "x": 545.9,
+      "y": 564.3
+    },
+    {
+      "id": "CNCQ",
+      "zh": "重庆",
+      "en": "Chongqing",
+      "x": 554.8,
+      "y": 509.5
+    },
+    {
+      "id": "CNSN",
+      "zh": "陕西",
+      "en": "Shaanxi",
+      "x": 567.3,
+      "y": 439.5
+    }
+  ],
+  "note": "Only aggregated location names; no member identities or counts."
+}

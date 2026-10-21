@@ -1,14 +1,16 @@
 {
   "en": {
     "home.meta.title": "Wu Lab",
-    "home.meta.description": "Precision oncology research, molecular medicine, and translational innovation at Wu Lab.",
+    "home.meta.description": "Aptomics and precision medicine research and translational innovation at Wu Lab.",
     "home.hero1.title": "Who We Are",
-    "home.hero1.lead": "We focus on precision oncology, integrating advanced molecular technologies and multi-omics analytics to decode tumor evolution. Our goal is to develop targeted therapies and companion diagnostics that enable truly personalized cancer treatment.",
+    "home.hero1.lead": "We connect chemical biology, bioinformatics, AI, and clinical medicine to explore cells and advance precision diagnosis and treatment. From <span class=\"brand-phrase\">wonder for science</span> to <span class=\"brand-phrase\">wonder for health</span> , join us in turning curiosity into discovery.",
     "home.hero1.btnMembers": "See our members",
     "home.hero1.btnJoin": "Join us",
     "home.hero1.card1.html": "<h3>Department of Innovation Research</h3><p>Our department focuses on national strategic priorities and the institute's core mission.</p>",
     "home.hero1.card2.html": "<h3>Hangzhou Institute of Medicine</h3><h3>Chinese Academy of Sciences</h3><p>We are the first medical research institute founded within CAS and serve as a key platform for advancing life sciences and health innovation.</p><a class=\"card-link\" href=\"https://him.cas.cn/\" aria-disabled=\"false\">HIM, CAS Homepage</a>",
-    "home.hero2.title": "Precision Oncology",
+    "home.hero2.title": "Aptomics and Precision Medicine",
+    "home.hero2.titleFirst": "Aptomics and",
+    "home.hero2.titleSecond": "Precision Medicine",
     "home.hero2.btn": "See our research",
     "home.hero2.card1": "Explore: Functional Nucleic Acid Intelligence",
     "home.hero2.card2": "Decode: Frontier Omics Technologies",
@@ -19,20 +21,22 @@
     "home.hero3.card2.html": "<h3>Partner Lab B</h3><p>Experimental biology and mechanistic assays.</p>",
     "home.hero3.card3.html": "<h3>Partner Lab C</h3><p>Computational pharmacology and drug discovery.</p>",
     "home.about.title": "Wu Qin Research Laboratory",
-    "home.about.p1": "Our lab focuses on precision oncology and has established an integrated research framework of “technology development – mechanistic investigation – clinical translation.”",
-    "home.about.p2": "By developing high-performance molecular probes and integrating cutting-edge technologies such as single-cell sequencing and spatial proteomics, the group builds intelligent multi-omics data analysis models to systematically map the spatiotemporal dynamics of tumor initiation and progression.",
-    "home.about.p3": "The ultimate goal is to develop novel targeted therapeutic strategies and companion diagnostic biomarkers, thereby enabling personalized precision treatment."
+    "home.about.p1": "We bring together chemical biology, bioinformatics, artificial intelligence, and clinical medicine to develop original chemical probes and new omics technologies, build comprehensive cellular atlases, and open new paths to precision diagnosis and treatment.",
+    "home.about.p2": "Over the past five years, our work has appeared in leading journals including Science, and we have conducted multicenter clinical research across China. Supported by major national research programs and advanced wet-lab and computing platforms, we connect every stage from molecular design to clinical validation.",
+    "home.about.p3": "We believe that every spark of curiosity about the unknown within cells ( <span class=\"brand-phrase\">wonder for science</span> ) can become an opportunity to transform human health ( <span class=\"brand-phrase\">wonder for health</span> ). Join us, where curiosity inspires discovery and makes wonders possible."
   },
   "zh": {
     "home.meta.title": "吴芩课题组",
-    "home.meta.description": "吴芩课题组聚焦精准肿瘤学、分子医学与临床转化创新。",
+    "home.meta.description": "吴芩课题组聚焦核酸适配体组学与精准医学，推动临床转化创新。",
     "home.hero1.title": "我们是谁",
-    "home.hero1.lead": "我们聚焦精准肿瘤学，结合先进分子技术与多组学分析解析肿瘤演化，发展靶向治疗与伴随诊断，推动真正的个体化癌症治疗。",
+    "home.hero1.lead": "我们融合化学生物学、生物信息学、人工智能与临床医学，探索细胞奥秘，推动精准诊疗。从 <span class=\"brand-phrase\">wonder for science</span> 到 <span class=\"brand-phrase\">wonder for health</span> ，加入我们，让探索成为可能。",
     "home.hero1.btnMembers": "查看成员",
     "home.hero1.btnJoin": "加入我们",
     "home.hero1.card1.html": "<h3>创新研究院</h3><p>创新研究院面向国家战略需求与研究所核心使命开展科研工作。</p>",
     "home.hero1.card2.html": "<h3>中国科学院杭州医学研究所</h3><p>我们是中国科学院体系内首家医学研究所，是推动生命科学与健康创新的重要平台。</p><a class=\"card-link\" href=\"https://him.cas.cn/\" aria-disabled=\"false\">杭州医学研究所主页</a>",
-    "home.hero2.title": "精准肿瘤学",
+    "home.hero2.title": "核酸适配体组学与精准医学",
+    "home.hero2.titleFirst": "核酸适配体组学与",
+    "home.hero2.titleSecond": "精准医学",
     "home.hero2.btn": "查看研究",
     "home.hero2.card1": "探索：功能核酸智能",
     "home.hero2.card2": "解码：前沿组学技术",
@@ -43,8 +47,8 @@
     "home.hero3.card2.html": "<h3>合作团队 B</h3><p>实验生物学与机制研究。</p>",
     "home.hero3.card3.html": "<h3>合作团队 C</h3><p>计算药理学与药物发现。</p>",
     "home.about.title": "吴芩课题组",
-    "home.about.p1": "课题组聚焦精准肿瘤学，建立了“技术开发—机制研究—临床转化”一体化研究框架。",
-    "home.about.p2": "通过开发高性能分子探针，并结合单细胞测序、空间蛋白组学等前沿技术，团队构建智能多组学数据分析模型，系统描绘肿瘤发生发展的时空动态分子图谱。",
-    "home.about.p3": "最终目标是发展新的靶向治疗策略和伴随诊断生物标志物，从而推动个体化精准治疗。"
+    "home.about.p1": "我们聚焦化学生物学、生物信息学、人工智能与临床医学的深度交叉，开发原创化学探针与组学新技术，绘制细胞全景图谱，推动精准诊疗新路径。",
+    "home.about.p2": "近五年成果发表于 Science 等顶刊，并开展全国多中心临床研究。依托国家重大专项及先进湿实验与算力平台，从分子设计到临床验证全链条贯通。",
+    "home.about.p3": "我们相信，每一次对细胞未知的好奇（ <span class=\"brand-phrase\">wonder for science</span> ），都终将化为改写生命健康的契机（ <span class=\"brand-phrase\">wonder for health</span> ）。加入我们，让好奇与奇迹发生。"
   }
 }
