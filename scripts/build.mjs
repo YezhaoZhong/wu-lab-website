@@ -1,4 +1,5 @@
 import fs from 'node:fs';
+import { createHash } from 'node:crypto';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -28,28 +29,83 @@ for (const publication of publications) {
 const newsText = read('news.json');
 const newsSource = fs.readFileSync(path.join(root, 'source/news-v10.html'), 'utf8');
 const names = [
-  ['discover', 'Discover', 'Molecular Recognition & Omics', '分子识别与组学',
-    'Read the molecular signatures that define a cell.', '读取定义细胞状态的分子信号。',
+  ['discover', 'Discover', 'Molecular Recognition & Omics', '分子识别与组学技术',
+    'Use aptamers and sequencing to discover molecular recognition relationships, cell states and disease-associated biomarkers at scale.', '利用适体和测序技术，大规模发现分子识别关系、细胞状态与疾病相关标志物。',
     ['spark-seq', 'apt-seq', 'tumor-marker-ms', 'molecular-medicine-era']],
-  ['design', 'Design', 'Structure-Guided Molecular Design', '结构引导的分子设计',
-    'Connect molecular structure to selective recognition.', '连接分子结构与特异性识别。',
+  ['design', 'Design', 'AI & Structure-Guided Molecular Design', 'AI与结构驱动的分子设计',
+    'Combine nucleic acid–target complex structures, computational methods and artificial intelligence to understand molecular recognition and design new functional nucleic acids.', '结合核酸–靶标复合物结构、计算方法与人工智能，理解分子识别规律，并据此设计新型功能核酸。',
     ['atp-aptamer', 'blocker-selex']],
-  ['engineer', 'Engineer', 'Functional Aptamers & Therapeutics', '功能适配体与治疗策略',
-    'Turn recognition into a programmable biological function.', '让分子识别成为可编程的生物功能。',
+  ['engineer', 'Engineer', 'Functional Molecular Discovery & Therapeutics', '功能分子筛选与药物发现',
+    'Advance Functional Aptomics to discover and optimize aptamers with inhibitory, activating or allosteric activities and develop new therapeutic molecules.', '以功能适体组学（Functional Aptomics）为核心，发现和优化具有抑制、激活、变构调控等活性的适体，开发新型治疗分子。',
     ['blocker-selex', 'dnazyme-evolution', 'aptamer-lytacs', 'ptf-sriapt', 'cd4-aptamer-cells']],
-  ['translate', 'Translate', 'Precision Medicine & Translation', '精准医学与转化',
-    'Link disease mechanisms to strategies for intervention.', '从疾病机制出发，寻找干预路径。',
+  ['translate', 'Translate', 'Precision Medicine & Clinical Translation', '精准医学与临床转化',
+    'Develop molecular diagnostics, patient stratification and personalized treatment strategies for major diseases, advancing molecular probes and functional nucleic acids toward clinical translation.', '面向重大疾病，发展新型分子诊断、患者分型及个体化治疗策略，推动分子探针与功能核酸的临床转化。',
     ['glut1-tnbc', 'bromodomain-toolbox', 'prmt-review', 'taf1-bay299', 'prmt-viral-mimicry',
       'prmt5-vulnerability', 'ezh2-rb1', 'interferon-prmt5', 'prmt1-pd1', 'drug-resistance-protocol',
       'ptf-sriapt', 'cd4-aptamer-cells', 'aptamer-lytacs']]
 ];
 const areas = names.map(([id, title, en, zh, leadEn, leadZh, studies]) =>
   ({ id, title, subtitle: { en, zh }, lead: { en: leadEn, zh: leadZh }, studies }));
+const areaKeywords = {
+  discover: ['SPARK-seq', 'Apt-seq', 'Single-cell Aptomics'],
+  design: ['Structural Aptomics', 'TransApt', 'Molecular Design'],
+  engineer: ['Functional Aptomics', 'Molecular Regulation', 'Nucleic Acid Drugs'],
+  translate: ['Clinical Aptomics', 'Biomarkers', 'Precision Oncology']
+};
+for (const area of areas) area.keywords = areaKeywords[area.id];
+const researchOverviewZh = {
+  discover: {
+    backgrounds: '分子生物学、化学生物学、单细胞组学、生物信息学。',
+    backgroundsEn: 'Molecular biology, chemical biology, single-cell omics and bioinformatics.'
+  },
+  design: {
+    backgrounds: '结构生物学、计算生物学、人工智能、化学、蛋白质科学。',
+    backgroundsEn: 'Structural biology, computational biology, artificial intelligence, chemistry and protein science.'
+  },
+  engineer: {
+    backgrounds: '化学生物学、药学、分子药理学、核酸化学、药物开发。',
+    backgroundsEn: 'Chemical biology, pharmaceutical sciences, molecular pharmacology, nucleic acid chemistry and drug development.'
+  },
+  translate: {
+    backgrounds: '肿瘤生物学、转化医学、临床医学、免疫学、生物信息学。',
+    backgroundsEn: 'Cancer biology, translational medicine, clinical medicine, immunology and bioinformatics.'
+  }
+};
+for (const area of areas) area.overviewZh = researchOverviewZh[area.id];
+const directionFocus = {
+  discover: {
+    heading: { en: 'Read molecular recognition and cellular information', zh: '读出分子识别与细胞信息' },
+    steps: { en: ['Aptamer recognition', 'Sequencing readout', 'Information discovery'], zh: ['适体识别', '测序读出', '信息发现'] },
+    topics: { en: ['Recognition relationships', 'Cell states', 'Disease biomarkers'], zh: ['识别关系', '细胞状态', '疾病标志物'] },
+    featured: ['spark-seq', 'apt-seq', 'tumor-marker-ms']
+  },
+  design: {
+    heading: { en: 'From recognition principles to molecular design', zh: '从识别规律到分子设计' },
+    steps: { en: ['Complex structures', 'Recognition principles', 'Molecular design'], zh: ['复合物结构', '识别规律', '分子设计'] },
+    topics: { en: ['Structural analysis', 'AI-assisted design', 'Experimental validation'], zh: ['结构解析', 'AI辅助设计', '实验验证'] },
+    featured: ['atp-aptamer', 'blocker-selex']
+  },
+  engineer: {
+    heading: { en: 'From molecular binding to functional regulation', zh: '从分子结合到功能调控' },
+    steps: { en: ['Functional screening', 'Activity validation', 'Molecular optimization'], zh: ['功能筛选', '活性验证', '分子优化'] },
+    topics: { en: ['Inhibition', 'Activation', 'Allosteric regulation'], zh: ['抑制', '激活', '变构调控'] },
+    featured: ['blocker-selex', 'aptamer-lytacs', 'dnazyme-evolution']
+  },
+  translate: {
+    heading: { en: 'From molecular discovery toward clinical application', zh: '从分子发现走向临床应用' },
+    steps: { en: ['Molecular probes', 'Disease information', 'Stratification & intervention'], zh: ['分子探针', '疾病信息', '分型与干预'] },
+    topics: { en: ['Molecular diagnostics', 'Patient stratification', 'Personalized treatment'], zh: ['分子诊断', '患者分型', '个体化治疗'] },
+    featured: ['interferon-prmt5', 'prmt-viral-mimicry', 'ptf-sriapt']
+  }
+};
+for (const area of areas) area.focus = directionFocus[area.id];
+const figureSources = read('subfigure-manifest.json');
 const studies = Object.entries(original.studies).map(([id, study]) => {
   const pub = publications.find(p => p.doi_url === study.doiUrl);
   if (!pub || !articles[id]) throw new Error(`Missing publication/article: ${id}`);
   return { id, ...study, areas: areas.filter(a => a.studies.includes(id)).map(a => a.id),
     article: articles[id], publication: pub, cover: asset(study.cover),
+    figureSource: figureSources.find(record => record.doi === pub.doi && asset(record.image) === asset(study.cover)) || null,
     paperCover: asset(pub.cover), pdf: asset(pub.pdf) };
 }).sort((a, b) => Number(b.year) - Number(a.year) || a.id.localeCompare(b.id));
 const news = [...newsSource.matchAll(/<article class="resource-card news-card"[^>]*>([\s\S]*?)<\/article>/g)].map(([, body]) => {
@@ -143,6 +199,8 @@ function inherited(dir = root) {
   }
 }
 inherited();
+const appVersion = createHash('sha256').update(fs.readFileSync(path.join(root, 'app.js'))).update(fs.readFileSync(path.join(root, 'data/site.json'))).digest('hex').slice(0, 12);
+const styleVersion = createHash('sha256').update(fs.readFileSync(path.join(root, 'probe.css'))).digest('hex').slice(0, 12);
 for (const [file, [page, title]] of routes) {
   const depth = file.split('/').length - 1;
   const base = '../'.repeat(depth) || './';
@@ -150,7 +208,7 @@ for (const [file, [page, title]] of routes) {
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>${title} | PROBE Lab</title><meta name="description" content="PROBE Lab. Functional nucleic acid omics, molecular recognition and precision medicine.">
 <link rel="icon" href="${base}${data.logo || 'assets/branding/logo.svg'}">
-<link rel="stylesheet" href="${base}probe.css"><script type="module" src="${base}app.js"></script></head>
+<link rel="stylesheet" href="${base}probe.css?v=${styleVersion}"><script type="module" src="${base}app.js?v=${appVersion}"></script></head>
 <body data-page="${page}"><a class="skip-link" href="#main">Skip to content</a>
 <div id="app"><main id="main" class="loading"><p>PROBE Lab</p><p>Loading research and stories...</p></main></div>
 <noscript>This website requires JavaScript. Please enable it to browse our research. Contact: wuqin@him.cas.cn</noscript>

@@ -1,0 +1,11 @@
+{
+  "tool": "built-in imagegen",
+  "purpose": "Concept illustrations, not experimental results",
+  "sharedStyle": "Square editorial biomedical schematic, clean soft vector-like shapes, restrained dimensional shading, consistent medium-fine outlines. Solid deep navy #10273e, mint #67d9cc and pale blue #a9cfe5, subtle ivory highlights. Centered composition, 12% safe margins, 3 to 5 large elements, readable at 150px. No text, letters, numbers, plots, journal panels, logos, sparkle or photorealism.",
+  "illustrations": {
+    "discover": "Molecular Recognition & Omics: a folded teal nucleic-acid aptamer recognizing a blue cell-surface protein on a curved cell membrane, linked by a few small sequencing barcode tiles to an abstract single-cell dot cluster. Focus on discovery and molecular recognition.",
+    "design": "Structure-Guided Molecular Design: a single large softly shaded blue protein with a clearly defined binding pocket, a mint folded nucleic-acid aptamer fitting the pocket, a restrained fine wireframe contour suggesting computational structure design. Focus on structure and complementary molecular fit.",
+    "engineer": "Functional Aptamers & Therapeutics: a mint folded nucleic-acid aptamer bridging two blue protein domains, one thin directional arrow toward a simplified cell with a regulated intracellular signaling pathway. Focus on engineering molecular function and targeted regulation, conceptual rather than experimental proof.",
+    "translate": "Precision Medicine & Translation: a central simplified blue human silhouette, a mint molecular biomarker icon on the left, branching gently into three small patient silhouettes and corresponding distinct molecular-treatment symbols on the right. Focus on biomarkers, patient stratification and individualized interventions, without implying clinical efficacy."
+  }
+}

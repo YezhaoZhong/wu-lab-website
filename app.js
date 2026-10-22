@@ -29,12 +29,12 @@ function brand(big = false) {
 }
 function header() {
   const active = page.startsWith('area') || page.startsWith('study') || page === 'tools' ? 'research'
-    : page === 'publications' ? 'discoveries' : ['pi', 'person', 'activity'].includes(page) ? 'minds' : page;
+    : page === 'publications' ? 'discoveries' : ['pi', 'person', 'activity'].includes(page) ? 'minds' : page.startsWith('news:') ? 'news' : page;
   return `<header class="site-header"><div class="header-inner">
     <div class="header-brand"><a class="brand-home" href="${url('')}" aria-label="PROBE Lab Home">${brand()}</a>
     <img class="header-institution" src="${url('assets/branding/HIMCASlogo2.png')}" alt="${t('Hangzhou Institute of Medicine, CAS', '中国科学院杭州医学研究所')}"></div>
     <div class="header-actions"><button id="menu" class="plain-button menu-toggle" aria-controls="nav" aria-expanded="false">${t('Menu', '菜单')}</button>
-    <nav id="nav" aria-label="${t('Main navigation', '主导航')}">${[['vision', 'Vision'], ['research', 'Research'], ['discoveries', 'Discoveries'], ['minds', 'Minds'], ['join-us', 'Join Us']].map(([route, name]) =>
+    <nav id="nav" aria-label="${t('Main navigation', '主导航')}">${[['vision', 'Vision'], ['research', 'Research'], ['discoveries', 'Discoveries'], ['minds', 'Minds'], ['news', 'Latest News'], ['join-us', 'Join Us']].map(([route, name]) =>
       `<a href="${url(route + '/')}" ${active === (route === 'join-us' ? 'join' : route) ? 'aria-current="page"' : ''}>${name}</a>`).join('')}</nav>
     <button id="language" class="plain-button language" aria-label="${t('Switch to Chinese', 'Switch to English')}">${t('中文', 'EN')}</button></div>
     </div></header>`;
@@ -54,11 +54,12 @@ function scienceCard(s, number = '') {
     <div class="card-content"><p class="eyebrow">${esc(number)} ${esc(s.journal)} · ${s.year}</p><h3><a href="${studyURL(s.id)}">${esc(article.title)}</a></h3>
     <p>${esc(article.paragraphs[0])}</p><a class="text-link" href="${studyURL(s.id)}">${t('Read the discovery', '阅读研究故事')} ↗</a></div></article>`;
 }
-function areaTile(area, index) {
-  const first = findStudy(area.studies[0]);
-  return `<article class="area-tile"><div><span class="index">${String(index + 1).padStart(2, '0')}</span><h3><a href="${areaURL(area.id)}">${area.title}</a></h3>
-    <p class="area-subtitle">${esc(local(area.subtitle))}</p><p>${esc(local(area.lead))}</p></div>
-    <a class="area-thumbnail" href="${areaURL(area.id)}"><img src="${url(first.cover)}" alt="${esc(local(first.article).title)}" loading="lazy"><span>${t('Explore the study map', '探索研究图谱')} ↗</span></a></article>`;
+function areaTile(area) {
+  const illustrationAlt = t(`${area.subtitle.en}: conceptual schematic`, `${area.subtitle.zh}：概念示意图`);
+  return `<article class="area-tile"><div><p class="area-keyword">${esc(area.title.toUpperCase())}</p><h3><a href="${areaURL(area.id)}">${esc(area.subtitle.en)}</a></h3>
+    ${lang === 'zh' ? `<p class="area-subtitle" lang="zh">${esc(area.subtitle.zh)}</p>` : ''}<p>${esc(local(area.lead))}</p>
+    <p class="area-topics">${area.keywords.map(esc).join(' · ')}</p></div>
+    <a class="area-thumbnail" href="${areaURL(area.id)}"><img src="${url(`assets/research-concepts/${area.id}.png`)}" alt="${esc(illustrationAlt)}" loading="lazy"><span>${t('Explore this direction', '探索研究方向')} ↗</span></a></article>`;
 }
 function home() {
   return `<section class="home-hero"><div class="wrap hero-grid"><div class="hero-copy">${kicker('FUNCTIONAL NUCLEIC ACIDS & OMICS')}
@@ -69,7 +70,7 @@ function home() {
     <div class="hero-bottom wrap"><span>CHEMISTRY × BIOLOGY × COMPUTATION × MEDICINE</span><a href="#vision">${t('A closer look ↓', '继续探索 ↓')}</a></div></section>
     <section class="wrap section intro" id="vision"><div>${kicker('01 / OUR SCIENTIFIC VISION')}<h2>${t('A small molecule.<br>A wider possibility.', '从微小分子，<br>看见更广阔的可能。')}</h2></div><div><p class="large-text">${t('Recognition is our starting point. Understanding is our purpose.', '以识别为起点，以理解为目标。')}</p>
     <p>${t('At PROBE Lab, chemistry, bioinformatics, artificial intelligence and medicine meet. We develop functional nucleic acid probes and omics technologies to connect molecular events with cellular states and new strategies for precision medicine.', '功能核酸组学团队聚焦化学生物学、生物信息学、人工智能与临床医学的交叉，开发功能核酸探针与组学技术，将分子事件、细胞状态与精准医学的新路径连接起来。')}</p>${link('vision/', t('Our vision', '科学愿景'))}</div></section>
-    <section class="section soft"><div class="wrap">${sectionHead('02 / RESEARCH', t('Four directions. One connected idea.', '四个方向，一个相连的科学问题。'))}<div class="area-grid">${data.areas.map(areaTile).join('')}</div></div></section>
+    <section class="section soft"><div class="wrap">${sectionHead('RESEARCH', t('Four research directions', 'Research / 四大方向'))}<div class="area-grid">${data.areas.map(areaTile).join('')}</div></div></section>
     <section class="section wrap">${sectionHead('03 / SELECTED DISCOVERIES', t('From questions to discoveries.', '从问题走向发现。'), link('discoveries/publications/', 'All Publications'))}
     <div class="feature-grid">${['spark-seq', 'apt-seq', 'blocker-selex'].map((id, i) => scienceCard(findStudy(id), `0${i + 1} /`)).join('')}</div></section>
     <section class="section news-band"><div class="wrap">${sectionHead('04 / LAB NOTES', 'Latest News', link('news/', t('All news', '全部新闻')))}${newsCarousel(data.news.slice(0, 5), 'home-news')}</div></section>
@@ -91,7 +92,9 @@ function vision() {
 }
 function research() {
   return `${head('RESEARCH / FOUR CONNECTED DIRECTIONS', t('From recognition<br>to <em>regulation.</em>', '从分子识别<br>到<em>功能调控。</em>'), t('Follow a scientific question through the studies that address it. Research can connect more than one direction.', '沿着科学问题探索相关研究；一项工作可以连接多个方向。'))}
-    <div class="wrap section">${data.areas.map((a, i) => `<section class="research-row"><div><span class="index">0${i + 1}</span><h2><a href="${areaURL(a.id)}">${a.title}</a></h2><h3>${esc(local(a.subtitle))}</h3><p>${esc(local(a.lead))}</p>${link(`research/${a.id}/`, t('Open study map', '打开研究图谱'), 'button outline')}</div>
+    <div class="wrap section">${data.areas.map((a, i) => `<section class="research-row"><div><h2><a href="${areaURL(a.id)}">${a.title}</a></h2>${lang === 'zh' ? `<h3 lang="zh">${esc(a.subtitle.zh)}</h3><p lang="en"><em>${esc(a.subtitle.en)}</em></p>` : `<h3>${esc(a.subtitle.en)}</h3>`}<p>${esc(local(a.lead))}</p>
+      <p class="small-note research-keywords" lang="en">${a.keywords.map(esc).join(' · ')}</p>
+      ${lang === 'zh' ? `<p class="small-note research-backgrounds">${esc(a.overviewZh.backgrounds)}</p>` : ''}${link(`research/${a.id}/`, t('Explore this direction', '探索研究方向'), 'button outline')}</div>
       ${figureCarousel(a, i)}</section>`).join('')}</div>
     <section class="soft section"><div class="wrap">${sectionHead('METHODS & RESOURCES', 'Tools & Resources')}<p>${t('Explore the methods through their publications. Standalone software links will be added when available.', '通过论文了解研究方法。独立工具链接将在准备好后补充。')}</p>${link('research/tools/', t('Explore methods', '查看研究方法'))}</div></section>`;
 }
@@ -105,14 +108,29 @@ function areaPage(id) {
   const a = data.areas.find(a => a.id === id);
   if (!a) return notFound();
   const studies = a.studies.map(findStudy);
-  const branches = id === 'discover' ? [['Sequencing & recognition', '测序与识别', studies.slice(0, 2)], ['Molecular readouts', '分子读出', studies.slice(2)]]
-    : id === 'design' ? [['Structure & selection', '结构与筛选', studies]]
-    : id === 'engineer' ? [['Selection & gene regulation', '筛选与基因调控', studies.slice(0, 2)], ['Targeted molecular systems', '靶向分子系统', studies.slice(2)]]
-    : [['Mechanisms & vulnerabilities', '机制与脆弱性', studies.filter(s => !['aptamer-lytacs', 'ptf-sriapt', 'cd4-aptamer-cells', 'drug-resistance-protocol'].includes(s.id))],
-      ['Intervention & validation', '干预与验证', studies.filter(s => ['aptamer-lytacs', 'ptf-sriapt', 'cd4-aptamer-cells', 'drug-resistance-protocol'].includes(s.id))]];
-  return `${head('RESEARCH / ' + a.title.toUpperCase(), a.title, esc(local(a.subtitle)))}<section class="wrap section map-section"><div class="map-root"><span class="eyebrow">STUDY MAP</span><h2>${esc(local(a.lead))}</h2><p>${t('Select a study to follow the full story.', '选择研究节点，阅读完整故事。')}</p></div>
-    <div class="map-branches">${branches.map(([en, zh, items]) => `<div class="map-branch"><h3>${t(en, zh)}</h3><div class="map-nodes">${items.map(s => `<a class="map-node" href="${studyURL(s.id)}"><span>${s.year} / ${esc(s.journal)}</span><strong>${esc(local(s.article).title)}</strong><span aria-hidden="true">↗</span></a>`).join('')}</div></div>`).join('')}</div></section>
+  const featured = a.focus.featured.map(findStudy);
+  const remaining = studies.filter(s => !a.focus.featured.includes(s.id));
+  const contextual = remaining.filter(s => ['molecular-medicine-era', 'prmt-review', 'drug-resistance-protocol'].includes(s.id));
+  const related = remaining.filter(s => !contextual.includes(s));
+  const publicationList = items => items.map(s => `<article class="direction-paper"><div><p class="eyebrow">${esc(s.journal)} · ${s.year}</p><h3><a href="${studyURL(s.id)}">${esc(local(s.article).title)}</a></h3><p>${esc(s.publication.title)}</p></div>${link(`discoveries/study.html?study=${encodeURIComponent(s.id)}`, t('Read study', '阅读研究'), 'text-link')}</article>`).join('');
+  return `${head('RESEARCH / ' + a.title.toUpperCase(), a.title, `${esc(a.subtitle.en)}${lang === 'zh' ? `<br><span lang="zh">${esc(a.subtitle.zh)}</span>` : ''}`)}
+    <section class="wrap direction-focus" aria-labelledby="direction-focus-title"><div class="direction-focus-copy">${kicker(t('RESEARCH FOCUS', '研究重点'))}<h2 id="direction-focus-title">${esc(local(a.focus.heading))}</h2><p>${esc(local(a.lead))}</p><ul class="direction-topics">${local(a.focus.topics).map(topic => `<li>${esc(topic)}</li>`).join('')}</ul></div>
+      <figure class="direction-focus-art"><img src="${url(`assets/research-concepts/${a.id}.png`)}" alt="${esc(local(a.focus.heading))}" fetchpriority="high"><figcaption>${t('Research concept illustration', '研究方向概念示意')}</figcaption></figure>
+      <ol class="direction-process" aria-label="${t('Research approach', '研究思路')}">${local(a.focus.steps).map(step => `<li>${esc(step)}</li>`).join('')}</ol></section>
+    <section class="wrap section direction-results">${sectionHead(t('SELECTED RESEARCH', '代表性研究'), t('Research in focus', '代表性成果'))}<div class="direction-result-list">${featured.map(s => directionResult(s, a)).join('')}</div>
+      ${related.length ? `<details class="direction-more"><summary>${t('More related studies', '更多相关研究')} <span>(${related.length})</span></summary><div>${publicationList(related)}</div></details>` : ''}
+      ${contextual.length ? `<details class="direction-more"><summary>${t('Reviews, perspectives & protocols', '相关综述、观点与实验方法')} <span>(${contextual.length})</span></summary><div>${publicationList(contextual)}</div></details>` : ''}</section>
     <section class="wrap section">${sectionHead('CONNECTED DIRECTIONS', t('Keep exploring.', '继续探索。'))}<div class="tag-row">${data.areas.filter(x => x.id !== id).map(x => link(`research/${x.id}/`, x.title, 'button outline')).join('')}</div></section>`;
+}
+function directionResult(s, area) {
+  const article = local(s.article);
+  const figure = s.figureSource;
+  const imagePath = s.cover || `assets/research-concepts/${area.id}.png`;
+  const caption = s.cover
+    ? t(`Publication figure${figure ? ` · ${figure.figure} · PDF p. ${figure.page}` : ''}`, `论文配图${figure ? ` · ${figure.figure} · PDF 第 ${figure.page} 页` : ''}`)
+    : t('Concept placeholder · publication figure to be added', '示意图占位 · 待替换为论文图片');
+  return `<article class="direction-result"><figure><a href="${s.cover ? url(s.pdf) + (figure ? '#page=' + figure.page : '') : studyURL(s.id)}" aria-label="${esc(t('View figure source: ', '查看图片出处：') + article.title)}"><img src="${url(imagePath)}" alt="${esc(s.cover ? caption + ': ' + article.title : caption)}" loading="lazy"></a><figcaption>${esc(caption)}</figcaption></figure>
+    <div class="direction-result-copy"><p class="eyebrow">${esc(s.journal)} · ${s.year}</p><h3><a href="${studyURL(s.id)}">${esc(article.title)}</a></h3><p class="direction-result-summary">${esc(article.paragraphs[1] || article.paragraphs[0])}</p><p class="direction-result-citation">${esc(s.citation)}<br>${esc(s.publication.title)}</p><div class="direction-result-links">${link(`discoveries/study.html?study=${encodeURIComponent(s.id)}`, t('Explore this study', '了解这项研究'), 'text-link')}<a class="text-link" href="${esc(s.doiUrl)}" target="_blank" rel="noopener">DOI ↗</a><a class="text-link" href="${url(s.pdf)}" target="_blank" rel="noopener">${t('Read paper', '阅读原文')} ↗</a></div></div></article>`;
 }
 function studyPage(id, person = null) {
   const s = findStudy(id);
@@ -384,7 +402,7 @@ async function initMap() {
   }
 }
 try {
-  const response = await fetch(url('data/site.json'));
+  const response = await fetch(url('data/site.json') + new URL(import.meta.url).search);
   if (!response.ok) throw new Error(`Content request failed (${response.status})`);
   data = await response.json(); render();
   if (location.hash) requestAnimationFrame(() => {
