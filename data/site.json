@@ -1,6 +1,6 @@
 {
   "version": 11,
-  "logo": "assets/branding/probe-logo.png",
+  "logo": "assets/branding/aptomics-cell-atlas-logo.png",
   "areas": [
     {
       "id": "discover",
@@ -3532,8 +3532,8 @@
   ],
   "join": {
     "en": {
-      "join.meta.title": "Join Us | PROBE Lab",
-      "join.meta.description": "Open positions and collaboration opportunities in the PROBE Lab.",
+      "join.meta.title": "Join Us | Aptomics & Cell Atlas",
+      "join.meta.description": "Open positions and collaboration opportunities in the Aptomics & Cell Atlas.",
       "join.head.title": "Join Us",
       "join.students.title": "Master & PhD Students",
       "join.students.lead": "The lab currently has openings for Master’s and PhD students in 2026. Please email Prof. Qin Wu at <a href=\"mailto:wuqin@him.cas.cn\">wuqin@him.cas.cn</a> for inquiries.",
@@ -3665,7 +3665,7 @@
     }
   },
   "origins": {
-    "source": "20260920_课题组学生信息收集.zip",
+    "source": "成员名单及信息汇总.xlsx",
     "field": "籍贯/省份",
     "locations": [
       {
@@ -3702,6 +3702,13 @@
         "en": "Shanxi",
         "x": 620.2,
         "y": 375.3
+      },
+      {
+        "id": "CNGD",
+        "zh": "广东",
+        "en": "Guangdong",
+        "x": 638,
+        "y": 609.9
       },
       {
         "id": "CNGX",

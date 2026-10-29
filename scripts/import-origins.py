@@ -6,7 +6,7 @@ import zipfile
 from pathlib import Path
 from xml.etree import ElementTree as ET
 
-source = Path(sys.argv[1] if len(sys.argv) > 1 else "../20260920_课题组学生信息收集.zip")
+source = Path(sys.argv[1] if len(sys.argv) > 1 else "../20260920_课题组学生信息收集/成员名单及信息汇总.xlsx")
 root = Path(__file__).resolve().parents[1]
 ns = {"m": "http://schemas.openxmlformats.org/spreadsheetml/2006/main"}
 if source.suffix == ".zip":
@@ -16,7 +16,8 @@ if source.suffix == ".zip":
 else:
     workbook_source = source
 with zipfile.ZipFile(workbook_source) as archive:
-    strings = ["".join(node.itertext()) for node in ET.fromstring(archive.read("xl/sharedStrings.xml"))]
+    strings = (["".join(node.itertext()) for node in ET.fromstring(archive.read("xl/sharedStrings.xml"))]
+               if "xl/sharedStrings.xml" in archive.namelist() else [])
     rows = ET.fromstring(archive.read("xl/worksheets/sheet1.xml")).findall(".//m:row", ns)
     def value(cell):
         raw = cell.findtext("m:v", "", ns)
@@ -56,4 +57,5 @@ for province in provinces:
 payload = {"source": source.name, "field": "籍贯/省份", "locations": aggregates,
            "note": "Only aggregated location names; no member identities or counts."}
 (root / "data/origins.json").write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n")
+(root / "assets/people/origins.json").write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n")
 print(f"Imported {len(provinces)} province-level locations. No personal roster data exported.")

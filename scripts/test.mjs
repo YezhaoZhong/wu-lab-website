@@ -52,6 +52,15 @@ for (const file of htmlFiles()) {
     const ctx = await open(route, lang);
     check(ctx.d.querySelectorAll('h1').length === 1, `${route}: one h1`);
     check(ctx.d.querySelector('#language'), 'Language switch exists');
+    check(ctx.d.querySelectorAll('#nav a').length === 6, 'Six primary sections');
+    check(ctx.d.querySelector('#nav a[href="http://localhost/news/"]').textContent === 'Latest News', 'Latest News navigation stays English in both languages');
+    check(ctx.d.querySelector('#nav a').href === 'http://localhost/', 'Vision navigation targets homepage');
+    check(ctx.d.querySelector('#language').nextElementSibling.id === 'theme-toggle', 'Language before theme button');
+    check(ctx.d.querySelectorAll('.footer-links a').length === 9, 'Footer retains four shortcuts and five sections');
+    if (file === 'index.html' || file === 'vision/index.html') {
+      check(ctx.d.querySelectorAll('#vision .principles article').length === 3, 'Merged vision has three principles');
+      check(ctx.d.querySelector('#nav a').getAttribute('aria-current') === 'page', 'Vision active on homepage');
+    }
     for (const e of ctx.d.querySelectorAll('a[href],img[src]')) {
       const target = new URL(e.getAttribute(e.tagName === 'IMG' ? 'src' : 'href'), ctx.w.location.href);
       if (target.origin !== 'http://localhost') continue;
@@ -96,23 +105,29 @@ for (const file of htmlFiles()) {
 }
 {
   const c = await open('news/');
+  const site = JSON.parse(fs.readFileSync(path.join(root, 'data/site.json'), 'utf8'));
+  check(c.d.querySelectorAll('.news-grid .news-card').length === site.news.length, 'Latest News displays all cards immediately');
+  check(!c.d.querySelector('.carousel, .expand, .pause'), 'Latest News has no carousel or playback and expansion controls');
+  check(c.timers.size === 0, 'Latest News is static');
+  c.close();
+}
+{
+  const c = await open('index.html');
   const el = c.d.querySelector('.carousel');
   check([...c.timers.values()].some(t => t.ms === 4000), 'News timer at four seconds');
   el.querySelector('[data-slide="2"]').click();
   check(el.querySelector('.carousel-track').style.transform.includes('-200%'), 'Clickable news dots');
-  el.querySelector('.expand').click();
-  check(el.classList.contains('expanded'), 'News expands');
-  check(c.timers.size === 0, 'No timers while expanded');
-  check([...el.querySelectorAll('.slide')].every(s => !s.inert), 'Expanded cards accessible');
-  el.querySelector('.expand').click();
-  check(c.timers.size === 1, 'Timer resumes on collapse');
+  check(!el.querySelector('.expand, .pause'), 'Vision news has no expansion or playback controls');
   c.close();
 }
 {
   const c = await open('minds/');
+  check(!c.d.querySelector('.pause'), 'Activities have no playback control');
   check(c.d.querySelectorAll('.researcher-card').length === 3, 'Only three selected people');
-  check(c.d.querySelectorAll('.origin-chip').length === 17, '17 anonymous hometown provinces');
-  check(c.d.querySelectorAll('.map-point').length === 17, 'Map points loaded');
+  const origins = JSON.parse(fs.readFileSync(path.join(root, 'assets/people/origins.json'), 'utf8'));
+  check(c.d.querySelectorAll('.origin-chip').length === origins.locations.length, 'All anonymous hometown provinces displayed');
+  check(c.d.querySelectorAll('.map-point').length === origins.locations.length, 'Map points loaded');
+  check(c.d.querySelector('[data-province="CNGD"]'), 'Updated Guangdong origin displayed');
   c.d.querySelector('.origin-chip').click();
   check(c.d.querySelector('.map-lines .selected'), 'Map focus connects location');
   check([...c.timers.values()].some(t => t.ms === 4500), 'Activities delay is 0.5 seconds');
@@ -121,7 +136,7 @@ for (const file of htmlFiles()) {
   c.close();
 }
 {
-  const c = await open('news/', 'en', true);
+  const c = await open('index.html', 'en', true);
   check(c.timers.size === 0, 'Reduced motion prevents autoplay');
   c.close();
 }

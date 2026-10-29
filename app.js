@@ -25,28 +25,28 @@ const slogan = () => '<span class="handwritten">wonder for science, wonders in l
 function brand(big = false) {
   return `<div class="brand-lockup ${big ? 'brand-large' : ''}">
     ${data.logo ? `<span class="brand-picture"><img src="${url(data.logo)}" alt="${t('W-shaped nucleic acid logo', 'W 形核酸标志')}" ${big ? 'fetchpriority="high"' : ''}></span>` : ''}
-    <span class="brand-words"><strong>PROBE Lab</strong><span lang="zh">功能核酸组学团队</span></span></div>`;
+    <span class="brand-words"><strong>Aptomics & Cell Atlas</strong><span lang="zh">功能核酸组学团队</span></span></div>`;
 }
 function header() {
   const active = page.startsWith('area') || page.startsWith('study') || page === 'tools' ? 'research'
     : page === 'publications' ? 'discoveries' : ['pi', 'person', 'activity'].includes(page) ? 'minds' : page.startsWith('news:') ? 'news' : page;
   return `<header class="site-header"><div class="header-inner">
-    <div class="header-brand"><a class="brand-home" href="${url('')}" aria-label="PROBE Lab Home">${brand()}</a>
-    <img class="header-institution" src="${url('assets/branding/HIMCASlogo2.png')}" alt="${t('Hangzhou Institute of Medicine, CAS', '中国科学院杭州医学研究所')}"></div>
+    <div class="header-brand"><a class="brand-home" href="${url('')}" aria-label="Aptomics & Cell Atlas Home">${brand()}</a>
+    <span class="brand-divider" aria-hidden="true"></span><img class="header-institution" src="${url('assets/branding/HIMCASlogo2.png')}" alt="${t('Hangzhou Institute of Medicine, CAS', '中国科学院杭州医学研究所')}"></div>
     <div class="header-actions"><button id="menu" class="plain-button menu-toggle" aria-controls="nav" aria-expanded="false">${t('Menu', '菜单')}</button>
-    <nav id="nav" aria-label="${t('Main navigation', '主导航')}">${[['vision', 'Vision'], ['research', 'Research'], ['discoveries', 'Discoveries'], ['minds', 'Minds'], ['news', 'Latest News'], ['join-us', 'Join Us']].map(([route, name]) =>
-      `<a href="${url(route + '/')}" ${active === (route === 'join-us' ? 'join' : route) ? 'aria-current="page"' : ''}>${name}</a>`).join('')}</nav>
-    <button id="language" class="plain-button language" aria-label="${t('Switch to Chinese', 'Switch to English')}">${t('中文', 'EN')}</button></div>
+    <nav id="nav" aria-label="${t('Main navigation', '主导航')}">${[['', 'Vision'], ['research', 'Research'], ['discoveries', 'Discoveries'], ['minds', 'Minds'], ['news', 'Latest News'], ['join-us', 'Join Us']].map(([route, name]) =>
+      `<a href="${url(route ? route + '/' : '')}" ${active === (route === 'join-us' ? 'join' : route || 'home') ? 'aria-current="page"' : ''}>${name}</a>`).join('')}</nav>
+    <button id="language" class="plain-button language" aria-label="${t('Switch to Chinese', 'Switch to English')}">${t('中文', 'EN')}</button>
+    <button id="theme-toggle" class="plain-button theme-toggle" type="button"></button></div>
     </div></header>`;
 }
 function footer() {
-  return `<footer class="footer"><div class="wrap footer-grid"><div><a class="footer-name" href="${url('')}">PROBE Lab</a><p>功能核酸组学团队</p><p>${slogan()}</p></div>
+  return `<footer class="footer"><div class="wrap footer-grid"><div><a class="footer-brand" href="${url('')}" aria-label="Aptomics & Cell Atlas Home"><span class="brand-picture"><img src="${url(data.logo)}" alt="" loading="lazy"></span><span class="footer-brand-name">Aptomics &amp; Cell Atlas</span></a><p>功能核酸组学团队</p><p>${slogan()}</p></div>
     <div><p class="eyebrow">${t('Based in Hangzhou', '立足杭州')}</p>
-    <img class="institution-logo" src="${url('assets/branding/HIMCASlogo2.png')}" alt="${t('Hangzhou Institute of Medicine, CAS', '中国科学院杭州医学研究所')}">
     <p>${t('Hangzhou Institute of Medicine<br>Chinese Academy of Sciences', '中国科学院杭州医学研究所')}<br>${t('150 Dongfang Street, Hangzhou, China', '杭州市钱塘区东方街 150 号')}</p></div>
     <div><p class="eyebrow">${t('Stay connected', '保持联系')}</p><a href="mailto:wuqin@him.cas.cn">wuqin@him.cas.cn</a><div class="footer-links">
-    ${link('news/', 'News')}${link('discoveries/publications/', 'All Publications')}${link('minds/#culture', 'Culture')}${link('research/tools/', 'Tools & Resources')}</div></div></div>
-    <div class="wrap footer-bottom"><span>© 2026 PROBE Lab</span><span>${t('Recognition. Discovery. Possibility.', '识别 · 发现 · 可能')}</span><a href="#top">${t('Back to top ↑', '返回顶部 ↑')}</a></div></footer>`;
+    ${link('', 'Vision')}${link('research/', 'Research')}${link('discoveries/', 'Discoveries')}${link('minds/', 'Minds')}${link('join-us/', 'Join Us')}${link('news/', 'News')}${link('discoveries/publications/', 'All Publications')}${link('minds/#culture', 'Culture')}${link('research/tools/', 'Tools & Resources')}</div></div></div>
+    <div class="wrap footer-bottom"><span>© 2026 Aptomics & Cell Atlas</span><span>${t('Recognition. Discovery. Possibility.', '识别 · 发现 · 可能')}</span><a href="#top">${t('Back to top ↑', '返回顶部 ↑')}</a></div></footer>`;
 }
 function scienceCard(s, number = '') {
   const article = local(s.article);
@@ -54,44 +54,32 @@ function scienceCard(s, number = '') {
     <div class="card-content"><p class="eyebrow">${esc(number)} ${esc(s.journal)} · ${s.year}</p><h3><a href="${studyURL(s.id)}">${esc(article.title)}</a></h3>
     <p>${esc(article.paragraphs[0])}</p><a class="text-link" href="${studyURL(s.id)}">${t('Read the discovery', '阅读研究故事')} ↗</a></div></article>`;
 }
-function areaTile(area) {
-  const illustrationAlt = t(`${area.subtitle.en}: conceptual schematic`, `${area.subtitle.zh}：概念示意图`);
-  return `<article class="area-tile"><div><p class="area-keyword">${esc(area.title.toUpperCase())}</p><h3><a href="${areaURL(area.id)}">${esc(area.subtitle.en)}</a></h3>
-    ${lang === 'zh' ? `<p class="area-subtitle" lang="zh">${esc(area.subtitle.zh)}</p>` : ''}<p>${esc(local(area.lead))}</p>
-    <p class="area-topics">${area.keywords.map(esc).join(' · ')}</p></div>
-    <a class="area-thumbnail" href="${areaURL(area.id)}"><img src="${url(`assets/research-concepts/${area.id}.png`)}" alt="${esc(illustrationAlt)}" loading="lazy"><span>${t('Explore this direction', '探索研究方向')} ↗</span></a></article>`;
-}
 function home() {
   return `<section class="home-hero"><div class="wrap hero-grid"><div class="hero-copy">${kicker('FUNCTIONAL NUCLEIC ACIDS & OMICS')}
-    <h1>${t('Probing biology.<br><em>Engineering function.</em>', '探知生命。<br><em>创造功能。</em>')}</h1>
+    <h1>${t('Probing Biology.<br><em>Engineering Function.</em>', '探知生命。<br><em>创造功能。</em>')}</h1>
     <p class="lead">${t('We turn molecular recognition into new ways to read, understand and reprogram biology.', '我们将分子识别转化为读取、理解与调控生命的新方法。')}</p>
     <div class="button-row">${link('research/', t('Explore research', '探索研究'), 'button')}${link('minds/', t('Meet the minds', '认识研究者'), 'button outline')}</div><p class="hero-slogan">${slogan()}</p></div>
     <div class="hero-art">${brand(true)}<span class="hero-coordinate">HANGZHOU · CHINA / 30°N</span></div></div>
     <div class="hero-bottom wrap"><span>CHEMISTRY × BIOLOGY × COMPUTATION × MEDICINE</span><a href="#vision">${t('A closer look ↓', '继续探索 ↓')}</a></div></section>
-    <section class="wrap section intro" id="vision"><div>${kicker('01 / OUR SCIENTIFIC VISION')}<h2>${t('A small molecule.<br>A wider possibility.', '从微小分子，<br>看见更广阔的可能。')}</h2></div><div><p class="large-text">${t('Recognition is our starting point. Understanding is our purpose.', '以识别为起点，以理解为目标。')}</p>
-    <p>${t('At PROBE Lab, chemistry, bioinformatics, artificial intelligence and medicine meet. We develop functional nucleic acid probes and omics technologies to connect molecular events with cellular states and new strategies for precision medicine.', '功能核酸组学团队聚焦化学生物学、生物信息学、人工智能与临床医学的交叉，开发功能核酸探针与组学技术，将分子事件、细胞状态与精准医学的新路径连接起来。')}</p>${link('vision/', t('Our vision', '科学愿景'))}</div></section>
-    <section class="section soft"><div class="wrap">${sectionHead('RESEARCH', t('Four research directions', 'Research / 四大方向'))}<div class="area-grid">${data.areas.map(areaTile).join('')}</div></div></section>
+    <section class="wrap section" id="vision">${kicker('OUR SCIENTIFIC VISION')}<h2>Recognize · Decode · Reprogram</h2>
+    <p class="large-text">${t('Can molecular recognition become a general strategy to understand and control biology?', '分子识别能否成为理解与调控生命系统的通用策略？')}</p>
+    <div class="principles">${[
+      ['Recognize', '识别', 'Discover molecular interactions and develop probes that help us see biological systems in new ways.', '发现分子相互作用，开发帮助我们以新视角观察生命系统的探针。'],
+      ['Decode', '解码', 'Connect molecular measurements with biological context to understand cellular states and disease.', '将分子测量与生物学背景相结合，理解细胞状态与疾病。'],
+      ['Reprogram', '重塑', 'Engineer functional nucleic acids to explore new ways of regulating biological activity.', '通过功能核酸工程，探索调控生物学活动的新方式。']
+    ].map(([en, zh, p, z]) => `<article><h3>${en}</h3>${lang === 'zh' ? `<p class="eyebrow">${zh}</p>` : ''}<p>${t(p, z)}</p></article>`).join('')}</div>
+    ${link('research/', t('Explore Our Research', '探索我们的研究'))}</section>
     <section class="section wrap">${sectionHead('03 / SELECTED DISCOVERIES', t('From questions to discoveries.', '从问题走向发现。'), link('discoveries/publications/', 'All Publications'))}
     <div class="feature-grid">${['spark-seq', 'apt-seq', 'blocker-selex'].map((id, i) => scienceCard(findStudy(id), `0${i + 1} /`)).join('')}</div></section>
     <section class="section news-band"><div class="wrap">${sectionHead('04 / LAB NOTES', 'Latest News', link('news/', t('All news', '全部新闻')))}${newsCarousel(data.news.slice(0, 5), 'home-news')}</div></section>
-    <section class="wrap section minds-callout">${kicker('05 / MEET THE MINDS')}<h2>${t('Different minds.<br>Shared curiosity.', '不同的思维，<br>共同的好奇。')}</h2><p>${t('Meet the researchers behind SPARK-seq, Apt-seq and Blocker-SELEX.', '走近 SPARK-seq、Apt-seq 与 Blocker-SELEX 背后的研究者。')}</p>${link('minds/', 'Meet the Minds', 'button outline')}</section>
+    <section class="wrap section minds-callout">${kicker('05 / MEET THE MINDS')}<h2>${t('Different minds.<br>Shared curiosity.', '不同的思维，<br>共同的好奇心。')}</h2><p>${t('Meet the researchers behind SPARK-seq, Apt-seq and Blocker-SELEX.', '走近 SPARK-seq、Apt-seq 与 Blocker-SELEX 背后的研究者。')}</p>${link('minds/', 'Meet the Minds', 'button outline')}</section>
     ${joinCallout()}`;
 }
 function joinCallout() {
-  return `<section class="join-callout"><div class="wrap"><div>${kicker('YOUR NEXT CHAPTER')}<h2>${t('Bring your curiosity.', '带上你的好奇。')}</h2><p>${t('Shape the next discovery with us.', '与我们一起，开启下一次发现。')}</p></div>${link('join-us/', 'Join Us', 'button light')}</div></section>`;
-}
-function vision() {
-  return `${head('VISION / OUR SCIENTIFIC COMPASS', t('Recognize.<br>Decode. <em>Reprogram.</em>', '识别。解码。<br><em>重塑功能。</em>'), t('From the language of molecular recognition to new possibilities for human health.', '从分子识别的语言出发，探索生命健康的新可能。'))}
-    <section class="wrap section vision-intro"><p class="large-text">${t('Life is built on interactions. We develop ways to recognize those interactions, decode the information they carry, and engineer tools that can change their outcomes.', '生命建立在相互作用之上。我们发展识别这些相互作用的方法，解读其中的信息，并构建能够改变其结果的分子工具。')}</p><p>${slogan()}</p></section>
-    <section class="wrap section principles">${[
-      ['Recognize', '识别', 'Build molecular probes that find their targets in complex biological environments.', '构建能够在复杂生物环境中找到靶点的分子探针。'],
-      ['Decode', '解码', 'Read proteins, glycans and transcripts together to reveal cellular states.', '联合读取蛋白、糖链与转录信息，理解细胞状态。'],
-      ['Reprogram', '重塑', 'Translate recognition into controlled molecular interventions, with careful validation of biological effects.', '将识别转化为可控的分子干预，并严谨验证其生物学效应。']
-    ].map(([en, zh, p, z], i) => `<article><span class="index">0${i + 1}</span><h2>${en}</h2><p class="eyebrow">${t('OUR APPROACH', zh)}</p><p>${t(p, z)}</p></article>`).join('')}</section>
-    <section class="soft section"><div class="wrap intro"><h2>${t('Science across boundaries.', '跨越学科边界。')}</h2><div><p>${t('Our research connects chemical biology, molecular and cellular biology, bioinformatics and medicine. Four connected directions bring discovery, design, engineering and translation into one programme.', '我们的研究连接化学生物学、分子与细胞生物学、生物信息学和医学，以发现、设计、工程与转化四个方向组织相互关联的研究。')}</p>${link('research/', 'Explore Research')}</div></div></section>${joinCallout()}`;
+  return `<section class="join-callout"><div class="wrap"><div>${kicker('YOUR NEXT CHAPTER')}<h2>${t('Bring your curiosity.', '带上你的好奇心。')}</h2><p>${t('Shape the next discovery with us.', '与我们一起，开启下一次发现。')}</p></div>${link('join-us/', 'Join Us', 'button light')}</div></section>`;
 }
 function research() {
-  return `${head('RESEARCH / FOUR CONNECTED DIRECTIONS', t('From recognition<br>to <em>regulation.</em>', '从分子识别<br>到<em>功能调控。</em>'), t('Follow a scientific question through the studies that address it. Research can connect more than one direction.', '沿着科学问题探索相关研究；一项工作可以连接多个方向。'))}
+  return `${head('RESEARCH / FOUR CONNECTED DIRECTIONS', t('From recognition<br>to <em>regulation.</em>', '从分子识别<br>到<em>功能调控。</em>'), t('We uncover molecular interactions and engineer functional nucleic acids for biology and medicine.', '我们揭示分子相互作用，设计与构建功能核酸，服务于生物学与医学。'))}
     <div class="wrap section">${data.areas.map((a, i) => `<section class="research-row"><div><h2><a href="${areaURL(a.id)}">${a.title}</a></h2>${lang === 'zh' ? `<h3 lang="zh">${esc(a.subtitle.zh)}</h3><p lang="en"><em>${esc(a.subtitle.en)}</em></p>` : `<h3>${esc(a.subtitle.en)}</h3>`}<p>${esc(local(a.lead))}</p>
       <p class="small-note research-keywords" lang="en">${a.keywords.map(esc).join(' · ')}</p>
       ${lang === 'zh' ? `<p class="small-note research-backgrounds">${esc(a.overviewZh.backgrounds)}</p>` : ''}${link(`research/${a.id}/`, t('Explore this direction', '探索研究方向'), 'button outline')}</div>
@@ -184,7 +172,7 @@ function researchers() {
   }).join('')}</div>`;
 }
 function minds() {
-  return `${head('MINDS / THE PEOPLE BEHIND DISCOVERY', t('Different minds.<br><em>Shared curiosity.</em>', '不同的思维，<br><em>共同的好奇。</em>'), t('Science is driven by questions, shaped by ideas, and advanced by people.', '科学由问题驱动，由思想塑造，由人推动。'))}
+  return `${head('MINDS / THE PEOPLE BEHIND DISCOVERY', t('Different minds.<br><em>Shared curiosity.</em>', '不同的思维，<br><em>共同的好奇心。</em>'), t('Science is driven by questions, shaped by ideas, and advanced by people.', '科学由问题驱动，由思想塑造，由人推动。'))}
     <section class="wrap section pi-panel">${kicker('01 / MEET THE PI')}<div class="intro"><div><h2>${t('Qin Wu', '吴芩')}</h2><p class="eyebrow">PRINCIPAL INVESTIGATOR</p><p>${t('Hangzhou Institute of Medicine<br>Chinese Academy of Sciences', '中国科学院杭州医学研究所')}</p></div><div><p class="large-text">${t('Connecting molecular tools with the complexity of living systems.', '连接分子工具与复杂的生命系统。')}</p><p>${t('Our research integrates chemical biology, molecular and cellular biology, and bioinformatics to understand cell states and develop new strategies for precision medicine.', '我们综合化学生物学、分子与细胞生物学及生物信息学方法，理解细胞状态，发展精准医学的新策略。')}</p>${link('minds/pi/', t('More about the PI', '了解研究负责人'))}</div></div></section>
     <section class="section soft"><div class="wrap">${sectionHead('02 / MEET THE DISCOVERERS', t('Every discovery has a story.', '每个发现，都有一个故事。'))}${researchers()}</div></section>
     <section id="origins" class="section wrap">${sectionHead('03 / WHERE WE COME FROM', t('Many journeys. One mission.', '不同的来路，共同的使命。'))}
@@ -192,21 +180,24 @@ function minds() {
     <div class="origins-layout"><div id="origin-map" class="origin-map" aria-label="${t('Team origins by province', '团队家乡省份汇总')}"></div><div><p class="eyebrow">${t('Places we call home', '家乡来源')}</p><div class="origin-list">${data.origins.locations.map(p => `<button data-province="${p.id}" class="origin-chip">${esc(p[lang])}</button>`).join('')}</div>
     <p id="origin-status" class="map-status" role="status">${t('Select a place to trace its connection to Hangzhou.', '选择一个地点，查看通往杭州的连接。')}</p><p class="small-note">${t('Province-level markers are schematic, not individual addresses.', '点位为省级示意，不代表个人地址。')}</p></div></div></section>
     <section id="culture" class="section soft"><div class="wrap">${sectionHead('04 / CULTURE', t('One team. All in.', '同一个团队，全心投入。'))}
-    <div class="values">${[['Stay curious.', '保持好奇。'], ['Think independently.', '独立思考。'], ['Create together.', '协同创造。'], ['Aim high.', '志存高远。']].map(([en, zh]) => `<span>${t(en, zh)}</span>`).join('')}</div>
+    <div class="values">${[['Stay curious.', '保持好奇心。'], ['Think independently.', '独立思考。'], ['Create together.', '协同创造。'], ['Aim high.', '志存高远。']].map(([en, zh]) => `<span>${t(en, zh)}</span>`).join('')}</div>
     ${activityCarousel()}</div></section>${joinCallout()}`;
 }
 function pi() {
   return `${head('MINDS / MEET THE PI', t('Qin Wu', '吴芩'), t('Principal Investigator · Hangzhou Institute of Medicine, CAS', '研究员 · 中国科学院杭州医学研究所'))}
-    <section class="wrap section prose standalone">${[1, 2].map(i => `<p>${esc(data.people[lang][`people.pi.bio${i}`])}</p>`).join('')}<p>${slogan()}</p><div class="button-row">${link('research/', 'Research', 'button')}<a class="button outline" href="mailto:wuqin@him.cas.cn">${t('Get in touch', '邮件联系')}</a></div></section>`;
+    <section class="wrap section pi-profile"><figure class="pi-portrait"><img src="${url('assets/minds/pi/PIimage.png')}" width="280" height="280" alt="${t('Portrait of Qin Wu', '吴芩研究员肖像')}" fetchpriority="high"></figure><div class="prose">${[1, 2].map(i => `<p>${esc(data.people[lang][`people.pi.bio${i}`])}</p>`).join('')}<p>${slogan()}</p><div class="button-row">${link('research/', 'Research', 'button')}<a class="button outline" href="mailto:wuqin@him.cas.cn">${t('Get in touch', '邮件联系')}</a></div></div></section>`;
 }
 function carousel(slides, id, vertical = false, delay = 4000, expandable = false) {
   return `<div class="carousel ${vertical ? 'vertical' : ''}" id="${id}" data-delay="${delay}" data-expandable="${expandable}">
     <div class="carousel-window"><div class="carousel-track">${slides.map((s, i) => `<div class="slide" ${i ? 'inert aria-hidden="true"' : ''}>${s}</div>`).join('')}</div></div>
     <div class="carousel-dots" aria-label="${t('Choose a slide', '选择幻灯片')}">${slides.map((_, i) => `<button class="dot ${i ? '' : 'active'}" data-slide="${i}" aria-label="${t('Slide', '第')} ${i + 1}" aria-pressed="${!i}"></button>`).join('')}</div>
-    <div class="carousel-actions"><button class="plain-button pause">${t('Pause', '暂停')}</button>${expandable ? `<button class="plain-button expand" aria-expanded="false">${more()}</button>` : ''}</div></div>`;
+    ${expandable ? `<div class="carousel-actions"><button class="plain-button expand" aria-expanded="false">${more()}</button></div>` : ''}</div>`;
+}
+function newsCard(n) {
+  return `<article class="news-card"><p class="eyebrow">${n.date}</p><h3><a href="${url(`news/${n.id}.html`)}">${esc(local(n).title)}</a></h3><p>${esc(local(n).summary)}</p>${link(`news/${n.id}.html`, t('Read more', '阅读全文'))}</article>`;
 }
 function newsCarousel(items, id) {
-  return carousel(items.map(n => `<article class="news-card"><p class="eyebrow">${n.date}</p><h3><a href="${url(`news/${n.id}.html`)}">${esc(local(n).title)}</a></h3><p>${esc(local(n).summary)}</p>${link(`news/${n.id}.html`, t('Read more', '阅读全文'))}</article>`), id, false, 4000, true);
+  return carousel(items.map(newsCard), id);
 }
 function activityCarousel() {
   return carousel(data.activities.map(a => `<article class="activity-cover"><div><p class="eyebrow">${esc(local(a).date)}</p><h3>${esc(local(a).title)}</h3><p>${esc(local(a).summary)}</p>${link(`minds/activity.html?id=${a.id}`, t('View activity', '查看活动'))}</div></article>`), 'culture-slides', true, 4500, true);
@@ -218,11 +209,11 @@ function activityPage() {
     <section class="wrap section prose standalone"><p class="large-text">${esc(local(a).summary)}</p>${link('minds/#culture', t('Back to Culture', '返回团队文化'))}</section>`;
 }
 function newsPage(id) {
-  if (!id) return `${head('LAB NOTES / NEWS & MILESTONES', 'News', t('Discoveries, recognition and moments from the lab.', '记录团队的研究进展、荣誉与重要时刻。'))}<section class="section wrap">${newsCarousel(data.news, 'all-news')}</section>`;
+  if (!id) return `${head('LAB NOTES / NEWS & MILESTONES', t('Latest News', '最新动态'), t('Discoveries, recognition and moments from the lab.', '记录团队的研究进展、荣誉与重要时刻。'))}<section class="section wrap"><div class="news-grid">${data.news.map(newsCard).join('')}</div></section>`;
   const n = data.news.find(n => n.id === id);
   if (!n) return notFound();
   const body = local(n).body.replace(/<p><a class="tool-link"[\s\S]*?<\/p>/g, '')
-    .replaceAll('Wu Lab', 'PROBE Lab').replaceAll('吴芩课题组', '功能核酸组学团队');
+    .replaceAll('Wu Lab', 'Aptomics & Cell Atlas').replaceAll('吴芩课题组', '功能核酸组学团队');
   return `${head('NEWS / ' + n.date, esc(local(n).title))}<article class="section wrap prose standalone">${body || `<p>${esc(local(n).summary)}</p>`}${link('news/', t('Back to News', '返回新闻'))}</article>`;
 }
 function toolsPage() {
@@ -233,7 +224,7 @@ function join() {
   const d = data.join[lang];
   const p = key => d[`join.${key}`];
   return `${head('OPPORTUNITIES / 2026', 'Join Us')}
-    <section class="wrap section join-intro"><h2>${t('Your curiosity.<br>Our next discovery.', '你的好奇，<br>我们的下一次发现。')}</h2><p>${t('We welcome students and researchers working across chemistry, biology, computation and medicine.', '我们欢迎化学、生物、计算与医学等领域的学生和研究者。')}</p><a class="button" href="mailto:wuqin@him.cas.cn">wuqin@him.cas.cn ↗</a></section>
+    <section class="wrap section join-intro"><h2>${t('Your curiosity.<br>Our next discovery.', '你的好奇心，<br>我们的下一次发现。')}</h2><p>${t('We welcome students and researchers working across chemistry, biology, computation and medicine.', '我们欢迎化学、生物、计算与医学等领域的学生和研究者。')}</p><a class="button" href="mailto:wuqin@him.cas.cn">wuqin@him.cas.cn ↗</a></section>
     <section class="soft section"><div class="wrap intro"><div>${kicker('01 / GRADUATE RESEARCH')}<h2>${p('students.title')}</h2><p>${p('students.lead')}</p></div><div>${[1, 2, 3].map(i => `<details class="admission"><summary>${p(`path${i}.title`)}</summary><p>${p(`path${i}.body`)}</p></details>`).join('')}<details class="admission"><summary>${p('joint.title')}</summary><p>${p('joint.body')}</p></details></div></div></section>
     <section class="section wrap"><div class="intro"><div>${kicker('02 / POSTDOCTORAL RESEARCH')}<h2>${p('postdoc.title')}</h2><p>${p('postdoc.lead')}</p><p>${p('background.body')}</p></div>
     <div><h3>${p('requirements.title')}</h3><ul>${[1, 2, 3].map(i => `<li>${p(`req${i}`)}</li>`).join('')}</ul><h3>${p('benefits.title')} · 2026</h3><ul>${[1, 2, 3].map(i => `<li>${p(`benefit${i}`)}</li>`).join('')}</ul><p>${p('benefits.note')}</p><p class="small-note">${t('Amounts are retained from the supplied recruitment information. Final eligibility, funding and benefits follow the institute’s applicable policies and offer.', '金额沿用已有招聘资料。申请资格、资助与最终待遇以研究所适用政策和录用文件为准。')}</p></div></div></section>
@@ -249,7 +240,7 @@ function render() {
   const [type, id] = page.split(':');
   switch (type) {
     case 'home': content = home(); break;
-    case 'vision': content = vision(); break;
+    case 'vision': content = home(); break;
     case 'research': content = research(); break;
     case 'area': content = areaPage(id); break;
     case 'study': content = studyPage(id || params().get('study')); break;
@@ -268,7 +259,25 @@ function render() {
     default: content = notFound();
   }
   document.querySelector('#app').innerHTML = `<div id="top"></div>${header()}<main id="main">${content}</main>${footer()}`;
-  document.title = `${document.querySelector('h1')?.textContent || 'Research'} | PROBE Lab`;
+  document.title = `${document.querySelector('h1')?.textContent || 'Research'} | Aptomics & Cell Atlas`;
+  const themeButton = document.querySelector('#theme-toggle');
+  const updateThemeButton = () => {
+    const mode = window.probeTheme?.mode || 'system';
+    const labels = { system: t('Auto', '自动'), light: t('Light', '浅色'), dark: t('Dark', '深色') };
+    const next = { system: 'light', light: 'dark', dark: 'system' }[mode];
+    const dark = document.documentElement.dataset.theme === 'dark';
+    document.querySelector('.header-institution').src = url(`assets/branding/${dark ? 'HIMCASlogo2-dark-v2.svg' : 'HIMCASlogo2.png'}`);
+    const icon = dark
+      ? '<path d="M20.5 13A8.5 8.5 0 0 1 11 3.5 8.5 8.5 0 1 0 20.5 13Z"/>'
+      : '<circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/>';
+    themeButton.innerHTML = `<svg viewBox="0 0 24 24" width="21" height="21" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">${icon}</svg>`;
+    themeButton.setAttribute('aria-label', t(`Theme: ${labels[mode]}. Switch to ${labels[next]}`, `配色：${labels[mode]}。切换为${labels[next]}`));
+    themeButton.title = themeButton.getAttribute('aria-label');
+  };
+  themeButton.onclick = () => window.probeTheme?.cycle();
+  window.addEventListener('themechange', updateThemeButton);
+  cleanups.push(() => window.removeEventListener('themechange', updateThemeButton));
+  updateThemeButton();
   document.querySelector('#language').onclick = () => {
     const y = scrollY;
     lang = lang === 'en' ? 'zh' : 'en'; storage.set('siteLang', lang);
@@ -296,7 +305,7 @@ function initCarousels() {
   document.querySelectorAll('.carousel').forEach(el => {
     let index = 0, timer, expanded = false, paused = reduced.matches, hovering = false, focused = false;
     const slides = [...el.querySelectorAll('.slide')], dots = [...el.querySelectorAll('.dot')];
-    const track = el.querySelector('.carousel-track'), pause = el.querySelector('.pause');
+    const track = el.querySelector('.carousel-track');
     function show(next) {
       index = (next + slides.length) % slides.length;
       track.style.transform = expanded ? '' : el.classList.contains('vertical')
@@ -310,8 +319,6 @@ function initCarousels() {
       timer = setTimeout(() => { show(index + 1); schedule(); }, delay);
     }
     dots.forEach((d, i) => d.onclick = () => { show(i); schedule(); });
-    pause.onclick = () => { paused = !paused; pause.textContent = paused ? t('Play', '播放') : t('Pause', '暂停'); schedule(); };
-    if (paused) pause.textContent = t('Play', '播放');
     const expand = el.querySelector('.expand');
     if (expand) expand.onclick = () => {
       expanded = !expanded; el.classList.toggle('expanded', expanded);
@@ -324,7 +331,7 @@ function initCarousels() {
     el.onfocusout = event => { if (!el.contains(event.relatedTarget)) { focused = false; schedule(); } };
     const visibility = () => schedule();
     document.addEventListener('visibilitychange', visibility);
-    const motion = () => { paused = reduced.matches; pause.textContent = paused ? t('Play', '播放') : t('Pause', '暂停'); schedule(); };
+    const motion = () => { paused = reduced.matches; schedule(); };
     reduced.addEventListener('change', motion);
     schedule(Number(el.dataset.delay));
     cleanups.push(() => { clearTimeout(timer); document.removeEventListener('visibilitychange', visibility); reduced.removeEventListener('change', motion); });
@@ -384,12 +391,12 @@ async function initMap() {
     const hub = { x: 745, y: 494 };
     target.innerHTML = `<svg viewBox="0 0 1000 738" role="group" aria-label="${t('Province-level hometown map', '省级家乡地图')}"><g class="map-land">${paths}</g><g class="map-lines">${data.origins.locations.map(p => `<path data-line="${p.id}" d="M${p.x},${p.y} Q${(p.x + hub.x) / 2},${Math.min(p.y, hub.y) - 80} ${hub.x},${hub.y}"/>`).join('')}</g>
       ${data.origins.locations.map(p => `<g class="map-point" role="button" tabindex="0" data-province="${p.id}" aria-label="${esc(p[lang])}"><circle cx="${p.x}" cy="${p.y}" r="14" class="hit"/><circle cx="${p.x}" cy="${p.y}" r="5"/><title>${esc(p[lang])}</title></g>`).join('')}
-      <g class="hub"><circle cx="${hub.x}" cy="${hub.y}" r="9"/><text x="${hub.x + 15}" y="${hub.y + 6}">Hangzhou / PROBE Lab</text></g></svg>`;
+      <g class="hub"><circle cx="${hub.x}" cy="${hub.y}" r="9"/><text x="${hub.x + 15}" y="${hub.y + 6}">Hangzhou / Aptomics & Cell Atlas</text></g></svg>`;
     const select = id => {
       const province = data.origins.locations.find(p => p.id === id);
       document.querySelectorAll('[data-province]').forEach(el => el.classList.toggle('selected', el.dataset.province === id));
       target.querySelectorAll('[data-line]').forEach(el => el.classList.toggle('selected', el.dataset.line === id));
-      document.querySelector('#origin-status').textContent = `${province[lang]} → ${t('Hangzhou / PROBE Lab', '杭州 / 功能核酸组学团队')}`;
+      document.querySelector('#origin-status').textContent = `${province[lang]} → ${t('Hangzhou / Aptomics & Cell Atlas', '杭州 / 功能核酸组学团队')}`;
     };
     document.querySelectorAll('[data-province]').forEach(el => {
       el.onclick = () => select(el.dataset.province);
@@ -410,5 +417,5 @@ try {
   });
 } catch (error) {
   console.error(error);
-  document.querySelector('#app').innerHTML = `<main class="wrap section"><h1>PROBE Lab</h1><p>${t('The page could not load. Please refresh or open this site using a local HTTP server.', '页面加载失败。请刷新，或通过本地 HTTP 服务打开网站。')}</p><a href="mailto:wuqin@him.cas.cn">wuqin@him.cas.cn</a></main>`;
+  document.querySelector('#app').innerHTML = `<main class="wrap section"><h1>Aptomics & Cell Atlas</h1><p>${t('The page could not load. Please refresh or open this site using a local HTTP server.', '页面加载失败。请刷新，或通过本地 HTTP 服务打开网站。')}</p><a href="mailto:wuqin@him.cas.cn">wuqin@him.cas.cn</a></main>`;
 }

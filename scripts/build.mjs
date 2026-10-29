@@ -127,7 +127,7 @@ const join = read('join.json');
 for (const lang of ['en', 'zh']) {
   for (const [key, value] of Object.entries(join[lang])) {
     join[lang][key] = value.replace(/\b202[45]\b/g, '2026')
-      .replaceAll('Wu Lab', 'PROBE Lab').replaceAll('吴芩课题组', '功能核酸组学团队');
+      .replaceAll('Wu Lab', 'Aptomics & Cell Atlas').replaceAll('吴芩课题组', '功能核酸组学团队');
   }
 }
 // Do not turn old named notices into invented 2026 announcements.
@@ -137,11 +137,11 @@ join.en['join.path2.body'] = 'For recommended admission and direct PhD entry in 
 join.zh['join.path2.body'] = '2026 年推免与直博申请请查阅正式招生通知，并通过邮件确认名额与申请安排。';
 join.en['join.path3.body'] = 'For 2026 graduate entrance examinations, consult the institute admissions brochure and programme catalogue. Deadlines follow official notices.';
 join.zh['join.path3.body'] = '2026 年研究生招生考试请参考研究所正式招生简章及专业目录，具体时间以官方通知为准。';
-const logo = 'assets/branding/probe-logo.png';
+const logo = 'assets/branding/aptomics-cell-atlas-logo.png';
 const data = {
   version: 11, logo: fs.existsSync(path.join(root, logo)) ? logo : null,
   areas, studies, news, activities, join, people: read('people.json'),
-  origins: fs.existsSync(path.join(root, 'data/origins.json')) ? read('origins.json') : { locations: [] },
+  origins: JSON.parse(fs.readFileSync(path.join(root, 'assets/people/origins.json'), 'utf8')),
   researchers: [
     { id: 'guoyan-luo', en: 'Guoyan Luo', zh: '罗国焰', study: 'spark-seq' },
     { id: 'xiaoqiu-wu', en: 'Xiaoqiu Wu', zh: '武晓秋', study: 'apt-seq' },
@@ -156,8 +156,8 @@ for (const s of studies) {
 }
 write('data/site.json', JSON.stringify(data, null, 2) + '\n');
 const routes = new Map([
-  ['index.html', ['home', 'PROBE Lab']],
-  ['vision/index.html', ['vision', 'Vision']],
+  ['index.html', ['home', 'Aptomics & Cell Atlas']],
+  ['vision/index.html', ['home', 'Vision']],
   ['research/index.html', ['research', 'Research']],
   ['research/tools/index.html', ['tools', 'Tools & Resources']],
   ['research/study.html', ['study', 'Research story']],
@@ -169,7 +169,7 @@ const routes = new Map([
   ['minds/story.html', ['person', 'Meet the Discoverer']],
   ['minds/activity.html', ['activity', 'Culture']],
   ['join-us/index.html', ['join', 'Join Us']],
-  ['news/index.html', ['news', 'News']],
+  ['news/index.html', ['news', 'Latest News']],
   ['people/index.html', ['minds', 'Minds']],
   ['publications/index.html', ['publications', 'All Publications']],
   ['software/index.html', ['tools', 'Tools & Resources']],
@@ -193,7 +193,7 @@ function inherited(dir = root) {
         routes.set(rel, [`study:${legacyStudies[entry.name.replace('.html', '')]}`, 'Research story']);
       } else if (!routes.has(rel)) {
         const old = entry.name.replace('.html', '');
-        routes.set(rel, [legacyStudies[old] ? `study:${legacyStudies[old]}` : 'research', 'PROBE Lab']);
+        routes.set(rel, [legacyStudies[old] ? `study:${legacyStudies[old]}` : 'research', 'Aptomics & Cell Atlas']);
       }
     }
   }
@@ -201,16 +201,21 @@ function inherited(dir = root) {
 inherited();
 const appVersion = createHash('sha256').update(fs.readFileSync(path.join(root, 'app.js'))).update(fs.readFileSync(path.join(root, 'data/site.json'))).digest('hex').slice(0, 12);
 const styleVersion = createHash('sha256').update(fs.readFileSync(path.join(root, 'probe.css'))).digest('hex').slice(0, 12);
+const themeVersion = createHash('sha256').update(fs.readFileSync(path.join(root, 'theme.js'))).digest('hex').slice(0, 12);
+const layoutVersion = createHash('sha256').update(fs.readFileSync(path.join(root, 'layout-scale.js'))).digest('hex').slice(0, 12);
 for (const [file, [page, title]] of routes) {
   const depth = file.split('/').length - 1;
   const base = '../'.repeat(depth) || './';
   write(file, `<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>${title} | PROBE Lab</title><meta name="description" content="PROBE Lab. Functional nucleic acid omics, molecular recognition and precision medicine.">
+<title>${title} | Aptomics & Cell Atlas</title><meta name="description" content="Aptomics & Cell Atlas. Functional nucleic acid omics, molecular recognition and precision medicine.">
+${file === 'vision/index.html' ? '<link rel="canonical" href="../"><script>location.replace("../" + location.search + location.hash);</script>' : ''}
 <link rel="icon" href="${base}${data.logo || 'assets/branding/logo.svg'}">
+<script src="${base}theme.js?v=${themeVersion}"></script>
+<script src="${base}layout-scale.js?v=${layoutVersion}"></script>
 <link rel="stylesheet" href="${base}probe.css?v=${styleVersion}"><script type="module" src="${base}app.js?v=${appVersion}"></script></head>
 <body data-page="${page}"><a class="skip-link" href="#main">Skip to content</a>
-<div id="app"><main id="main" class="loading"><p>PROBE Lab</p><p>Loading research and stories...</p></main></div>
+<div id="app"><main id="main" class="loading"><p>Aptomics & Cell Atlas</p><p>Loading research and stories...</p></main></div>
 <noscript>This website requires JavaScript. Please enable it to browse our research. Contact: wuqin@him.cas.cn</noscript>
 </body></html>\n`);
 }
