@@ -229,6 +229,7 @@ li{margin-bottom:10px}
 .pi-panel{border-bottom:1px solid var(--line)}
 .pi-profile{display:grid;grid-template-columns:280px minmax(0,1fr);gap:60px;align-items:start}
 .pi-portrait{margin:0;width:100%;max-width:280px}
+.pi-preview{margin-bottom:24px}
 .pi-portrait img{width:100%;height:auto;border-radius:3px}
 @media(max-width:850px){.pi-profile{grid-template-columns:1fr;gap:32px}}
 .researcher-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:30px}

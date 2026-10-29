@@ -122,6 +122,7 @@ for (const file of htmlFiles()) {
 }
 {
   const c = await open('minds/');
+  check(c.d.querySelector('.pi-panel .pi-preview img')?.getAttribute('src').endsWith('/assets/minds/pi/PIimage.png'), 'PI preview includes portrait');
   check(!c.d.querySelector('.pause'), 'Activities have no playback control');
   check(c.d.querySelectorAll('.researcher-card').length === 3, 'Only three selected people');
   const origins = JSON.parse(fs.readFileSync(path.join(root, 'assets/people/origins.json'), 'utf8'));
