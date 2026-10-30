@@ -139,7 +139,7 @@ const join = read('join.json');
 for (const lang of ['en', 'zh']) {
   for (const [key, value] of Object.entries(join[lang])) {
     join[lang][key] = value.replace(/\b202[45]\b/g, '2026')
-      .replaceAll('Wu Lab', 'Aptomics & Cell Atlas').replaceAll('吴芩课题组', '功能核酸组学团队');
+      .replaceAll('Wu Lab', 'Probe Lab').replaceAll('吴芩课题组', '功能核酸组学团队');
   }
 }
 // Do not turn old named notices into invented 2026 announcements.
@@ -168,7 +168,7 @@ for (const s of studies) {
 }
 write('data/site.json', JSON.stringify(data, null, 2) + '\n');
 const routes = new Map([
-  ['index.html', ['home', 'Aptomics & Cell Atlas']],
+  ['index.html', ['home', 'Probe Lab']],
   ['vision/index.html', ['home', 'Vision']],
   ['research/index.html', ['research', 'Research']],
   ['research/tools/index.html', ['tools', 'Tools & Resources']],
@@ -205,7 +205,7 @@ function inherited(dir = root) {
         routes.set(rel, [`study:${legacyStudies[entry.name.replace('.html', '')]}`, 'Research story']);
       } else if (!routes.has(rel)) {
         const old = entry.name.replace('.html', '');
-        routes.set(rel, [legacyStudies[old] ? `study:${legacyStudies[old]}` : 'research', 'Aptomics & Cell Atlas']);
+        routes.set(rel, [legacyStudies[old] ? `study:${legacyStudies[old]}` : 'research', 'Probe Lab']);
       }
     }
   }
@@ -220,14 +220,14 @@ for (const [file, [page, title]] of routes) {
   const base = '../'.repeat(depth) || './';
   write(file, `<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>${title} | Aptomics & Cell Atlas</title><meta name="description" content="Aptomics & Cell Atlas. Functional nucleic acid omics, molecular recognition and precision medicine.">
+<title>${title} | Probe Lab</title><meta name="description" content="Probe Lab. Functional nucleic acid omics, molecular recognition and precision medicine.">
 ${file === 'vision/index.html' ? '<link rel="canonical" href="../"><script>location.replace("../" + location.search + location.hash);</script>' : ''}
 <link rel="icon" href="${base}${data.logo || 'assets/branding/logo.svg'}">
 <script src="${base}theme.js?v=${themeVersion}"></script>
 <script src="${base}layout-scale.js?v=${layoutVersion}"></script>
 <link rel="stylesheet" href="${base}probe.css?v=${styleVersion}"><script type="module" src="${base}app.js?v=${appVersion}"></script></head>
 <body data-page="${page}"><a class="skip-link" href="#main">Skip to content</a>
-<div id="app"><main id="main" class="loading"><p>Aptomics & Cell Atlas</p><p>Loading research and stories...</p></main></div>
+<div id="app"><main id="main" class="loading"><p>Probe Lab</p><p>Loading research and stories...</p></main></div>
 <noscript>This website requires JavaScript. Please enable it to browse our research. Contact: wuqin@him.cas.cn</noscript>
 </body></html>\n`);
 }

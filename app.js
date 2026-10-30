@@ -25,13 +25,13 @@ const slogan = () => '<span class="handwritten">wonder for science, wonders in l
 function brand(big = false) {
   return `<div class="brand-lockup ${big ? 'brand-large' : ''}">
     ${data.logo ? `<span class="brand-picture"><img src="${url(data.logo)}" alt="${t('W-shaped nucleic acid logo', 'W 形核酸标志')}" ${big ? 'fetchpriority="high"' : ''}></span>` : ''}
-    <span class="brand-words"><strong>Aptomics & Cell Atlas</strong><span lang="zh">功能核酸组学团队</span></span></div>`;
+    <span class="brand-words"><strong>Probe Lab</strong><span lang="zh">功能核酸组学团队</span></span></div>`;
 }
 function header() {
   const active = page.startsWith('area') || page.startsWith('study') || page === 'tools' ? 'research'
     : page === 'publications' ? 'discoveries' : ['pi', 'person', 'activity'].includes(page) ? 'minds' : page.startsWith('news:') ? 'news' : page;
   return `<header class="site-header"><div class="header-inner">
-    <div class="header-brand"><a class="brand-home" href="${url('')}" aria-label="Aptomics & Cell Atlas Home">${brand()}</a>
+    <div class="header-brand"><a class="brand-home" href="${url('')}" aria-label="Probe Lab Home">${brand()}</a>
     <span class="brand-divider" aria-hidden="true"></span><img class="header-institution" src="${url('assets/branding/HIMCASlogo2.png')}" alt="${t('Hangzhou Institute of Medicine, CAS', '中国科学院杭州医学研究所')}"></div>
     <div class="header-actions"><button id="menu" class="plain-button menu-toggle" aria-controls="nav" aria-expanded="false">${t('Menu', '菜单')}</button>
     <nav id="nav" aria-label="${t('Main navigation', '主导航')}">${[['', 'Vision'], ['research', 'Research'], ['discoveries', 'Discoveries'], ['minds', 'Minds'], ['news', 'Latest News'], ['join-us', 'Join Us']].map(([route, name]) =>
@@ -41,12 +41,12 @@ function header() {
     </div></header>`;
 }
 function footer() {
-  return `<footer class="footer"><div class="wrap footer-grid"><div><a class="footer-brand" href="${url('')}" aria-label="Aptomics & Cell Atlas Home"><span class="brand-picture"><img src="${url(data.logo)}" alt="" loading="lazy"></span><span class="footer-brand-name">Aptomics &amp; Cell Atlas</span></a><p>功能核酸组学团队</p><p>${slogan()}</p></div>
+  return `<footer class="footer"><div class="wrap footer-grid"><div><a class="footer-brand" href="${url('')}" aria-label="Probe Lab Home"><span class="brand-picture"><img src="${url(data.logo)}" alt="" loading="lazy"></span><span class="footer-brand-name">Probe Lab</span></a><p>功能核酸组学团队</p><p>${slogan()}</p></div>
     <div><p class="eyebrow">${t('Based in Hangzhou', '立足杭州')}</p>
     <p><a href="https://www.him.cas.cn/" target="_blank" rel="noopener noreferrer">${t('Hangzhou Institute of Medicine<br>Chinese Academy of Sciences', '中国科学院杭州医学研究所')}</a><br>${t('150 Dongfang Street, Hangzhou, China', '杭州市钱塘区东方街 150 号')}</p></div>
     <div><p class="eyebrow">${t('Stay connected', '保持联系')}</p><a href="mailto:wuqin@him.cas.cn">wuqin@him.cas.cn</a><div class="footer-links">
     ${link('', 'Vision')}${link('research/', 'Research')}${link('discoveries/', 'Discoveries')}${link('minds/', 'Minds')}${link('join-us/', 'Join Us')}${link('news/', 'News')}${link('discoveries/publications/', 'All Publications')}${link('minds/#culture', 'Culture')}${link('research/tools/', 'Tools & Resources')}</div></div></div>
-    <div class="wrap footer-bottom"><span>© 2026 Aptomics & Cell Atlas</span><span>${t('Recognition. Discovery. Possibility.', '识别 · 发现 · 可能')}</span><a href="#top">${t('Back to top ↑', '返回顶部 ↑')}</a></div></footer>`;
+    <div class="wrap footer-bottom"><span>© 2026 Probe Lab</span><span>${t('Recognition. Discovery. Possibility.', '识别 · 发现 · 可能')}</span><a href="#top">${t('Back to top ↑', '返回顶部 ↑')}</a></div></footer>`;
 }
 function scienceCard(s, number = '') {
   const article = local(s.article);
@@ -240,7 +240,7 @@ function newsPage(id) {
   const n = data.news.find(n => n.id === id);
   if (!n) return notFound();
   const body = local(n).body.replace(/<p><a class="tool-link"[\s\S]*?<\/p>/g, '')
-    .replaceAll('Wu Lab', 'Aptomics & Cell Atlas').replaceAll('吴芩课题组', '功能核酸组学团队');
+    .replaceAll('Wu Lab', 'Probe Lab').replaceAll('吴芩课题组', '功能核酸组学团队');
   const category = newsCategories[n.category] || newsCategories.people;
   const related = data.news.filter(item => item.id !== n.id).sort((a, b) => Number(b.category === n.category) - Number(a.category === n.category)).slice(0, 3);
   return `${head(`NEWS / ${t(category.en, category.zh)} · ${n.dateKind === 'record' ? t('Archive date: ', '记录日期：') : ''}${newsDate(n.date)}`, esc(local(n).title), esc(local(n).summary))}<section class="section wrap news-detail"><article class="news-detail-main"><figure class="news-detail-media">${newsMedia(n)}${n.showCaption === false ? '' : `<figcaption>${esc(local(n.caption) || t('Section illustration', '栏目示意图'))}</figcaption>`}</figure><div class="prose news-detail-copy">${body || `<p>${esc(local(n).summary)}</p>`}</div>${newsExtras(n)}${link('news/', t('Back to all news', '返回全部新闻'))}</article><aside class="news-related"><p class="eyebrow">${t('LATEST NEWS', '近期新闻')}</p>${related.map(item => `<article><p class="eyebrow"><time datetime="${esc(item.date)}">${newsDate(item.date)}</time></p><h3><a href="${url(`news/${item.id}.html`)}">${esc(local(item).title)}</a></h3></article>`).join('')}${link('news/', t('Browse all news', '查看全部新闻'))}</aside></section>`;
@@ -288,7 +288,7 @@ function render() {
     default: content = notFound();
   }
   document.querySelector('#app').innerHTML = `<div id="top"></div>${header()}<main id="main">${content}</main>${footer()}`;
-  document.title = `${document.querySelector('h1')?.textContent || 'Research'} | Aptomics & Cell Atlas`;
+  document.title = `${document.querySelector('h1')?.textContent || 'Research'} | Probe Lab`;
   const themeButton = document.querySelector('#theme-toggle');
   const updateThemeButton = () => {
     const mode = window.probeTheme?.mode || 'system';
@@ -420,12 +420,12 @@ async function initMap() {
     const hub = { x: 745, y: 494 };
     target.innerHTML = `<svg viewBox="0 0 1000 738" role="group" aria-label="${t('Province-level hometown map', '省级家乡地图')}"><g class="map-land">${paths}</g><g class="map-lines">${data.origins.locations.map(p => `<path data-line="${p.id}" d="M${p.x},${p.y} Q${(p.x + hub.x) / 2},${Math.min(p.y, hub.y) - 80} ${hub.x},${hub.y}"/>`).join('')}</g>
       ${data.origins.locations.map(p => `<g class="map-point" role="button" tabindex="0" data-province="${p.id}" aria-label="${esc(p[lang])}"><circle cx="${p.x}" cy="${p.y}" r="14" class="hit"/><circle cx="${p.x}" cy="${p.y}" r="5"/><title>${esc(p[lang])}</title></g>`).join('')}
-      <g class="hub"><circle cx="${hub.x}" cy="${hub.y}" r="9"/><text x="${hub.x + 15}" y="${hub.y + 6}">Hangzhou / Aptomics & Cell Atlas</text></g></svg>`;
+      <g class="hub"><circle cx="${hub.x}" cy="${hub.y}" r="9"/><text x="${hub.x + 15}" y="${hub.y + 6}">Hangzhou / Probe Lab</text></g></svg>`;
     const select = id => {
       const province = data.origins.locations.find(p => p.id === id);
       document.querySelectorAll('[data-province]').forEach(el => el.classList.toggle('selected', el.dataset.province === id));
       target.querySelectorAll('[data-line]').forEach(el => el.classList.toggle('selected', el.dataset.line === id));
-      document.querySelector('#origin-status').textContent = `${province[lang]} → ${t('Hangzhou / Aptomics & Cell Atlas', '杭州 / 功能核酸组学团队')}`;
+      document.querySelector('#origin-status').textContent = `${province[lang]} → ${t('Hangzhou / Probe Lab', '杭州 / 功能核酸组学团队')}`;
     };
     document.querySelectorAll('[data-province]').forEach(el => {
       el.onclick = () => select(el.dataset.province);
@@ -446,5 +446,5 @@ try {
   });
 } catch (error) {
   console.error(error);
-  document.querySelector('#app').innerHTML = `<main class="wrap section"><h1>Aptomics & Cell Atlas</h1><p>${t('The page could not load. Please refresh or open this site using a local HTTP server.', '页面加载失败。请刷新，或通过本地 HTTP 服务打开网站。')}</p><a href="mailto:wuqin@him.cas.cn">wuqin@him.cas.cn</a></main>`;
+  document.querySelector('#app').innerHTML = `<main class="wrap section"><h1>Probe Lab</h1><p>${t('The page could not load. Please refresh or open this site using a local HTTP server.', '页面加载失败。请刷新，或通过本地 HTTP 服务打开网站。')}</p><a href="mailto:wuqin@him.cas.cn">wuqin@him.cas.cn</a></main>`;
 }
