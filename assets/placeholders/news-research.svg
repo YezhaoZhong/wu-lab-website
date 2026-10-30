@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Research story image placeholder</title>
+  <desc id="desc">A molecular network illustration marking a space for a research image.</desc>
+  <defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#102b43"/><stop offset="1" stop-color="#174254"/></linearGradient><radialGradient id="node"><stop stop-color="#86f2df"/><stop offset="1" stop-color="#35b9b1"/></radialGradient></defs>
+  <rect width="1200" height="760" fill="url(#bg)"/>
+  <g fill="none" stroke="#5ed6c8" stroke-opacity=".36" stroke-width="3"><path d="M290 230 470 330 635 205 810 315 950 205M470 330 390 510 610 565 810 315 760 525 950 205M635 205 610 565"/><path d="M290 230 390 510M810 315 1020 470 760 525"/></g>
+  <g fill="url(#node)"><circle cx="290" cy="230" r="23"/><circle cx="470" cy="330" r="34"/><circle cx="635" cy="205" r="19"/><circle cx="810" cy="315" r="28"/><circle cx="950" cy="205" r="17"/><circle cx="390" cy="510" r="17"/><circle cx="610" cy="565" r="26"/><circle cx="760" cy="525" r="17"/><circle cx="1020" cy="470" r="13"/></g>
+  <g fill="#dceaf3" font-family="Arial,sans-serif" text-anchor="middle"><text x="600" y="663" font-size="24" letter-spacing="5">RESEARCH IMAGE</text><text x="600" y="704" font-size="19" fill="#8be9db">图片待补 · IMAGE PLACEHOLDER</text></g>
+</svg>

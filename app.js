@@ -43,7 +43,7 @@ function header() {
 function footer() {
   return `<footer class="footer"><div class="wrap footer-grid"><div><a class="footer-brand" href="${url('')}" aria-label="Aptomics & Cell Atlas Home"><span class="brand-picture"><img src="${url(data.logo)}" alt="" loading="lazy"></span><span class="footer-brand-name">Aptomics &amp; Cell Atlas</span></a><p>功能核酸组学团队</p><p>${slogan()}</p></div>
     <div><p class="eyebrow">${t('Based in Hangzhou', '立足杭州')}</p>
-    <p>${t('Hangzhou Institute of Medicine<br>Chinese Academy of Sciences', '中国科学院杭州医学研究所')}<br>${t('150 Dongfang Street, Hangzhou, China', '杭州市钱塘区东方街 150 号')}</p></div>
+    <p><a href="https://www.him.cas.cn/" target="_blank" rel="noopener noreferrer">${t('Hangzhou Institute of Medicine<br>Chinese Academy of Sciences', '中国科学院杭州医学研究所')}</a><br>${t('150 Dongfang Street, Hangzhou, China', '杭州市钱塘区东方街 150 号')}</p></div>
     <div><p class="eyebrow">${t('Stay connected', '保持联系')}</p><a href="mailto:wuqin@him.cas.cn">wuqin@him.cas.cn</a><div class="footer-links">
     ${link('', 'Vision')}${link('research/', 'Research')}${link('discoveries/', 'Discoveries')}${link('minds/', 'Minds')}${link('join-us/', 'Join Us')}${link('news/', 'News')}${link('discoveries/publications/', 'All Publications')}${link('minds/#culture', 'Culture')}${link('research/tools/', 'Tools & Resources')}</div></div></div>
     <div class="wrap footer-bottom"><span>© 2026 Aptomics & Cell Atlas</span><span>${t('Recognition. Discovery. Possibility.', '识别 · 发现 · 可能')}</span><a href="#top">${t('Back to top ↑', '返回顶部 ↑')}</a></div></footer>`;
@@ -127,6 +127,7 @@ function studyPage(id, person = null) {
   const researchers = data.researchers.filter(r => r.study === id);
   return `<div class="wrap breadcrumbs">${link('research/', 'Research')}<span>/</span>${link('discoveries/', 'Discoveries')}</div>
     ${head(person ? `MEET THE DISCOVERERS / ${esc(person[lang])}` : `${esc(s.journal)} / ${s.year}`, esc(article.title), person ? t(`A research story with ${person.en}.`, `${person.zh}参与的研究故事。`) : '')}
+    ${person?.portrait ? `<figure class="wrap story-person"><img src="${url(person.portrait)}" alt="${esc(person[lang])}"><figcaption>${esc(person[lang])} · ${t('The researcher behind the story', '研究故事中的成员')}</figcaption></figure>` : ''}
     <article class="wrap article-layout"><aside><p class="eyebrow">${t('Publication', '论文信息')}</p><p>${esc(s.publication.title)}</p><p>${esc(s.citation)}</p><p>${esc(s.journal)} · ${s.year}</p><div class="article-links"><a href="${esc(s.doiUrl)}" target="_blank" rel="noopener">DOI ↗</a><a href="${url(s.pdf)}" target="_blank" rel="noopener">${t('Read PDF', '阅读 PDF')} ↗</a></div>
     ${authorList(s)}<div class="tag-row">${s.areas.map(id => `<a class="tag" href="${areaURL(id)}">${data.areas.find(a => a.id === id).title}</a>`).join('')}</div>
     ${researchers.length && !person ? `<p class="eyebrow">MEET THE DISCOVERERS</p>${researchers.map(r => link(`minds/story.html?person=${r.id}`, esc(r[lang]))).join('')}` : ''}</aside>
@@ -168,13 +169,15 @@ function researchers() {
   return `<div class="researcher-grid">${data.researchers.map((r, i) => {
     const s = findStudy(r.study);
     return `<article class="researcher-card"><div class="researcher-number">0${i + 1} / DISCOVERER</div><h3><a href="${url(`minds/story.html?person=${r.id}`)}">${esc(r[lang])}</a></h3><p class="researcher-alt">${esc(r[lang === 'zh' ? 'en' : 'zh'])}</p>
+    ${r.portrait ? `<img class="researcher-portrait" src="${url(r.portrait)}"  alt="${esc(t(`Portrait of ${r.en}`, `${r.zh}的照片`))}" loading="lazy">` : ''}
     <div class="researcher-science"><span class="eyebrow">${s.journal} · ${s.year}</span><h4>${esc(local(s.article).title)}</h4><p>${esc(local(s.article).paragraphs[0])}</p></div>${link(`minds/story.html?person=${r.id}`, t('Read the research story', '阅读研究故事'))}</article>`;
   }).join('')}</div>`;
 }
 function minds() {
   return `${head('MINDS / THE PEOPLE BEHIND DISCOVERY', t('Different minds.<br><em>Shared curiosity.</em>', '不同的思维，<br><em>共同的好奇心。</em>'), t('Science is driven by questions, shaped by ideas, and advanced by people.', '科学由问题驱动，由思想塑造，由人推动。'))}
-    <section class="wrap section pi-panel">${kicker('01 / MEET THE PI')}<div class="intro"><div><figure class="pi-portrait pi-preview"><img src="${url('assets/minds/pi/PIimage.png')}" width="280" height="280" alt="${t('Portrait of Qin Wu', '吴芩研究员肖像')}" loading="lazy"></figure><h2>${t('Qin Wu', '吴芩')}</h2><p class="eyebrow">PRINCIPAL INVESTIGATOR</p><p>${t('Hangzhou Institute of Medicine<br>Chinese Academy of Sciences', '中国科学院杭州医学研究所')}</p></div><div><p class="large-text">${t('Connecting molecular tools with the complexity of living systems.', '连接分子工具与复杂的生命系统。')}</p><p>${t('Our research integrates chemical biology, molecular and cellular biology, and bioinformatics to understand cell states and develop new strategies for precision medicine.', '我们综合化学生物学、分子与细胞生物学及生物信息学方法，理解细胞状态，发展精准医学的新策略。')}</p>${link('minds/pi/', t('More about the PI', '了解研究负责人'))}</div></div></section>
+    <section class="wrap section pi-panel">${kicker('01 / MEET THE PI')}<div class="intro"><div><figure class="pi-portrait pi-preview"><img src="${url('assets/minds/pi/qin-wu.webp')}" width="280" height="280" alt="${t('Portrait of Qin Wu', '吴芩研究员肖像')}" loading="lazy"></figure><h2>${t('Qin Wu', '吴芩')}</h2><p class="eyebrow">PRINCIPAL INVESTIGATOR</p><p>${t('Hangzhou Institute of Medicine<br>Chinese Academy of Sciences', '中国科学院杭州医学研究所')}</p></div><div><p class="large-text">${t('Connecting molecular tools with the complexity of living systems.', '连接分子工具与复杂的生命系统。')}</p><p>${t('Our research integrates chemical biology, molecular and cellular biology, and bioinformatics to understand cell states and develop new strategies for precision medicine.', '我们综合化学生物学、分子与细胞生物学及生物信息学方法，理解细胞状态，发展精准医学的新策略。')}</p>${link('minds/pi/', t('More about the PI', '了解研究负责人'))}</div></div></section>
     <section class="section soft"><div class="wrap">${sectionHead('02 / MEET THE DISCOVERERS', t('Every discovery has a story.', '每个发现，都有一个故事。'))}${researchers()}</div></section>
+    <section class="wrap section minds-photos">${sectionHead('LIFE IN THE LAB', t('People, place and everyday research.', '团队、空间与研究日常。'))}<div class="minds-photo-grid"><figure class="minds-group"><img src="${url('assets/minds/group.webp')}" alt="${t('Lab group photograph', '课题组合影')}" loading="lazy"><figcaption>${t('A moment together, from the lab photo archive.', '来自课题组照片档案的合影记录。')}</figcaption></figure><figure><img src="${url('assets/minds/lab-work.webp')}" alt="${t('Researchers at work in the laboratory', '实验室中的研究工作')}" loading="lazy"><figcaption>${t('Everyday research in the laboratory.', '实验室中的研究日常。')}</figcaption></figure><figure><img src="${url('assets/minds/institute.webp')}" alt="${t('Hangzhou Institute of Medicine campus', '杭州医学研究所院区')}" loading="lazy"><figcaption>${t('Hangzhou Institute of Medicine, CAS.', '中国科学院杭州医学研究所。')}</figcaption></figure></div></section>
     <section id="origins" class="section wrap">${sectionHead('03 / WHERE WE COME FROM', t('Many journeys. One mission.', '不同的来路，共同的使命。'))}
     <p>${t('Our journeys meet in Hangzhou. Locations are grouped by province or municipality, without names or member counts.', '我们的旅程在杭州汇合。地图按省份或直辖市汇总，不关联姓名或公开成员人数。')}</p>
     <div class="origins-layout"><div id="origin-map" class="origin-map" aria-label="${t('Team origins by province', '团队家乡省份汇总')}"></div><div><p class="eyebrow">${t('Places we call home', '家乡来源')}</p><div class="origin-list">${data.origins.locations.map(p => `<button data-province="${p.id}" class="origin-chip">${esc(p[lang])}</button>`).join('')}</div>
@@ -184,8 +187,11 @@ function minds() {
     ${activityCarousel()}</div></section>${joinCallout()}`;
 }
 function pi() {
-  return `${head('MINDS / MEET THE PI', t('Qin Wu', '吴芩'), t('Principal Investigator · Hangzhou Institute of Medicine, CAS', '研究员 · 中国科学院杭州医学研究所'))}
-    <section class="wrap section pi-profile"><figure class="pi-portrait"><img src="${url('assets/minds/pi/PIimage.png')}" width="280" height="280" alt="${t('Portrait of Qin Wu', '吴芩研究员肖像')}" fetchpriority="high"></figure><div class="prose">${[1, 2].map(i => `<p>${esc(data.people[lang][`people.pi.bio${i}`])}</p>`).join('')}<p>${slogan()}</p><div class="button-row">${link('research/', 'Research', 'button')}<a class="button outline" href="mailto:wuqin@him.cas.cn">${t('Get in touch', '邮件联系')}</a></div></div></section>`;
+  const person = data.people[lang];
+  const selectedStudies = data.studies.filter(s => ['cd4-aptamer-cells', 'spark-seq', 'apt-seq'].includes(s.id));
+  return `<section class="wrap section pi-profile"><img class="pi-profile-portrait" src="${url('assets/minds/pi/qin-wu.webp')}" width="280" height="280" alt="${t('Portrait of Qin Wu', '吴芩研究员肖像')}"><div class="pi-profile-intro"><p class="eyebrow">MINDS / MEET THE PI</p><p class="eyebrow">${t('PRINCIPAL INVESTIGATOR', '课题组负责人')}</p><h1>${esc(person['people.pi.name'])}</h1><p class="large-text">${t('Connecting molecular tools with the complexity of living systems.', '连接分子工具与复杂的生命系统。')}</p><p>${t('Hangzhou Institute of Medicine<br>Chinese Academy of Sciences', '中国科学院杭州医学研究所')}</p><div class="button-row">${link('research/', t('Explore Research', '探索研究'), 'button outline')}<a class="button outline" href="mailto:wuqin@him.cas.cn">${t('Get in touch', '邮件联系')}</a></div></div></section>
+    <section class="wrap section pi-bio-grid"><article><p class="eyebrow">${t('ACADEMIC PROFILE', '学术简介')}</p><h2>${t('Appointments and honors', '任职与荣誉')}</h2><p>${esc(person['people.pi.bio1'])}</p></article><article><p class="eyebrow">${t('RESEARCH', '研究方向')}</p><h2>${t('Research and contributions', '研究与学术贡献')}</h2><p>${esc(person['people.pi.bio2'])}</p></article></section>
+    <section class="wrap section pi-selected"><div class="section-heading"><div><p class="eyebrow">${t('SELECTED PUBLICATIONS', '代表性论文')}</p><h2>${t('Selected studies', '代表性研究')}</h2></div></div><div class="pi-selected-grid">${selectedStudies.map(s => `<article><p class="eyebrow">${esc(s.journal)} · ${esc(s.year)}</p><h3><a href="${studyURL(s.id)}">${esc(local(s.article).title)}</a></h3><p>${esc(s.publication.title)}</p><p class="pi-publication-authors">${esc(s.citation)}</p><div class="button-row">${link(`discoveries/study.html?study=${encodeURIComponent(s.id)}`, t('Read study', '阅读研究解读'))}<a class="text-link" href="${esc(s.doiUrl)}" target="_blank" rel="noopener">DOI ↗</a></div></article>`).join('')}</div></section><section class="wrap section pi-signoff">${slogan()}</section>`;
 }
 function carousel(slides, id, vertical = false, delay = 4000, expandable = false) {
   return `<div class="carousel ${vertical ? 'vertical' : ''}" id="${id}" data-delay="${delay}" data-expandable="${expandable}">
@@ -193,28 +199,51 @@ function carousel(slides, id, vertical = false, delay = 4000, expandable = false
     <div class="carousel-dots" aria-label="${t('Choose a slide', '选择幻灯片')}">${slides.map((_, i) => `<button class="dot ${i ? '' : 'active'}" data-slide="${i}" aria-label="${t('Slide', '第')} ${i + 1}" aria-pressed="${!i}"></button>`).join('')}</div>
     ${expandable ? `<div class="carousel-actions"><button class="plain-button expand" aria-expanded="false">${more()}</button></div>` : ''}</div>`;
 }
-function newsCard(n) {
-  return `<article class="news-card"><p class="eyebrow">${n.date}</p><h3><a href="${url(`news/${n.id}.html`)}">${esc(local(n).title)}</a></h3><p>${esc(local(n).summary)}</p>${link(`news/${n.id}.html`, t('Read more', '阅读全文'))}</article>`;
+const newsCategories = {
+  research: { en: 'Research', zh: '研究进展' }, recognition: { en: 'Recognition', zh: '荣誉进展' },
+  people: { en: 'People & Training', zh: '人才培养' }, culture: { en: 'Lab Life', zh: '团队活动' }
+};
+function newsDate(date) {
+  if (/^\d{4}$/.test(date)) return date;
+  const monthOnly = date.length === 7;
+  return new Intl.DateTimeFormat(lang === 'zh' ? 'zh-CN' : 'en-US', { year: 'numeric', month: 'short', ...(monthOnly ? {} : { day: 'numeric' }), timeZone: 'UTC' }).format(new Date(date + (monthOnly ? '-01' : '') + 'T00:00:00Z'));
 }
-function newsCarousel(items, id) {
-  return carousel(items.map(newsCard), id);
+function newsMedia(n) {
+  const image = n.image || 'assets/placeholders/news-' + (n.category === 'research' ? 'research' : n.category === 'recognition' ? 'recognition' : 'people') + '.svg';
+  return '<img src="' + url(image) + '" alt="' + esc(local(n.caption) || local(n).title) + '" loading="lazy" class="media-' + esc(n.imageFit || 'photo') + '">';
+}
+function newsCard(n, featured = false) {
+  const kind = newsCategories[n.category] || newsCategories.people;
+  return `<article class="news-card ${featured ? 'news-card--featured' : ''}"><a class="news-card-media" href="${url(`news/${n.id}.html`)}">${newsMedia(n)}</a><div class="news-card-copy"><p class="eyebrow"><span>${t(kind.en, kind.zh)}</span><time datetime="${esc(n.date)}">${n.dateKind === 'record' ? t('Archive: ', '记录：') : ''}${newsDate(n.date)}</time></p><h3><a href="${url(`news/${n.id}.html`)}">${esc(local(n).title)}</a></h3><p class="news-summary">${esc(local(n).summary)}</p>${link(`news/${n.id}.html`, t('Read the story', '阅读新闻'))}</div></article>`;
+}
+function newsCarousel(items) {
+  if (!items.length) return '';
+  return `<div class="news-editorial home-news"><div class="news-editorial-feature">${newsCard(items[0], true)}</div><div class="news-editorial-latest"><p class="eyebrow">${t('MORE FROM THE LAB', '更多团队动态')}</p>${items.slice(1, 3).map(n => `<article class="news-compact"><p class="eyebrow"><span>${t(newsCategories[n.category]?.en || 'News', newsCategories[n.category]?.zh || '团队新闻')}</span><time datetime="${esc(n.date)}">${newsDate(n.date)}</time></p><h3><a href="${url(`news/${n.id}.html`)}">${esc(local(n).title)}</a></h3><p>${esc(local(n).summary)}</p>${link(`news/${n.id}.html`, t('Read more', '阅读全文'))}</article>`).join('')}</div></div>`;
 }
 function activityCarousel() {
-  return carousel(data.activities.map(a => `<article class="activity-cover"><div><p class="eyebrow">${esc(local(a).date)}</p><h3>${esc(local(a).title)}</h3><p>${esc(local(a).summary)}</p>${link(`minds/activity.html?id=${a.id}`, t('View activity', '查看活动'))}</div></article>`), 'culture-slides', true, 4500, true);
+  return carousel(data.activities.map(a => '<article class="activity-cover">' + (a.image ? '<a class="activity-card-image" href="' + url('minds/activity.html?id=' + a.id) + '"><img src="' + url(a.image) + '" alt="' + esc(local(a).title) + '" loading="lazy"></a>' : '') + '<div><p class="eyebrow">' + esc(local(a).date) + '</p><h3>' + esc(local(a).title) + '</h3><p>' + esc(local(a).summary) + '</p>' + link('minds/activity.html?id=' + a.id, t('View activity & photos', '查看活动与照片')) + '</div></article>'), 'culture-slides', true, 4500, true);
 }
 function activityPage() {
   const a = data.activities.find(a => String(a.id) === params().get('id'));
   if (!a) return notFound();
-  return `${head('MINDS / CULTURE / ' + esc(local(a).date), esc(local(a).title))}
-    <section class="wrap section prose standalone"><p class="large-text">${esc(local(a).summary)}</p>${link('minds/#culture', t('Back to Culture', '返回团队文化'))}</section>`;
+  const record = data.news.find(n => n.id === a.news);
+  return head('MINDS / CULTURE / ' + esc(local(a).date), esc(local(a).title)) + '<section class="wrap section prose standalone">' + (a.image ? '<figure class="activity-record-photo"><img src="' + url(a.image) + '" alt="' + esc(record ? local(record.caption) : local(a).title) + '"><figcaption>' + esc(record ? local(record.caption) : local(a).title) + '</figcaption></figure>' : '') + (record ? '<div>' + local(record).body + '</div>' + newsExtras(record) + link('news/' + record.id + '.html', t('Read the full story', '查看完整报道')) : '<p>' + esc(local(a).summary) + '</p>') + link('minds/#culture', t('Back to Culture', '返回团队文化')) + '</section>';
+}
+function newsExtras(n) {
+  const gallery = (n.gallery || []).map(photo => '<figure><a href="' + url(photo.image) + '" target="_blank" rel="noopener"><img src="' + url(photo.image) + '" alt="' + esc(local(photo.caption)) + '" loading="lazy"></a><figcaption>' + esc(local(photo.caption)) + '</figcaption></figure>').join('');
+  const study = n.study ? findStudy(n.study) : null;
+  return (gallery ? '<section class="news-gallery">' + (n.id === 'iupac-breakfast-hangzhou-2026' ? '' : '<h2>' + t('In pictures', '图像记录') + '</h2>') + '<div class="news-gallery-grid">' + gallery + '</div></section>' : '')
+    + (study ? '<div class="news-study-link">' + link('discoveries/study.html?study=' + encodeURIComponent(study.id), t('Explore the related research', '阅读相关研究')) + '</div>' : '');
 }
 function newsPage(id) {
-  if (!id) return `${head('LAB NOTES / NEWS & MILESTONES', t('Latest News', '最新动态'), t('Discoveries, recognition and moments from the lab.', '记录团队的研究进展、荣誉与重要时刻。'))}<section class="section wrap"><div class="news-grid">${data.news.map(newsCard).join('')}</div></section>`;
+  if (!id) return `${head('LAB NOTES / NEWS & MILESTONES', t('Latest News', '团队新闻'), t('Discoveries, recognition and moments from the lab.', '记录团队的研究进展、荣誉与重要时刻。'))}<section class="section wrap news-index"><div class="news-index-feature">${newsCard(data.news[0], true)}</div><div class="news-index-grid">${data.news.slice(1).map(n => newsCard(n)).join('')}</div></section>`;
   const n = data.news.find(n => n.id === id);
   if (!n) return notFound();
   const body = local(n).body.replace(/<p><a class="tool-link"[\s\S]*?<\/p>/g, '')
     .replaceAll('Wu Lab', 'Aptomics & Cell Atlas').replaceAll('吴芩课题组', '功能核酸组学团队');
-  return `${head('NEWS / ' + n.date, esc(local(n).title))}<article class="section wrap prose standalone">${body || `<p>${esc(local(n).summary)}</p>`}${link('news/', t('Back to News', '返回新闻'))}</article>`;
+  const category = newsCategories[n.category] || newsCategories.people;
+  const related = data.news.filter(item => item.id !== n.id).sort((a, b) => Number(b.category === n.category) - Number(a.category === n.category)).slice(0, 3);
+  return `${head(`NEWS / ${t(category.en, category.zh)} · ${n.dateKind === 'record' ? t('Archive date: ', '记录日期：') : ''}${newsDate(n.date)}`, esc(local(n).title), esc(local(n).summary))}<section class="section wrap news-detail"><article class="news-detail-main"><figure class="news-detail-media">${newsMedia(n)}${n.showCaption === false ? '' : `<figcaption>${esc(local(n.caption) || t('Section illustration', '栏目示意图'))}</figcaption>`}</figure><div class="prose news-detail-copy">${body || `<p>${esc(local(n).summary)}</p>`}</div>${newsExtras(n)}${link('news/', t('Back to all news', '返回全部新闻'))}</article><aside class="news-related"><p class="eyebrow">${t('LATEST NEWS', '近期新闻')}</p>${related.map(item => `<article><p class="eyebrow"><time datetime="${esc(item.date)}">${newsDate(item.date)}</time></p><h3><a href="${url(`news/${item.id}.html`)}">${esc(local(item).title)}</a></h3></article>`).join('')}${link('news/', t('Browse all news', '查看全部新闻'))}</aside></section>`;
 }
 function toolsPage() {
   return `${head('RESEARCH / METHODS', 'Tools & Resources', t('Start with the published methods.', '从已发表的方法开始。'))}

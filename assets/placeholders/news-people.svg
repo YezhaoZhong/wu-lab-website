@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">People and training image placeholder</title>
+  <desc id="desc">Three abstract figures mark a space for a team milestone photo.</desc>
+  <defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#102b43"/><stop offset="1" stop-color="#174254"/></linearGradient></defs>
+  <rect width="1200" height="760" fill="url(#bg)"/>
+  <g fill="#5dd4c5" fill-opacity=".8"><circle cx="435" cy="285" r="52"/><circle cx="600" cy="250" r="63"/><circle cx="765" cy="285" r="52"/><path d="M330 510c8-93 47-143 105-143s97 50 105 143zM463 522c8-112 58-173 137-173s129 61 137 173zM660 510c8-93 47-143 105-143s97 50 105 143z"/></g>
+  <path d="M340 552h520" stroke="#87e9db" stroke-opacity=".65" stroke-width="4"/>
+  <g fill="#dceaf3" font-family="Arial,sans-serif" text-anchor="middle"><text x="600" y="663" font-size="24" letter-spacing="5">PEOPLE &amp; TRAINING</text><text x="600" y="704" font-size="19" fill="#8be9db">图片待补 · IMAGE PLACEHOLDER</text></g>
+</svg>

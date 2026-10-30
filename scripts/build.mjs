@@ -27,6 +27,8 @@ for (const publication of publications) {
   publication.authorSource = { pdf: asset(publication.pdf), page: record.authorPage, equalPage: record.equalPage || null, reviewed: '2026-10-21' };
 }
 const newsText = read('news.json');
+const newsContent = read('news-content.json');
+const activityMedia = read('activity-media.json');
 const newsSource = fs.readFileSync(path.join(root, 'source/news-v10.html'), 'utf8');
 const names = [
   ['discover', 'Discover', 'Molecular Recognition & Omics', '分子识别与组学技术',
@@ -117,9 +119,19 @@ const news = [...newsSource.matchAll(/<article class="resource-card news-card"[^
     summary: newsText[lang][`resources.news.${number}.summary`],
     body: newsText[lang][`resources.detail.${slug}.body.html`] || ''
   }])) };
-}).sort((a, b) => b.date.localeCompare(a.date));
+}).map(item => {
+  const update = newsContent.overrides[item.id] || {};
+  return { ...item, ...update, en: { ...item.en, ...update.en }, zh: { ...item.zh, ...update.zh } };
+}).concat(newsContent.additional).sort((a, b) => b.date.localeCompare(a.date));
+if (new Set(news.map(item => item.id)).size !== news.length) throw new Error('Duplicate news ID');
+for (const item of news) {
+  if (!/^\d{4}(-\d{2}){0,2}$/.test(item.date)) throw new Error(`Invalid news date: ${item.id}`);
+  for (const image of [item.image, ...(item.gallery || []).map(photo => photo.image)].filter(Boolean)) {
+    if (!fs.existsSync(path.join(root, image))) throw new Error(`Missing news image: ${image}`);
+  }
+}
 const activities = Array.from({ length: 10 }, (_, i) => ({
-  id: i + 1, ...Object.fromEntries(['en', 'zh'].map(lang => [lang,
+  id: i + 1, ...(activityMedia[String(i + 1)] || {}), ...Object.fromEntries(['en', 'zh'].map(lang => [lang,
     Object.fromEntries(['title', 'summary', 'date'].map(key =>
       [key, newsText[lang][`resources.activity.${i + 1}.${key}`] || '']))]))
 })).sort((a, b) => (parseInt(b.en.date) || 0) - (parseInt(a.en.date) || 0));
@@ -143,9 +155,9 @@ const data = {
   areas, studies, news, activities, join, people: read('people.json'),
   origins: JSON.parse(fs.readFileSync(path.join(root, 'assets/people/origins.json'), 'utf8')),
   researchers: [
-    { id: 'guoyan-luo', en: 'Guoyan Luo', zh: '罗国焰', study: 'spark-seq' },
-    { id: 'xiaoqiu-wu', en: 'Xiaoqiu Wu', zh: '武晓秋', study: 'apt-seq' },
-    { id: 'tongqing-li', en: 'Tongqing Li', zh: '李同庆', study: 'blocker-selex' }
+    { id: 'guoyan-luo', en: 'Guoyan Luo', zh: '罗国焰', study: 'spark-seq', portrait: 'assets/minds/people/guoyan-luo.webp' },
+    { id: 'xiaoqiu-wu', en: 'Xiaoqiu Wu', zh: '武晓秋', study: 'apt-seq', portrait: 'assets/minds/people/xiaoqiu-wu.webp' },
+    { id: 'tongqing-li', en: 'Tongqing Li', zh: '李同庆', study: 'blocker-selex', portrait: 'assets/minds/people/tongqing-li.jpg' }
   ]
 };
 for (const s of studies) {

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Recognition image placeholder</title>
+  <desc id="desc">An abstract award ribbon marks a space for a recognition photo.</desc>
+  <defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#10283f"/><stop offset="1" stop-color="#263d55"/></linearGradient><linearGradient id="r" x2="0" y2="1"><stop stop-color="#83eadb"/><stop offset="1" stop-color="#39aaa8"/></linearGradient></defs>
+  <rect width="1200" height="760" fill="url(#bg)"/>
+  <circle cx="600" cy="305" r="150" fill="#5dd4c5" fill-opacity=".1" stroke="#74e1d3" stroke-opacity=".56" stroke-width="3"/>
+  <path d="m600 185 35 75 83 11-60 58 15 82-73-39-73 39 15-82-60-58 83-11z" fill="url(#r)"/>
+  <path d="m520 388-30 144 91-44 34 91 26-128M680 388l30 144-91-44" fill="none" stroke="#8de9dc" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+  <g fill="#dceaf3" font-family="Arial,sans-serif" text-anchor="middle"><text x="600" y="663" font-size="24" letter-spacing="5">RECOGNITION PHOTO</text><text x="600" y="704" font-size="19" fill="#8be9db">图片待补 · IMAGE PLACEHOLDER</text></g>
+</svg>

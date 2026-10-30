@@ -1,0 +1,562 @@
+{
+  "overrides": {
+    "paper-accepted-angewandte-2025": {
+      "category": "research",
+      "sources": [
+        {
+          "url": "https://www.x-mol.com/groups/wuqin/news/105265",
+          "en": "Lab news on X-MOL",
+          "zh": "课题组 X-MOL 新闻记录"
+        }
+      ],
+      "en": {
+        "body": "<p>The study develops an energy-interception strategy to improve conversion of reactive-oxygen-species chemical energy into light, and explores luminescence-based monitoring of tumor-treatment responses in experimental models.</p><p><a class=\"paper-link\" href=\"https://doi.org/10.1002/anie.202517880\" target=\"_blank\" rel=\"noopener\">Read the paper ↗</a></p>",
+        "summary": "An energy-interception strategy enhances ultrasound-induced luminescence for monitoring experimental tumor treatment."
+      },
+      "zh": {
+        "body": "<p>研究提出能量拦截策略，提高活性氧化学能向光信号的转化效率，并在实验模型中探索以发光信号监测肿瘤治疗反应。</p><p><a class=\"paper-link\" href=\"https://doi.org/10.1002/anie.202517880\" target=\"_blank\" rel=\"noopener\">阅读论文 ↗</a></p>",
+        "summary": "通过能量拦截增强超声诱导发光，探索肿瘤治疗过程的实时监测。"
+      },
+      "image": "assets/news/angewandte-ultrasound-luminescence.png",
+      "imageFit": "contain",
+      "caption": {
+        "en": "Ultrasound-induced luminescence and reactive oxygen species for monitoring experimental cancer treatment.",
+        "zh": "超声诱导发光与活性氧介导的肿瘤治疗监测示意图。"
+      }
+    },
+    "paper-accepted-science-2025": {
+      "category": "research",
+      "sources": [
+        {
+          "url": "https://www.x-mol.com/groups/wuqin/news/103006",
+          "en": "Lab news on X-MOL",
+          "zh": "课题组 X-MOL 新闻记录"
+        }
+      ],
+      "en": {
+        "body": "<p>SPARK-seq integrates single-cell mRNA and aptamer sequencing with CRISPR-based surface-protein perturbations to connect aptamers with their targets and characterize dissociation kinetics, supporting aptamer selection and variant design.</p><p><a class=\"paper-link\" href=\"https://doi.org/10.1126/science.adv6127\" target=\"_blank\" rel=\"noopener\">Read the paper ↗</a></p>",
+        "summary": "SPARK-seq combines single-cell sequencing and CRISPR perturbations to map aptamer targets and profile binding kinetics."
+      },
+      "zh": {
+        "body": "<p>SPARK-seq 将单细胞转录组、适体测序与 CRISPR 细胞表面蛋白扰动结合，在同一次实验中解析适体与靶蛋白的对应关系及解离动力学，为适体筛选和变体设计提供依据。</p><p><a class=\"paper-link\" href=\"https://doi.org/10.1126/science.adv6127\" target=\"_blank\" rel=\"noopener\">阅读论文 ↗</a></p>",
+        "summary": "SPARK-seq 整合单细胞测序与 CRISPR 扰动，高通量识别适体靶标并解析结合动力学。"
+      },
+      "image": "assets/publications/covers-subfigure/luo-et-al-2026-spark-seq-a-high-throughput-platform-for-aptamer.png",
+      "imageFit": "contain",
+      "study": "spark-seq",
+      "caption": {
+        "zh": "SPARK-seq 原文首页的技术总览图：适体靶标识别、动力学分析与变体设计。",
+        "en": "SPARK-seq overview from the article summary: target mapping, kinetic profiling and variant design."
+      }
+    },
+    "paper-accepted-advanced-science-2025": {
+      "category": "research",
+      "sources": [
+        {
+          "url": "https://www.x-mol.com/groups/wuqin/news/103005",
+          "en": "Lab news on X-MOL",
+          "zh": "课题组 X-MOL 新闻记录"
+        }
+      ],
+      "en": {
+        "body": "<p>The study links basal interferon signaling to PRMT5-inhibitor sensitivity in triple-negative breast cancer and evaluates olaparib plus PRMT5 inhibition in cells, patient-derived organoids and animal models.</p><p><a class=\"paper-link\" href=\"https://doi.org/10.1002/advs.202505787\" target=\"_blank\" rel=\"noopener\">Read the paper ↗</a></p>",
+        "summary": "Preclinical TNBC models link interferon signaling to PRMT5-inhibitor sensitivity and support a combination-treatment strategy."
+      },
+      "zh": {
+        "body": "<p>研究发现基础干扰素信号与三阴性乳腺癌模型对 PRMT5 抑制的敏感性相关，并在细胞、患者来源类器官及动物模型中评估了奥拉帕利与 PRMT5 抑制剂的联合抗肿瘤作用。</p><p><a class=\"paper-link\" href=\"https://doi.org/10.1002/advs.202505787\" target=\"_blank\" rel=\"noopener\">阅读论文 ↗</a></p>",
+        "summary": "在三阴性乳腺癌临床前模型中，研究干扰素信号与 PRMT5 抑制敏感性的关系，并探索联合治疗。"
+      },
+      "image": "assets/news/prmt5-olaparib-figure4-i-o.png",
+      "imageFit": "contain",
+      "study": "interferon-prmt5",
+      "caption": {
+        "zh": "原文图 4i–o：药物协同作用及患者来源模型中的联合治疗结果（临床前研究）。",
+        "en": "Original Figure 4i–o: drug synergy and combination-treatment results in patient-derived models (preclinical research)."
+      }
+    },
+    "yue-zhao-nsfc-young-scientist-2025": {
+      "category": "recognition",
+      "sources": [
+        {
+          "url": "https://www.x-mol.com/groups/wuqin/news/100034",
+          "en": "Lab news on X-MOL",
+          "zh": "课题组 X-MOL 新闻记录"
+        }
+      ],
+      "en": {
+        "body": "<p>Dr. Yue Zhao was awarded a Young Scientists Fund project from the National Natural Science Foundation of China.</p>"
+      },
+      "zh": {
+        "body": "<p>赵越博士获批国家自然科学基金青年项目。</p>"
+      }
+    },
+    "lu-guo-nsfc-young-scientist-2025": {
+      "category": "recognition",
+      "sources": [
+        {
+          "url": "https://www.x-mol.com/groups/wuqin/news/100032",
+          "en": "Lab news on X-MOL",
+          "zh": "课题组 X-MOL 新闻记录"
+        }
+      ],
+      "en": {
+        "body": "<p>Dr. Lu Guo was awarded a Young Scientists Fund project from the National Natural Science Foundation of China.</p>"
+      },
+      "zh": {
+        "body": "<p>郭璐博士获批国家自然科学基金青年项目。</p>"
+      },
+      "image": "assets/minds/people/lu-guo.webp",
+      "imageFit": "portrait",
+      "caption": {
+        "en": "Portrait supplied by the lab; not an award-ceremony photograph.",
+        "zh": "郭璐的个人照片，由课题组提供；非颁奖现场照片。"
+      },
+      "showCaption": false
+    },
+    "cas-red-banner-holder-qin-wu": {
+      "category": "recognition",
+      "sources": [
+        {
+          "url": "https://www.x-mol.com/groups/wuqin/news/92375",
+          "en": "Lab news on X-MOL",
+          "zh": "课题组 X-MOL 新闻记录"
+        }
+      ],
+      "en": {
+        "body": "<p>Prof. Qin Wu was recognized by the Chinese Academy of Sciences with the March 8th Red Banner Holder Advanced Individual honor.</p>"
+      },
+      "zh": {
+        "body": "<p>吴芩老师获评中国科学院三八红旗手先进个人。</p>"
+      },
+      "image": "assets/minds/pi/qin-wu.webp",
+      "imageFit": "portrait",
+      "caption": {
+        "en": "Portrait supplied by the lab; not an award-ceremony photograph.",
+        "zh": "吴芩的个人照片，由课题组提供；非颁奖现场照片。"
+      },
+      "showCaption": false
+    },
+    "tongqing-li-outstanding-student-2024": {
+      "category": "people",
+      "sources": [
+        {
+          "url": "https://www.x-mol.com/groups/wuqin/news/92341",
+          "en": "Lab news on X-MOL",
+          "zh": "课题组 X-MOL 新闻记录"
+        }
+      ],
+      "en": {
+        "body": "<p>Tongqing Li received the 2024 Outstanding Student of the CAS Community award from the Youth League Committee of the Shanghai Branch of CAS.</p>"
+      },
+      "zh": {
+        "body": "<p>李同庆同学获中国科学院上海分院团委 2024 年度“科苑优秀学子”奖。</p>"
+      },
+      "image": "assets/minds/people/tongqing-li.jpg",
+      "imageFit": "portrait",
+      "caption": {
+        "en": "Portrait supplied by the lab; not an award-ceremony photograph.",
+        "zh": "李同庆的个人照片，由课题组提供；非颁奖现场照片。"
+      },
+      "showCaption": false
+    },
+    "outstanding-young-talent-qin-wu": {
+      "category": "recognition",
+      "sources": [
+        {
+          "url": "https://www.x-mol.com/groups/wuqin/news/92372",
+          "en": "Lab news on X-MOL",
+          "zh": "课题组 X-MOL 新闻记录"
+        }
+      ],
+      "en": {
+        "body": "<p>Prof. Qin Wu was named an Outstanding Young Talent by the Shanghai Branch of the Chinese Academy of Sciences.</p>"
+      },
+      "zh": {
+        "body": "<p>吴芩老师获评中国科学院上海分院杰出青年人才。</p>"
+      },
+      "date": "2024-11-04",
+      "image": "assets/minds/pi/qin-wu.webp",
+      "imageFit": "portrait",
+      "caption": {
+        "en": "Portrait supplied by the lab; not an award-ceremony photograph.",
+        "zh": "吴芩的个人照片，由课题组提供；非颁奖现场照片。"
+      },
+      "showCaption": false
+    },
+    "sheyu-zhang-tju-innovation-award-2024": {
+      "category": "people",
+      "sources": [
+        {
+          "url": "https://www.x-mol.com/groups/wuqin/news/92343",
+          "en": "Lab news on X-MOL",
+          "zh": "课题组 X-MOL 新闻记录"
+        }
+      ],
+      "en": {
+        "body": "<p>Sheyu Zhang received the 2024 Tianjin University Advanced Individual in Science and Technology Innovation award.</p>"
+      },
+      "zh": {
+        "body": "<p>张舍予同学获 2024 年天津大学科技创新先进个人。</p>"
+      },
+      "image": "assets/minds/people/sheyu-zhang.webp",
+      "imageFit": "portrait",
+      "caption": {
+        "en": "Portrait supplied by the lab; not an award-ceremony photograph.",
+        "zh": "张舍予的个人照片，由课题组提供；非颁奖现场照片。"
+      },
+      "showCaption": false
+    },
+    "xueying-liu-zhejiang-postdoc-funding": {
+      "category": "recognition",
+      "sources": [
+        {
+          "url": "https://www.x-mol.com/groups/wuqin/news/92377",
+          "en": "Lab news on X-MOL",
+          "zh": "课题组 X-MOL 新闻记录"
+        }
+      ],
+      "en": {
+        "body": "<p>Dr. Xueying Liu received the Zhejiang Province Postdoctoral Merit-Based Funding award.</p>"
+      },
+      "zh": {
+        "body": "<p>刘雪莹博士获浙江省博士后择优资助项目。</p>"
+      },
+      "date": "2023-08-01",
+      "image": "assets/minds/people/xueying-liu.webp",
+      "imageFit": "portrait",
+      "caption": {
+        "en": "Portrait supplied by the lab; not an award-ceremony photograph.",
+        "zh": "刘雪莹的个人照片，由课题组提供；非颁奖现场照片。"
+      },
+      "showCaption": false
+    },
+    "liyan-fei-outstanding-student-2023": {
+      "category": "people",
+      "sources": [
+        {
+          "url": "https://www.x-mol.com/groups/wuqin/news/92342",
+          "en": "Lab news on X-MOL",
+          "zh": "课题组 X-MOL 新闻记录"
+        }
+      ],
+      "en": {
+        "body": "<p>Liyan Fei received the 2023 Outstanding Student of the CAS Community award from the Youth League Committee of the Shanghai Branch of CAS.</p>"
+      },
+      "zh": {
+        "body": "<p>费立言同学获中国科学院上海分院团委 2023 年度“科苑优秀学子”奖。</p>"
+      }
+    }
+  },
+  "additional": [
+    {
+      "id": "iupac-breakfast-hangzhou-2025",
+      "date": "2025-02-11",
+      "category": "culture",
+      "image": "assets/news/iupac-hangzhou-2025.webp",
+      "caption": {
+        "en": "Participants at the 2025 Hangzhou Global Women’s Breakfast.",
+        "zh": "2025年 IUPAC 全球女化学家早餐会杭州分会场合影。"
+      },
+      "sources": [],
+      "sourceLabel": {
+        "en": "Final Hangzhou event press release supplied by the lab",
+        "zh": "课题组提供的2025杭州分会场新闻稿最终版"
+      },
+      "en": {
+        "title": "Global Women’s Breakfast comes to Hangzhou for the first time",
+        "summary": "Women scientists from universities, hospitals and industry met at the Hangzhou Institute of Medicine to discuss equity and careers in science.",
+        "body": "<p>On 11 February 2025, the IUPAC Global Women’s Breakfast took place across 11 Chinese cities under the theme “Accelerating Equity in Science”. Hangzhou joined the event for the first time, with its local gathering hosted at the Hangzhou Institute of Medicine, Chinese Academy of Sciences.</p><p>Participants came from institutions including Zhejiang University, Westlake University, Zhejiang Sci-Tech University, Soochow University and Hangzhou City University, alongside hospitals and biotechnology companies.</p><p>Weihong Tan, an academician of the Chinese Academy of Sciences and director of the institute, attended the event. Discussions focused on the opportunities, challenges and career development of women in research, creating a setting for exchange across disciplines and institutions.</p>"
+      },
+      "zh": {
+        "title": "勇攀科技高峰：IUPAC 全球女化学家早餐会首次落地杭州",
+        "summary": "2025年2月11日，杭州首次加入 IUPAC 全球女化学家早餐会，来自高校、医院与生物医药企业的女性科研工作者在杭州医学研究所交流。",
+        "body": "<p>2025年2月11日，以“加速推动科学领域的公平性”为主题的 IUPAC 全球女化学家早餐会在中国11个城市同步举行。杭州首次作为参会城市加入，杭州分会场设在中国科学院杭州医学研究所。</p><p>活动吸引了来自浙江大学、西湖大学、浙江理工大学、苏州大学、浙江大学城市学院等高校，浙江省肿瘤医院、浙大附属医院等机构，以及联川生物等生物医药企业的女性科学家和科技工作者参与。</p><p>中国科学院院士、杭州医学研究所所长谭蔚泓出席活动并代表杭州向全球传递祝福。与会者围绕科研女性的职业发展、机遇与挑战展开交流，分享不同研究领域与职业阶段的经验。</p><p>杭州分会场为本地女性科研工作者提供了跨机构交流的平台，也让关于科学公平性与多样性的讨论在具体的相遇和对话中展开。</p>"
+      }
+    },
+    {
+      "id": "iupac-breakfast-hangzhou-2026",
+      "date": "2026",
+      "category": "culture",
+      "image": "assets/news/iupac-hangzhou-2026.webp",
+      "caption": {
+        "en": "2026 IUPAC Global Women’s Breakfast, Hangzhou.",
+        "zh": "2026年 IUPAC 全球女化学家早餐会杭州分会场。"
+      },
+      "sources": [],
+      "gallery": [
+        {
+          "image": "assets/news/iupac-2026-conversation.webp",
+          "caption": {
+            "en": "A conversation at the Hangzhou gathering.",
+            "zh": "杭州分会场交流现场。"
+          }
+        },
+        {
+          "image": "assets/news/iupac-2026-gathering.webp",
+          "caption": {
+            "en": "Participants gather for a photograph.",
+            "zh": "与会者合影留念。"
+          }
+        }
+      ],
+      "sourceLabel": {
+        "en": "Lab event photographs; event year confirmed by the banner",
+        "zh": "课题组活动照片；活动年份依据现场横幅"
+      },
+      "en": {
+        "title": "Conversations and connections at the 2026 Global Women’s Breakfast",
+        "summary": "Photographs from the Hangzhou gathering capture conversations and a shared celebration of women in science.",
+        "body": "<p>The 2026 IUPAC Global Women’s Breakfast gathering in Hangzhou brought women researchers together around a shared table. The event photographs capture conversations, group portraits and participants holding traditional “Fu” decorations.</p><p>This photo story records the gathering through the images supplied by the lab.</p>"
+      },
+      "zh": {
+        "title": "2026 IUPAC 全球女化学家早餐会：相聚杭州，共话科研",
+        "summary": "",
+        "body": "<p>2026年 IUPAC 全球女化学家早餐会杭州分会场再次相聚。现场照片记录了女性科研工作者围桌交流、分享经历和共同合影的时刻。</p><p>与会者手持“福”字留下纪念，在轻松的交流中建立连接。本页以课题组提供的现场照片记录此次相聚。</p>"
+      }
+    },
+    {
+      "id": "women-in-science-2026",
+      "date": "2026-03-08",
+      "category": "culture",
+      "image": "assets/news/women-in-science-2026.webp",
+      "caption": {
+        "en": "Women in Science 2026: group photograph.",
+        "zh": "2026 年 Women in Science 活动合影。"
+      },
+      "sources": [
+        {
+          "url": "https://www.x-mol.com/groups/wuqin/events/123451",
+          "en": "Original lab event record",
+          "zh": "课题组原始活动记录"
+        }
+      ],
+      "dateKind": "event",
+      "en": {
+        "title": "Women in Science 2026: time together",
+        "summary": "A group photograph against a Women’s Day backdrop marks the 2026 Women in Science gathering.",
+        "body": "<p>The 2026 Women in Science group photograph captures a moment together beyond the laboratory.</p>"
+      },
+      "zh": {
+        "title": "Women in Science 2026：属于我们的相聚",
+        "summary": "三八节主题布景前，留下 2026 年 Women in Science 活动的合影。",
+        "body": "<p>2026 年的 Women in Science 活动，合影留下了科研工作之外共同相聚的时刻。</p>"
+      }
+    },
+    {
+      "id": "women-in-science-2025",
+      "date": "2025-03-08",
+      "category": "culture",
+      "image": "assets/news/women-in-science-2025.webp",
+      "caption": {
+        "en": "Women in Science 2025: group photograph.",
+        "zh": "2025 年 Women in Science 活动合影。"
+      },
+      "sources": [
+        {
+          "url": "https://www.x-mol.com/groups/wuqin/events/92371",
+          "en": "Original lab event record",
+          "zh": "课题组原始活动记录"
+        }
+      ],
+      "dateKind": "event",
+      "en": {
+        "title": "Women in Science 2025: time together",
+        "summary": "A group photograph at a pottery workbench captures the 2025 Women in Science gathering.",
+        "body": "<p>The 2025 Women in Science activity.</p>"
+      },
+      "zh": {
+        "title": "Women in Science 2025：属于我们的相聚",
+        "summary": "陶艺工作台前，定格 2025 年 Women in Science 活动的相聚。",
+        "body": "<p>2025 年的 Women in Science 活动</p>"
+      }
+    },
+    {
+      "id": "women-in-science-2024",
+      "date": "2024-03-08",
+      "category": "culture",
+      "image": "assets/news/women-in-science-2024.webp",
+      "caption": {
+        "en": "Women in Science 2024: group photograph.",
+        "zh": "2024 年 Women in Science 活动合影。"
+      },
+      "sources": [
+        {
+          "url": "https://www.x-mol.com/groups/wuqin/events/76244",
+          "en": "Original lab event record",
+          "zh": "课题组原始活动记录"
+        }
+      ],
+      "dateKind": "event",
+      "en": {
+        "title": "Women in Science 2024: time together",
+        "summary": "An outdoor photograph beneath a canopy records the 2024 Women in Science gathering.",
+        "body": "<p>For the 2024 Women in Science activity, the group gathered around a table beneath an outdoor canopy for a photograph.</p>"
+      },
+      "zh": {
+        "title": "Women in Science 2024：属于我们的相聚",
+        "summary": "帐篷下围桌而坐，留下 2024 年 Women in Science 活动的户外合影。",
+        "body": "<p>2024 年的 Women in Science 活动，大家在户外帐篷下围桌而坐，留下一张集体合影。</p>"
+      }
+    },
+    {
+      "id": "graduation-memories-2023",
+      "date": "2024-10-28",
+      "category": "people",
+      "image": "assets/news/graduation-2023.webp",
+      "caption": {
+        "en": "2023 graduation photograph, from the lab archive.",
+        "zh": "2023年毕业合影，来自课题组活动档案。"
+      },
+      "sources": [
+        {
+          "url": "https://www.x-mol.com/groups/wuqin/events/76290",
+          "en": "Original graduation archive entry",
+          "zh": "原始毕业活动档案"
+        }
+      ],
+      "dateKind": "record",
+      "en": {
+        "title": "Graduation memories from 2023",
+        "summary": "A graduation photograph from 2023, preserved in the lab’s event archive.",
+        "body": "<p>This photograph is archived as “2023 — We graduated”. It records a graduation gathering outside the Hangzhou Institute of Medicine.</p><p>The archive entry was posted on 28 October 2024; the activity itself is identified as a 2023 graduation memory.</p>"
+      },
+      "zh": {
+        "title": "2023 毕业季：把共同走过的时光留在合影里",
+        "summary": "课题组活动档案中的2023年毕业合影，记录一段共同学习与研究的时光。",
+        "body": "<p>这张合影来自课题组“2023—我们毕业了”活动档案，记录了在杭州医学研究所留下的毕业纪念。</p><p>原活动记录发布于2024年10月28日，活动标注年份为2023年。这里保留这一区别，让照片中的记忆与档案日期各有归属。</p>"
+      }
+    },
+    {
+      "id": "team-excellent-assessment-2025",
+      "date": "2026-01-22",
+      "category": "recognition",
+      "image": "assets/news/lei-ming-jia-haoran-portraits.png",
+      "caption": {
+        "en": "Ming Lei and Haoran Jia, two of the four colleagues recognised.",
+        "zh": "获评年度考核“优秀”的四位同事中的雷鸣与贾浩然。"
+      },
+      "sources": [],
+      "imageFit": "contain",
+      "sourceLabel": {
+        "en": "Institute certificates supplied by the lab",
+        "zh": "课题组提供的研究所荣誉证书"
+      },
+      "en": {
+        "title": "Four colleagues recognised in the institute’s 2025 annual assessment",
+        "summary": "Institute certificates dated 22 January 2026 recognise four colleagues for their work in 2025.",
+        "body": "<p>Lu Guo, Haoran Jia, Yichun Pan and Ming Lei received an “Excellent” rating in the 2025 annual staff assessment of the Hangzhou Institute of Medicine, Chinese Academy of Sciences.</p><p>The four certificates were issued on 22 January 2026. Congratulations to our colleagues on this recognition.</p>"
+      },
+      "zh": {
+        "title": "郭璐、贾浩然、潘艺春与雷鸣获2025年度考核“优秀”",
+        "summary": "杭州医学研究所于2026年1月22日签发证书，表彰四位同事在2025年度职工考核中获评“优秀”。",
+        "body": "<p>郭璐、贾浩然、潘艺春与雷鸣在中国科学院杭州医学研究所2025年度职工考核中获评“优秀”。</p><p>四份荣誉证书均于2026年1月22日签发。祝贺四位同事，也感谢每一份持续投入日常研究与团队工作的努力。</p>"
+      }
+    },
+    {
+      "id": "science-contribution-award-2025",
+      "date": "2026-01",
+      "category": "recognition",
+      "image": "assets/publications/covers/luo-et-al-2026-spark-seq-a-high-throughput-platform-for-aptamer.png",
+      "caption": {
+        "en": "First page of the award-winning SPARK-seq article published in Science.",
+        "zh": "获奖 SPARK-seq 论文发表于 Science 的首页。"
+      },
+      "sources": [],
+      "imageFit": "contain",
+      "study": "spark-seq",
+      "sourceLabel": {
+        "en": "Institute award certificate supplied by the lab",
+        "zh": "课题组提供的科研突出贡献奖证书"
+      },
+      "en": {
+        "title": "Science study receives an institute research contribution first prize",
+        "summary": "An institute certificate recognises the team’s Science paper with a 2025 research contribution first prize.",
+        "body": "<p>The Hangzhou Institute of Medicine recognised the team’s Science paper with a first prize in its 2025 Research Contribution Awards. The certificate is dated January 2026.</p><p>The SPARK-seq study develops a high-throughput platform for aptamer discovery and kinetic profiling. Read the research story for the published work and author information.</p>"
+      },
+      "zh": {
+        "title": "Science论文获2025年度科研突出贡献奖一等奖",
+        "summary": "杭州医学研究所颁发的证书记录了Science论文获得2025年度科研突出贡献奖一等奖。",
+        "body": "<p>中国科学院杭州医学研究所授予团队Science论文2025年度科研突出贡献奖一等奖。证书签发时间为2026年1月。</p><p>相关SPARK-seq研究发展了用于适配体发现与动力学表征的高通量平台。研究内容及作者信息可从对应研究故事与论文中进一步了解。</p>"
+      }
+    },
+    {
+      "id": "tongqing-li-science-star-2024",
+      "date": "2025-03-26",
+      "category": "people",
+      "image": "assets/minds/people/tongqing-li.jpg",
+      "caption": {
+        "en": "Tongqing Li.",
+        "zh": "李同庆。"
+      },
+      "sources": [],
+      "imageFit": "portrait",
+      "study": "blocker-selex",
+      "sourceLabel": {
+        "en": "Research Star certificate supplied by the lab",
+        "zh": "课题组提供的科研之星证书"
+      },
+      "en": {
+        "title": "Tongqing Li named a 2024 Research Star",
+        "summary": "The Hangzhou Institute of Medicine recognised Tongqing Li’s research contributions with its 2024 Research Star honour.",
+        "body": "<p>Tongqing Li received the 2024 “Research Star” honour from the Hangzhou Institute of Medicine, Chinese Academy of Sciences. The certificate was issued on 26 March 2025.</p><p>His featured work on Blocker-SELEX can be explored through the research story linked below.</p>"
+      },
+      "zh": {
+        "title": "李同庆获2024年度“科研之星”称号",
+        "summary": "杭州医学研究所授予李同庆2024年度“科研之星”称号，证书于2025年3月26日签发。",
+        "body": "<p>李同庆获中国科学院杭州医学研究所2024年度“科研之星”称号。证书于2025年3月26日签发，表彰其科研工作。</p><p>李同庆参与的Blocker-SELEX研究，可通过下方研究故事进一步了解。</p>"
+      }
+    },
+    {
+      "id": "tongqing-li-science-outreach-2025",
+      "date": "2025-07",
+      "category": "people",
+      "image": "assets/minds/people/tongqing-li.jpg",
+      "caption": {
+        "en": "Tongqing Li.",
+        "zh": "李同庆。"
+      },
+      "sources": [],
+      "imageFit": "portrait",
+      "sourceLabel": {
+        "en": "Two certificates supplied by the lab",
+        "zh": "课题组提供的科普作品与志愿服务证书"
+      },
+      "en": {
+        "title": "Tongqing Li recognised for science communication",
+        "summary": "Tongqing Li’s video “The Geometry of Life” received an award in a 2025 CAS science communication competition.",
+        "body": "<p>Tongqing Li’s work “The Geometry of Life” received an award in the 2025 Chinese Academy of Sciences science video competition. The certificate is dated July 2025.</p><p>A separate certificate records his service as a science communication volunteer during the 21st CAS Public Science Day in May 2025. Together, the records document two different contributions to public engagement with science.</p>"
+      },
+      "zh": {
+        "title": "从科普视频到公众科学日：李同庆的科学传播实践",
+        "summary": "李同庆作品《造物者的几何学》获2025年中国科学院科普视频片大赛优秀奖，并参与公众科学日科普志愿服务。",
+        "body": "<p>李同庆作品《造物者的几何学》在“2025年中国科学院科普视频片大赛”中荣获优秀奖，获奖证书签发于2025年7月。</p><p>另一份证书记录了他于2025年5月在中国科学院第二十一届公众科学日大型公益科普活动中担任科普志愿者。两份记录分别对应科普作品与志愿服务，展现了实验室之外的科学传播实践。</p>"
+      }
+    },
+    {
+      "id": "shift-001-study-launch",
+      "date": "2026-02",
+      "category": "research",
+      "image": "assets/news/shift-001-launch-ceremony.png",
+      "caption": {
+        "en": "SHIFT-001 study launch ceremony.",
+        "zh": "SHIFT-001 临床研究启动仪式合影。"
+      },
+      "sources": [],
+      "imageFit": "photo",
+      "sourceLabel": {
+        "en": "Study launch plaque supplied by the lab",
+        "zh": "课题组提供的研究启动牌"
+      },
+      "en": {
+        "title": "SHIFT-001 multicentre clinical study: launch record",
+        "summary": "The national multicentre SHIFT-001 study on HIM-based stratification and treatment of triple-negative breast cancer launched in February 2026.",
+        "body": "<p>A launch plaque dated February 2026 records the start of the national multicentre clinical study on HIM-based stratification and treatment of triple-negative breast cancer, designated SHIFT-001.</p><p>This entry records the study launch. It does not report patient enrolment, treatment outcomes or clinical benefit.</p>"
+      },
+      "zh": {
+        "title": "三阴性乳腺癌HIM分型分治多中心临床研究（SHIFT-001）启动",
+        "summary": "三阴性乳腺癌HIM分型分治全国多中心临床研究（SHIFT-001）于2026年2月启动。",
+        "body": "<p>2026年2月，三阴性乳腺癌HIM分型分治全国多中心临床研究（SHIFT-001）启动。课题组提供的启动牌记录了这一节点。</p><p>本条为研究启动记录，尚不涉及入组人数、治疗结果或临床获益数据。</p>"
+      }
+    }
+  ]
+}
