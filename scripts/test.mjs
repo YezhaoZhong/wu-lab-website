@@ -142,6 +142,14 @@ for (const file of htmlFiles()) {
   c.close();
 }
 for (const lang of ['en', 'zh']) {
+  const c = await open('minds/story.html?person=guoyan-luo', lang);
+  check(c.d.querySelectorAll('.personal-story-section').length === 4, 'Luo story contains four personal sections');
+  check(c.d.querySelector('.person-portrait img')?.src.endsWith('/assets/minds/guoyan-luo/portrait.jpg'), 'Luo story displays supplied portrait');
+  check(c.d.querySelector('h1').textContent === (lang === 'zh' ? '罗国焰' : 'Guoyan Luo'), 'Luo story has localized name');
+  check(!c.d.querySelector('.editorial-note'), 'Personal story does not retain generic research disclaimer');
+  c.close();
+}
+for (const lang of ['en', 'zh']) {
   const c = await open('join-us/', lang);
   check(!/2024|2025/.test(c.d.querySelector('main').textContent), 'Recruitment years updated');
   check(c.d.querySelector('h1').textContent === 'Join Us', 'Join Us heading retained');

@@ -143,7 +143,7 @@ const data = {
   areas, studies, news, activities, join, people: read('people.json'),
   origins: JSON.parse(fs.readFileSync(path.join(root, 'assets/people/origins.json'), 'utf8')),
   researchers: [
-    { id: 'guoyan-luo', en: 'Guoyan Luo', zh: '罗国焰', study: 'spark-seq' },
+    { id: 'guoyan-luo', en: 'Guoyan Luo', zh: '罗国焰', study: 'spark-seq', story: read('guoyan-luo-story.json') },
     { id: 'xiaoqiu-wu', en: 'Xiaoqiu Wu', zh: '武晓秋', study: 'apt-seq' },
     { id: 'tongqing-li', en: 'Tongqing Li', zh: '李同庆', study: 'blocker-selex' }
   ]

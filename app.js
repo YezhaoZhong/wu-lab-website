@@ -164,10 +164,18 @@ function publications() {
     <div class="publication-controls"><p id="result-count" role="status"></p><div class="segmented" role="group" aria-label="${t('Image mode', '图片模式')}"><button data-mode="covers">${t('Paper covers', '论文封面')}</button><button data-mode="figures">${t('Important subfigures', '重要子图')}</button></div></div>
     <div id="pub-results"></div></section>`;
 }
+function personStory(person) {
+  const story = local(person.story);
+  const study = findStudy(person.study);
+  return `<div class="wrap breadcrumbs">${link('minds/', 'Minds')}</div>
+    ${head('MINDS / MEET THE DISCOVERERS', esc(person[lang]), esc(story.role))}
+    <article class="wrap article-layout personal-story"><aside><figure class="person-portrait"><img src="${url(person.story.portrait)}" alt="${esc(t(`Portrait of ${person.en}`, `${person.zh}肖像`))}" fetchpriority="high"></figure><p class="eyebrow">SPARK-seq</p>${link(studyURL(person.study), t('Explore the study', '了解这项研究'))}<div class="article-links"><a href="${url(study.pdf)}" target="_blank" rel="noopener">${t('Read the paper', '阅读论文')} ↗</a></div></aside>
+    <div class="prose">${story.sections.map((section, i) => `<section class="personal-story-section"><h2><span class="eyebrow">${String(i + 1).padStart(2, '0')}</span> ${esc(section.title)}</h2><p>${esc(section.body)}</p></section>`).join('')}</div></article>${joinCallout()}`;
+}
 function researchers() {
   return `<div class="researcher-grid">${data.researchers.map((r, i) => {
     const s = findStudy(r.study);
-    return `<article class="researcher-card"><div class="researcher-number">0${i + 1} / DISCOVERER</div><h3><a href="${url(`minds/story.html?person=${r.id}`)}">${esc(r[lang])}</a></h3><p class="researcher-alt">${esc(r[lang === 'zh' ? 'en' : 'zh'])}</p>
+    return `<article class="researcher-card"><div class="researcher-number">0${i + 1} / DISCOVERER</div>${r.story ? `<a class="researcher-photo" href="${url(`minds/story.html?person=${r.id}`)}"><img src="${url(r.story.portrait)}" alt="${esc(t(`Portrait of ${r.en}`, `${r.zh}肖像`))}" loading="lazy"></a>` : ''}<h3><a href="${url(`minds/story.html?person=${r.id}`)}">${esc(r[lang])}</a></h3><p class="researcher-alt">${esc(r[lang === 'zh' ? 'en' : 'zh'])}</p>
     <div class="researcher-science"><span class="eyebrow">${s.journal} · ${s.year}</span><h4>${esc(local(s.article).title)}</h4><p>${esc(local(s.article).paragraphs[0])}</p></div>${link(`minds/story.html?person=${r.id}`, t('Read the research story', '阅读研究故事'))}</article>`;
   }).join('')}</div>`;
 }
@@ -250,7 +258,7 @@ function render() {
     case 'pi': content = pi(); break;
     case 'person': {
       const person = data.researchers.find(r => r.id === params().get('person'));
-      content = person ? studyPage(person.study, person) : notFound(); break;
+      content = person ? (person.story ? personStory(person) : studyPage(person.study, person)) : notFound(); break;
     }
     case 'activity': content = activityPage(); break;
     case 'news': content = newsPage(id); break;

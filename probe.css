@@ -234,6 +234,11 @@ li{margin-bottom:10px}
 @media(max-width:850px){.pi-profile{grid-template-columns:1fr;gap:32px}}
 .researcher-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:30px}
 .researcher-card{border-top:2px solid var(--blue);padding:20px 0 0;display:flex;flex-direction:column}
+.researcher-photo{display:block;width:160px;max-width:100%;margin-top:20px}
+.researcher-photo img,.person-portrait img{display:block;width:100%;height:auto;border-radius:3px}
+.person-portrait{margin:0;width:100%;max-width:240px}
+.personal-story-section+.personal-story-section{margin-top:48px;padding-top:32px;border-top:1px solid var(--line)}
+.personal-story-section h2{margin-top:0}
 .researcher-number{font-size:10px;letter-spacing:.13em;color:var(--blue);margin-bottom:34px}
 .researcher-card h3{font:2.4rem/1.2 var(--serif);margin-bottom:8px}
 .researcher-alt{font-size:13px;color:var(--muted)}

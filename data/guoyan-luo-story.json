@@ -1,0 +1,45 @@
+{
+  "portrait": "assets/minds/guoyan-luo/portrait.jpg",
+  "zh": {
+    "role": "2026 级博士后 · 2021 级博士研究生",
+    "sections": [
+      {
+        "title": "从哪里开始？",
+        "body": "最初在2021年开展核酸适体研究时，导师谭蔚泓院士向我提出了一个问题：“单细胞基因组学与细胞表面受体表达差异之间，究竟有什么关联？”这个问题引发了我的思考：我们已经能够在单细胞水平读取海量基因信息，却仍然难以系统解析细胞表面的蛋白质世界。与此同时，筛选出的核酸适体往往不知道具体识别哪个蛋白。那么，能否以核酸适体为桥梁，利用单细胞测序技术，实现细胞表面蛋白的高通量识别与解析？"
+      },
+      {
+        "title": "遇到了什么困难？",
+        "body": "科研过程中，最大的挑战往往不是某一次实验失败，而是很长一段时间里，实验始终得不到预期结果。从最初的技术构想到实验体系的建立，每一个环节都需要不断摸索、尝试和优化。即使终于获得了数据，新的疑问又接踵而至：为什么识别同一个蛋白的不同核酸适体，结合信号却存在巨大差异？在反复实验与分析中，我逐渐意识到，信号差异不仅与结合能力有关，还可能隐藏着分子结合与解离的动力学规律。这些看似棘手的问题，反而成为推动研究不断深入的重要线索。"
+      },
+      {
+        "title": "最终发现了什么？",
+        "body": "经过不断探索，我们在2026年成功建立的SPARK-seq平台并在Science期刊发表，让核酸适体筛选、靶点鉴定和结合特征分析能够同步进行。更有意思的是，我们发现筛选过程中更容易被保留下来的，往往是那些结合后不容易脱落的分子。在大数据时代，海量核酸适体序列及其靶点信息也带来了新的可能：我们进一步引入人工智能，让模型学习分子识别规律，实现核酸适体靶标的预测与新序列的生成。这意味着，核酸适体的研究不再局限于从海量序列中寻找答案，而是有望走向数据驱动的预测与设计，让分子发现从“被动筛选”迈向“主动创造”。"
+      },
+      {
+        "title": "接下来想探索什么？",
+        "body": "这项研究让我更加相信，科研的意义不仅在于解决一个具体问题，更在于为探索未知提供新的可能。未来，我希望继续推动不同学科与技术的交叉融合，突破现有分子识别与生命分析技术的局限，让我们能够以更全面、更精准的方式理解生命，并将这些发现逐步转化为疾病诊断与治疗的新思路。"
+      }
+    ]
+  },
+  "en": {
+    "role": "Postdoctoral researcher, 2026 cohort · Doctoral student, 2021 cohort",
+    "sections": [
+      {
+        "title": "Where did it begin?",
+        "body": "When I began working on aptamers in 2021, my supervisor, Academician Weihong Tan, asked me a question: What is the connection between single-cell genomics and differences in cell-surface receptor expression? It made me reflect on a gap in our understanding: we could already read vast amounts of genetic information at single-cell resolution, yet systematically deciphering the protein landscape on the cell surface remained difficult. Meanwhile, the specific protein targets of selected aptamers were often unknown. Could aptamers serve as a bridge, enabling single-cell sequencing to identify and characterize cell-surface proteins at high throughput?"
+      },
+      {
+        "title": "What challenges did I encounter?",
+        "body": "The greatest challenge in research is often not a single failed experiment, but a prolonged period in which experiments simply do not yield the expected results. From the initial concept to establishing an experimental system, every step required exploration, trial and optimization. Even when data finally arrived, new questions followed: why did different aptamers recognizing the same protein produce such different binding signals? Through repeated experiments and analysis, I gradually realized that these differences might reflect not only binding ability, but also the kinetics of molecular association and dissociation. These seemingly difficult problems became important clues that drove the research forward."
+      },
+      {
+        "title": "What did we ultimately discover?",
+        "body": "After sustained exploration, we established the SPARK-seq platform in 2026 and published the work in Science, bringing aptamer screening, target identification and binding characterization together in a single workflow. More intriguingly, we found that molecules that remained bound rather than readily dissociating were more likely to be retained during selection. Large datasets of aptamer sequences and their targets opened up further possibilities: we introduced artificial intelligence to learn the rules of molecular recognition, predict aptamer targets and generate new sequences. Aptamer research may therefore move beyond searching vast sequence pools toward data-driven prediction and design, shifting molecular discovery from passive screening toward active creation."
+      },
+      {
+        "title": "What would I like to explore next?",
+        "body": "This study strengthened my belief that research matters not only because it solves a specific problem, but also because it opens up new possibilities for exploring the unknown. I hope to continue bringing disciplines and technologies together, pushing beyond the limitations of current approaches to molecular recognition and biological analysis. My goal is to help us understand life more comprehensively and precisely, and gradually translate these discoveries into new ideas for disease diagnosis and treatment."
+      }
+    ]
+  }
+}
