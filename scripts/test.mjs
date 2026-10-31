@@ -106,25 +106,27 @@ for (const file of htmlFiles()) {
 {
   const c = await open('news/');
   const site = JSON.parse(fs.readFileSync(path.join(root, 'data/site.json'), 'utf8'));
-  check(c.d.querySelectorAll('.news-grid .news-card').length === site.news.length, 'Latest News displays all cards immediately');
+  check(c.d.querySelectorAll('.news-grid .news-card').length === site.news.length, 'Local news grid displays all cards immediately');
+  check(!c.d.querySelector('.news-index-feature'), 'Local news layout has no featured section');
+  check(c.d.querySelectorAll('.news-card-media img').length === site.news.length, 'Every news record has a real image or category illustration');
   check(!c.d.querySelector('.carousel, .expand, .pause'), 'Latest News has no carousel or playback and expansion controls');
   check(c.timers.size === 0, 'Latest News is static');
   c.close();
 }
 {
   const c = await open('index.html');
-  const el = c.d.querySelector('.carousel');
-  check([...c.timers.values()].some(t => t.ms === 4000), 'News timer at four seconds');
-  el.querySelector('[data-slide="2"]').click();
-  check(el.querySelector('.carousel-track').style.transform.includes('-200%'), 'Clickable news dots');
-  check(!el.querySelector('.expand, .pause'), 'Vision news has no expansion or playback controls');
+  check(c.d.querySelector('#home-news.carousel'), 'Local home news carousel retained');
+  check(c.d.querySelectorAll('#home-news .news-card').length === 5, 'Home previews five news stories');
+  check(!c.d.querySelector('#home-news .expand, #home-news .pause'), 'No news expansion or playback controls');
+  check([...c.timers.values()].some(t => t.ms === 4000), 'Home news rotates every four seconds');
   c.close();
 }
 {
   const c = await open('minds/');
-  check(c.d.querySelector('.pi-panel .pi-preview img')?.getAttribute('src').endsWith('/assets/minds/pi/PIimage.png'), 'PI preview includes portrait');
+  check(c.d.querySelector('.pi-panel .pi-preview img')?.getAttribute('src').endsWith('/assets/minds/pi/qin-wu.webp'), 'PI preview includes portrait');
   check(!c.d.querySelector('.pause'), 'Activities have no playback control');
   check(c.d.querySelectorAll('.researcher-card').length === 3, 'Only three selected people');
+  check(c.d.querySelectorAll('.researcher-card img').length === 3, 'All three discoverers have supplied portraits');
   const origins = JSON.parse(fs.readFileSync(path.join(root, 'assets/people/origins.json'), 'utf8'));
   check(c.d.querySelectorAll('.origin-chip').length === origins.locations.length, 'All anonymous hometown provinces displayed');
   check(c.d.querySelectorAll('.map-point').length === origins.locations.length, 'Map points loaded');
@@ -141,10 +143,38 @@ for (const file of htmlFiles()) {
   check(c.timers.size === 0, 'Reduced motion prevents autoplay');
   c.close();
 }
+{
+  const c = await open('news/iupac-breakfast-hangzhou-2025.html', 'zh');
+  check(c.d.querySelector('.news-detail-copy').textContent.includes('11个城市'), 'Breakfast story retains the documented scope');
+  check(c.d.querySelector('.news-detail-media figcaption').textContent.includes('2025'), 'Photo caption matches the event year');
+  check(!c.d.querySelector('.news-related'), 'Local news reading layout has no sidebar');
+  c.close();
+}
+{
+  const c = await open('news/iupac-breakfast-hangzhou-2026.html', 'zh');
+  check(c.d.querySelectorAll('.news-gallery img').length === 2, '2026 photo story includes verified gallery photographs');
+  check(!c.d.querySelector('.news-detail-copy').textContent.includes('11个城市'), '2026 does not reuse the 2025 press release');
+  c.close();
+}
+{
+  const c = await open('news/shift-001-study-launch.html', 'en');
+  check(c.d.querySelector('.page-head .eyebrow').textContent.includes('Feb 2026'), 'Month-only date renders without an invented day');
+  check(!c.d.querySelector('.page-head .eyebrow').textContent.includes('Feb 1,'), 'No synthetic first-of-month news date');
+  c.close();
+}
+{
+  const c = await open('news/graduation-memories-2023.html', 'zh');
+  check(c.d.querySelector('h1').textContent.includes('2023'), 'Graduation event year retained');
+  check(c.d.querySelector('.page-head .eyebrow').textContent.includes('记录日期'), 'Archive date explicitly labelled');
+  c.close();
+}
 for (const lang of ['en', 'zh']) {
   const c = await open('minds/story.html?person=guoyan-luo', lang);
   check(c.d.querySelectorAll('.personal-story-section').length === 4, 'Luo story contains four personal sections');
-  check(c.d.querySelector('.person-portrait img')?.src.endsWith('/assets/minds/guoyan-luo/portrait.jpg'), 'Luo story displays supplied portrait');
+  check(c.d.querySelector('.person-portrait img')?.src.endsWith('/assets/minds/guoyan-luo/portrait-presentation.png'), 'Luo story displays local solo photograph');
+  check(!c.d.querySelector('.page-head .lead'), 'Luo cohort subtitle removed');
+  check(c.d.querySelector('.story-gallery img'), 'Luo discussion photo appears in story');
+  check(c.d.querySelector('.story-related a[href$="study=spark-seq"]'), 'Story links back to SPARK-seq through a card');
   check(c.d.querySelector('h1').textContent === (lang === 'zh' ? '罗国焰' : 'Guoyan Luo'), 'Luo story has localized name');
   check(!c.d.querySelector('.editorial-note'), 'Personal story does not retain generic research disclaimer');
   c.close();
@@ -179,4 +209,4 @@ for (const lang of ['en', 'zh']) {
   check(names.includes('Guoyan Luo') && names.includes('Jia Song'), 'Study page preserves both co-first authors');
   c.close();
 }
-console.log(`PASS: ${assertions} assertions; 39 routes in both languages, local links, filters, image modes, collapse controls, timers, map and recruitment. Real-browser visual QA still required.`);
+console.log(`PASS: ${assertions} assertions; ${htmlFiles().length} routes in both languages, local links, filters, image modes, collapse controls, timers, map and recruitment. Real-browser visual QA still required.`);
