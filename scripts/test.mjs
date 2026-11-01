@@ -169,6 +169,15 @@ for (const file of htmlFiles()) {
   c.close();
 }
 for (const lang of ['en', 'zh']) {
+  const c = await open('minds/story.html?person=xiaoqiu-wu', lang);
+  check(c.d.querySelectorAll('.personal-story-section').length === 4, 'Wu personal story has four sections');
+  check(c.d.querySelector('h1').textContent === (lang === 'zh' ? '武晓秋' : 'Xiaoqiu Wu'), 'Wu story name localized');
+  check(c.d.querySelector('.person-portrait img').src.endsWith('/xiaoqiu-wu.webp'), 'Wu story retains own portrait');
+  check(!c.d.querySelector('.story-gallery'), 'Wu story does not reuse Luo photo');
+  check(c.d.querySelector('.story-related a[href$="study=apt-seq"]'), 'Wu story links to Apt-seq');
+  c.close();
+}
+for (const lang of ['en', 'zh']) {
   const c = await open('minds/story.html?person=guoyan-luo', lang);
   check(c.d.querySelectorAll('.personal-story-section').length === 4, 'Luo story contains four personal sections');
   check(c.d.querySelector('.person-portrait img')?.src.endsWith('/assets/minds/guoyan-luo/portrait-presentation.png'), 'Luo story displays local solo photograph');

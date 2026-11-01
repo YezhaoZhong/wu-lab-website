@@ -156,7 +156,7 @@ const data = {
   origins: JSON.parse(fs.readFileSync(path.join(root, 'assets/people/origins.json'), 'utf8')),
   researchers: [
     { id: 'guoyan-luo', en: 'Guoyan Luo', zh: '罗国焰', study: 'spark-seq', portrait: 'assets/minds/guoyan-luo/portrait-presentation.png', story: read('guoyan-luo-story.json') },
-    { id: 'xiaoqiu-wu', en: 'Xiaoqiu Wu', zh: '武晓秋', study: 'apt-seq', portrait: 'assets/minds/people/xiaoqiu-wu.webp' },
+    { id: 'xiaoqiu-wu', en: 'Xiaoqiu Wu', zh: '武晓秋', study: 'apt-seq', portrait: 'assets/minds/people/xiaoqiu-wu.webp', story: read('xiaoqiu-wu-story.json') },
     { id: 'tongqing-li', en: 'Tongqing Li', zh: '李同庆', study: 'blocker-selex', portrait: 'assets/minds/people/tongqing-li.jpg' }
   ]
 };
