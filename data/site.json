@@ -3244,34 +3244,6 @@
   ],
   "news": [
     {
-      "id": "women-in-science-2026",
-      "date": "2026-03-08",
-      "category": "culture",
-      "image": "assets/news/women-in-science-2026.webp",
-      "caption": {
-        "en": "Women in Science 2026: group photograph.",
-        "zh": "2026 年 Women in Science 活动合影。"
-      },
-      "sources": [
-        {
-          "url": "https://www.x-mol.com/groups/wuqin/events/123451",
-          "en": "Original lab event record",
-          "zh": "课题组原始活动记录"
-        }
-      ],
-      "dateKind": "event",
-      "en": {
-        "title": "Women in Science 2026: time together",
-        "summary": "A group photograph against a Women’s Day backdrop marks the 2026 Women in Science gathering.",
-        "body": "<p>The 2026 Women in Science group photograph captures a moment together beyond the laboratory.</p>"
-      },
-      "zh": {
-        "title": "Women in Science 2026：属于我们的相聚",
-        "summary": "三八节主题布景前，留下 2026 年 Women in Science 活动的合影。",
-        "body": "<p>2026 年的 Women in Science 活动，合影留下了科研工作之外共同相聚的时刻。</p>"
-      }
-    },
-    {
       "id": "shift-001-study-launch",
       "date": "2026-02",
       "category": "research",
@@ -3348,47 +3320,6 @@
         "title": "Science论文获2025年度科研突出贡献奖一等奖",
         "summary": "杭州医学研究所颁发的证书记录了Science论文获得2025年度科研突出贡献奖一等奖。",
         "body": "<p>中国科学院杭州医学研究所授予团队Science论文2025年度科研突出贡献奖一等奖。证书签发时间为2026年1月。</p><p>相关SPARK-seq研究发展了用于适配体发现与动力学表征的高通量平台。研究内容及作者信息可从对应研究故事与论文中进一步了解。</p>"
-      }
-    },
-    {
-      "id": "iupac-breakfast-hangzhou-2026",
-      "date": "2026",
-      "category": "culture",
-      "image": "assets/news/iupac-hangzhou-2026.webp",
-      "caption": {
-        "en": "2026 IUPAC Global Women’s Breakfast, Hangzhou.",
-        "zh": "2026年 IUPAC 全球女化学家早餐会杭州分会场。"
-      },
-      "sources": [],
-      "gallery": [
-        {
-          "image": "assets/news/iupac-2026-conversation.webp",
-          "caption": {
-            "en": "A conversation at the Hangzhou gathering.",
-            "zh": "杭州分会场交流现场。"
-          }
-        },
-        {
-          "image": "assets/news/iupac-2026-gathering.webp",
-          "caption": {
-            "en": "Participants gather for a photograph.",
-            "zh": "与会者合影留念。"
-          }
-        }
-      ],
-      "sourceLabel": {
-        "en": "Lab event photographs; event year confirmed by the banner",
-        "zh": "课题组活动照片；活动年份依据现场横幅"
-      },
-      "en": {
-        "title": "Conversations and connections at the 2026 Global Women’s Breakfast",
-        "summary": "Photographs from the Hangzhou gathering capture conversations and a shared celebration of women in science.",
-        "body": "<p>The 2026 IUPAC Global Women’s Breakfast gathering in Hangzhou brought women researchers together around a shared table. The event photographs capture conversations, group portraits and participants holding traditional “Fu” decorations.</p><p>This photo story records the gathering through the images supplied by the lab.</p>"
-      },
-      "zh": {
-        "title": "2026 IUPAC 全球女化学家早餐会：相聚杭州，共话科研",
-        "summary": "",
-        "body": "<p>2026年 IUPAC 全球女化学家早餐会杭州分会场再次相聚。现场照片记录了女性科研工作者围桌交流、分享经历和共同合影的时刻。</p><p>与会者手持“福”字留下纪念，在轻松的交流中建立连接。本页以课题组提供的现场照片记录此次相聚。</p>"
       }
     },
     {
@@ -3611,59 +3542,6 @@
       "showCaption": false
     },
     {
-      "id": "women-in-science-2025",
-      "date": "2025-03-08",
-      "category": "culture",
-      "image": "assets/news/women-in-science-2025.webp",
-      "caption": {
-        "en": "Women in Science 2025: group photograph.",
-        "zh": "2025 年 Women in Science 活动合影。"
-      },
-      "sources": [
-        {
-          "url": "https://www.x-mol.com/groups/wuqin/events/92371",
-          "en": "Original lab event record",
-          "zh": "课题组原始活动记录"
-        }
-      ],
-      "dateKind": "event",
-      "en": {
-        "title": "Women in Science 2025: time together",
-        "summary": "A group photograph at a pottery workbench captures the 2025 Women in Science gathering.",
-        "body": "<p>The 2025 Women in Science activity.</p>"
-      },
-      "zh": {
-        "title": "Women in Science 2025：属于我们的相聚",
-        "summary": "陶艺工作台前，定格 2025 年 Women in Science 活动的相聚。",
-        "body": "<p>2025 年的 Women in Science 活动</p>"
-      }
-    },
-    {
-      "id": "iupac-breakfast-hangzhou-2025",
-      "date": "2025-02-11",
-      "category": "culture",
-      "image": "assets/news/iupac-hangzhou-2025.webp",
-      "caption": {
-        "en": "Participants at the 2025 Hangzhou Global Women’s Breakfast.",
-        "zh": "2025年 IUPAC 全球女化学家早餐会杭州分会场合影。"
-      },
-      "sources": [],
-      "sourceLabel": {
-        "en": "Final Hangzhou event press release supplied by the lab",
-        "zh": "课题组提供的2025杭州分会场新闻稿最终版"
-      },
-      "en": {
-        "title": "Global Women’s Breakfast comes to Hangzhou for the first time",
-        "summary": "Women scientists from universities, hospitals and industry met at the Hangzhou Institute of Medicine to discuss equity and careers in science.",
-        "body": "<p>On 11 February 2025, the IUPAC Global Women’s Breakfast took place across 11 Chinese cities under the theme “Accelerating Equity in Science”. Hangzhou joined the event for the first time, with its local gathering hosted at the Hangzhou Institute of Medicine, Chinese Academy of Sciences.</p><p>Participants came from institutions including Zhejiang University, Westlake University, Zhejiang Sci-Tech University, Soochow University and Hangzhou City University, alongside hospitals and biotechnology companies.</p><p>Weihong Tan, an academician of the Chinese Academy of Sciences and director of the institute, attended the event. Discussions focused on the opportunities, challenges and career development of women in research, creating a setting for exchange across disciplines and institutions.</p>"
-      },
-      "zh": {
-        "title": "勇攀科技高峰：IUPAC 全球女化学家早餐会首次落地杭州",
-        "summary": "2025年2月11日，杭州首次加入 IUPAC 全球女化学家早餐会，来自高校、医院与生物医药企业的女性科研工作者在杭州医学研究所交流。",
-        "body": "<p>2025年2月11日，以“加速推动科学领域的公平性”为主题的 IUPAC 全球女化学家早餐会在中国11个城市同步举行。杭州首次作为参会城市加入，杭州分会场设在中国科学院杭州医学研究所。</p><p>活动吸引了来自浙江大学、西湖大学、浙江理工大学、苏州大学、浙江大学城市学院等高校，浙江省肿瘤医院、浙大附属医院等机构，以及联川生物等生物医药企业的女性科学家和科技工作者参与。</p><p>中国科学院院士、杭州医学研究所所长谭蔚泓出席活动并代表杭州向全球传递祝福。与会者围绕科研女性的职业发展、机遇与挑战展开交流，分享不同研究领域与职业阶段的经验。</p><p>杭州分会场为本地女性科研工作者提供了跨机构交流的平台，也让关于科学公平性与多样性的讨论在具体的相遇和对话中展开。</p>"
-      }
-    },
-    {
       "id": "tongqing-li-outstanding-student-2024",
       "date": "2025-01-15",
       "en": {
@@ -3751,6 +3629,181 @@
       "showCaption": false
     },
     {
+      "id": "liyan-fei-outstanding-student-2023",
+      "date": "2024-01-15",
+      "en": {
+        "title": "Congratulations to Liyan Fei on Receiving the 2023 Outstanding Student of the CAS Community Award",
+        "summary": "Liyan Fei received the 2023 Outstanding Student of the CAS Community award from the Youth League Committee of the Shanghai Branch of CAS.",
+        "body": "<p>Liyan Fei received the 2023 Outstanding Student of the CAS Community award from the Youth League Committee of the Shanghai Branch of CAS.</p>"
+      },
+      "zh": {
+        "title": "恭喜费立言同学获得 2023 年度中国科学院上海分院团委“科苑优秀学子”奖！",
+        "summary": "费立言同学获中国科学院上海分院团委 2023 年度“科苑优秀学子”奖。",
+        "body": "<p>费立言同学获中国科学院上海分院团委 2023 年度“科苑优秀学子”奖。</p>"
+      },
+      "category": "people",
+      "sources": [
+        {
+          "url": "https://www.x-mol.com/groups/wuqin/news/92342",
+          "en": "Lab news on X-MOL",
+          "zh": "课题组 X-MOL 新闻记录"
+        }
+      ]
+    },
+    {
+      "id": "xueying-liu-zhejiang-postdoc-funding",
+      "date": "2023-08-01",
+      "en": {
+        "title": "Congratulations to Dr. Xueying Liu on Receiving the Zhejiang Province Postdoctoral Merit-Based Funding Award",
+        "summary": "Dr. Xueying Liu received the Zhejiang Province Postdoctoral Merit-Based Funding award.",
+        "body": "<p>Dr. Xueying Liu received the Zhejiang Province Postdoctoral Merit-Based Funding award.</p>"
+      },
+      "zh": {
+        "title": "恭喜刘雪莹博士获得浙江省博士后择优资助项目！",
+        "summary": "刘雪莹博士获浙江省博士后择优资助项目。",
+        "body": "<p>刘雪莹博士获浙江省博士后择优资助项目。</p>"
+      },
+      "category": "recognition",
+      "sources": [
+        {
+          "url": "https://www.x-mol.com/groups/wuqin/news/92377",
+          "en": "Lab news on X-MOL",
+          "zh": "课题组 X-MOL 新闻记录"
+        }
+      ],
+      "image": "assets/minds/people/xueying-liu.webp",
+      "imageFit": "portrait",
+      "caption": {
+        "en": "Portrait supplied by the lab; not an award-ceremony photograph.",
+        "zh": "刘雪莹的个人照片，由课题组提供；非颁奖现场照片。"
+      },
+      "showCaption": false
+    }
+  ],
+  "activityRecords": [
+    {
+      "id": "women-in-science-2026",
+      "date": "2026-03-08",
+      "category": "culture",
+      "image": "assets/news/women-in-science-2026.webp",
+      "caption": {
+        "en": "Women in Science 2026: group photograph.",
+        "zh": "2026 年 Women in Science 活动合影。"
+      },
+      "sources": [
+        {
+          "url": "https://www.x-mol.com/groups/wuqin/events/123451",
+          "en": "Original lab event record",
+          "zh": "课题组原始活动记录"
+        }
+      ],
+      "dateKind": "event",
+      "en": {
+        "title": "Women in Science 2026: time together",
+        "summary": "A group photograph against a Women’s Day backdrop marks the 2026 Women in Science gathering.",
+        "body": "<p>The 2026 Women in Science group photograph captures a moment together beyond the laboratory.</p>"
+      },
+      "zh": {
+        "title": "Women in Science 2026：属于我们的相聚",
+        "summary": "三八节主题布景前，留下 2026 年 Women in Science 活动的合影。",
+        "body": "<p>2026 年的 Women in Science 活动，合影留下了科研工作之外共同相聚的时刻。</p>"
+      }
+    },
+    {
+      "id": "iupac-breakfast-hangzhou-2026",
+      "date": "2026",
+      "category": "culture",
+      "image": "assets/news/iupac-hangzhou-2026.webp",
+      "caption": {
+        "en": "2026 IUPAC Global Women’s Breakfast, Hangzhou.",
+        "zh": "2026年 IUPAC 全球女化学家早餐会杭州分会场。"
+      },
+      "sources": [],
+      "gallery": [
+        {
+          "image": "assets/news/iupac-2026-conversation.webp",
+          "caption": {
+            "en": "A conversation at the Hangzhou gathering.",
+            "zh": "杭州分会场交流现场。"
+          }
+        },
+        {
+          "image": "assets/news/iupac-2026-gathering.webp",
+          "caption": {
+            "en": "Participants gather for a photograph.",
+            "zh": "与会者合影留念。"
+          }
+        }
+      ],
+      "sourceLabel": {
+        "en": "Lab event photographs; event year confirmed by the banner",
+        "zh": "课题组活动照片；活动年份依据现场横幅"
+      },
+      "en": {
+        "title": "Conversations and connections at the 2026 Global Women’s Breakfast",
+        "summary": "Photographs from the Hangzhou gathering capture conversations and a shared celebration of women in science.",
+        "body": "<p>The 2026 IUPAC Global Women’s Breakfast gathering in Hangzhou brought women researchers together around a shared table. The event photographs capture conversations, group portraits and participants holding traditional “Fu” decorations.</p><p>This photo story records the gathering through the images supplied by the lab.</p>"
+      },
+      "zh": {
+        "title": "2026 IUPAC 全球女化学家早餐会：相聚杭州，共话科研",
+        "summary": "",
+        "body": "<p>2026年 IUPAC 全球女化学家早餐会杭州分会场再次相聚。现场照片记录了女性科研工作者围桌交流、分享经历和共同合影的时刻。</p><p>与会者手持“福”字留下纪念，在轻松的交流中建立连接。本页以课题组提供的现场照片记录此次相聚。</p>"
+      }
+    },
+    {
+      "id": "women-in-science-2025",
+      "date": "2025-03-08",
+      "category": "culture",
+      "image": "assets/news/women-in-science-2025.webp",
+      "caption": {
+        "en": "Women in Science 2025: group photograph.",
+        "zh": "2025 年 Women in Science 活动合影。"
+      },
+      "sources": [
+        {
+          "url": "https://www.x-mol.com/groups/wuqin/events/92371",
+          "en": "Original lab event record",
+          "zh": "课题组原始活动记录"
+        }
+      ],
+      "dateKind": "event",
+      "en": {
+        "title": "Women in Science 2025: time together",
+        "summary": "A group photograph at a pottery workbench captures the 2025 Women in Science gathering.",
+        "body": "<p>The 2025 Women in Science activity.</p>"
+      },
+      "zh": {
+        "title": "Women in Science 2025：属于我们的相聚",
+        "summary": "陶艺工作台前，定格 2025 年 Women in Science 活动的相聚。",
+        "body": "<p>2025 年的 Women in Science 活动</p>"
+      }
+    },
+    {
+      "id": "iupac-breakfast-hangzhou-2025",
+      "date": "2025-02-11",
+      "category": "culture",
+      "image": "assets/news/iupac-hangzhou-2025.webp",
+      "caption": {
+        "en": "Participants at the 2025 Hangzhou Global Women’s Breakfast.",
+        "zh": "2025年 IUPAC 全球女化学家早餐会杭州分会场合影。"
+      },
+      "sources": [],
+      "sourceLabel": {
+        "en": "Final Hangzhou event press release supplied by the lab",
+        "zh": "课题组提供的2025杭州分会场新闻稿最终版"
+      },
+      "en": {
+        "title": "Global Women’s Breakfast comes to Hangzhou for the first time",
+        "summary": "Women scientists from universities, hospitals and industry met at the Hangzhou Institute of Medicine to discuss equity and careers in science.",
+        "body": "<p>On 11 February 2025, the IUPAC Global Women’s Breakfast took place across 11 Chinese cities under the theme “Accelerating Equity in Science”. Hangzhou joined the event for the first time, with its local gathering hosted at the Hangzhou Institute of Medicine, Chinese Academy of Sciences.</p><p>Participants came from institutions including Zhejiang University, Westlake University, Zhejiang Sci-Tech University, Soochow University and Hangzhou City University, alongside hospitals and biotechnology companies.</p><p>Weihong Tan, an academician of the Chinese Academy of Sciences and director of the institute, attended the event. Discussions focused on the opportunities, challenges and career development of women in research, creating a setting for exchange across disciplines and institutions.</p>"
+      },
+      "zh": {
+        "title": "勇攀科技高峰：IUPAC 全球女化学家早餐会首次落地杭州",
+        "summary": "2025年2月11日，杭州首次加入 IUPAC 全球女化学家早餐会，来自高校、医院与生物医药企业的女性科研工作者在杭州医学研究所交流。",
+        "body": "<p>2025年2月11日，以“加速推动科学领域的公平性”为主题的 IUPAC 全球女化学家早餐会在中国11个城市同步举行。杭州首次作为参会城市加入，杭州分会场设在中国科学院杭州医学研究所。</p><p>活动吸引了来自浙江大学、西湖大学、浙江理工大学、苏州大学、浙江大学城市学院等高校，浙江省肿瘤医院、浙大附属医院等机构，以及联川生物等生物医药企业的女性科学家和科技工作者参与。</p><p>中国科学院院士、杭州医学研究所所长谭蔚泓出席活动并代表杭州向全球传递祝福。与会者围绕科研女性的职业发展、机遇与挑战展开交流，分享不同研究领域与职业阶段的经验。</p><p>杭州分会场为本地女性科研工作者提供了跨机构交流的平台，也让关于科学公平性与多样性的讨论在具体的相遇和对话中展开。</p>"
+      }
+    },
+    {
       "id": "graduation-memories-2023",
       "date": "2024-10-28",
       "category": "people",
@@ -3805,57 +3858,6 @@
         "summary": "帐篷下围桌而坐，留下 2024 年 Women in Science 活动的户外合影。",
         "body": "<p>2024 年的 Women in Science 活动，大家在户外帐篷下围桌而坐，留下一张集体合影。</p>"
       }
-    },
-    {
-      "id": "liyan-fei-outstanding-student-2023",
-      "date": "2024-01-15",
-      "en": {
-        "title": "Congratulations to Liyan Fei on Receiving the 2023 Outstanding Student of the CAS Community Award",
-        "summary": "Liyan Fei received the 2023 Outstanding Student of the CAS Community award from the Youth League Committee of the Shanghai Branch of CAS.",
-        "body": "<p>Liyan Fei received the 2023 Outstanding Student of the CAS Community award from the Youth League Committee of the Shanghai Branch of CAS.</p>"
-      },
-      "zh": {
-        "title": "恭喜费立言同学获得 2023 年度中国科学院上海分院团委“科苑优秀学子”奖！",
-        "summary": "费立言同学获中国科学院上海分院团委 2023 年度“科苑优秀学子”奖。",
-        "body": "<p>费立言同学获中国科学院上海分院团委 2023 年度“科苑优秀学子”奖。</p>"
-      },
-      "category": "people",
-      "sources": [
-        {
-          "url": "https://www.x-mol.com/groups/wuqin/news/92342",
-          "en": "Lab news on X-MOL",
-          "zh": "课题组 X-MOL 新闻记录"
-        }
-      ]
-    },
-    {
-      "id": "xueying-liu-zhejiang-postdoc-funding",
-      "date": "2023-08-01",
-      "en": {
-        "title": "Congratulations to Dr. Xueying Liu on Receiving the Zhejiang Province Postdoctoral Merit-Based Funding Award",
-        "summary": "Dr. Xueying Liu received the Zhejiang Province Postdoctoral Merit-Based Funding award.",
-        "body": "<p>Dr. Xueying Liu received the Zhejiang Province Postdoctoral Merit-Based Funding award.</p>"
-      },
-      "zh": {
-        "title": "恭喜刘雪莹博士获得浙江省博士后择优资助项目！",
-        "summary": "刘雪莹博士获浙江省博士后择优资助项目。",
-        "body": "<p>刘雪莹博士获浙江省博士后择优资助项目。</p>"
-      },
-      "category": "recognition",
-      "sources": [
-        {
-          "url": "https://www.x-mol.com/groups/wuqin/news/92377",
-          "en": "Lab news on X-MOL",
-          "zh": "课题组 X-MOL 新闻记录"
-        }
-      ],
-      "image": "assets/minds/people/xueying-liu.webp",
-      "imageFit": "portrait",
-      "caption": {
-        "en": "Portrait supplied by the lab; not an award-ceremony photograph.",
-        "zh": "刘雪莹的个人照片，由课题组提供；非颁奖现场照片。"
-      },
-      "showCaption": false
     }
   ],
   "activities": [

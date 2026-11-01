@@ -150,9 +150,11 @@ join.zh['join.path2.body'] = '2026 年推免与直博申请请查阅正式招生
 join.en['join.path3.body'] = 'For 2026 graduate entrance examinations, consult the institute admissions brochure and programme catalogue. Deadlines follow official notices.';
 join.zh['join.path3.body'] = '2026 年研究生招生考试请参考研究所正式招生简章及专业目录，具体时间以官方通知为准。';
 const logo = 'assets/branding/aptomics-cell-atlas-logo.png';
+const activityRecordIds = new Set(activities.map(a => a.news).filter(Boolean));
+const activityRecords = news.filter(n => activityRecordIds.has(n.id));
 const data = {
   version: 11, logo: fs.existsSync(path.join(root, logo)) ? logo : null,
-  areas, studies, news, activities, join, people: read('people.json'),
+  areas, studies, news: news.filter(n => !activityRecordIds.has(n.id)), activityRecords, activities, join, people: read('people.json'),
   origins: JSON.parse(fs.readFileSync(path.join(root, 'assets/people/origins.json'), 'utf8')),
   researchers: [
     { id: 'guoyan-luo', en: 'Guoyan Luo', zh: '罗国焰', study: 'spark-seq', portrait: 'assets/minds/guoyan-luo/portrait-presentation.png', story: read('guoyan-luo-story.json') },
@@ -180,6 +182,7 @@ const routes = new Map([
   ['minds/pi/index.html', ['pi', 'Qin Wu']],
   ['minds/story.html', ['person', 'Meet the Discoverer']],
   ['minds/activity.html', ['activity', 'Culture']],
+  ['minds/culture/index.html', ['culture', 'Culture']],
   ['join-us/index.html', ['join', 'Join Us']],
   ['news/index.html', ['news', 'Latest News']],
   ['people/index.html', ['minds', 'Minds']],

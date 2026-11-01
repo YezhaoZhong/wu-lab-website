@@ -73,16 +73,12 @@ for (const file of htmlFiles()) {
 }
 {
   const c = await open('discoveries/publications/');
-  check(c.d.querySelectorAll('.pub-item').length === 6, 'Six initial papers');
-  c.d.querySelector('.pub-toggle').click();
-  check(c.d.querySelectorAll('.pub-item').length === 20, 'All papers expanded');
-  check(c.d.querySelectorAll('.pub-toggle').length === 2, 'Two Show Less controls');
-  check(c.d.querySelector('#more-publications').previousElementSibling.querySelector('.pub-toggle'), 'Top Show Less before More Publications');
+  check(c.d.querySelectorAll('.pub-item').length === 20, 'All papers visible initially');
+  check(!c.d.querySelector('.pub-toggle, #more-publications'), 'No publication expansion controls');
   c.d.querySelector('[data-mode="figures"]').click();
   check(c.d.querySelector('.subfigures'), 'Subfigure mode');
-  check(c.d.querySelectorAll('.pub-toggle').length === 2, 'Both collapse controls in figures mode');
-  c.d.querySelector('[data-position="bottom"]').click();
-  check(c.d.querySelectorAll('.pub-item').length === 6, 'Bottom collapse works');
+  check(!c.d.querySelector('.pub-toggle'), 'No expansion controls in figures mode');
+  check(c.d.querySelectorAll('.pub-item').length === 20, 'All figures visible');
   c.d.querySelector('#query').value = 'SPARK';
   c.d.querySelector('#query').dispatchEvent(new c.w.Event('input'));
   check(c.d.querySelectorAll('.pub-item').length === 1, 'Keyword search');
@@ -91,7 +87,7 @@ for (const file of htmlFiles()) {
   c.d.querySelector('#area').dispatchEvent(new c.w.Event('input'));
   check(c.d.querySelector('.empty-state'), 'Combined filter empty state');
   c.d.querySelector('#clear-filters').click();
-  check(c.d.querySelectorAll('.pub-item').length === 6, 'Clear filters');
+  check(c.d.querySelectorAll('.pub-item').length === 20, 'Clear filters restores all papers');
   c.d.querySelector('#language').click();
   check(c.d.documentElement.lang === 'zh-CN', 'Language toggle');
   check(c.d.querySelector('.subfigures'), 'Image mode preserved through language change');
@@ -107,15 +103,37 @@ for (const file of htmlFiles()) {
   const c = await open('news/');
   const site = JSON.parse(fs.readFileSync(path.join(root, 'data/site.json'), 'utf8'));
   check(c.d.querySelectorAll('.news-grid .news-card').length === site.news.length, 'Local news grid displays all cards immediately');
+  check(!site.news.some(n => /women-in-science|iupac-breakfast|graduation-memories/.test(n.id)), 'Culture records excluded from news');
+  check(site.activityRecords.length === 6, 'Six culture stories retained for activity pages');
   check(!c.d.querySelector('.news-index-feature'), 'Local news layout has no featured section');
   check(c.d.querySelectorAll('.news-card-media img').length === site.news.length, 'Every news record has a real image or category illustration');
   check(!c.d.querySelector('.carousel, .expand, .pause'), 'Latest News has no carousel or playback and expansion controls');
   check(c.timers.size === 0, 'Latest News is static');
   c.close();
 }
+for (const language of ['en', 'zh']) {
+  const c = await open('minds/culture/', language);
+  const site = JSON.parse(fs.readFileSync(path.join(root, 'data/site.json'), 'utf8'));
+  check(c.d.querySelectorAll('.news-grid .news-card').length === site.activities.length, 'Culture lists every activity in the news layout');
+  check(!c.d.querySelector('.carousel, .expand'), 'Culture archive is static and fully expanded');
+  c.close();
+  const m = await open('minds/', language);
+  check(m.d.querySelectorAll('#culture .culture-mosaic .culture-tile').length === 6, 'Culture has six mosaic photo tiles');
+  check(!m.d.querySelector('.minds-photos'), 'Standalone life-in-the-lab section removed');
+  check(m.d.querySelector('#culture .values + .culture-mosaic + #culture-slides'), 'Mosaic sits between culture text and activity slides');
+  check(!m.d.querySelector('#culture-slides .expand'), 'Culture slideshow has no inline expansion');
+  check(m.d.querySelector('#culture .carousel-actions a[href$="minds/culture/"]'), 'Show more links to the Culture archive');
+  check(m.d.querySelectorAll('#culture-slides .activity-background').length === site.activities.length, 'Activity slides use background covers');
+  m.close();
+}
 {
   const c = await open('index.html');
   check(c.d.querySelector('#home-news.carousel'), 'Local home news carousel retained');
+  const discoveries = c.d.querySelector('#home-discoveries');
+  check(discoveries.querySelectorAll('.slide').length === 3, 'Three selected discovery slides');
+  check(!discoveries.querySelector('.expand, .pause'), 'Discovery carousel has no expansion or playback controls');
+  discoveries.querySelector('[data-slide="1"]').click();
+  check(discoveries.querySelector('.carousel-track').style.transform === 'translateX(-100%)', 'Discoveries slide horizontally');
   check(c.d.querySelectorAll('#home-news .news-card').length === 5, 'Home previews five news stories');
   check(!c.d.querySelector('#home-news .expand, #home-news .pause'), 'No news expansion or playback controls');
   check([...c.timers.values()].some(t => t.ms === 4000), 'Home news rotates every four seconds');
