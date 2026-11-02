@@ -142,13 +142,6 @@ for (const lang of ['en', 'zh']) {
       .replaceAll('Wu Lab', 'Aptomics & Cell Atlas').replaceAll('吴芩课题组', '功能核酸组学团队');
   }
 }
-// Do not turn old named notices into invented 2026 announcements.
-join.en['join.path1.body'] = 'For 2026 summer-camp dates, eligibility and application procedures, please consult the current official institute notice or contact us.';
-join.zh['join.path1.body'] = '2026 年夏令营的时间、资格和申请流程，请以研究所当年正式通知为准，或邮件咨询。';
-join.en['join.path2.body'] = 'For recommended admission and direct PhD entry in 2026, consult the official admissions notice and confirm availability by email.';
-join.zh['join.path2.body'] = '2026 年推免与直博申请请查阅正式招生通知，并通过邮件确认名额与申请安排。';
-join.en['join.path3.body'] = 'For 2026 graduate entrance examinations, consult the institute admissions brochure and programme catalogue. Deadlines follow official notices.';
-join.zh['join.path3.body'] = '2026 年研究生招生考试请参考研究所正式招生简章及专业目录，具体时间以官方通知为准。';
 const logo = 'assets/branding/aptomics-cell-atlas-logo.png';
 const activityRecordIds = new Set(activities.map(a => a.news).filter(Boolean));
 const activityRecords = news.filter(n => activityRecordIds.has(n.id));
