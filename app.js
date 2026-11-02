@@ -192,7 +192,7 @@ function minds() {
     <p>${t('Our journeys meet in Hangzhou. Locations are grouped by province or municipality, without names or member counts.', '我们的旅程在杭州汇合。地图按省份或直辖市汇总，不关联姓名或公开成员人数。')}</p>
     <div class="origins-layout"><div id="origin-map" class="origin-map" aria-label="${t('Team origins by province', '团队家乡省份汇总')}"></div><div class="origin-panel"><div class="origin-list">${data.origins.locations.map(p => `<button data-province="${p.id}" class="origin-chip">${esc(p[lang])}</button>`).join('')}</div>
     <p id="origin-status" class="map-status" role="status"></p></div></div></section>
-    <section id="culture" class="section soft"><div class="wrap">${sectionHead('04 / CULTURE', t('One team. All in.', '同一个团队，全心投入。'))}
+    <section id="culture" class="section soft"><div class="wrap">${sectionHead('04 / THE WAY WE WORK', t('One team. All in.', '同一个团队，全心投入。'))}
     <div class="values">${[['Stay curious.', '保持好奇心。'], ['Think independently.', '独立思考。'], ['Create together.', '协同创造。'], ['Aim high.', '志存高远。']].map(([en, zh]) => `<span>${t(en, zh)}</span>`).join('')}</div>
     ${cultureMosaic()}${activityCarousel()}</div></section>${joinCallout()}`;
 }
